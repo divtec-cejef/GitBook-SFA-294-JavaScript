@@ -15,7 +15,7 @@ var personneNom = "Dinateur";
 let personneAge = 22;
 
 // Constantes
-const URL = "http://kode.ch”;
+const URL = "http://kode.ch";
 const AGE_MAX = 65;
 ```
 
