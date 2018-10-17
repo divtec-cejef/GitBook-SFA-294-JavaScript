@@ -5,3 +5,4 @@
 ## Les bases
 
 * [Variables et constantes](les-bases/variables-et-constantes.md)
+* [Types de données](les-bases/types.md)
