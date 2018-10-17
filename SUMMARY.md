@@ -5,5 +5,3 @@
 ## Les bases
 
 * [Variables et constantes](les-bases/variables-et-constantes.md)
-* [Untitled](les-bases/untitled.md)
-
