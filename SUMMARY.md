@@ -1,5 +1,9 @@
 # Table of contents
 
 * [Introduction à JavaScript](README.md)
-* [Variables et constantes](variables-et-constantes.md)
+
+## Les bases
+
+* [Variables et constantes](les-bases/variables-et-constantes.md)
+* [Untitled](les-bases/untitled.md)
 
