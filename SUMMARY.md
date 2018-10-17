@@ -19,6 +19,11 @@
 ## Document Object Model
 
 * [Introduction](dom/dom-introduction.md)
+* [Accéder aux éléments](dom/dom-acceder.md)
+* [Créer des éléments](dom/dom-creer.md)
+* [Modifier les contenus textes](dom/dom-modifier-texte.md)
+* [Classes CSS](dom/dom-classes.md)
+
 
 ## JavaScript moderne
 
