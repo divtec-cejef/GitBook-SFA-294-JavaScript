@@ -1,10 +1,10 @@
-### Récupérer et modifier le contenu texte et HTML d'un élément
+# Modifier les contenus textes
 
-#### `innerHTML`
+## `innerHTML`
 
 Récupère ou définit le contenu HTML d'un élément, de ses descendants.
 
-```html
+```markup
 <p id="intro">
   Je suis un <strong>joli</strong> paragraphe !
 </p>
@@ -25,15 +25,13 @@ introPara.innerHTML += ' <a href="http://kode.ch">Lien</a>';
 </script>
 ```
 
-
-
-#### `innerText`
+## `innerText`
 
 Représente le contenu textuel, le rendu visuel d'un noeud. Il fait donc abstraction des balises HTML.
 
 Utilisé en lecture, il renvoie une approximation du texte que l’utilisateur ou utilisatrice obtiendrait s’il ou elle sélectionnnait le contenu d’un élément avec le curseur, et le copiait dans le presse-papier.
 
-```html
+```markup
 <p id="intro">
   Je suis un <strong>joli</strong> paragraphe !
 </p>
@@ -50,22 +48,18 @@ console.log(introPara.innerHTML); // Je suis un <strong>joli</strong> paragraphe
 </script>
 ```
 
-
-
-#### `insertAdjacentHTML(position, text);`
+## `insertAdjacentHTML(position, text);`
 
 Permet d'ajouter du `text` HTML à une `position` donnée autours ou à l'intérieur d'un `element` existant.
 
-Il existe quatre `positions `:
+Il existe quatre `positions`:
 
-- `'beforebegin'` : **Avant** l'`element`  lui-même.
-- `'afterbegin'` : Juste à l'intérieur de l'`element` , **avant son premier enfant**.
-- `'beforeend'` : Juste à l'intérieur de l'`element` , **après son dernier enfant**.
-- `'afterend'` : **Après** `element` lui-même.
+* `'beforebegin'` : **Avant** l'`element`  lui-même.
+* `'afterbegin'` : Juste à l'intérieur de l'`element` , **avant son premier enfant**.
+* `'beforeend'` : Juste à l'intérieur de l'`element` , **après son dernier enfant**.
+* `'afterend'` : **Après** `element` lui-même.
 
-
-
-```html
+```markup
 <p>bla bla</p>
 <!-- beforebegin -->
 <p id='intro'>
@@ -77,9 +71,9 @@ Il existe quatre `positions `:
 <p>bla bla</p>
 ```
 
-##### Exemple
+### Exemple
 
-```html
+```markup
 <ul id="liste1">
   <li>élément de #liste1</li>
 </ul>
@@ -101,3 +95,4 @@ liste2.insertAdjacentHTML('afterbegin', '<li>Nouveau premier fils de #liste2</li
 liste2.insertAdjacentHTML('beforeend', '<li>Nouveau dernier fils de #liste2</li>');
 </script>
 ```
+

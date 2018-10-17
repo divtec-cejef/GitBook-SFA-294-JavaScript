@@ -1,4 +1,4 @@
-## Events ([MDN Event reference](https://developer.mozilla.org/en-US/docs/Web/Events))
+# Evénements
 
 ```javascript
 let newElement = document.getElementsByTagName('h1');
@@ -18,3 +18,4 @@ window.onload = function() {
   console.log('Im loaded');
 };
 ```
+

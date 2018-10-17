@@ -1,5 +1,6 @@
+# Accéder aux éléments
 
-### Accéder aux éléments du DOM
+## Accéder aux éléments du DOM
 
 ```javascript
 // Renvoie l'élément identifier avec "menu" <nav id="menu">...</nav>
@@ -27,19 +28,18 @@ const elementCoche = monElement.querySelector('input:checked');
 let notesEtAlertes = document.querySelectorAll('div.note, div.alert');
 ```
 
+## Naviguer dans le DOM
 
-
-### Naviguer dans le DOM  
-
-#### Récupérer les enfants d'un élément `element.childNodes`
+### Récupérer les enfants d'un élément `element.childNodes`
 
 ```javascript
 let monElement = document.getElementById('monElement');
 let enfants = monElement.childNodes;
 ```
 
-#### Récupérer le parent d'un élément  `element.parentNode`
+### Récupérer le parent d'un élément  `element.parentNode`
 
 ```javascript
 let parent = enfants.parentNode;
 ```
+

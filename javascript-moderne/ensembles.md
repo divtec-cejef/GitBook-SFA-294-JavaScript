@@ -1,10 +1,10 @@
-## Ensembles
+# Ensembles
 
-Sets  are a new object type with ES6 (ES2015) that allow to create  collections of unique values. The values in a set can be either simple  primitives like strings or integers, but more complex object types like  object literals or arrays can also be part of a set.
+Sets are a new object type with ES6 \(ES2015\) that allow to create collections of unique values. The values in a set can be either simple primitives like strings or integers, but more complex object types like object literals or arrays can also be part of a set.
 
-Here’s a simple example showing off a basic set and a few of the available methods on it like *add*, *size*, *has*, *forEach*, *delete* and *clear*:
+Here’s a simple example showing off a basic set and a few of the available methods on it like _add_, _size_, _has_, _forEach_, _delete_ and _clear_:
 
-```
+```text
 let animals = new Set();
 
 animals.add('🐷');
@@ -29,12 +29,11 @@ animals.forEach(animal => {
 
 animals.clear();
 console.log(animals.size); // 0
-
 ```
 
-Here’s  another example where we pass-in an array to initialize the set. Notice  how the initializing array gets deconstructed, but an array added added  later stays in the form of an array:
+Here’s another example where we pass-in an array to initialize the set. Notice how the initializing array gets deconstructed, but an array added added later stays in the form of an array:
 
-```
+```text
 let myAnimals = new Set(['🐷', '🐢', '🐷', '🐷']);
 
 myAnimals.add(['🐨', '🐑']);
@@ -50,26 +49,20 @@ myAnimals.forEach(animal => {
 // 🐢
 // ["🐨", "🐑"]
 // Object { name: "Rud", type: "🐢" }
-
 ```
-
-------
 
 Strings are a valid iterable so they can also be passed-in to initialize a set:
 
-```
+```text
 console.log('Only unique characters will be in this set.'.length); // 43
 
 let sentence = new Set('Only unique characters will be in this set.');
 console.log(sentence.size); // 18
-
 ```
 
-------
+On top of using _forEach_ on a set, [for…of](https://alligator.io/js/for-of-for-in-loops/) loops can also be used to iterate over sets:
 
-On top of using *forEach* on a set, [for…of](https://alligator.io/js/for-of-for-in-loops/) loops can also be used to iterate over sets:
-
-```
+```text
 let moreAnimals = new Set(['🐺', '🐴', '🐕', '🐇']);
 
 for (let animal of moreAnimals) {
@@ -80,14 +73,13 @@ for (let animal of moreAnimals) {
 // Howdy 🐴
 // Howdy 🐕
 // Howdy 🐇
-
 ```
 
-### Keys and Values
+## Keys and Values
 
-Sets also have the *keys* and *values* methods, with **keys** being an alias for **values**,  so both methods do exactly the same thing. Using either of these  methods returns a new iterator object with the values of the set in the  same order in which they were added to the set. Here’s an example:
+Sets also have the _keys_ and _values_ methods, with **keys** being an alias for **values**, so both methods do exactly the same thing. Using either of these methods returns a new iterator object with the values of the set in the same order in which they were added to the set. Here’s an example:
 
-```
+```text
 let partyItems = new Set(['🍕', '🍾', '🎊']);
 let items = partyItems.values();
 

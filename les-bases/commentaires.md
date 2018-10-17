@@ -1,4 +1,4 @@
-## Commentaires
+# Commentaires
 
 ```javascript
 // Ceci est une ligne de commentaires
@@ -6,10 +6,10 @@
 /*
 Ceci est un bloc 
 de commentaires
-*/  
+*/
 ```
 
-#### Entête de document
+## Entête de document
 
 ```javascript
 /**
@@ -19,9 +19,9 @@ de commentaires
  */
 ```
 
-#### Entête de fonction
+## Entête de fonction
 
-```js
+```javascript
 /**
  * Additionne deux nombres.
  * @param {number} x - nombre a.
@@ -33,7 +33,7 @@ function add(a, b) {
 }
 ```
 
-#### Entête de classe
+## Entête de classe
 
 ```javascript
 /** Classe représeetant un point. */
@@ -73,3 +73,4 @@ class Point {
     }
 }
 ```
+

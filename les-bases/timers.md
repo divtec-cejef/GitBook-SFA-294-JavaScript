@@ -1,4 +1,4 @@
-## Timers
+# Timers
 
 ```javascript
 function simpleMessage() {
@@ -20,3 +20,4 @@ window.setInterval(simpleMessage, 5000);
 let intervalHandler = window.setInterval(simpleMessage, 5000);
 window.clearInterval(intervalHandle);
 ```
+

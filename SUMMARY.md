@@ -18,14 +18,14 @@
 
 ## Document Object Model
 
-* [Introduction](dom/dom-introduction.md)
-* [Accéder aux éléments](dom/dom-acceder.md)
-* [Créer des éléments](dom/dom-creer.md)
-* [Modifier les contenus textes](dom/dom-modifier-texte.md)
-* [Classes CSS](dom/dom-classes.md)
-
+* [Introduction](document-object-model/dom-introduction.md)
+* [Accéder aux éléments](document-object-model/dom-acceder.md)
+* [Créer des éléments](document-object-model/dom-creer.md)
+* [Modifier les contenus textes](document-object-model/dom-modifier-texte.md)
+* [Classes CSS](document-object-model/dom-classes.md)
 
 ## JavaScript moderne
 
-* [Ensembles](js-moderne/ensembles.md)
-* [Paramètres par défaut](js-moderne/parametres-par-default.md)
+* [Ensembles](javascript-moderne/ensembles.md)
+* [Paramètres par défaut](javascript-moderne/parametres-par-default.md)
+

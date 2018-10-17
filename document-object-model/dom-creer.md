@@ -1,22 +1,20 @@
-### Créer de nouveaux éléments
+# Créer des éléments
 
-#### Ajouter un élément enfant à la fin d'un élément existant
+## Ajouter un élément enfant à la fin d'un élément existant
 
 Pour ajouter un élément comme dernier fils d'un élément existant il faut :
 
 1. Créer un nouvel élément : `createElement("nomTagHTML")`
 2. Créer un nœud texte : `createTextNode("chaine de caractères")`
 3. Attacher le nœud texte au nouvel élément : `appendChild(nœudTexte)`
-4. Récupérer un élément existant du DOM : voir chapitre [Accéder aux éléments de la DOM](#Accéder-aux éléments-de-la-DOM)
+4. Récupérer un élément existant du DOM : voir chapitre [Accéder aux éléments de la DOM](dom-creer.md#Accéder-aux%20éléments-de-la-DOM)
 5. Attacher le nouvel élément à l'élément existant du DOM : `appendChild(element)`
 
+### Exemple : Ajouter un élément à la fin d'une liste
 
+Voici comment ajouter le nouvel élément `<li>2kg de Pain</li>` **à la fin** de la liste `#fondue`.
 
-##### Exemple : Ajouter un élément à la fin d'une liste
-
-Voici comment ajouter le nouvel élément `<li>2kg de Pain</li>` **à la fin** de la liste `#fondue`. 
-
-```html
+```markup
 <ul id="fondue">
     <li>2kg de Fromage</li>
     <li>1L de Kirsh</li>
@@ -31,7 +29,7 @@ let newLiTexte = document.createTextNode("2kg de Pain");
 
 // 3. Ajout du texte au <li>
 newLi.appendChild(newLiTexte);
-    
+
 // 4. Récupération de la liste
 let listeFondue = document.getElementById('fondue');
 
@@ -40,9 +38,9 @@ listeFondue.appendChild(newLi);
 </script>
 ```
 
-###### Résultat
+#### Résultat
 
-```html
+```markup
 <ul id="fondue">
     <li>2kg de Fromage</li>
     <li>1L de Kirsh</li>
@@ -50,27 +48,23 @@ listeFondue.appendChild(newLi);
 </ul>
 ```
 
+## Ajouter un nouvel élément avant un élément enfant existant
 
+L'exemple précédent nous a montré comment ajouter un nouvel élément enfant à la fin d'un élément existant avec `appendChild()`.
 
-#### Ajouter un nouvel élément avant un élément enfant existant
-
-L'exemple précédent nous a montré comment ajouter un nouvel élément enfant à la fin d'un élément existant avec  `appendChild()`.
-
-Il existe un autre méthode pour ajouter des éléments :  `element.insertBefore()`
+Il existe un autre méthode pour ajouter des éléments : `element.insertBefore()`
 
 ```javascript
 elementParent.insertBefore(nouvelElement, elementEnfantExistant);
 ```
 
-Cette méthode permet d'ajouter à un élément existant `elementParent` un élément enfant `nouvelElement` juste avant l'élément enfant spécifié  `elementEnfantExistant`.
+Cette méthode permet d'ajouter à un élément existant `elementParent` un élément enfant `nouvelElement` juste avant l'élément enfant spécifié `elementEnfantExistant`.
 
-
-
-##### Exemple : Ajouter un élément au début d'une liste
+### Exemple : Ajouter un élément au début d'une liste
 
 Voici comment ajouter le nouvel élément `<li>2kg de Pain</li>` **au début** de la liste `#fondue`.
 
-```html
+```markup
 <ul id="fondue">
     <li>2kg de Fromage</li>
     <li>1L de Kirsh</li>
@@ -97,12 +91,13 @@ parentLi.insertBefore(newLi, premierLi);
 </script>
 ```
 
-###### Résultat
+#### Résultat
 
-```html
+```markup
 <ul id="fondue">
-	<li>2kg de Pain</li>
+    <li>2kg de Pain</li>
     <li>2kg de Fromage</li>
     <li>1L de Kirsh</li>
 </ul>
 ```
+

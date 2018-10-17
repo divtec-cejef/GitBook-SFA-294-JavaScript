@@ -1,6 +1,6 @@
-## Conditions
+# Conditions
 
-### `if... else`
+## `if... else`
 
 ```javascript
 // If Else
@@ -28,11 +28,9 @@ if (a > b) {
 }
 ```
 
+## L'opérateur \(ternaire\) conditionnel
 
-
-### L'opérateur (ternaire) conditionnel
-
-L'**opérateur (ternaire) conditionnel** est le seul opérateur JavaScript qui comporte trois opérandes.
+L'**opérateur \(ternaire\) conditionnel** est le seul opérateur JavaScript qui comporte trois opérandes.
 
 Cet opérateur est fréquemment utilisé comme raccourci pour la déclaration `if… else`
 
@@ -47,9 +45,7 @@ function prixEntree(estMembre) {
 }
 ```
 
-
-
-### Sélections avec `switch`
+## Sélections avec `switch`
 
 ```javascript
 let fruit = 'Bananes';

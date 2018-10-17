@@ -1,19 +1,19 @@
-## Types de données
+# Types de données
 
-- Six types de données **primitifs** :   
-  - `boolean` pour les booléen : `true` et `false`.
-  - `null` pour les valeurs nulles (au sens informatique).
-  - `undefined` pour les valeurs indéfinies.
-  - `number` pour les nombres entiers ou décimaux. Par exemple : `42` ou `3.14159`.
-  - `string` pour les chaînes de caractères. Par exemple : `"Coucou"`
-  - `symbol` pour les symboles, apparus avec ECMAScript 2015 (ES6). Ce  type est utilisé pour représenter des données immuables et uniques.
-- et un type pour les **objets** `Object`, comme par exmple :
-  - `Function`
-  - `Array`
-  - `Date`
-  - `RegExp`
+* Six types de données **primitifs** :   
+  * `boolean` pour les booléen : `true` et `false`.
+  * `null` pour les valeurs nulles \(au sens informatique\).
+  * `undefined` pour les valeurs indéfinies.
+  * `number` pour les nombres entiers ou décimaux. Par exemple : `42` ou `3.14159`.
+  * `string` pour les chaînes de caractères. Par exemple : `"Coucou"`
+  * `symbol` pour les symboles, apparus avec ECMAScript 2015 \(ES6\). Ce  type est utilisé pour représenter des données immuables et uniques.
+* et un type pour les **objets** `Object`, comme par exmple :
+  * `Function`
+  * `Array`
+  * `Date`
+  * `RegExp`
 
-### Tester le type d'une variable
+## Tester le type d'une variable
 
 Les variables peuvent contenir tous types de données à tous moments. Il est donc important de pouvoir tester le type du contenu d'une variable.
 
@@ -38,21 +38,21 @@ typeof pasUnNombre; // 'number' -- Et oui NaN fait partie de l'objet Number.
 typeof nonDefini; // 'undefined'
 ```
 
-#### Exemple de test de type
+### Exemple de test de type
 
 ```javascript
 let message = "Bonjour le monde";
 
 if(typeof message === "string"){
-	alert("c’est une chaine");
+    alert("c’est une chaine");
 } else {
-	alert("ce n’est pas une chaine !");
+    alert("ce n’est pas une chaine !");
 }
 ```
 
-#### Astuces
+### Astuces
 
-##### Comment savoir si une variable contient un tableau ?
+#### Comment savoir si une variable contient un tableau ?
 
 Réponse, on teste si l'objet possède une propriété `length`.
 
@@ -67,9 +67,7 @@ if(typeof tableau === 'object' && tableau.hasOwnProperty('length')) {
 }
 ```
 
-
-
-##### Comment s'assurer qu'une variable est du type number et que c'est un nombre ?
+#### Comment s'assurer qu'une variable est du type number et que c'est un nombre ?
 
 Réponse, utiliser la fonction `isNaN()` qui retourne `true` si la valeur passée en paramètre n'est pas un nombre.
 
@@ -83,3 +81,4 @@ if(typeof age === 'number' && !isNaN(age)) {
     alert("Ce n'est PAS un nombre !");
 }
 ```
+

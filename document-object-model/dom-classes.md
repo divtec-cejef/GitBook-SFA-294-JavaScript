@@ -1,5 +1,8 @@
+---
+description: 'Ajouter, modifier, vérifier, alterner des classes CSS'
+---
 
-### Classes : Ajouter, modifier, vérifier, alterner
+# Classes CSS
 
 ```javascript
 // Récupère l'élément #menu
@@ -23,3 +26,4 @@ menu.classList.toggle('rouge');
 // Retoune true si #menu a la classe .rouge, false s'il ne l'a pas
 menu.classList.contains('rouge');
 ```
+

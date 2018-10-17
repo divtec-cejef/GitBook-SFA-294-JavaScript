@@ -1,6 +1,6 @@
-## Tableaux
+# Tableaux
 
-### Ajouter et retirer des valeurs
+## Ajouter et retirer des valeurs
 
 ```javascript
 // Crée un tableau vide
@@ -33,12 +33,9 @@ let premier = monTab.shift();
 // Récupérer et supprimer un sous tableau
 // Premier paramètre postion de départ, 2e paramètre le nombre d'éléments
 monTab.splice(3, 2); //Reourne et supprime le 4e et 5e élément
-
 ```
 
-
-
-### Parcourir un tableau
+## Parcourir un tableau
 
 ```javascript
 let fondue = ["fromage", "pain", "kirsh"];

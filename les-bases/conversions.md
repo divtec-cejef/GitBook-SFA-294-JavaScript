@@ -1,23 +1,21 @@
-## Conversions
+# Conversions
 
-### Convertir des nombres en chaines de caractères
+## Convertir des nombres en chaines de caractères
 
-The global method **String()** can convert numbers to strings.
+The global method **String\(\)** can convert numbers to strings.
 
 It can be used on any type of numbers, literals, variables, or expressions:
 
-#### Example
+### Example
 
-  String(x)         // returns a string from a number variable x
-  String(123)       // returns a string from a number literal 123
-  String(100 + 23)  // returns a string from a number from an expression 
+String\(x\) // returns a string from a number variable x String\(123\) // returns a string from a number literal 123 String\(100 + 23\) // returns a string from a number from an expression
 
-### Convertir une chaîne de caractères en nombre
+## Convertir une chaîne de caractères en nombre
 
 Il existe deux méthodes :
 
-- `parseInt(string, base)`
-- `parseFloat(string)`
+* `parseInt(string, base)`
+* `parseFloat(string)`
 
 ```javascript
 // Conversion nombre entier en base 10
@@ -37,14 +35,11 @@ parseFloat("33.1045"); //33.1045
 
 // Conversion en nombre flottant
 parseFloat("33,1045"); //33 - la virgule n'est pas prise en compte
-
 ```
 
-> Une bonne pratique pour `parseInt()` est de toujours inclure l'argument qui indique dans quelle base numérique le résultat doit être renvoyé (base 2, base 10...). 
+> Une bonne pratique pour `parseInt()` est de toujours inclure l'argument qui indique dans quelle base numérique le résultat doit être renvoyé \(base 2, base 10...\).
 
-
-
-#### L'opérateur + unaire
+### L'opérateur + unaire
 
 Une autre méthode pour récupérer un nombre à partir d'une chaîne de caractères consiste à utiliser l'opérateur `+`.
 
@@ -53,8 +48,7 @@ Une autre méthode pour récupérer un nombre à partir d'une chaîne de caract�
 +"1.1" = 1.1 // fonctionne seulement avec le + unaire
 ```
 
-
-
-#### Not A Number
+### Not A Number
 
 TODO - ...
+

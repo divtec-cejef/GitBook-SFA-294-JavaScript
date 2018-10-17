@@ -1,6 +1,6 @@
-## Boucles
+# Boucles
 
-### While
+## While
 
 ```javascript
 let i = 0;
@@ -10,9 +10,7 @@ while (i < 10) {
 }
 ```
 
-
-
-### Do...while
+## Do...while
 
 ```javascript
 let i = 0;
@@ -22,9 +20,7 @@ do {
 } while (i < 10)
 ```
 
-
-
-### For
+## For
 
 ```javascript
 //Eviter l'utilisation de "i++". Préférer "++i" ou "i += 1"
@@ -33,9 +29,7 @@ for (let i = 0; i < 10; ++i) {
 }
 ```
 
-
-
-### For...in
+## For...in
 
 L'**instruction for...in** permet d'itérer sur les propriétés d'un objet.
 

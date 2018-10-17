@@ -1,6 +1,6 @@
-## Objets
+# Objets
 
-### Ajouter, modifier des propriétés
+## Ajouter, modifier des propriétés
 
 ```javascript
 // Créer un nouvel objet
