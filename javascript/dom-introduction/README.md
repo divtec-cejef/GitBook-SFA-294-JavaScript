@@ -1,7 +1,7 @@
 ---
 description: >-
-  JavaScript permet de modifier dynamiquement les éléments, attributs et
-  événements d'une page Web.
+  JavaScript permet de créer, modifier et supprimer dynamiquement les éléments
+  HTML, les styles CSS et les événements d'une page Web.
 ---
 
 # Manipuler une page Web via le DOM
@@ -17,4 +17,17 @@ Le DOM \(Document Object Model\) est un modèle de document chargé dans le navi
 Ci-après un repésentation typique du DOM sous forme d'arbre nodal.
 
 ![Repr&#xE9;sentation d&apos;un document HTML sous forme d&apos;arbre nodal](http://www.ntu.edu.sg/home/ehchua/programming/webprogramming/images/JS_DOMExample.png)
+
+### Et JavaScript dant tou ça ?
+
+Grâce au DOM, JavaScript à le pouvoir de :
+
+* **Récupérer un élément** HTML du document
+* **Modifier un élément** du document et personaliser
+  * son **contenu texte ou HTML**
+  * son **style CSS**
+  * ses **attributs**
+* **Supprimer un élément** HTML du document
+* 
+
 
