@@ -2,6 +2,10 @@
 
 * [Objectifs du Module 133A](README.md)
 
+## Formulaires HTML
+
+* [Créer un premier formulaire](formulaires-html/creer-un-premier-formulaire.md)
+
 ## JavaScript
 
 * [Premiers pas en JavaScript](javascript/les-bases-1/README.md)
