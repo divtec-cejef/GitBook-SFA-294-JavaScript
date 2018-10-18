@@ -21,7 +21,7 @@
   * [Tableaux](javascript/les-bases-1/tableaux.md)
   * [Evénements](javascript/les-bases-1/evenements.md)
   * [Timers](javascript/les-bases-1/timers.md)
-* [Document Object Model \(DOM\)](javascript/dom-introduction/README.md)
+* [Manipuler une page Web via le DOM](javascript/dom-introduction/README.md)
   * [Accéder aux éléments](javascript/dom-introduction/dom-acceder.md)
   * [Créer des éléments](javascript/dom-introduction/dom-creer.md)
   * [Modifier les contenus textes](javascript/dom-introduction/dom-modifier-texte.md)
