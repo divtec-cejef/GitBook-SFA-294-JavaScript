@@ -2,7 +2,7 @@
 
 ## Les différents types de données
 
-### Six types **primitifs**  
+### Six types **primitifs**
 
 * `boolean` pour les booléen : `true` et `false`.
 * `null` pour les valeurs nulles \(au sens informatique\).

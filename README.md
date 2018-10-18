@@ -9,7 +9,7 @@ Quelques généralités sur JavaScript :
 * Langage interprété
   * Nécessite un interpréteur \(versus. un compilateur\)
 * Langage orienté objet
-  * Langage à « prototype » 
+  * Langage à « prototype »
 
     Un prototype est un objet à partir duquel on crée de nouveaux objets
 * Sensible à la casse
