@@ -1,10 +1,11 @@
 # Table of contents
 
-* [Introduction à JavaScript](README.md)
+* [Objectifs du Module 133A](README.md)
 
 ## JavaScript
 
 * [Premiers pas en JavaScript](javascript/les-bases-1/README.md)
+  * [Introduction](javascript/les-bases-1/introduction.md)
   * [Commentaires](javascript/les-bases-1/commentaires.md)
   * [Variables et constantes](javascript/les-bases-1/variables-et-constantes.md)
   * [Types de données](javascript/les-bases-1/types.md)
