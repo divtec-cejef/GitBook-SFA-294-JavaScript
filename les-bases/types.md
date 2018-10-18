@@ -1,17 +1,24 @@
 # Types de données
 
-* Six types de données **primitifs** :   
-  * `boolean` pour les booléen : `true` et `false`.
-  * `null` pour les valeurs nulles \(au sens informatique\).
-  * `undefined` pour les valeurs indéfinies.
-  * `number` pour les nombres entiers ou décimaux. Par exemple : `42` ou `3.14159`.
-  * `string` pour les chaînes de caractères. Par exemple : `"Coucou"`
-  * `symbol` pour les symboles, apparus avec ECMAScript 2015 \(ES6\). Ce  type est utilisé pour représenter des données immuables et uniques.
-* et un type pour les **objets** `Object`, comme par exmple :
-  * `Function`
-  * `Array`
-  * `Date`
-  * `RegExp`
+## Les différents types de données
+
+### Six types **primitifs**  
+
+* `boolean` pour les booléen : `true` et `false`.
+* `null` pour les valeurs nulles \(au sens informatique\).
+* `undefined` pour les valeurs indéfinies.
+* `number` pour les nombres entiers ou décimaux. Par exemple : `42` ou `3.14159`.
+* `string` pour les chaînes de caractères. Par exemple : `"Coucou"`
+* `symbol` pour les symboles, apparus avec ECMAScript 2015 \(ES6\). Ce  type est utilisé pour représenter des données immuables et uniques.
+
+### Un type pour les **objets** `Object`
+
+Les éléments ci-après sont tous de type `Object`
+
+* `Function`
+* `Array`
+* `Date`
+* `RegExp`
 
 ## Tester le type d'une variable
 
