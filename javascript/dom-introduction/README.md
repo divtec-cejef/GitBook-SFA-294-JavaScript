@@ -14,9 +14,9 @@ Le DOM \(Document Object Model\) est un modèle de document chargé dans le navi
 * `Text` : chaine de caractères
 * `Comment` : commenaire HTML
 
-Ci-après un repésentation typique du DOM sous forme d'arbre nodal.
+Ci-après un repésentation typique du DOM sous forme d'arbre nodal :
 
-![Repr&#xE9;sentation d&apos;un document HTML sous forme d&apos;arbre nodal](http://www.ntu.edu.sg/home/ehchua/programming/webprogramming/images/JS_DOMExample.png)
+![Représentation du DOM. Source: https://www.guru99.com](https://www.guru99.com/images/JavaScript/javascript8_1.png)
 
 ### Et JavaScript dant tou ça ?
 
