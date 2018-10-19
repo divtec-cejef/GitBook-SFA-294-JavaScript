@@ -6,28 +6,23 @@ description: >-
 
 # Manipuler une page Web via le DOM
 
-### Dis papa c'est quoi le DOM ?
+## Dis papa c'est quoi le DOM ?
 
 Le DOM \(Document Object Model\) est un objet JavaScript représentant le document HTML \(ou XML\) actuellement chargé dans le navigateur.
 
-Dans cet objet, le document `Document` y est **représenté comme un arbre nodal**, chaque nœud `Node` représentant une partie du document. 
+Dans cet objet, le document `Document` y est **représenté comme un arbre nodal**, chaque nœud `Node` représentant une partie du document.
 
 Il existe trois pricipaux type de nœud :
 
-* `Element` : un élément HTML `<p>, <h1>, <body>, <img>, ... `
-
+* `Element` : un élément HTML `<p>, <h1>, <body>, <img>, ...`
 * `Text` : chaine de caractères `"C'est pas faux !"`
-
 * `Comment` : commenaire HTML `<!-- Je suis un simple commentaire -->`
 
-
-#### Exemple
+### Exemple
 
 Ci-après le code source d'un document HTML et sa repésentation sous forme d'arbre nodal de type DOM.
 
-
-
-```html
+```markup
 <!doctype html>
 <html>
     <head>
@@ -42,15 +37,9 @@ Ci-après le code source d'un document HTML et sa repésentation sous forme d'ar
 </html>
 ```
 
+![Repr&#xE9;sentation du DOM](../../.gitbook/assets/dom-arbre-nodal-petit.png)
 
-
-
-
-![Représentation du DOM. Source: https://www.guru99.com](https://www.guru99.com/images/JavaScript/javascript8_1.png)
-
-
-
-### Et JavaScript dant tou ça ?
+## Et JavaScript dant tou ça ?
 
 Grâce au DOM, JavaScript à le pouvoir de :
 
@@ -60,5 +49,4 @@ Grâce au DOM, JavaScript à le pouvoir de :
   * son **style CSS**
   * ses **attributs**
 * **Supprimer un élément** HTML du document
-
 
