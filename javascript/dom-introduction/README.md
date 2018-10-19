@@ -44,9 +44,11 @@ Ci-après le code source d'un document HTML et sa repésentation sous forme d'ar
 Grâce au DOM, JavaScript à le pouvoir de :
 
 * **Récupérer un élément** HTML du document
-* **Modifier un élément** du document et personaliser
-  * son **contenu texte ou HTML**
-  * son **style CSS**
-  * ses **attributs**
+* **Modifier un élément** en personalisant
+  * son **contenu texte** `"texte"` **ou HTML** `"<li>Yoda</li>"`
+  * son **style CSS** `fontSize, backgroundColor, border, ...`
+  * ses **attributs** `href, class, src, …`
+  * ses **événements** `click, submit, mouseover, load, ...`
+* **Créer un élément** et l'ajouter au document
 * **Supprimer un élément** HTML du document
 
