@@ -1,22 +1,27 @@
 # Accéder aux éléments
 
-> La variable `document` correspond au "root element" l'élément `<html>`
+
+
+On peut rechercher, accéder, aux éléments du document de deux manières :
+
+1. En recherchant **dans tous le document** en utilisant l'objet `document`.
+2. En recherchant **depuis un noeud spécifié** de type `Element`.
+
+La deuxième méthode étant bien entendu plus efficace, puisqu'elle ne nécessite pas un parcours complet du document.
+
+> L' objet `document` correspond à l'élément `<html>` du document.
 
 
 
 ## Accéder aux éléments du DOM
 
-### Récupérer un élément par son `id`
-
-```javascript
-const menuPrincipal = document.getElementById('menu');
-```
 
 
+### document.getElementById() 
 
-### document.getElementById 
+Ne peut être appelée qu'avec l'objet `document`.
 
-Récupérer un élément par son `id`
+Renvoie un objet `Element` représentant l'élément dont l' `id` correspond à la chaîne de caractères passée en paramètre.
 
 ```javascript
 // Renvoie l'élément avec l'id "menu" <nav id="menu">...</nav>
@@ -24,6 +29,20 @@ const menuPrincipal = document.getElementById('menu');
 ```
 
 
+
+### Element.getElementsByClassName()
+
+Peut être appelée avec l'objet `document` ou un objet de type `Element`.
+
+Retourne un "tableau" (HTMLCollection) contenant une référence sur tous les éléments ayant les noms de classes passés en paramètre.
+
+```javascript
+// Renvoie un tableau de tous les éléments du document appartenant à la classe rouge
+let elementsRouges = document.getElementsByClassName('rouge');
+
+// Renvoie un tableau de tous les enfants de rootElement appartenant aux classes rouge ET gras
+let elementsRougesGras = monElement.getElementsByClassName('rouge gras'); 
+```
 
 
 
@@ -35,7 +54,7 @@ const menuPrincipal = document.getElementById('menu');
 
 // Renvoie un tableau de tous les éléments du document appartenant à la classe rouge
 let elementsRouges = document.getElementsByClassName('rouge');
-//Renvoie un tableau de tous les enfants de rootElement appartenant aux classes rouge ET gras
+// Renvoie un tableau de tous les enfants de rootElement appartenant aux classes rouge ET gras
 let elementsRougesGras = monElement.getElementsByClassName('rouge gras'); 
 
 // Renvoie un tableau de tous les éléments <li> du document
