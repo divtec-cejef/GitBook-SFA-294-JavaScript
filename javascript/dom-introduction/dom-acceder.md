@@ -4,16 +4,16 @@
 
 On peut rechercher, accéder, aux éléments du document de deux manières :
 
-1. En recherchant **dans tous le document** en utilisant l'objet `document`.
-2. En recherchant **depuis un noeud spécifié** de type `Element`.
+1. En recherchant **dans tous le document**, en utilisant l'objet `document`.
+2. En recherchant **depuis un noeud spécifique** de type `Element`.
 
-La deuxième méthode étant bien entendu plus efficace, puisqu'elle ne nécessite pas un parcours complet du document.
+La deuxième méthode est plus efficace, puisqu'elle ne nécessite pas un parcours complet du document.
 
 > L' objet `document` correspond à l'élément `<html>` du document.
 
 
 
-## Accéder aux éléments du DOM
+## Méthodes d'accès aux éléments
 
 
 
