@@ -7,7 +7,7 @@ On peut rechercher, accéder, aux éléments du document de deux manières :
 
 La deuxième méthode est plus efficace, puisqu'elle ne nécessite pas un parcours complet du document.
 
-> L' objet `document` est un noeud de type `Element` et correspond à l'élément `<html>` de la page.
+> L' objet `document` est un noeud de type `Element` coresspondant à l'élément  `<html>` de la page.
 
 ## document.getElementById\(\)
 
