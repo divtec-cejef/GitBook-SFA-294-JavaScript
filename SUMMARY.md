@@ -22,6 +22,7 @@
   * [Timers](javascript/les-bases-1/timers.md)
 * [Manipuler une page Web via le DOM](javascript/dom-introduction/README.md)
   * [Accéder aux éléments](javascript/dom-introduction/dom-acceder.md)
+  * [Naviguer dans le DOM](javascript/dom-introduction/dom-naviguer.md)
   * [Créer des éléments](javascript/dom-introduction/dom-creer.md)
   * [Modifier les contenus textes](javascript/dom-introduction/dom-modifier-texte.md)
   * [Classes CSS](javascript/dom-introduction/dom-classes.md)
