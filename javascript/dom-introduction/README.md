@@ -37,14 +37,15 @@ Ci-après le code source d'un document HTML et sa repésentation sous forme d'ar
 </html>
 ```
 
-![](../../.gitbook/assets/dom-arbre-nodal.png)
+![Arbre nodal du DOM](../../.gitbook/assets/dom-arbre-nodal.png)
 
 ## Et JavaScript dant tou ça ?
 
 Grâce au DOM, JavaScript à le pouvoir de :
 
-* **Récupérer un élément** HTML du document
-* **Modifier un élément** en personalisant
+* **Récupérer un élément** HTML du document `<h1>, <p>, <a>, …`
+* **Naviguer entre les éléments** en récupérants ses élements fils, parents ou voisins (frères)
+* **Modifier un élément** en changeant :
   * son **contenu texte** `"texte"` **ou HTML** `"<li>Yoda</li>"`
   * son **style CSS** `fontSize, backgroundColor, border, ...`
   * ses **attributs** `href, class, src, …`
@@ -52,3 +53,4 @@ Grâce au DOM, JavaScript à le pouvoir de :
 * **Créer un élément** et l'ajouter au document
 * **Supprimer un élément** HTML du document
 
+Ces manipulations sont présentées dans les chapitres suivants.
