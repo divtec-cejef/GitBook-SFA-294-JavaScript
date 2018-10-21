@@ -33,14 +33,18 @@ Peut être appelée avec l'objet `document` ou un objet de type `Element`.
 Retourne un "tableau" (HTMLCollection) contenant une référence sur tous les éléments ayant les noms de classes passés en paramètre.
 
 ```javascript
-// Renvoie un tableau de tous les éléments du document appartenant à la classe rouge
+// Renvoie un tableau de tous les éléments du document
+// appartenant à la classe rouge
 let elementsRouges = document.getElementsByClassName('rouge');
 
-// Renvoie un tableau de tous les enfants de rootElement appartenant aux classes rouge ET gras
+// Renvoie un tableau de tous les enfants de l'élément spécifié
+// appartenant aux classes rouge ET gras
 let elementsRougesGras = monElement.getElementsByClassName('rouge gras'); 
 ```
 
 
+
+https://jsfiddle.net/m0g9fvsh/
 
 
 
