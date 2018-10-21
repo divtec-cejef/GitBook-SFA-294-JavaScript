@@ -25,7 +25,7 @@
   * [Créer des éléments](javascript/dom-introduction/dom-creer.md)
   * [Modifier les contenus textes](javascript/dom-introduction/dom-modifier-texte.md)
   * [Classes CSS](javascript/dom-introduction/dom-classes.md)
-    * [Evénements](javascript/dom-introduction/evenements.md)
+  * [Evénements](javascript/dom-introduction/evenements.md)
 * [JavaScript Moderne](javascript/javascript-moderne/README.md)
   * [Transpiller](javascript/javascript-moderne/transpiller.md)
   * [Ensembles](javascript/javascript-moderne/ensembles.md)
