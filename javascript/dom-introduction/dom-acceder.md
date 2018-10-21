@@ -7,8 +7,6 @@ On peut rechercher, accéder, aux éléments du document de deux manières :
 
 La deuxième méthode est plus efficace, puisqu'elle ne nécessite pas un parcours complet du document.
 
-> L' objet `document` représente l'élément `<html>` de la page.
-
 {% hint style="info" %}
 L' objet `document` représente l'élément `<html>` de la page.
 {% endhint %}
