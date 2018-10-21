@@ -7,20 +7,22 @@ On peut rechercher, accéder, aux éléments du document de deux manières :
 
 La deuxième méthode est plus efficace, puisqu'elle ne nécessite pas un parcours complet du document.
 
-> L' objet `document` représente l'élément  `<html>` de la page.
+> L' objet `document` représente l'élément `<html>` de la page.
+
+{% hint style="info" %}
+L' objet `document` représente l'élément `<html>` de la page.
+{% endhint %}
 
 ## document.getElementById\(\)
 
 Ne peut être appelée qu'avec l'objet `document`.
 
-Renvoie **un objet `Element`** représentant l'élément dont l' **`id`** correspond à la chaîne de caractères passée en paramètre.
+Renvoie **un objet** `Element` représentant l'élément dont l' `id` correspond à la chaîne de caractères passée en paramètre.
 
 ```javascript
 // Renvoie l'élément avec l'id "menu" <nav id="menu">...</nav>
 const MENU = document.getElementById('menu');
 ```
-
-
 
 ## Element.getElementsByClassName\(\)
 
@@ -38,9 +40,7 @@ let elementsRouges = document.getElementsByClassName('rouge');
 let elementsRougesGras = monElement.getElementsByClassName('rouge gras');
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/BqPNjK" %}
-
-
+{% embed url="https://codepen.io/fallinov/pen/BqPNjK" caption="" %}
 
 ## Element.getElementsByTagName\(\)
 
@@ -56,13 +56,11 @@ let elementsDeListes = document.getElementsByTagName('li');
 let taches = monElement.getElementsByTagName('strong');
 ```
 
-
-
 ## Element.querySelector\(\)
 
 Peut être appelée avec l'objet `document` ou un objet de type `Element`.
 
-Retourne **le premier `Element`** dans le document correspondant au **sélecteur CSS** - ou groupe de sélecteurs - spécifié(s), ou null si aucune correspondance n'est trouvée.
+Retourne **le premier** `Element` dans le document correspondant au **sélecteur CSS** - ou groupe de sélecteurs - spécifié\(s\), ou null si aucune correspondance n'est trouvée.
 
 ```javascript
 // Revoie le premier paragraphe du document
@@ -78,13 +76,11 @@ let pays = document.querySelector('input[name="pays"]:checked').value;
 const INPUT_LOGIN = document.querySelector('div.panneau-utilisateur input[name="login"]);
 ```
 
-
-
 ## Element.querySelectorAll\(\)
 
 Peut être appelée avec l'objet `document` ou un objet de type `Element`.
 
-Retourne un **tableau** \(NodeList\) contenant une référence sur tous les éléments correspondent au **sélecteur CSS** - ou groupe de sélecteurs - spécifié(s).
+Retourne un **tableau** \(NodeList\) contenant une référence sur tous les éléments correspondent au **sélecteur CSS** - ou groupe de sélecteurs - spécifié\(s\).
 
 ```javascript
 // Retourne tous les paragraphes du document
@@ -97,3 +93,4 @@ let parasAticle = container.querySelectorAll("div.article > p");
 // Sélectionne les div appartenant à la classe "note" OU "alert"
 let notesEtAlertes = document.querySelectorAll('div.note, div.alert');
 ```
+
