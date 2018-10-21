@@ -1,9 +1,36 @@
 # Accéder aux éléments
 
+> La variable `document` correspond au "root element" l'élément `<html>`
+
+
+
 ## Accéder aux éléments du DOM
 
+### Récupérer un élément par son `id`
+
 ```javascript
-// Renvoie l'élément identifier avec "menu" <nav id="menu">...</nav>
+const menuPrincipal = document.getElementById('menu');
+```
+
+
+
+### document.getElementById 
+
+Récupérer un élément par son `id`
+
+```javascript
+// Renvoie l'élément avec l'id "menu" <nav id="menu">...</nav>
+const menuPrincipal = document.getElementById('menu');
+```
+
+
+
+
+
+
+
+```javascript
+// Renvoie l'élément avec l'id "menu" <nav id="menu">...</nav>
 const menuPrincipal = document.getElementById('menu');
 
 // Renvoie un tableau de tous les éléments du document appartenant à la classe rouge
@@ -15,8 +42,6 @@ let elementsRougesGras = monElement.getElementsByClassName('rouge gras');
 let elementsDeListes = document.getElementsByTagName('li');
 // Renvoie un tableau des éléments <strong> enfants de monElement
 let taches = monElement.getElementsByTagName('strong');
-
-// Returns the first element within the document that matches the specified group of selectors.
 
 // Renvoie le premier élément du document correspondant à l'un des sélecteur CSS 'img.rouge, img-jaune' (images appartenant à la classe rouge OU jaune)
 const imageRouge = document.querySelector('img.rouge, img.jaune');
