@@ -1,7 +1,5 @@
 # Accéder aux éléments
 
-
-
 On peut rechercher, accéder, aux éléments du document de deux manières :
 
 1. En recherchant **dans tous le document**, en utilisant l'objet `document`.
@@ -11,9 +9,7 @@ La deuxième méthode est plus efficace, puisqu'elle ne nécessite pas un parcou
 
 > L' objet `document` est un noeud de type `Element` et correspond à l'élément `<html>` de la page.
 
-
-
-## document.getElementById() 
+## document.getElementById\(\)
 
 Ne peut être appelée qu'avec l'objet `document`.
 
@@ -24,13 +20,11 @@ Renvoie un objet `Element` représentant l'élément dont l' `id` correspond à 
 const menuPrincipal = document.getElementById('menu');
 ```
 
-
-
-## Element.getElementsByClassName()
+## Element.getElementsByClassName\(\)
 
 Peut être appelée avec l'objet `document` ou un objet de type `Element`.
 
-Retourne un "tableau" (HTMLCollection) contenant une référence sur tous les éléments ayant les noms de classes passés en paramètre.
+Retourne un "tableau" \(HTMLCollection\) contenant une référence sur tous les éléments ayant les noms de classes passés en paramètre.
 
 ```javascript
 // Renvoie un tableau de tous les éléments du document
@@ -39,12 +33,10 @@ let elementsRouges = document.getElementsByClassName('rouge');
 
 // Renvoie un tableau de tous les enfants de l'élément spécifié
 // appartenant aux classes rouge ET gras
-let elementsRougesGras = monElement.getElementsByClassName('rouge gras'); 
+let elementsRougesGras = monElement.getElementsByClassName('rouge gras');
 ```
 
-
-
-https://jsfiddle.net/m0g9fvsh/
+{% embed url="https://codepen.io/fallinov/pen/BqPNjK?editors=1010\#code-area" %}
 
 
 
