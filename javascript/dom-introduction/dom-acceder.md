@@ -9,15 +9,11 @@ On peut rechercher, accéder, aux éléments du document de deux manières :
 
 La deuxième méthode est plus efficace, puisqu'elle ne nécessite pas un parcours complet du document.
 
-> L' objet `document` correspond à l'élément `<html>` du document.
+> L' objet `document` est un noeud de type `Element` et correspond à l'élément `<html>` de la page.
 
 
 
-## Méthodes d'accès aux éléments
-
-
-
-### document.getElementById() 
+## document.getElementById() 
 
 Ne peut être appelée qu'avec l'objet `document`.
 
@@ -30,7 +26,7 @@ const menuPrincipal = document.getElementById('menu');
 
 
 
-### Element.getElementsByClassName()
+## Element.getElementsByClassName()
 
 Peut être appelée avec l'objet `document` ou un objet de type `Element`.
 
