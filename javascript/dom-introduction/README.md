@@ -37,7 +37,7 @@ Ci-après le code source d'un document HTML et sa repésentation sous forme d'ar
 </html>
 ```
 
-![](../../.gitbook/assets/dom-arbre-nodal-petit%20%281%29.png)
+![](../../.gitbook/assets/dom-arbre-nodal.png)
 
 ## Et JavaScript dant tou ça ?
 
