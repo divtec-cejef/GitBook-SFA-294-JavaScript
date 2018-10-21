@@ -36,8 +36,7 @@ let elementsRouges = document.getElementsByClassName('rouge');
 let elementsRougesGras = monElement.getElementsByClassName('rouge gras');
 ```
 
-{% embed url="https://codepen.io/fallinov/embed/BqPNjK/?height=300&theme-id=26659&default-tab=js,resultundefined&editable=true" %}
-
+{% embed url="https://codepen.io/fallinov/pen/BqPNjK" %}
 
 
 
