@@ -13,11 +13,11 @@ La deuxième méthode est plus efficace, puisqu'elle ne nécessite pas un parcou
 
 Ne peut être appelée qu'avec l'objet `document`.
 
-Renvoie un objet `Element` représentant l'élément dont l' `id` correspond à la chaîne de caractères passée en paramètre.
+Renvoie **un objet `Element`** représentant l'élément dont l' **`id`** correspond à la chaîne de caractères passée en paramètre.
 
 ```javascript
 // Renvoie l'élément avec l'id "menu" <nav id="menu">...</nav>
-const menuPrincipal = document.getElementById('menu');
+const MENU = document.getElementById('menu');
 ```
 
 
@@ -26,7 +26,7 @@ const menuPrincipal = document.getElementById('menu');
 
 Peut être appelée avec l'objet `document` ou un objet de type `Element`.
 
-Retourne un "tableau" \(HTMLCollection\) contenant une référence sur tous les éléments ayant les noms de classes passés en paramètre.
+Retourne un **tableau** \(HTMLCollection\) contenant une référence sur tous les éléments ayant les **noms de classes** passés en paramètre.
 
 ```javascript
 // Renvoie un tableau de tous les éléments du document
@@ -46,7 +46,7 @@ let elementsRougesGras = monElement.getElementsByClassName('rouge gras');
 
 Peut être appelée avec l'objet `document` ou un objet de type `Element`.
 
-Retourne un "tableau" \(HTMLCollection\) contenant une référence sur tous les éléments portant le nom de balise donné passé en paramètre.
+Retourne un **tableau** \(HTMLCollection\) contenant une référence sur tous les éléments portant le **nom de balise** donné passé en paramètre.
 
 ```javascript
 // Renvoie un tableau de tous les éléments <li> du document
@@ -62,13 +62,20 @@ let taches = monElement.getElementsByTagName('strong');
 
 Peut être appelée avec l'objet `document` ou un objet de type `Element`.
 
-Retourne un "tableau" \(HTMLCollection\) contenant une référence sur tous les éléments portant le nom de balise donné passé en paramètre.
+Retourne **le premier `Element`** dans le document correspondant au **sélecteur CSS** - ou groupe de sélecteurs - spécifié(s), ou null si aucune correspondance n'est trouvée.
 
 ```javascript
+// Revoie le premier paragraphe du document
+const PREMIER_PARA = document.querySelector('p');
+
 // Renvoie le premier élément du document correspondant à l'un des sélecteur CSS 'img.rouge, img-jaune' (images appartenant à la classe rouge OU jaune)
-const imageRouge = document.querySelector('img.rouge, img.jaune');
-// Renvoie le premier élément enfants de monElement correspondant au sélecteur CSS 'input:checked' (checkboxes ou radios cochés)
-const elementCoche = monElement.querySelector('input:checked');
+const IMG_ROUGE_OU_JAUNE = document.querySelector('img.rouge, img.jaune');
+
+// Renvoie la valeur (.value) de l'élément coché (:checked) du groupe d'input "pays"
+let pays = document.querySelector('input[name="pays"]:checked').value;
+
+// Renvoi le champ texte "login" présent dans la div avec la classe ".panneau-utilisateur"
+const INPUT_LOGIN = document.querySelector('div.panneau-utilisateur input[name="login"]);
 ```
 
 
@@ -77,9 +84,15 @@ const elementCoche = monElement.querySelector('input:checked');
 
 Peut être appelée avec l'objet `document` ou un objet de type `Element`.
 
-Retourne un "tableau" \(HTMLCollection\) contenant une référence sur tous les éléments portant le nom de balise donné passé en paramètre.
+Retourne un **tableau** \(NodeList\) contenant une référence sur tous les éléments correspondent au **sélecteur CSS** - ou groupe de sélecteurs - spécifié(s).
 
 ```javascript
+// Retourne tous les paragraphes du document
+let paras = document.querySelectorAll("p");
+
+// Retourne tous les paragraphes présents dans une div avec la classe "article"
+let parasAticle = container.querySelectorAll("div.article > p");
+
 // Retourne un tableau de tous les éléments correspondants à l'un des sélecteurs CSS
 // Sélectionne les div appartenant à la classe "note" OU "alert"
 let notesEtAlertes = document.querySelectorAll('div.note, div.alert');
