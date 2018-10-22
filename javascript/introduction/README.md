@@ -90,6 +90,6 @@ Lorsqu'il rencontre un élément `<script>` il va charger tout son contenu avant
 
 L’inclusion des script à la fin du document va donc permettre :
 
-* D’afficher plus rapidement quelque chose à l’écran. On ne devra pas attendre la fin du chargement des scripts avant d'interpréter le HTML.
-* de manipuler les éléments HTML de la page car tous créés avant l'interprétation du script.
+* d'afficher rapidement quelque chose à l’écran. Le navigateur ne doit pas attendre le chargement des scripts avant d'interpréter le HTML.
+* de manipuler les éléments HTML de la page car tous créés avant l'importation du script.
 
