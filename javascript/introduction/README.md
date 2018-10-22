@@ -1,4 +1,6 @@
-# Introduction
+# Les bases
+
+## Introduction
 
 JavaScript est un **langage de script**, **multi-plateforme** et **orienté objet**.
 

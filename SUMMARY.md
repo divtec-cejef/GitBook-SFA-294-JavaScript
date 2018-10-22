@@ -8,7 +8,7 @@
 
 ## JavaScript
 
-* [Introduction](javascript/introduction/README.md)
+* [Les bases](javascript/introduction/README.md)
   * [Commentaires](javascript/introduction/commentaires.md)
   * [Variables et constantes](javascript/introduction/variables-et-constantes.md)
   * [Types de données](javascript/introduction/types.md)

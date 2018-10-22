@@ -19,3 +19,7 @@ window.onload = function() {
 };
 ```
 
+### Récupérer la cible `target`
+
+
+
