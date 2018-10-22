@@ -46,15 +46,15 @@ Le code JavaScript contenu dans les balises `<script>` est interprété instruct
 <p>Un petit paragraphe</p>
 ```
 
-> Bonne pratique : éviter de mélanger javaScript et HTML.
+> Bonne pratique : éviter de mélanger JavaScript et HTML.
 >
 > Un bon développeur séparera toujours le contenu \(HTML\), la mise en forme \(CSS\) et les traitements \(JavaScript\).
 
 ### Dans un fichier externe
 
-Généralement on écrit le code JavaScript dans des fichiers portant l'extentions `.js`. Exemple : `panier-achats.js`
+Généralement on écrit le code JavaScript dans des fichiers portant l'extension `.js`. Exemple : `panier-achats.js`
 
-Pour intégrer un fichier JavaScipt dans un document HTML on utilisera l'élément `<script>` et l'attribut `src`. Exemple :
+Pour intégrer un fichier JavaScript dans un document HTML on utilisera l'élément `<script>` et l'attribut `src`. Exemple :
 
 ```markup
 <script src="panier-achats.js"></script>
