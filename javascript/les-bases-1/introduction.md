@@ -25,15 +25,10 @@ Quelques généralités sur JavaScript :
 ![Console Google Chrome](../../.gitbook/assets/image-20181012172428367.png)
 
 1. Ouvrir la **console** de votre navigateur
-2. command + option + J \(Mac\) ou control + shift + J \(Windows, Linux, Chrome OS\) pour ouvrir la **console**.
+2. `command` + `option` + `J` \(Mac\) ou `control` + `shift` + `J` \(Windows, Linux, Chrome OS\) pour ouvrir la **console**.
 3. Sélectionner l'**onglet Console**.
-4. Écrire l'instruction suivante :
-
-   ```javascript
-   alert("Bonjour les apprentis en JS");
-   ```
-
-5. Valider l'instruction avec la touche ↵ Enter
+4. Écrire l'instruction suivante : `alert("Bonjour les apprentis en JS");`
+5. Valider l'instruction avec la touche `↵ Enter`
 
 ### Dans une fichier HTML
 
