@@ -49,5 +49,10 @@ for (let i = 0; i < fondue.length; ++i) {
 fondue.forEach(function(ingredient){
     alert(ingredient);
 });
+
+// Méthode for...of
+for (let ingredient of fondue) {
+  alert(ingredient);
+}
 ```
 
