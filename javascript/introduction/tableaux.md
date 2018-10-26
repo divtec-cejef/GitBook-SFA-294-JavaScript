@@ -52,7 +52,7 @@ fondue.forEach(function(ingredient){
 
 // Méthode for...of
 for (let ingredient of fondue) {
-  alert(ingredient);
+    alert(ingredient);
 }
 ```
 
