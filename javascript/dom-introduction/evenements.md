@@ -21,5 +21,21 @@ window.onload = function() {
 
 ### Récupérer la cible `target`
 
+en construction...
+
+### Ajouter un événement `click` à une liste d'éléments
+
+```javascript
+let boutons = document.querySelectorAll("button");
+
+for (const bouton of boutons) {
+   bouton.addEventListener("click", function(event) {
+      bouton.classList.toggle("rouge");
+   });
+}
+```
+
+{% embed url="https://codepen.io/fallinov/pen/WaPXEQ/" %}
+
 
 
