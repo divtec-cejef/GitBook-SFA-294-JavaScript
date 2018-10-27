@@ -8,8 +8,6 @@ Cependant, elle n'est **pas utile pour connaître le style de l'élément** en g
 
 > Pour obtenir les valeurs de toutes les propriétés CSS pour un élément, il faut utiliser [`window.getComputedStyle(element)`](modifier-le-style-css.md#window-getcomputedstyle-element).
 
-
-
 Pour ajouter ou modifier une déclaration CSS dans l'attribut style d'un élément on écrira
 
 ```javascript
@@ -46,7 +44,13 @@ for (let i = 0; i < intros.length; i = i + 1) {
 
 ## window.getComputedStyle\(element\)
 
-La méthode `window.getComputedStyle()` retourne un objet contenant la valeur calculée finale de toutes les propriétés CSS d'un élément. L'objet retourné est en **lecture seule**.
+La méthode `window.getComputedStyle()` retourne un objet contenant la valeur calculée finale de toutes les propriétés CSS d'un élément.
+
+{% hint style="danger" %}
+L'objet retourné est en **lecture seule**.
+{% endhint %}
+
+### Exemple
 
 ```javascript
 // Récupère #intro
