@@ -1,8 +1,15 @@
 # Modifier les contenus textes
 
+Il existe deux propriétés pour récupérer ou modifier le contenu d'un élément HTML :
+
+1. [`innerHTML`](dom-modifier-texte.md#innerhtml) : lecture ou modification au **format HTML** 
+2. [`innerText`](dom-modifier-texte.md#innertext) : lecture ou modification au **format texte brut**
+
+La méthode, [`insertAdjacentHTML()`](dom-modifier-texte.md#insertadjacenthtml-position-text) permet elle d'ajouter du HTML à différents emplacement d'un élément.
+
 ## `innerHTML`
 
-Récupère ou définit le contenu HTML d'un élément, de ses descendants.
+Récupère ou définit le contenu HTML d'un élément et de ses descendants.
 
 ```markup
 <p id="intro">
@@ -12,7 +19,7 @@ Récupère ou définit le contenu HTML d'un élément, de ses descendants.
 <script>
 // Récupère le paragraphe #intro
 let introPara = document.getElementById('intro');
-// Récupère le contenu HTML du paragraphe avec la propriété .innerHTML
+// Récupère le contenu HTML du paragraphe
 let contenu = introPara.innerHTML; //Je suis un <strong>joli</strong> paragraphe !
 
 // Remplacer le contenu HTML du paragraphe
@@ -27,7 +34,7 @@ introPara.innerHTML += ' <a href="http://kode.ch">Lien</a>';
 
 ## `innerText`
 
-Représente le contenu textuel, le rendu visuel d'un noeud. Il fait donc abstraction des balises HTML.
+Représente le contenu textuel, le rendu visuel d'un élément. Il fait donc abstraction des balises HTML.
 
 Utilisé en lecture, il renvoie une approximation du texte que l’utilisateur ou utilisatrice obtiendrait s’il ou elle sélectionnnait le contenu d’un élément avec le curseur, et le copiait dans le presse-papier.
 

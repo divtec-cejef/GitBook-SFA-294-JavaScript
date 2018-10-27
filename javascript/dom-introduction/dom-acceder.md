@@ -38,7 +38,7 @@ let elementsRouges = document.getElementsByClassName('rouge');
 let elementsRougesGras = monElement.getElementsByClassName('rouge gras');
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/BqPNjK" caption="" %}
+{% embed url="https://codepen.io/fallinov/pen/BqPNjK" caption="Exemple de récupération et parcours d\'éléments" %}
 
 ## Element.getElementsByTagName\(\)
 
