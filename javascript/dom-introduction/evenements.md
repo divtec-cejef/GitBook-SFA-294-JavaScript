@@ -151,28 +151,90 @@ button.rouge {
 
 {% embed url="https://codepen.io/fallinov/pen/WaPXEQ/" %}
 
+## L'objet `event`
 
+Un objet `event` est automatiquement passé comme premier paramètre de la fonction affectée à un événement. Pour le récupérer il suffit d'ajouter un paramètre à la fonction liée. Le nom de ce paramètre est libre mais on le nomme régulièrement `event` ou plus simplement `e`.
 
-## Récupérer la cible `target` d'un événement
+```markup
+<button>Clique moi !</button>
 
-```javascript
-// Produit une liste
-var ul = document.createElement('ul');
-document.body.appendChild(ul);
-
-var li1 = document.createElement('li');
-var li2 = document.createElement('li');
-ul.appendChild(li1);
-ul.appendChild(li2);
-
-function hide(e){
-  // e.target se réfère à l'élément <li> cliqué
-  // C'est différent de e.currentTarget qui doit faire référence au parent <ul> dans ce contexte
-  e.target.style.visibility = 'hidden';
-}
-
-// Attache l'écouteur à la liste
-// Il se déclenche pour chaque <li> clické
-ul.addEventListener('click', hide, false);
+<script>
+// Récupère le 1er boutons du document
+const BOUTON = document.querySelector("button");
+// Ajoute événement click avec une fonction avec paramètre event
+BOUTON.addEventListener("click", function (event) {
+  // Affiche le type d'événement envoyé
+  alert(event.type); // click
+});
+</script>
 ```
+
+{% embed url="https://codepen.io/fallinov/pen/PyLVjJ" %}
+
+### Récupérer la cible d'un événement
+
+On appelle "cible" l'objet ou 'élément qui a envoyé l'événement. Pour récupérer la cible on utiliser la propriété `target` de l'événement.
+
+```markup
+<button>Clique moi !</button>
+
+<script>
+// Récupère le 1er boutons du document
+const BOUTON = document.querySelector("button");
+// Ajoute événement click avec une fonction avec paramètre event
+BOUTON.addEventListener("click", function (event) {
+  // Récupère l'élément qui a envoyé l'événement, la cible
+  let cible = event.target;
+  // Modifie la taille du texte de la cible
+  cible.style.fontSize = "2em";
+  // Affiche le contenu texte de la cible
+  alert(cible.innerText); // Clique moi !
+});
+</script>
+```
+
+{% embed url="https://codepen.io/fallinov/pen/mzovXM" %}
+
+## Bubbling & Capturing
+
+Capture ? Bouillonnement ? De quoi parle-t-on ?
+
+Ces deux phases sont deux étapes distinctes de l'exécution d'un événement. La première, la **capture** \(_capture_ en anglais\), s'exécute avant le déclenchement de l'événement, tandis que la deuxième, le **bouillonnement** \(_bubbling_ en anglais\), s'exécute après que l'événement a été déclenché. Toutes deux permettent de définir le sens de propagation des événements.  
+
+
+![](../../.gitbook/assets/image%20%284%29.png)
+
+```markup
+<div id="div1">
+  <p id="p1">I am Bubbling</p>
+</div><br>
+
+<div id="div2">
+  <p id="p2">I am Capturing.</p>
+</div>
+
+<script>
+document.getElementById("p1").addEventListener("click", function() {
+    alert("You clicked the P element!");
+}, false);
+
+document.getElementById("div1").addEventListener("click", function() {
+    alert("You clicked the DIV element!");
+}, false);
+
+document.getElementById("p2").addEventListener("click", function() {
+    alert("You clicked the P element!");
+}, true);
+
+document.getElementById("div2").addEventListener("click", function() {
+    alert("You clicked the DIV element!");
+}, true);
+</script>
+```
+
+{% embed url="https://codepen.io/fallinov/pen/zmbeev?editors=1111" %}
+
+## A lire...
+
+{% embed url="https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating\_and\_triggering\_events" %}
 
