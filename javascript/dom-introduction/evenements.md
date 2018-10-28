@@ -2,22 +2,22 @@
 
 ## Affecter une fonction à un événement
 
-Il existe deux manières d'affecter une fonction à l'événement d'un objet.
+Il existe différentes manières d'affecter une fonction à l'événement d'un objet.
 
-1. Utiliser les **gestionnaires d'événements "on-event"**
-2. Créer des écouteur d'événement \(listener\) avec **la méthode `addEventListener()`** 
+* Utiliser les [**gestionnaires d'événements "on-event"**](evenements.md#on-event) ****👎 
+* Créer des écouteur d'événement \(listener\) avec [**la méthode `addEventListener()`**](evenements.md#addeventlistener) 👍 
 
 {% hint style="success" %}
-Le meilleure moyen est souvent `addEventListener()`
+**Le meilleure moyen est souvent `addEventListener()`**
 
-Avec la méthode "on-event", chaque objet peut avoir qu'un seul gestionnaire d'événement pour un événement donné. C'est pourquoi `addEventListener()` est souvent le meilleur moyen d'être averti des événements.
+Avec la méthode "on-event", chaque objet ne peut avoir qu'un seul gestionnaire d'événement pour un événement donné. C'est pourquoi `addEventListener()` est souvent le meilleur moyen d'être averti des événements.
 {% endhint %}
 
 ### On-event
 
 Les gestionnaires d'événements "on-event" sont nommées selon l'événement lié : `onclick`, `onkeypress`, `onfocus`, `onsubmit`, etc. 
 
-Liste des gestionnaires d'événements : [https://www.w3schools.com/tags/ref\_eventattributes.asp](https://www.w3schools.com/tags/ref_eventattributes.asp)
+🔗 Liste des gestionnaires d'événements : [https://www.w3schools.com/tags/ref\_eventattributes.asp](https://www.w3schools.com/tags/ref_eventattributes.asp)
 
 On peut scpécifier un "on-event" pour un événement particulier de différentes manières :
 
@@ -50,7 +50,7 @@ document.querySelector('button').onclick = () => alert("Plutôt embrasser un Woo
 
 ### addEventListener\(\)
 
-Liste des événements JavaScript : [https://www.w3schools.com/jsref/dom\_obj\_event.asp](https://www.w3schools.com/jsref/dom_obj_event.asp)
+🔗 Liste des événements JavaScript : [https://www.w3schools.com/jsref/dom\_obj\_event.asp](https://www.w3schools.com/jsref/dom_obj_event.asp)
 
 
 
