@@ -1,5 +1,55 @@
 # Evénements
 
+## Lier une fonction à un événement
+
+Il existe deux manières d'affecter une fonction à l'événement d'un élément.
+
+1. Utiliser les **gestionnaires d'événements "on-event"**
+2. Créer des écouteur d'événement \(listener\) avec **la méthode `addEventListener()`** 
+
+Avec la première méthode, chaque objet ne peut avoir qu'un seul gestionnaire d'événement pour un événement donné. C'est pourquoi `addEventListener()` est souvent le meilleur moyen d'être averti des événements.
+
+### Gestionnaires d'événements "on-event"
+
+Les gestionnaires d'événements "on-event" sont nommées selon l'événement lié : `onclick`, `onkeypress`, `onfocus`, `onsubmit`, etc. 
+
+Liste des gestionnaires d'événements : [https://www.w3schools.com/tags/ref\_eventattributes.asp](https://www.w3schools.com/tags/ref_eventattributes.asp)
+
+On peut scpécifier un "on-event" pour un événement particulier de différentes manières :
+
+* Avec un attribut HTML : `<button onclick="bonjour()">`
+* En utilisant la propriété correspondante en JavaScript : `Element.onclick = bonjour;`
+
+{% hint style="warning" %}
+En JavaScript, afin d'affecter la fonction `bonjour()` et non son résultat, on n'ajoute pas les parenthèses après le nom de la fonction.
+
+* `Element.onclick = bonjour;`  affecte la fonction `bonjour()`.
+* `Element.onclick = bonjour();`  affecte le résultat de la fonction `bonjour()`.
+{% endhint %}
+
+```javascript
+function citationLeia() {
+  alert("Plutôt embrasser un Wookie");
+}
+
+// Affecte la fonction citationLeia() au click du bouton
+document.querySelector('button').onclick = citationLeia;
+
+// Variante avec fonction anonyme
+document.querySelector('button').onclick = function() {
+  alert("Plutôt embrasser un Wookie");
+};
+
+// Variante avec fonction fléchée (arrow function)
+document.querySelector('button').onclick = () => alert("Plutôt embrasser un Wookie");
+```
+
+{% embed url="https://codepen.io/fallinov/pen/wYOxKN?editors=101" caption="Gestion d\'événements \"on-event\"" %}
+
+### addEventListener\(\)
+
+
+
 ```javascript
 let newElement = document.getElementsByTagName('h1');
 

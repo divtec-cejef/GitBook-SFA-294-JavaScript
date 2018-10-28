@@ -2,7 +2,7 @@
 description: 'Ajouter, modifier, vérifier, alterner des classes CSS'
 ---
 
-# Classes CSS
+# Modifier les classes CSS
 
 ```javascript
 // Récupère l'élément #menu
