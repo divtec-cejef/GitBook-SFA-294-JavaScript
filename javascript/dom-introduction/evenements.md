@@ -1,15 +1,19 @@
 # Evénements
 
-## Lier une fonction à un événement
+## Affecter une fonction à un événement
 
-Il existe deux manières d'affecter une fonction à l'événement d'un élément.
+Il existe deux manières d'affecter une fonction à l'événement d'un objet.
 
 1. Utiliser les **gestionnaires d'événements "on-event"**
 2. Créer des écouteur d'événement \(listener\) avec **la méthode `addEventListener()`** 
 
-Avec la première méthode, chaque objet ne peut avoir qu'un seul gestionnaire d'événement pour un événement donné. C'est pourquoi `addEventListener()` est souvent le meilleur moyen d'être averti des événements.
+{% hint style="success" %}
+Le meilleure moyen est souvent `addEventListener()`
 
-### Gestionnaires d'événements "on-event"
+Avec la méthode "on-event", chaque objet peut avoir qu'un seul gestionnaire d'événement pour un événement donné. C'est pourquoi `addEventListener()` est souvent le meilleur moyen d'être averti des événements.
+{% endhint %}
+
+### On-event
 
 Les gestionnaires d'événements "on-event" sont nommées selon l'événement lié : `onclick`, `onkeypress`, `onfocus`, `onsubmit`, etc. 
 
@@ -44,9 +48,9 @@ document.querySelector('button').onclick = function() {
 document.querySelector('button').onclick = () => alert("Plutôt embrasser un Wookie");
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/wYOxKN?editors=101" caption="Gestion d\'événements \"on-event\"" %}
-
 ### addEventListener\(\)
+
+Liste des événements JavaScript : [https://www.w3schools.com/jsref/dom\_obj\_event.asp](https://www.w3schools.com/jsref/dom_obj_event.asp)
 
 
 
@@ -69,11 +73,7 @@ window.onload = function() {
 };
 ```
 
-### Récupérer la cible `target`
-
-en construction...
-
-### Ajouter un événement `click` à une liste d'éléments
+## Ajouter un événement à une liste d'éléments
 
 {% code-tabs %}
 {% code-tabs-item title="main.js" %}
@@ -121,4 +121,27 @@ button.rouge {
 {% embed url="https://codepen.io/fallinov/pen/WaPXEQ/" %}
 
 
+
+## Récupérer la cible `target` d'un événement
+
+```javascript
+// Produit une liste
+var ul = document.createElement('ul');
+document.body.appendChild(ul);
+
+var li1 = document.createElement('li');
+var li2 = document.createElement('li');
+ul.appendChild(li1);
+ul.appendChild(li2);
+
+function hide(e){
+  // e.target se réfère à l'élément <li> cliqué
+  // C'est différent de e.currentTarget qui doit faire référence au parent <ul> dans ce contexte
+  e.target.style.visibility = 'hidden';
+}
+
+// Attache l'écouteur à la liste
+// Il se déclenche pour chaque <li> clické
+ul.addEventListener('click', hide, false);
+```
 
