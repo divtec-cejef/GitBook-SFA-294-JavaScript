@@ -1,5 +1,30 @@
 # Evénements
 
+Les événements permettent de déclencher une fonction pour une action spécifique, comme par exemple le clic ou le survol d'un élément, le chargement du document HTML ou encore l'envoi d'un formulaire.
+
+## Principaux événements du DOM
+
+| Evénement DOM | Description |
+| :--- | :--- |
+| `click` | Bouton de la souris enfoncé puis relâché sur un élément. |
+| `dblclick` | Deux foix l'événement `click` |
+| `mouseover` | Souris au-dessus d'un élément. |
+| `mouseout` | Souris sort d'un élément. |
+| `mousedown` | Bouton de la souris enfoncé, pas relâché, sur un élément. |
+| `mouseup` | Bouton de la souris relâché sur un élément. |
+| `mousemove` | Souris en mouvement au-dessus d'un élément. |
+| `keydown` | Touche clavier enfoncée, pas relâchée, sur un élément. |
+| `keyup` | Touche clavier relâchée sur un élément. |
+| `keypress` | Touche clavier enfoncée et relâchée sur un élément. |
+| `focus` | L'élément reçoit, gagne, le focus.   Quand un objet devient l'élément actif du document. |
+| `blur` | Elément perd le focus. |
+| `change` | Changement de a valeur d'un élément de formulaire. |
+| `select` | Sélection du texte d'un élémen, mis en srubrillance. |
+| `submit` | Envoi d'un formulaire |
+| `reset` | Réinitialisation d'un formulaire |
+
+ 🔗 Liste complète des événements : [https://www.w3schools.com/jsref/dom\_obj\_event.asp](https://www.w3schools.com/jsref/dom_obj_event.asp)
+
 ## Affecter une fonction à un événement
 
 Il existe différentes manières d'affecter une fonction à l'événement d'un objet.
@@ -51,6 +76,12 @@ document.querySelector('button').onclick = () => alert("Plutôt embrasser un Woo
 ### addEventListener\(\)
 
 🔗 Liste des événements JavaScript : [https://www.w3schools.com/jsref/dom\_obj\_event.asp](https://www.w3schools.com/jsref/dom_obj_event.asp)
+
+La méthode `addEventListener()` permet de définir une fonction à appeler chaque fois que l'événement spécifié est détecté sur l'élément ciblé.
+
+```typescript
+ElementCible.addEventListener("nomEvenement", nomFonction);
+```
 
 
 
