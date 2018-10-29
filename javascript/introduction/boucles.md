@@ -29,6 +29,17 @@ for (let i = 0; i < 10; ++i) {
 }
 ```
 
+## For..of
+
+```javascript
+let courses = ["pain", "fromage", "jambon"];
+
+for(let ingredient of courses) {
+    console.log(ingredient);
+}
+// pain fromage jambon
+```
+
 ## For...in
 
 L'**instruction for...in** permet d'itérer sur les propriétés d'un objet.

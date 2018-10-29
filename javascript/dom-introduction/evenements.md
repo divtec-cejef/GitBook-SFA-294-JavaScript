@@ -111,7 +111,7 @@ window.onload = function() {
 ```javascript
 let boutons = document.querySelectorAll("button");
 
-for (const bouton of boutons) {
+for (let bouton of boutons) {
    bouton.addEventListener("click", function(event) {
       bouton.classList.toggle("rouge");
    });
