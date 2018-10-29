@@ -37,22 +37,55 @@ monTab.splice(3, 2); //Reourne et supprime le 4e et 5e élément
 
 ## Parcourir un tableau
 
+### **instruction** for
+
 ```javascript
-let fondue = ["fromage", "pain", "kirsh"];
+let animaux = [ '🐔', '🐷', '🐑', '🐇'];
 
 // Boucle for classique (éviter i++ et utiliser ++i ou i+=1)
-for (let i = 0; i < fondue.length; ++i) {
-    alert(fondue[i]);
+for (let i = 0; i < animaux.length; ++i) {
+    console.log(animaux[i]);
 }
+
+// 🐔
+// 🐷
+// 🐑
+// 🐇
+```
+
+### **instruction** for...of
+
+```javascript
+let animaux = ["🐔", "🐷", "🐑", "🐇"];
+
+// Itération avec for..of
+for (let animal of animaux) {
+   console.log(animal);
+}
+
+// 🐔
+// 🐷
+// 🐑
+// 🐇
+```
+
+### Méthode forEach\(\)
+
+```javascript
+let animaux = ["🐔", "🐷", "🐑", "🐇"];
 
 // Méthode forEach avec fontion anonyme (depsui ES5 seulement)
-fondue.forEach(function(ingredient){
-    alert(ingredient);
+animaux.forEach(function(animal) {
+   console.log(animal);
 });
 
-// Méthode for...of
-for (let ingredient of fondue) {
-    alert(ingredient);
-}
+// 🐔
+// 🐷
+// 🐑
+// 🐇
 ```
+
+### Exemples
+
+{% embed url="https://codepen.io/fallinov/pen/BqEJgp?editors=0012" %}
 
