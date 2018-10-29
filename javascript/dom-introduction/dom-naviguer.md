@@ -13,7 +13,14 @@ let enfants = monElement.childNodes;
 
 **Problème** :  `Element.lastChild` retourne le dernier noeud fils d'un élément. Mais ce derniers fils n'est pas forcément un élément HTML.
 
-**Solution** :  `Element.querySelector(":last-child")`
+**Solutions** :  
+
+```javascript
+// lastElementChild, ne fonctionne pas avec document
+var dernier = Element.lastElementChild; 
+// Ou avec querySelector
+var dernier = Element.querySelector(":last-child")
+```
 
 ## Récupérer le parent d'un élément
 
