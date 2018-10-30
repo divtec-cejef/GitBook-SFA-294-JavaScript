@@ -63,7 +63,9 @@ Pour intégrer un fichier JavaScript dans un document HTML on utilisera l'élém
 
 #### Ou placer la balise `<script>`
 
-Il est fortement recommandé de placer ses scripts à la fin du document juste avant la balise de fermeture `</body>`.
+On peut placer la balise `<script>` dans l'entête du document `<head>` ou dans le corpts `<body>`.
+
+La meilleure pratique consite a placer ses scripts à la fin du document juste avant la balise de fermeture du corps du document `</body>`.
 
 ```markup
 <!DOCTYPE html>
@@ -81,7 +83,7 @@ Il est fortement recommandé de placer ses scripts à la fin du document juste a
 </html>
 ```
 
-> Mais pourquoi à la fin et pas au début du document, dans l'entête `<head>` ?
+#### Pourquoi à la fin du et pas au début du document, dans l'entête  ?
 
 Le navigateur interprète le code de la page et résout les éléments un par un.
 
@@ -89,6 +91,6 @@ Lorsqu'il rencontre un élément `<script>` il va charger tout son contenu avant
 
 L’inclusion des script à la fin du document va donc permettre :
 
-* d'afficher rapidement quelque chose à l’écran. Le navigateur ne doit pas attendre le chargement des scripts avant d'interpréter le HTML.
+* d'afficher rapidement quelque chose à l’écran. Le navigateur ne doit pas attendre le chargement des scripts avant d'interpréter les autres éléments HTML.
 * de manipuler les éléments HTML de la page car tous créés avant l'importation du script.
 

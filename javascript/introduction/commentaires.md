@@ -24,8 +24,8 @@ de commentaires
 ```javascript
 /**
  * Additionne deux nombres.
- * @param {number} x - nombre a.
- * @param {number} y - nombre b.
+ * @param {number} a - nombre a.
+ * @param {number} b - nombre b.
  * @return {number} résultat de a + b.
  */
 function add(a, b) {
@@ -36,7 +36,7 @@ function add(a, b) {
 ## Entête de classe
 
 ```javascript
-/** Classe représeetant un point. */
+/** Classe représentant un point. */
 class Point {
     /**
      * Crée un point.
