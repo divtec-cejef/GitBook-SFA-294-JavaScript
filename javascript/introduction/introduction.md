@@ -1,8 +1,6 @@
 # Introduction
 
-
-
-JavaScript est un **langage de script**, **multi-plateforme** et **orienté objet**.
+JavaScript est un **langage de script**, **multiplateforme** et **orienté objet**.
 
 C'est un **langage léger** qui **doit faire partie d'un environnement hôte** \(un navigateur web par exemple\) pour qu'il puisse être **utilisé sur les objets de cet environnement**.
 
