@@ -2,13 +2,39 @@
 
 ## Convertir des nombres en chaines de caractères
 
-The global method **String\(\)** can convert numbers to strings.
+### String\(\)
 
-It can be used on any type of numbers, literals, variables, or expressions:
+La méthode globale `String()` permet de convertir des nombres en chaines.
 
-### Example
+```javascript
+let total = 123.56;
+String(total); // "123.56"
+String(123); // "123"
+String(100 + 23); // "123"
+```
 
-String\(x\) // returns a string from a number variable x String\(123\) // returns a string from a number literal 123 String\(100 + 23\) // returns a string from a number from an expression
+### .toString\(\)
+
+Autre solution utiliser la méthode `.toString()`.
+
+```javascript
+let total = 123.56;
+total.toString(); // "123.56"
+123.toString(); // "123"
+(100 + 23).toString(); // "123"
+```
+
+### Opérateur + concaténation
+
+En utilisant l'opérateur `+` de concaténation, il suffit d'ajouter une chaine au nombre.
+
+```javascript
+let total = 123.56;
+total + ""; // "123.56"
+100 + "123"; // "100123"
+100 + 23 + ""; //"123"
+50 + " CHF"; // "50 CHF"
+```
 
 ## Convertir une chaîne de caractères en nombre
 
@@ -39,12 +65,11 @@ parseFloat("33,1045"); //33 - la virgule n'est pas prise en compte
 
 > Une bonne pratique pour `parseInt()` est de toujours inclure l'argument qui indique dans quelle base numérique le résultat doit être renvoyé \(base 2, base 10...\).
 
-### L'opérateur + unaire
+### Opérateur + unaire
 
 Une autre méthode pour récupérer un nombre à partir d'une chaîne de caractères consiste à utiliser l'opérateur `+`.
 
 ```javascript
-"1.1" + "1.1" = "1.11.1"
 +"1.1" = 1.1 // fonctionne seulement avec le + unaire
 ```
 

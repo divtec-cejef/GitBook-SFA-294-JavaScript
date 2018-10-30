@@ -10,7 +10,7 @@
 JavaScript est **sensible à la casse** : `NomDeFamille` ≠ `nomdefamille` 
 {% endhint %}
 
-## Création
+## Déclarer des variables et constantes
 
 ```javascript
 // Variables
@@ -30,7 +30,7 @@ On peut initialiser une variable avec un entier puis lui affecter une chaîne de
 
 {% page-ref page="types.md" %}
 
-### Instruction `var` ou `let`
+### Variables avec `var` ou `let` ?
 
 Il existe deux instructions pour déclarer des variables depuis la sixième édition du standard ECMAScript \(ES6 en abrégé\).
 

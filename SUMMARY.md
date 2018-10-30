@@ -9,6 +9,7 @@
 ## JavaScript
 
 * [Les bases](javascript/introduction/README.md)
+  * [Introduction](javascript/introduction/introduction.md)
   * [Commentaires](javascript/introduction/commentaires.md)
   * [Variables et constantes](javascript/introduction/variables-et-constantes.md)
   * [Types de données](javascript/introduction/types.md)
@@ -20,6 +21,7 @@
   * [Tableaux](javascript/introduction/tableaux.md)
   * [Timers](javascript/introduction/timers.md)
 * [Manipuler une page Web via le DOM](javascript/dom-introduction/README.md)
+  * [Introduction](javascript/dom-introduction/introduction.md)
   * [Accéder aux éléments](javascript/dom-introduction/dom-acceder.md)
   * [Modifier les contenus textes](javascript/dom-introduction/dom-modifier-texte.md)
   * [Modifier le style CSS](javascript/dom-introduction/modifier-le-style-css.md)
