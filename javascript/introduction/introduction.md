@@ -20,9 +20,9 @@ Quelques généralités sur JavaScript :
 
 ## Ou écrire du JavaScript
 
-### Dans la console d'un navigateur
+![Console JavaScript de Firefox](../../.gitbook/assets/133a-js-firefox-console.gif)
 
-![Ecrire du JavaScript dans la console Firefox](../../.gitbook/assets/133a-js-console.gif)
+### Dans la console d'un navigateur
 
 1. Ouvrir la **console** de votre navigateur `command` + `option` + `J` \(Mac\) ou `control` + `shift` + `J` \(Windows, Linux, Chrome OS\) pour ouvrir la **console**.
 2. Sélectionner l'**onglet Console**.
