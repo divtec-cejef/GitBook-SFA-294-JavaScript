@@ -22,13 +22,12 @@ Quelques généralités sur JavaScript :
 
 ### Dans la console d'un navigateur
 
-![Console Google Chrome](../../.gitbook/assets/image-20181012172428367.png)
+![Ecrire du JavaScript dans la console Firefox](../../.gitbook/assets/133a-js-console.gif)
 
-1. Ouvrir la **console** de votre navigateur
-2. `command` + `option` + `J` \(Mac\) ou `control` + `shift` + `J` \(Windows, Linux, Chrome OS\) pour ouvrir la **console**.
-3. Sélectionner l'**onglet Console**.
-4. Écrire l'instruction suivante : `alert("Bonjour les apprentis en JS");`
-5. Valider l'instruction avec la touche `↵ Enter`
+1. Ouvrir la **console** de votre navigateur `command` + `option` + `J` \(Mac\) ou `control` + `shift` + `J` \(Windows, Linux, Chrome OS\) pour ouvrir la **console**.
+2. Sélectionner l'**onglet Console**.
+3. Écrire l'instruction suivante : `alert("Bonjour les apprentis en JS");`
+4. Valider l'instruction avec la touche `↵ Enter`
 
 ### Dans une fichier HTML
 
@@ -46,9 +45,11 @@ Le code JavaScript contenu dans les balises `<script>` est interprété instruct
 <p>Un petit paragraphe</p>
 ```
 
-> Bonne pratique : éviter de mélanger JavaScript et HTML.
->
-> Un bon développeur séparera toujours le contenu \(HTML\), la mise en forme \(CSS\) et les traitements \(JavaScript\).
+{% hint style="success" %}
+**Eviter de mélanger JavaScript et HTML.**
+
+Un bon développeur séparera toujours le contenu \(HTML\), la mise en forme \(CSS\) et les traitements \(JavaScript\).
+{% endhint %}
 
 ### Dans un fichier externe
 
