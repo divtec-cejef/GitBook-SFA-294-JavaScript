@@ -1,4 +1,4 @@
-# Actions des formulaires
+# Envoi des formulaires
 
 ## Envoyer et réinitialiser un formulaire
 
@@ -15,9 +15,9 @@ FORMULAIRE.submit();
 FORMULAIRE.reset();
 ```
 
-## Événements `submit` 
+## Événement `submit` 
 
-L'événement `submit` permet de déclencher une fonction lors de l'envoi du formulaire.
+L'événement `submit` permet de déclencher une fonction lors de l'**envoi du formulaire**.
 
 ```javascript
 const FORMULAIRE = document.querySelector('form');
