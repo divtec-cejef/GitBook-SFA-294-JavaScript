@@ -32,7 +32,7 @@
   * [Evénements](javascript/dom-introduction/evenements.md)
   * [Naviguer dans le DOM](javascript/dom-introduction/dom-naviguer.md)
 * [Formulaires](javascript/formulaires/README.md)
-  * [Capter l'envoi du formulaire](javascript/formulaires/capter-lenvoi-du-formulaire.md)
+  * [Actions des formulaires](javascript/formulaires/capter-lenvoi-du-formulaire.md)
   * [Récupérer la valeur des champs](javascript/formulaires/recuperer-la-valeur-des-champs.md)
   * [Valider les saisies utilisateurs](javascript/formulaires/valider-les-saisies-utilisateurs.md)
 * [JavaScript Moderne](javascript/javascript-moderne/README.md)
