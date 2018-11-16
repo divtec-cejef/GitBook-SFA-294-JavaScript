@@ -2,7 +2,9 @@
 
 ## Champs de saisie
 
-Pour récupérer les valeurs entrée par le visiteur dans un champs de saisie \(`input`, `textarea`\), on utilise la propriété `.value`.
+### Propriété `value`
+
+Pour récupérer la valeur entrée par le visiteur dans un champs de saisie texte \(`input`, `textarea`\), on utilise la propriété `.value`.
 
 ```javascript
 monElement.value;
@@ -53,15 +55,23 @@ LIS_PAYS.addEventListener("change", function() {
 </script>
 ```
 
+## Cases à cocher
+
+### Propriété checked
+
+ 
+
+```javascript
+monElement.checked; // Retourne true ou false
+```
+
+### Groupe de cases à cocher
+
+
+
 ## Groupe de boutons radios
 
 Pour récupérer la valeur de l'élément sélectionné dans un groupe de bouton radio, il faut savoir quel bouton du groupe est coché.
 
 ### Propriété checked
-
- entrée par le visiteur dans un champs de saisie \(`input`, `textarea`\), on utilise la propriété `.value`.
-
-```javascript
-monElement.value;
-```
 
