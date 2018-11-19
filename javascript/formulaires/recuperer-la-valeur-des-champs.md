@@ -102,6 +102,12 @@ var casesCochées = document.querySelectorAll(
    );
 ```
 
+{% hint style="warning" %}
+La variable qui contient le résultat du `querySelectorAll` n'est pas "dynamique".
+
+Si l'on coche une nouvelle case, elle ne s'ajoutera pas automatiquement, il faudra refaire un `querySelectorAll` pour mettre à jour le contenu de la variable.
+{% endhint %}
+
 ### Exemple
 
 ```markup
@@ -138,6 +144,8 @@ FORMULAIRE.addEventListener("submit", function(event) {
 });
 </script>
 ```
+
+{% embed url="https://codepen.io/fallinov/pen/mQwoYY?editors=1011" %}
 
 ## Groupe de boutons radios
 
