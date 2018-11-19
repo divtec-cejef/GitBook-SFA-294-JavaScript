@@ -202,7 +202,7 @@ Capture ? Bouillonnement ? De quoi parle-t-on ?
 Ces deux phases sont deux étapes distinctes de l'exécution d'un événement. La première, la **capture** \(_capture_ en anglais\), s'exécute avant le déclenchement de l'événement, tandis que la deuxième, le **bouillonnement** \(_bubbling_ en anglais\), s'exécute après que l'événement a été déclenché. Toutes deux permettent de définir le sens de propagation des événements.  
 
 
-![](../../.gitbook/assets/image%20%284%29.png)
+![](../../.gitbook/assets/image%20%285%29.png)
 
 ```markup
 <div id="div1">

@@ -19,7 +19,7 @@ En JavaScript deux règles importantes concernant le CSS :
 * les **valeurs sont toujours des chaines de caractères** `Element.style.padding = "4px"`. 
 * les traits d'union `-` des **propriétés CSS composées de plusieurs mots-clés** comme `border-color`, sont remplacés par une **camélisation** `borderColor`.
 
-![Cam&#xE9;lisation des propri&#xE9;t&#xE9;s CSS](../../.gitbook/assets/image.png)
+![Cam&#xE9;lisation des propri&#xE9;t&#xE9;s CSS](../../.gitbook/assets/image%20%281%29.png)
 
 Ci-après, quelques exemples de déclaration CSS et leur équivalence en JavaScript:
 
