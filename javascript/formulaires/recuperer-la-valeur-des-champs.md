@@ -156,5 +156,43 @@ Pour récupérer la valeur du radio sélectionné dans un groupe, la meilleure m
 document.querySelector('[name="couleur"]:checked').value;
 ```
 
+### Exemple
 
+```markup
+<form action="https://kode.ch/getpost/" method="post">
+   <input type="radio" name="genre" id="h" value="Homme">
+   <label for="h">Homme</label>
+
+   <input type="radio" name="genre" id="f" value="Femme">
+   <label for="f">Femme</label>
+
+   <button>Envoyer</button>
+</form>
+
+<script>
+// 1er formulaire du document
+const FORMULAIRE = document.querySelector("form");
+
+// Evénement submit => Lors de l'envoi du formulaire
+FORMULAIRE.addEventListener("submit", function(event) {
+    // Désactive l'envoi du formulaire
+   event.preventDefault();
+   
+   // Radio coché dans le groupe genre
+   let genre = document.querySelector(
+      '[name="genre"]:checked'
+   );
+   
+   // Test si un genre est coché
+   if(genre === null) {
+      alert("Sélectionner un genre !");
+      return;
+   }
+   
+   alert(genre.value);   
+});
+</script>
+```
+
+{% embed url="https://codepen.io/fallinov/pen/mQwoYY?editors=1000" %}
 
