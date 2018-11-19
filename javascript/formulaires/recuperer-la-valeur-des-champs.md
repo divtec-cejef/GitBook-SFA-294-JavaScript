@@ -98,7 +98,12 @@ FORMULAIRE.addEventListener('submit', function(event){
 
 ## Groupe de boutons radios
 
-Pour récupérer la valeur de l'élément sélectionné dans un groupe de bouton radio, il faut savoir quel bouton du groupe est coché.
+Pour récupérer la valeur du radio sélectionné dans un groupe, la meilleure méthode est d'utiliser `querySelector` et la puissance des sélecteurs CSS, pour récupérer le premier radio coché  `:checked` du groupe `[name="nomGroupe"]` .
 
-### Propriété checked
+```javascript
+// Récupère la valeur du radio coché dans le groupe "couleur"
+document.querySelector('[name="couleur"]:checked').value;
+```
+
+
 
