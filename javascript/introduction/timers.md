@@ -20,8 +20,12 @@ window.clearTimeout(timer);
 ### Exemple
 
 ```markup
-<button>Affiche un alerte après 3 secondes...</button>
-<button>Annuler l'affichage</button>
+<button onclick="startBonjour();">
+  Affiche un alerte après 3 secondes...
+</button>
+<button onclick="stopBonjour();">
+  Annuler l'affichage
+</button>
 
 <script>
 let timerBonjour;
@@ -37,11 +41,6 @@ function startBonjour() {
 function stopBonjour() {
   window.clearTimeout(timerBonjour);
 }
-
-// Affectation des fonctions aux boutons
-boutons = document.querySelectorAll("button");
-boutons[0].addEventListener("click", startBonjour);
-boutons[1].addEventListener("click", stopBonjour);
 </script>
 ```
 
