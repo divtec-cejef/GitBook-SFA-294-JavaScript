@@ -102,6 +102,43 @@ var casesCochées = document.querySelectorAll(
    );
 ```
 
+### Exemple
+
+```markup
+<form action="https://kode.ch/getpost/" method="post">
+   <input type="checkbox" name="couleurs[]" id="rouge" value="rouge">
+   <label for="rouge">Rouge</label>
+
+   <input type="checkbox" name="couleurs[]" id="vert" value="vert">
+   <label for="vert">Vert</label>
+
+   <input type="checkbox" name="couleurs[]" id="bleu" value="bleu">
+   <label for="bleu">Bleu</label>
+
+   <button>Envoyer</button>
+</form>
+
+<script>
+// 1er formulaire du document
+const FORMULAIRE = document.querySelector("form");
+
+// Evénement submit => Lors de l'envoi du formulaire
+FORMULAIRE.addEventListener("submit", function(event) {
+   event.preventDefault();
+   
+   // Cases cochée dans le groupe couleurs[]
+   var couleursCochées = document.querySelectorAll(
+      'input[name="couleurs[]"]:checked'
+   );
+
+   //Récupère la valeur des éléments cochés
+   for (let couleur of couleursCochées) {
+      console.log(couleur.value);
+   }
+});
+</script>
+```
+
 ## Groupe de boutons radios
 
 Pour récupérer la valeur du radio sélectionné dans un groupe, la meilleure méthode est d'utiliser `querySelector` et la puissance des sélecteurs CSS, pour récupérer le premier radio coché  `:checked` du groupe `[name="nomGroupe"]` .
