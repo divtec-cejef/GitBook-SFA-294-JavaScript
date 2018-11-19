@@ -1,4 +1,4 @@
-# Envoi des formulaires
+# Envoyer des formulaires
 
 ## Envoyer et réinitialiser un formulaire
 
@@ -44,19 +44,14 @@ FORMULAIRE.addEventListener('submit', function(event){
 
 ## Exemple
 
-{% code-tabs %}
-{% code-tabs-item title="index.html" %}
 ```markup
 <form action="https://kode.ch/getpost/" method="post">
    <label for="nom">Votre nom</label>
    <input type="text" id="nom" name="nom">
    <button>Envoyer</button>
 </form>
-```
-{% endcode-tabs-item %}
 
-{% code-tabs-item title="main.js" %}
-```javascript
+<script>
 // 1er formulaire du document
 const FORMULAIRE = document.querySelector('form');
 // Champ texte nom
@@ -76,9 +71,8 @@ FORMULAIRE.addEventListener('submit', function(event){
    // Envoie le formulaire
    FORMULAIRE.submit(); 
 });
+</script>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 {% embed url="https://codepen.io/fallinov/pen/mQwoYY?editors=1011" %}
 

@@ -28,7 +28,7 @@ L'événement `change` est souvent associé aux listes. Il se déclenche lorsque
 monElementListe.addEventListener("change", function() {...});
 ```
 
-#### Exemple
+### Exemple
 
 ```markup
 <select name="pays" id="pays">
@@ -59,13 +59,40 @@ LIS_PAYS.addEventListener("change", function() {
 
 ### Propriété checked
 
- 
+ La propritété `checked` vous permet de savoir si une case est cochée `true` ou non `false`
 
 ```javascript
 monElement.checked; // Retourne true ou false
 ```
 
-### Groupe de cases à cocher
+### Exemple
+
+```markup
+<form action="https://kode.ch/getpost/" method="post">
+   <input type="checkbox" id="copie" name="copie">
+   <label for="copie">Recevoir une copie</label>
+   <button>Envoyer</button>
+</form>
+
+<script>
+// 1er formulaire du document
+const FORMULAIRE = document.querySelector('form');
+// Case à cocher "copie"
+const CHK_COPIE = document.getElementById('copie');
+
+// Evénement submit => Lors de l'envoi du formulaire
+FORMULAIRE.addEventListener('submit', function(event){ 
+   // Si utilisateur n'a pas saisi de nom
+   if(CHK_COPIE.checked === true) {
+      alert("Vous recevrez un copie !");
+   }
+});
+</script>
+```
+
+{% embed url="https://codepen.io/fallinov/pen/mQwoYY?editors=1001" %}
+
+## Groupe de cases à cocher
 
 
 
