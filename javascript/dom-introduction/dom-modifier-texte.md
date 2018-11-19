@@ -32,6 +32,8 @@ introPara.innerHTML += ' <a href="http://kode.ch">Lien</a>';
 </script>
 ```
 
+{% embed url="https://codepen.io/fallinov/pen/KrypqZ?editors=1000" %}
+
 ## `innerText`
 
 Représente le contenu textuel, le rendu visuel d'un élément. Il fait donc abstraction des balises HTML.
@@ -54,6 +56,8 @@ console.log(introPara.innerText); // Je suis un joli paragraphe !
 console.log(introPara.innerHTML); // Je suis un <strong>joli</strong> paragraphe !
 </script>
 ```
+
+{% embed url="https://codepen.io/fallinov/pen/qQVdXG?editors=0010" %}
 
 ## `insertAdjacentHTML(position, text);`
 
@@ -102,4 +106,6 @@ liste2.insertAdjacentHTML('afterbegin', '<li>Nouveau premier fils de #liste2</li
 liste2.insertAdjacentHTML('beforeend', '<li>Nouveau dernier fils de #liste2</li>');
 </script>
 ```
+
+{% embed url="https://codepen.io/fallinov/pen/qQVdPz?editors=1000" %}
 
