@@ -94,7 +94,13 @@ FORMULAIRE.addEventListener('submit', function(event){
 
 ## Groupe de cases à cocher
 
+Pour récupérer les cases cochées d'un groupe, la meilleure méthode est d'utiliser `querySelector` et la puissance des sélecteurs CSS, pour récupérer toutes les cases cochées  `:checked` du groupe `[name="nomGroupe"]` .
 
+```javascript
+var casesCochées = document.querySelectorAll(
+      'input[name="groupeCases[]"]:checked'
+   );
+```
 
 ## Groupe de boutons radios
 
