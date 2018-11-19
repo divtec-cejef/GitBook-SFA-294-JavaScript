@@ -36,6 +36,7 @@ Si l'on veut désactiver, stopper l'envoi du formulaire il faut utiliser la mét
 ```javascript
 const FORMULAIRE = document.querySelector('form');
 
+// Ne pas oublier d'ajouter un paramètre à la fonction pour récupérer l'événment.
 FORMULAIRE.addEventListener('submit', function(event){
    event.preventDefault(); // Stoppe l'envoi du formulaire
    console.log("Formulaire envoyé !");
