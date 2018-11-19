@@ -38,22 +38,26 @@ monElementListe.addEventListener("change", function() {...});
    <option value="CH">Suisse</option>
 </select>
 
-Code du pays : <span class="code"></span>
+<div>
+   Code du pays : <span class="code"></span>
+</div>
 
 <script>
 // Récupère la liste déroulante #pays et le span .code
 const LIS_PAYS = document.getElementById("pays");
-const DIV_CODE = document.querySelector("span.code");
+const SPAN_CODE = document.querySelector("span.code");
 
 // Sur changement de la valeur de la liste déroulante
 LIS_PAYS.addEventListener("change", function() {
    // Récupère la valeur de l'option sélectionnée
    let codePays = LIS_PAYS.value;
    // Modifie le contenu texte du span .code   
-   DIV_CODE.innerText = codePays;
+   SPAN_CODE.innerText = codePays;
 });
 </script>
 ```
+
+{% embed url="https://codepen.io/fallinov/pen/jQaPVL?editors=1000" %}
 
 ## Cases à cocher
 
@@ -84,13 +88,15 @@ const CHK_COPIE = document.getElementById('copie');
 FORMULAIRE.addEventListener('submit', function(event){ 
    // Si utilisateur n'a pas saisi de nom
    if(CHK_COPIE.checked === true) {
-      alert("Vous recevrez un copie !");
+      alert("Message envoyé AVEC copie !");
+   } else {
+      alert("Message envoyé SANS copie !");
    }
 });
 </script>
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/mQwoYY?editors=1001" %}
+{% embed url="https://codepen.io/fallinov/pen/zMPGvL?editors=0010" %}
 
 ## Groupe de cases à cocher
 
@@ -139,13 +145,13 @@ FORMULAIRE.addEventListener("submit", function(event) {
 
    //Récupère la valeur des éléments cochés
    for (let couleur of couleursCochées) {
-      console.log(couleur.value);
+      alert(couleur.value);
    }
 });
 </script>
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/mQwoYY?editors=1011" %}
+{% embed url="https://codepen.io/fallinov/pen/eQeNYV?editors=0011" %}
 
 ## Groupe de boutons radios
 
@@ -194,5 +200,5 @@ FORMULAIRE.addEventListener("submit", function(event) {
 </script>
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/mQwoYY?editors=1000" %}
+{% embed url="https://codepen.io/fallinov/pen/aQzRPy?editors=0010" %}
 
