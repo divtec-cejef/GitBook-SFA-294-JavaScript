@@ -2,7 +2,8 @@
 
 Les **Template literals** permettent d'écrire des **chaines de caractètes multilignes** contenant des **expressions**.
 
-Ces chaines spéciales sont délimitées par des **accents graves** ```ma chaine```.
+* Ces chaines spéciales sont délimitées par des **accents graves** ```ma chaine```.
+* Les expressions commencent par un  `$` et sont délimitées par des accolades : `${expression}`
 
 ```typescript
 let nom = 'Luc';
