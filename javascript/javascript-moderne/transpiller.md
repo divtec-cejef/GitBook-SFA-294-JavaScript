@@ -1,6 +1,4 @@
 # Transpiller
 
-{% embed url="https://babeljs.io/" %}
-
-
+{% embed url="https://babeljs.io/" caption="" %}
 

@@ -2,6 +2,10 @@
 
 ## Supprimer un élément
 
+test
+
+### Supprimer un fils
+
 ```markup
 <div>
     <h1>Un Titre</h1>
@@ -18,7 +22,7 @@ DIV.removeChild(P1);
 </script>
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/NOJedR" %}
+{% embed url="https://codepen.io/fallinov/pen/NOJedR" caption="" %}
 
 ## Remplacer un élément
 
@@ -42,7 +46,7 @@ DIV.replaceChild(NOUVEAU_PARA, ANCIEN_PARA);
 </script>
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/xyBmYm" %}
+{% embed url="https://codepen.io/fallinov/pen/xyBmYm" caption="" %}
 
 ## Cloner un élément
 
@@ -67,5 +71,5 @@ document.getElementById("liste2").appendChild(CLONE);
 </script>
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/LgaMja?editors=1111" %}
+{% embed url="https://codepen.io/fallinov/pen/LgaMja?editors=1111" caption="" %}
 

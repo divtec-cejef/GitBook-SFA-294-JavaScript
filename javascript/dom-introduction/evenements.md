@@ -23,24 +23,24 @@ Les événements permettent de déclencher une fonction pour une action spécifi
 | `submit` | Envoi d'un formulaire |
 | `reset` | Réinitialisation d'un formulaire |
 
- 🔗 Liste complète des événements : [https://www.w3schools.com/jsref/dom\_obj\_event.asp](https://www.w3schools.com/jsref/dom_obj_event.asp)
+🔗 Liste complète des événements : [https://www.w3schools.com/jsref/dom\_obj\_event.asp](https://www.w3schools.com/jsref/dom_obj_event.asp)
 
 ## Affecter une fonction à un événement
 
 Il existe différentes manières d'affecter une fonction à l'événement d'un objet.
 
-* Utiliser les [**gestionnaires d'événements "on-event"**](evenements.md#on-event) ****👎 
-* Créer des écouteur d'événement \(listener\) avec [**la méthode `addEventListener()`**](evenements.md#addeventlistener) 👍 
+* Utiliser les [**gestionnaires d'événements "on-event"**](evenements.md#on-event) _\*\*_👎 
+* Créer des écouteur d'événement \(listener\) avec [**la méthode** `addEventListener()`](evenements.md#addeventlistener) 👍 
 
 {% hint style="success" %}
-**Le meilleure moyen est souvent `addEventListener()`**
+**Le meilleure moyen est souvent** `addEventListener()`
 
 Avec la méthode "on-event", chaque objet ne peut avoir qu'un seul gestionnaire d'événement pour un événement donné. C'est pourquoi `addEventListener()` est souvent le meilleur moyen d'être averti des événements.
 {% endhint %}
 
 ### On-event
 
-Les gestionnaires d'événements "on-event" sont nommées selon l'événement lié : `onclick`, `onkeypress`, `onfocus`, `onsubmit`, etc. 
+Les gestionnaires d'événements "on-event" sont nommées selon l'événement lié : `onclick`, `onkeypress`, `onfocus`, `onsubmit`, etc.
 
 🔗 Liste des gestionnaires d'événements : [https://www.w3schools.com/tags/ref\_eventattributes.asp](https://www.w3schools.com/tags/ref_eventattributes.asp)
 
@@ -50,11 +50,11 @@ On peut scpécifier un "on-event" pour un événement particulier de différente
 * En utilisant la propriété correspondante en JavaScript : `Element.onclick = bonjour;`
 
 {% hint style="warning" %}
+
 En JavaScript, afin d'affecter la fonction `bonjour()` et non son résultat, on n'ajoute pas les parenthèses après le nom de la fonction.
 
 * `Element.onclick = bonjour;`  affecte la fonction `bonjour()`.
 * `Element.onclick = bonjour();`  affecte le résultat de la fonction `bonjour()`.
-{% endhint %}
 
 ```javascript
 function citationLeia() {
@@ -82,8 +82,6 @@ La méthode `addEventListener()` permet de définir une fonction à appeler chaq
 ```typescript
 ElementCible.addEventListener("nomEvenement", nomFonction);
 ```
-
-
 
 ```javascript
 let newElement = document.getElementsByTagName('h1');
@@ -124,7 +122,6 @@ for (let bouton of boutons) {
 <button>Bouton 1</button>
 <button>Bouton 3</button>
 <button>Bouton 3</button>
-
 ```
 {% endcode-tabs-item %}
 
@@ -144,12 +141,11 @@ button.rouge {
    background-color: #e74c3c;
    color: #ecf0f1;
 }
-
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-{% embed url="https://codepen.io/fallinov/pen/WaPXEQ/" %}
+{% embed url="https://codepen.io/fallinov/pen/WaPXEQ/" caption="" %}
 
 ## L'objet `event`
 
@@ -169,7 +165,7 @@ BOUTON.addEventListener("click", function (event) {
 </script>
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/PyLVjJ" %}
+{% embed url="https://codepen.io/fallinov/pen/PyLVjJ" caption="" %}
 
 ### Récupérer la cible d'un événement
 
@@ -193,16 +189,15 @@ BOUTON.addEventListener("click", function (event) {
 </script>
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/mzovXM" %}
+{% embed url="https://codepen.io/fallinov/pen/mzovXM" caption="" %}
 
 ## Bubbling & Capturing
 
 Capture ? Bouillonnement ? De quoi parle-t-on ?
 
-Ces deux phases sont deux étapes distinctes de l'exécution d'un événement. La première, la **capture** \(_capture_ en anglais\), s'exécute avant le déclenchement de l'événement, tandis que la deuxième, le **bouillonnement** \(_bubbling_ en anglais\), s'exécute après que l'événement a été déclenché. Toutes deux permettent de définir le sens de propagation des événements.  
+Ces deux phases sont deux étapes distinctes de l'exécution d'un événement. La première, la **capture** \(_capture_ en anglais\), s'exécute avant le déclenchement de l'événement, tandis que la deuxième, le **bouillonnement** \(_bubbling_ en anglais\), s'exécute après que l'événement a été déclenché. Toutes deux permettent de définir le sens de propagation des événements.
 
-
-![](../../.gitbook/assets/image%20%285%29.png)
+![](../../.gitbook/assets/image-5.png)
 
 ```markup
 <div id="div1">
@@ -232,9 +227,9 @@ document.getElementById("div2").addEventListener("click", function() {
 </script>
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/zmbeev?editors=1111" %}
+{% embed url="https://codepen.io/fallinov/pen/zmbeev?editors=1111" caption="" %}
 
 ## A lire...
 
-{% embed url="https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating\_and\_triggering\_events" %}
+{% embed url="https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating\_and\_triggering\_events" caption="" %}
 

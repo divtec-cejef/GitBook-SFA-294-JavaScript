@@ -14,5 +14,3 @@ colmar.setAttribute('target', '_blank');
 Pour modifier les attributs HTML non-standard utiliser `setAttribute()`
 {% endhint %}
 
-
-

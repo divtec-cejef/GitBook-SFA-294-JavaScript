@@ -14,7 +14,7 @@ monElement.value;
 
 ### Propriété `value`
 
-Pour récupérer la valeur de l'option sélectionnée d'une liste,  on utilise  la propriété `.value`.
+Pour récupérer la valeur de l'option sélectionnée d'une liste, on utilise la propriété `.value`.
 
 ```javascript
 monElementSelect.value;
@@ -57,13 +57,13 @@ LIS_PAYS.addEventListener("change", function() {
 </script>
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/jQaPVL?editors=1000" %}
+{% embed url="https://codepen.io/fallinov/pen/jQaPVL?editors=1000" caption="" %}
 
 ## Cases à cocher
 
 ### Propriété checked
 
- La propritété `checked` vous permet de savoir si une case est cochée `true` ou non `false`
+La propritété `checked` vous permet de savoir si une case est cochée `true` ou non `false`
 
 ```javascript
 monElement.checked; // Retourne true ou false
@@ -96,11 +96,11 @@ FORMULAIRE.addEventListener('submit', function(event){
 </script>
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/zMPGvL?editors=0010" %}
+{% embed url="https://codepen.io/fallinov/pen/zMPGvL?editors=0010" caption="" %}
 
 ## Groupe de cases à cocher
 
-Pour récupérer les cases cochées d'un groupe, la meilleure méthode est d'utiliser `querySelector` et la puissance des sélecteurs CSS, pour récupérer toutes les cases cochées  `:checked` du groupe `[name="nomGroupe"]` .
+Pour récupérer les cases cochées d'un groupe, la meilleure méthode est d'utiliser `querySelector` et la puissance des sélecteurs CSS, pour récupérer toutes les cases cochées `:checked` du groupe `[name="nomGroupe"]` .
 
 ```javascript
 let casesCochées = document.querySelectorAll(
@@ -137,7 +137,7 @@ const FORMULAIRE = document.querySelector("form");
 // Evénement submit => Lors de l'envoi du formulaire
 FORMULAIRE.addEventListener("submit", function(event) {
    event.preventDefault();
-   
+
    // Cases cochée dans le groupe couleurs[]
    let couleursCochées = document.querySelectorAll(
       'input[name="couleurs[]"]:checked'
@@ -151,11 +151,11 @@ FORMULAIRE.addEventListener("submit", function(event) {
 </script>
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/eQeNYV?editors=0011" %}
+{% embed url="https://codepen.io/fallinov/pen/eQeNYV?editors=0011" caption="" %}
 
 ## Groupe de boutons radios
 
-Pour récupérer la valeur du radio sélectionné dans un groupe, la meilleure méthode est d'utiliser `querySelector` et la puissance des sélecteurs CSS, pour récupérer le premier radio coché  `:checked` du groupe `[name="nomGroupe"]` .
+Pour récupérer la valeur du radio sélectionné dans un groupe, la meilleure méthode est d'utiliser `querySelector` et la puissance des sélecteurs CSS, pour récupérer le premier radio coché `:checked` du groupe `[name="nomGroupe"]` .
 
 ```javascript
 // Récupère la valeur du radio coché dans le groupe "couleur"
@@ -183,22 +183,22 @@ const FORMULAIRE = document.querySelector("form");
 FORMULAIRE.addEventListener("submit", function(event) {
     // Désactive l'envoi du formulaire
    event.preventDefault();
-   
+
    // Radio coché dans le groupe genre
    let genre = document.querySelector(
       '[name="genre"]:checked'
    );
-   
+
    // Test si un genre est coché
    if(genre === null) {
       alert("Sélectionner un genre !");
       return;
    }
-   
+
    alert(genre.value);   
 });
 </script>
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/aQzRPy?editors=0010" %}
+{% embed url="https://codepen.io/fallinov/pen/aQzRPy?editors=0010" caption="" %}
 
