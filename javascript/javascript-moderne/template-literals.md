@@ -6,11 +6,11 @@ Les **Template literals** permettent d'écrire des **chaines de caractètes mult
 * Les expressions commencent par un  `$` et sont délimitées par des accolades : `${expression}`
 
 ```typescript
-let nom = 'Luc';
-let prenom = 'Skywlaker'
-let message = `Salut ${nom} ${prenom} !`;
+let nom = 'Skywlaker';
+let prenom = 'Luc'
+let message = `Salut ${prenom} ${nom} !`;
 
-alert(message); // Salut Luc !
+alert(message); // Salut Luc Skywlaker !
 
 let ficheClient = `<div class="fiche-client">
 						<div>Nom : ${nom}</div>
