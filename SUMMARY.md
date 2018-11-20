@@ -37,6 +37,7 @@
   * [Valider les saisies utilisateurs](javascript/formulaires/valider-les-saisies-utilisateurs.md)
 * [JavaScript Moderne](javascript/javascript-moderne/README.md)
   * [Transpiller](javascript/javascript-moderne/transpiller.md)
+  * [Template Literals](javascript/javascript-moderne/template-literals.md)
   * [Ensembles](javascript/javascript-moderne/ensembles.md)
   * [Paramètres par défaut](javascript/javascript-moderne/parametres-par-default.md)
 

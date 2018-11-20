@@ -6,85 +6,93 @@
 
 ## Tableau des propriétés
 
-| Action | Propriétés des noeud | Retour |
-| :--- | :--- | :--- |
-
-
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Récupérer les fils</th>
-      <th style="text-align:left">
+      <th style="text-align:left">Action</th>
+      <th style="text-align:left">Propriétés des noeud</th>
+      <th style="text-align:left">Retour</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+        <p>Récupérer les fils</p>
+        <p></p>
+      </td>
+      <td style="text-align:left">
         <p><code>node.childNodes</code>
         </p>
         <p><code>element.children</code>
         </p>
-      </th>
-      <th style="text-align:left">
+      </td>
+      <td style="text-align:left">
         <p><code>NodeList</code>  <em>tableau de noeuds</em>
         </p>
         <p><code>HTMLCollection</code>  <em>tableau d'éléments</em>
         </p>
-      </th>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
-</table><table>
-  <thead>
     <tr>
-      <th style="text-align:left">Premier fils</th>
-      <th style="text-align:left">
+      <td style="text-align:left">Premier fils</td>
+      <td style="text-align:left">
         <p><code>node.firstChild</code>
         </p>
         <p><code>element.firstElementChild</code>
         </p>
-      </th>
-      <th style="text-align:left">
+      </td>
+      <td style="text-align:left">
         <p><code>Node</code>
         </p>
         <p><code>Element</code>
         </p>
-      </th>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
-</table><table>
-  <thead>
     <tr>
-      <th style="text-align:left">Dernier fils</th>
-      <th style="text-align:left">
+      <td style="text-align:left">Dernier fils</td>
+      <td style="text-align:left">
         <p><code>node.lastChild</code>
         </p>
         <p><code>element.lastElementChild</code>
         </p>
-      </th>
-      <th style="text-align:left">
+      </td>
+      <td style="text-align:left">
         <p><code>Node</code>
         </p>
         <p><code>Element</code>
         </p>
-      </th>
+      </td>
     </tr>
-  </thead>
-  <tbody></tbody>
-</table>| Frère suivant | `node.nextSibling` | `Node` |
-| :--- | :--- | :--- |
-
-
-| Frère précédent | `node.previousSibling` | `Node` |
-| :--- | :--- | :--- |
-
-
-| Récupèrer le parent | `node.parentNode` | `Node` |
-| :--- | :--- | :--- |
-
+    <tr>
+      <td style="text-align:left">Frère suivant</td>
+      <td style="text-align:left"><code>node.nextSibling</code>
+      </td>
+      <td style="text-align:left"><code>Node</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Frère précédent</td>
+      <td style="text-align:left"><code>node.previousSibling</code>
+      </td>
+      <td style="text-align:left"><code>Node</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Récupèrer le parent</td>
+      <td style="text-align:left"><code>node.parentNode</code>
+      </td>
+      <td style="text-align:left"><code>Node</code>
+      </td>
+    </tr>
+  </tbody>
+</table>Comme on peut le voir, certaines actions sont réalisables avec deux propriétés différentes.
 
 Il existe deux "familles" de propriétés pour naviguer dans la DOM :
 
 * Les propriétés de type  `Node` , pour naviguer dans **tous les types de noeuds** : éléments, textes ou  commentaires
 * Les propriétés de type `Element` , pour naviguer **uniquement dans les éléments**
 
-Dans l'exemple ci après, on récupère le premier fils de la `div` avec la propriété `firstChild`, avec la propriété`firstElementChild` .
+Dans l'exemple ci après, on récupère le premier fils de la `div`  avec la propriété `firstChild`, avec la propriété`firstElementChild` .
 
 * La propriété `firstChild` retourne le premier noeud peut importe son type. Dans l'exemple le premier noeud est un noeud texte contenant `"Bonjour le"`.
 * La propriété `firstElementChild` retourne le premier noeud de type élément. Dans l'exemple le premier élément de la div est `<strong>monde</strong>`.
@@ -161,4 +169,6 @@ listeAnimaux.firstElementChild; // <li>🐔</li>
 listeAnimaux.lastElementChild; // <li>🐷</li>
 </script>
 ```
+
+
 

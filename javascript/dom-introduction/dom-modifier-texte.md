@@ -32,7 +32,7 @@ introPara.innerHTML += ' <a href="http://kode.ch">Lien</a>';
 </script>
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/KrypqZ?editors=1000" caption="" %}
+{% embed url="https://codepen.io/fallinov/pen/KrypqZ?editors=1000" %}
 
 ## `innerText`
 
@@ -57,7 +57,7 @@ console.log(introPara.innerHTML); // Je suis un <strong>joli</strong> paragraphe
 </script>
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/qQVdXG?editors=0010" caption="" %}
+{% embed url="https://codepen.io/fallinov/pen/qQVdXG?editors=0010" %}
 
 ## `insertAdjacentHTML(position, text);`
 
@@ -107,5 +107,5 @@ liste2.insertAdjacentHTML('beforeend', '<li>Nouveau dernier fils de #liste2</li>
 </script>
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/qQVdPz?editors=1000" caption="" %}
+{% embed url="https://codepen.io/fallinov/pen/qQVdPz?editors=1000" %}
 

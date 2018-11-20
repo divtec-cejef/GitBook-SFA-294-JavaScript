@@ -47,7 +47,7 @@ function stopBonjour() {
 </script>
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/MzEdJV?editors=0010" caption="" %}
+{% embed url="https://codepen.io/fallinov/pen/MzEdJV?editors=0010" %}
 
 ## setInterval\(\)
 
@@ -87,7 +87,7 @@ function changeCouleur() {
 function flashText() {
    // Récupère 1er paragraphe du document
    let para = document.querySelector("p");
-
+   
    // Change la couleur du texte en rouge ou en bleu
    if (para.style.color === "red") {
       para.style.color = "blue";
@@ -103,5 +103,5 @@ function stopChangeCouleur() {
 </script>
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/MzEdJV?editors=0011" caption="" %}
+{% embed url="https://codepen.io/fallinov/pen/MzEdJV?editors=0011" %}
 

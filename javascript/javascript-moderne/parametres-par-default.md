@@ -1,10 +1,12 @@
 # Paramètres par défaut
 
 ```javascript
-let myFunc = function (arg1='default argument one', arg2='default argument two') {
-  console.log(arg1 + " & " + arg2);
+let produit = function(nom = 'Sabre laser', prix = 220) {
+    console.log(nom + " & " + prix);
 };
 
-myFunc(undefined, 'and a new value'); // logs 'default argument one & and a new value'
+produit(undefined, 200); // Sabre laser & 200
 ```
+
+
 

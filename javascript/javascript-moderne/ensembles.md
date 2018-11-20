@@ -1,8 +1,8 @@
 # Ensembles
 
-Sets are a new object type with ES6 \(ES2015\) that allow to create collections of unique values. The values in a set can be either simple primitives like strings or integers, but more complex object types like object literals or arrays can also be part of a set.
+Les ensembles `Set` est un nouveau type d'objet arrivé avec ES6 \(ES2015\), qui permet de créer des collections de valeurs uniques. 
 
-Here’s a simple example showing off a basic set and a few of the available methods on it like _add_, _size_, _has_, _forEach_, _delete_ and _clear_:
+Voici un exemple simple montrant un ensemble de base et quelques-unes des méthodes disponibles comme `add`, `size`, `has`, `forEach`, `delete` et `clear`.
 
 ```text
 let animals = new Set();
@@ -31,7 +31,7 @@ animals.clear();
 console.log(animals.size); // 0
 ```
 
-Here’s another example where we pass-in an array to initialize the set. Notice how the initializing array gets deconstructed, but an array added added later stays in the form of an array:
+### Initialisation avec un tableau 
 
 ```text
 let myAnimals = new Set(['🐷', '🐢', '🐷', '🐷']);

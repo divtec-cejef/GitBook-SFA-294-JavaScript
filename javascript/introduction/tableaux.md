@@ -87,5 +87,5 @@ animaux.forEach(function(animal) {
 
 ### Exemples
 
-{% embed url="https://codepen.io/fallinov/pen/BqEJgp?editors=0012" caption="" %}
+{% embed url="https://codepen.io/fallinov/pen/BqEJgp?editors=0012" %}
 

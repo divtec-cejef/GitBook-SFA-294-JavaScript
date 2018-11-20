@@ -15,7 +15,7 @@ FORMULAIRE.submit();
 FORMULAIRE.reset();
 ```
 
-## Événement `submit`
+## Événement `submit` 
 
 L'événement `submit` permet de déclencher une fonction lors de l'**envoi du formulaire**.
 
@@ -62,18 +62,18 @@ const TXT_NOM = document.getElementById('nom');
 FORMULAIRE.addEventListener('submit', function(event){
    // Désactive l'envoi du formulaire
    event.preventDefault();
-
+   
    // Si utilisateur n'a pas saisi de nom
    if(TXT_NOM.value === "") {
       alert("Entrez votre nom !");
       return; // Sors de la fonction
    }
-
+   
    // Envoie le formulaire
    FORMULAIRE.submit(); 
 });
 </script>
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/yQPywX?editors=0010" caption="" %}
+{% embed url="https://codepen.io/fallinov/pen/yQPywX?editors=0010" %}
 

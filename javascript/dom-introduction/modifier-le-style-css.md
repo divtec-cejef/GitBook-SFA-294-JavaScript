@@ -2,7 +2,7 @@
 
 ## Element.style
 
-La propriété `style` d'un élément représente son attribut HTML `style="color:red;"`. Elle représente donc la **déclaration de style en-ligne** qui a la **priorité la plus haute** dans la cascade CSS.
+La propriété `style` d'un élément représente son attribut HTML `style="color:red;"`.  Elle représente donc la **déclaration de style en-ligne** qui a la **priorité la plus haute** dans la cascade CSS.
 
 Cependant, elle n'est **pas utile pour connaître le style de l'élément** en général, puisqu'elle ne représente que les déclarations CSS définies dans l'attribut style de l'élément, et pas celles qui viennent d'autres règles de style.
 
@@ -19,7 +19,7 @@ En JavaScript deux règles importantes concernant le CSS :
 * les **valeurs sont toujours des chaines de caractères** `Element.style.padding = "4px"`. 
 * les traits d'union `-` des **propriétés CSS composées de plusieurs mots-clés** comme `border-color`, sont remplacés par une **camélisation** `borderColor`.
 
-![Cam&#xE9;lisation des propri&#xE9;t&#xE9;s CSS](../../.gitbook/assets/image-1.png)
+![Cam&#xE9;lisation des propri&#xE9;t&#xE9;s CSS](../../.gitbook/assets/image%20%281%29.png)
 
 Ci-après, quelques exemples de déclaration CSS et leur équivalence en JavaScript:
 
@@ -61,5 +61,7 @@ let styleINTRO = window.getComputedStyle(INTRO);
 console.log( styleINTRO.getPropertyValue('top') );
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/EdMxzL?editors=0011" caption="" %}
+{% embed url="https://codepen.io/fallinov/pen/EdMxzL?editors=0011" %}
+
+
 

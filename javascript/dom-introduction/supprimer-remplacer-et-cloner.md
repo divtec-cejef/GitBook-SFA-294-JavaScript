@@ -2,9 +2,25 @@
 
 ## Supprimer un élément
 
-test
 
-### Supprimer un fils
+
+```markup
+<div>
+    <h1>Un Titre</h1>
+    <p>Petit paragraphe<p>
+</div>
+
+<script>
+// Récupération du 1er paragraphe de la 1re div du document
+const P1 = document.querySelector("div p");
+// Suppression du 1er paragraphe
+P1.remove();
+</script>
+```
+
+{% embed url="https://jsfiddle.net/fallinov/zybnhj6c/" %}
+
+### Supprimer un élément fils
 
 ```markup
 <div>
@@ -22,7 +38,7 @@ DIV.removeChild(P1);
 </script>
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/NOJedR" caption="" %}
+{% embed url="https://codepen.io/fallinov/pen/NOJedR" %}
 
 ## Remplacer un élément
 
@@ -46,7 +62,7 @@ DIV.replaceChild(NOUVEAU_PARA, ANCIEN_PARA);
 </script>
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/xyBmYm" caption="" %}
+{% embed url="https://codepen.io/fallinov/pen/xyBmYm" %}
 
 ## Cloner un élément
 
@@ -71,5 +87,5 @@ document.getElementById("liste2").appendChild(CLONE);
 </script>
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/LgaMja?editors=1111" caption="" %}
+{% embed url="https://codepen.io/fallinov/pen/LgaMja?editors=1111" %}
 

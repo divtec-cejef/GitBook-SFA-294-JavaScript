@@ -7,7 +7,7 @@
 * Une variable doit porter un **nom représentatif de ce qu'elle contient**
 
 {% hint style="danger" %}
-JavaScript est **sensible à la casse** : `NomDeFamille` ≠ `nomdefamille`
+JavaScript est **sensible à la casse** : `NomDeFamille` ≠ `nomdefamille` 
 {% endhint %}
 
 ## Déclarer des variables et constantes
