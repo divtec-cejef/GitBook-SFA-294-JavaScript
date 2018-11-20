@@ -103,15 +103,15 @@ FORMULAIRE.addEventListener('submit', function(event){
 Pour récupérer les cases cochées d'un groupe, la meilleure méthode est d'utiliser `querySelector` et la puissance des sélecteurs CSS, pour récupérer toutes les cases cochées  `:checked` du groupe `[name="nomGroupe"]` .
 
 ```javascript
-var casesCochées = document.querySelectorAll(
+let casesCochées = document.querySelectorAll(
       'input[name="groupeCases[]"]:checked'
    );
 ```
 
 {% hint style="warning" %}
-La variable qui contient le résultat du `querySelectorAll` n'est pas "dynamique".
+La variable qui contient le résultat du `querySelectorAll()`n'est pas "dynamique", les nouvelles cases cochées ne s'y ajouteront pas automatiquement.
 
-Si l'on coche une nouvelle case, elle ne s'ajoutera pas automatiquement, il faudra refaire un `querySelectorAll` pour mettre à jour le contenu de la variable.
+Il ne faut donc rappeler `querySelectorAll()` pour mettre à jour le contenu de la variable.
 {% endhint %}
 
 ### Exemple
@@ -139,7 +139,7 @@ FORMULAIRE.addEventListener("submit", function(event) {
    event.preventDefault();
    
    // Cases cochée dans le groupe couleurs[]
-   var couleursCochées = document.querySelectorAll(
+   let couleursCochées = document.querySelectorAll(
       'input[name="couleurs[]"]:checked'
    );
 
