@@ -79,7 +79,7 @@ eleFormulaire.addEventListener("submit", function(event) {
    const txtNom = document.getElementById("nom");
    const txtAge = document.getElementById("age");
 
-   // Supprime les message existants
+   // Supprime les anciens messages d'erreur
    eleMessage.innerHTML = "";
 
    // Validation des données
