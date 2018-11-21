@@ -1,4 +1,4 @@
-# Commentaires
+# Commentaires & entêtes
 
 ```javascript
 // Ceci est une ligne de commentaires
