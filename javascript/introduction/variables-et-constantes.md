@@ -20,13 +20,26 @@ let personneAge = 22;
 // Constantes
 const URL = "http://kode.ch";
 const AGE_MAX = 65;
+const langues = ['FR','EN'];
+const personne = { age: 20 };
 ```
+
+{% hint style="success" %}
+#### Bonne pratique
+
+Ecrire en :
+
+* **majuscule** les constantes contenant des **valeurs** : `const MAX = 33;` 
+* **minuscule** les constantes contenant des **références**  : `const ids = [12, 44];` 
+{% endhint %}
 
 {% hint style="info" %}
 Les variables JavaScript ne sont **pas typées** !
 
 On peut initialiser une variable avec un entier puis lui affecter une chaîne de caractères sans déclencher d’erreur.
 {% endhint %}
+
+\`\`
 
 {% page-ref page="types.md" %}
 
