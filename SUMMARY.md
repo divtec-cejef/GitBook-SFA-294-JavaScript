@@ -1,10 +1,6 @@
 # Table of contents
 
-* [Objectifs du Module 133A](README.md)
-
-## Formulaires HTML
-
-* [Créer un premier formulaire](formulaires-html/creer-un-premier-formulaire.md)
+* [Module 133A](README.md)
 
 ## JavaScript
 
