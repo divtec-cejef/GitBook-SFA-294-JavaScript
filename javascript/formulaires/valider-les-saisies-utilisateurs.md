@@ -27,16 +27,16 @@ Ci-après un exemple classique de validation de formulaire avec création d'un m
 {% code-tabs-item title="" %}
 ```javascript
 /**
- * Valide le formulaire et retourne un tableau d'erreurs
+ * Valide le nom et l'âge d'une personne et retourne un tableau d'erreurs
  * @return {Array} Tableau de messages d'erreur
  */
-function validationFormulaire(nom, age) {
+function validerPersonne(nom, age) {
    // Initialisation du tableau des erreurs
    let erreurs = [];
 
    //Supprime les espaces en début et fin de chaine
    nom = nom.trim();
-   
+
    //Converti l'age en entier
    age = parseInt(age);
 
@@ -45,7 +45,7 @@ function validationFormulaire(nom, age) {
       erreurs.push("Entrez un nom !");
    }
 
-   // Si l'age n'est pas un nombre entier compris entre 0 et 120
+   // Si l'âge n'est pas un nombre entier compris entre 0 et 120
    if (Number.isNaN(age) || age < 1 || age > 119) {
       erreurs.push("Entrez un age valide !");
    }
@@ -53,39 +53,46 @@ function validationFormulaire(nom, age) {
    return erreurs;
 }
 
+/**
+ * Ajoute le contenu d'un tableau à la fin d'une liste HTML
+ * @param {HTMLElement} eleListe - Liste HTML (ol ou ul) à remplir
+ * @param {Array} erreurs - tableau de String
+ */
+function ajouterFinListe(eleListe, erreurs) {
+   // Parcours les messages d'erreur
+   for (message of erreurs) {
+      // Ajoute un li au contenu de la liste
+      eleListe.innerHTML += "<li>" + message.toString() + "</li>";
+   }
+}
 
-// Récupération du formulaire et de la liste des messages d'erreurs
-const FORMULAIRE = document.querySelector("form");
-const UL_MESSAGE = document.querySelector("ul.message");
+// Récupération du formulaire et de la liste message
+const eleFormulaire = document.querySelector("form");
+const eleMessage = document.querySelector("ul.message");
 
 // Evénement submit => Lors de l'envoi du formulaire
-FORMULAIRE.addEventListener("submit", function(event) {
+eleFormulaire.addEventListener("submit", function(event) {
    // Désactive l'envoi du formulaire
    event.preventDefault();
-   
-   // Récupère les champs nom et age
-   const TXT_NOM = document.getElementById("nom");
-   const TXT_AGE = document.getElementById("age");
-   
-   // Supprime les message existants
-   UL_MESSAGE.innerHTML = "";
-   
-   // Validation du formulaire
-   let erreurs = validationFormulaire(TXT_NOM.value, TXT_AGE.value);
-   
-   // Si il y a des erreurs
-   if(erreurs.length > 0) { 
-      // Parcours les messages d'erreur
-      for(message of erreurs) {
-         // Ajoute un li au contenu de la liste
-         UL_MESSAGE.innerHTML += "<li>" + message + "</li>";
-      }
-      // Sort de la fonction
-      return;
-   }
 
-   // Envoie le formulaire
-   FORMULAIRE.submit();
+   // Récupère les champs nom et age
+   const txtNom = document.getElementById("nom");
+   const txtAge = document.getElementById("age");
+
+   // Supprime les message existants
+   eleMessage.innerHTML = "";
+
+   // Validation des données
+   let erreurs = validerPersonne(txtNom.value, txtAge.value);
+
+   // Si il y a des erreurs
+   if (erreurs.length > 0) {
+      // Ajoute les erreurs à la fin de ul.message
+      ajouterFinListe(eleMessage, erreurs);
+   } else {
+      // Envoi du formulaire
+      eleFormulaire.submit();
+   }
 });
 ```
 {% endcode-tabs-item %}
