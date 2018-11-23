@@ -20,6 +20,28 @@ Pour récupérer la valeur de l'option sélectionnée d'une liste,  on utilise  
 monElementSelect.value;
 ```
 
+### Selecteur CSS :checked
+
+Le sélecteur  `:checked` vous permet de récupérer l'**option actuellement sélectionnée** avec ****`querySelector` **.** 
+
+Exemple récupérer le contenu texte de l'option `selected` : 
+
+```markup
+<select name="pays" id="pays">
+   <option value="">-- Sélectionnez un pays --</option>
+   <option value="FR">France</option>
+   <option selected value="IT">Italie</option>
+   <option value="CH">Suisse</option>
+</select>
+
+<script>
+const liste = document.getElementById("pays");
+let optionSelectionnee = liste.querySelector("option:checked");
+
+console.log(optionSelectionnee.innerText); // Italie
+</script>
+```
+
 ### Evénement `change`
 
 L'événement `change` est souvent associé aux listes. Il se déclenche lorsque le visiteur sélectionne une autre option dans la liste.
