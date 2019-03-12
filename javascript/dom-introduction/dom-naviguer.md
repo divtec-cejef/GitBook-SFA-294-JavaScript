@@ -10,14 +10,14 @@
   <thead>
     <tr>
       <th style="text-align:left">Action</th>
-      <th style="text-align:left">Propriétés des noeud</th>
+      <th style="text-align:left">Propri&#xE9;t&#xE9;s des noeud</th>
       <th style="text-align:left">Retour</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left">
-        <p>Récupérer les fils</p>
+        <p>R&#xE9;cup&#xE9;rer les fils</p>
         <p></p>
       </td>
       <td style="text-align:left">
@@ -29,7 +29,7 @@
       <td style="text-align:left">
         <p><code>NodeList</code>  <em>tableau de noeuds</em>
         </p>
-        <p><code>HTMLCollection</code>  <em>tableau d'éléments</em>
+        <p><code>HTMLCollection</code>  <em>tableau d&apos;&#xE9;l&#xE9;ments</em>
         </p>
       </td>
     </tr>
@@ -64,21 +64,21 @@
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">Frère suivant</td>
+      <td style="text-align:left">Fr&#xE8;re suivant</td>
       <td style="text-align:left"><code>node.nextSibling</code>
       </td>
       <td style="text-align:left"><code>Node</code>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">Frère précédent</td>
+      <td style="text-align:left">Fr&#xE8;re pr&#xE9;c&#xE9;dent</td>
       <td style="text-align:left"><code>node.previousSibling</code>
       </td>
       <td style="text-align:left"><code>Node</code>
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">Récupèrer le parent</td>
+      <td style="text-align:left">R&#xE9;cup&#xE8;rer le parent</td>
       <td style="text-align:left"><code>node.parentNode</code>
       </td>
       <td style="text-align:left"><code>Node</code>

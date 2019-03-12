@@ -72,7 +72,7 @@ const IMG_ROUGE_OU_JAUNE = document.querySelector('img.rouge, img.jaune');
 let pays = document.querySelector('input[name="pays"]:checked').value;
 
 // Renvoi le champ texte "login" contenu dans une div avec la classe ".utilisateur"
-const INPUT_LOGIN = document.querySelector('div.utilisateur input[name="login"]);
+const INPUT_LOGIN = document.querySelector('div.utilisateur input[name="login"]');
 ```
 
 ## Element.querySelectorAll\(\)
