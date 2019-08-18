@@ -6,13 +6,13 @@ Pour envoyer un formulaire on utilise la méthode `submit()` et `reset()` pour l
 
 ```javascript
 // Récupère le 1er formulaire du document
-const FORMULAIRE = document.querySelector('form');
+const formulaire = document.querySelector('form');
 
 // Envoyer un formulaire
-FORMULAIRE.submit();
+formulaire.submit();
 
 // Réinitialiser un formulaire
-FORMULAIRE.reset();
+formulaire.reset();
 ```
 
 ## Événement `submit` 
@@ -20,9 +20,9 @@ FORMULAIRE.reset();
 L'événement `submit` permet de déclencher une fonction lors de l'**envoi du formulaire**.
 
 ```javascript
-const FORMULAIRE = document.querySelector('form');
+const formulaire = document.querySelector('form');
 
-FORMULAIRE.addEventListener('submit', function(){
+formulaire.addEventListener('submit', function(){
    console.log("Formulaire envoyé !");
 });
 ```
@@ -34,10 +34,10 @@ Une foix la fonction terminée le formulaire sera envoyé.
 Si l'on veut désactiver, stopper l'envoi du formulaire il faut utiliser la méthode `preventDefault()` de l'événement.
 
 ```javascript
-const FORMULAIRE = document.querySelector('form');
+const formulaire = document.querySelector('form');
 
 // Ne pas oublier d'ajouter un paramètre à la fonction pour récupérer l'événment.
-FORMULAIRE.addEventListener('submit', function(event){
+formulaire.addEventListener('submit', function(event){
    event.preventDefault(); // Stoppe l'envoi du formulaire
    console.log("Formulaire envoyé !");
 });
@@ -54,23 +54,23 @@ FORMULAIRE.addEventListener('submit', function(event){
 
 <script>
 // 1er formulaire du document
-const FORMULAIRE = document.querySelector('form');
+const formulaire = document.querySelector('form');
 // Champ texte nom
-const TXT_NOM = document.getElementById('nom');
+const txt_nom = document.getElementById('nom');
 
 // Evénement submit => Lors de l'envoi du formulaire
-FORMULAIRE.addEventListener('submit', function(event){
+formulaire.addEventListener('submit', function(event){
    // Désactive l'envoi du formulaire
    event.preventDefault();
    
    // Si utilisateur n'a pas saisi de nom
-   if(TXT_NOM.value === "") {
+   if(txt_nom.value === "") {
       alert("Entrez votre nom !");
       return; // Sors de la fonction
    }
    
    // Envoie le formulaire
-   FORMULAIRE.submit(); 
+   formulaire.submit(); 
 });
 </script>
 ```
