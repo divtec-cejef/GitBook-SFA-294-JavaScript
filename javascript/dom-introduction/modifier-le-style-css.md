@@ -34,7 +34,7 @@ Ci-après, quelques exemples de déclaration CSS et leur équivalence en JavaScr
 ### Exemple
 
 ```javascript
-let intros = document.getElementsByClassName("intro");
+const intros = document.getElementsByClassName("intro");
 
 for (let i = 0; i < intros.length; i = i + 1) {
     intros[i].style.fontSize = '1.5em';
