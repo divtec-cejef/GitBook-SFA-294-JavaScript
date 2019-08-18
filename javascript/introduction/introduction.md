@@ -94,3 +94,48 @@ L’inclusion des script à la fin du document va donc permettre :
 * d'afficher rapidement quelque chose à l’écran. Le navigateur ne doit pas attendre le chargement des scripts avant d'interpréter les autres éléments HTML.
 * de manipuler les éléments HTML de la page car tous créés avant l'importation du script.
 
+## La directive "use strict"
+
+En ajoutant la directive `"use strict"` au début d'un script, on demande au navigateur de respecter la nomre ECMAScript et d'ainsi arrêter le script à la moindre erreur.
+
+{% hint style="info" %}
+Appliquer "use strict" à tous vos scripts afin d'éviter les auto-correction des navigateurs. Il vaut mieux stopper un script erroné le plus rapidement possible.
+{% endhint %}
+
+On peut placer la directive au début d'un script ou au début d'une fonction.
+
+Les deux exemples suivant généreront un erreur et le script sera stoppé, car la variable `msg`n'a pas été correctement déclarée.
+
+```markup
+<script>
+    "use strict";
+    msg = "Bonjour";
+    alert(msg);
+</script>
+```
+
+```javascript
+function maFonction() {
+    "use strict";
+    msg = "Bonjour";
+}
+```
+
+## Conventions de nommage, JavaScript Style Guide
+
+Beaucoup de guides exposent leur règles de "codage" pour le JavaScipt.
+
+Les plus connus sont ceux de AirBnB, GitHub, & Google : 
+
+* [https://google.github.io/styleguide/jsguide.html](https://google.github.io/styleguide/jsguide.html)
+* [https://github.com/airbnb/javascript](https://github.com/airbnb/javascript)
+* [https://github.com/standard/standard](https://github.com/standard/standard)
+
+Il existe également des outils permettant d'analyser votre code comme [ESLint](https://eslint.org/) & [JSLint](https://www.jslint.com/).
+
+A vous de trouvez celui qui vous convient le mieux. Peut importe votre choix, l'important c'est de choisir un style et de le respecter.
+
+Ce support de cours est basé sur les conventions de **Google** et de **JSLint**.
+
+
+
