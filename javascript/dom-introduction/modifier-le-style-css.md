@@ -54,11 +54,11 @@ L'objet retourné est en **lecture seule**.
 
 ```javascript
 // Récupère #intro
-const INTRO = document.getElementById('intro');
+const intro = document.getElementById('intro');
 // Récupère le style CSS de #intro
-let styleINTRO = window.getComputedStyle(INTRO);
+let styleIntro = window.getComputedStyle(intro);
 // Affiche la valeur de la propriété CSS top de #intro
-console.log( styleINTRO.getPropertyValue('top') );
+console.log( styleIntro.getPropertyValue('top') ); // "40px"
 ```
 
 {% embed url="https://codepen.io/fallinov/pen/EdMxzL?editors=0011" %}
