@@ -86,7 +86,7 @@ ElementCible.addEventListener("nomEvenement", nomFonction);
 
 
 ```javascript
-let newElement = document.getElementsByTagName('h1');
+const newElement = document.getElementsByTagName('h1');
 
 newElement.onclick = function() {
   console.log('clicked');
@@ -109,7 +109,7 @@ window.onload = function() {
 {% code-tabs %}
 {% code-tabs-item title="main.js" %}
 ```javascript
-let boutons = document.querySelectorAll("button");
+const boutons = document.querySelectorAll("button");
 
 for (let bouton of boutons) {
    bouton.addEventListener("click", function(event) {
@@ -160,9 +160,9 @@ Un objet `event` est automatiquement passé comme premier paramètre de la fonct
 
 <script>
 // Récupère le 1er boutons du document
-const BOUTON = document.querySelector("button");
+const bouton = document.querySelector("button");
 // Ajoute événement click avec une fonction avec paramètre event
-BOUTON.addEventListener("click", function (event) {
+bouton.addEventListener("click", function (event) {
   // Affiche le type d'événement envoyé
   alert(event.type); // click
 });
@@ -180,9 +180,9 @@ On appelle "cible" l'objet ou 'élément qui a envoyé l'événement. Pour récu
 
 <script>
 // Récupère le 1er boutons du document
-const BOUTON = document.querySelector("button");
+const bouton = document.querySelector("button");
 // Ajoute événement click avec une fonction avec paramètre event
-BOUTON.addEventListener("click", function (event) {
+bouton.addEventListener("click", function (event) {
   // Récupère l'élément qui a envoyé l'événement, la cible
   let cible = event.target;
   // Modifie la taille du texte de la cible

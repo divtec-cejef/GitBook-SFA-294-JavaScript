@@ -102,7 +102,7 @@ Dans l'exemple ci après, on récupère le premier fils de la `div`  avec la pro
 
 <script>
 // Récupère la première <div> du document
-let div = document.querySelector("div");
+const div = document.querySelector("div");
 
 // Affiche le premier fils avec firstChild
 console.log( div.firstChild ); // "Bonjour le" 
@@ -119,7 +119,7 @@ console.log( div.firstElementChild ); // "<strong>monde</strong>"
 
 <script>
 // Récupère le premier élément strong du document
-let strongElement = document.querySelector("strong");
+const strongElement = document.querySelector("strong");
 
 // Noeud parent
 moneElement.parentNode; // <div>
@@ -154,7 +154,7 @@ monElement.previousSibling; // "Bonjour "
 
 <script>
 // Récupère la première liste non triée du document
-let listeAnimaux = document.querySelector("ul");
+const listeAnimaux = document.querySelector("ul");
 
 // Noeud parent
 listeAnimaux.parentNode; // <div id="animaux">...</div>

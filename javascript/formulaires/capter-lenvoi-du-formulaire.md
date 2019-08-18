@@ -54,24 +54,24 @@ formulaire.addEventListener('submit', function(event){
 
 <script>
 // 1er formulaire du document
-const formulaire = document.querySelector('form');
+const formulaire = document.querySelector("form");
 // Champ texte nom
-const txt_nom = document.getElementById('nom');
-
+const inputNom = document.getElementById("nom");
 // Evénement submit => Lors de l'envoi du formulaire
-formulaire.addEventListener('submit', function(event){
+formulaire.addEventListener("submit", function(event) {
    // Désactive l'envoi du formulaire
    event.preventDefault();
-   
+
    // Si utilisateur n'a pas saisi de nom
-   if(txt_nom.value === "") {
+   if (inputNom.value === "") {
       alert("Entrez votre nom !");
       return; // Sors de la fonction
    }
-   
+
    // Envoie le formulaire
-   formulaire.submit(); 
+   formulaire.submit();
 });
+
 </script>
 ```
 

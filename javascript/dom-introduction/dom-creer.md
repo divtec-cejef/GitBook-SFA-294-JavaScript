@@ -22,16 +22,16 @@ Voici comment ajouter le nouvel élément `<li>2kg de Pain</li>` **à la fin** d
 
 <script>
 // 1. Création du nouvel élément <li> 
-let newLi = document.createElement('li');
+const newLi = document.createElement('li');
 
 // 2. Création du nœud texte
-let newLiTexte = document.createTextNode("2kg de Pain");
+const newLiTexte = document.createTextNode("2kg de Pain");
 
 // 3. Ajout du texte au <li>
 newLi.appendChild(newLiTexte);
 
 // 4. Récupération de la liste
-let listeFondue = document.getElementById('fondue');
+const listeFondue = document.getElementById('fondue');
 
 // 5. Ajoute le nouvel élément <li> à la fin de la liste
 listeFondue.appendChild(newLi);
@@ -72,19 +72,19 @@ Voici comment ajouter le nouvel élément `<li>2kg de Pain</li>` **au début** d
 
 <script>
 // 1. Création du nouvel élément <li> 
-let newLi = document.createElement('li');
+const newLi = document.createElement('li');
 
 // 2. Création du nœud texte
-let newLiTexte = document.createTextNode("2kg de Pain");
+const newLiTexte = document.createTextNode("2kg de Pain");
 
 // 3. Ajout du texte au <li>
 newLi.appendChild(newLiTexte);
 
 // 4. Récupération d'un 1er élément <li> de la liste actuelle existant du DOM
-let premierLi = document.querySelector('#fondue li:first-child');
+const premierLi = document.querySelector('#fondue li:first-child');
 
 // 3. Récupération du parent de premierLi
-let parentLi = premierLi.parentNode;
+const parentLi = premierLi.parentNode;
 
 // 6. Ajout de newLi avant premierLi
 parentLi.insertBefore(newLi, premierLi);

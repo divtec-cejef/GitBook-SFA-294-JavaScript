@@ -6,7 +6,7 @@ description: 'Ajouter, modifier, vérifier, alterner des classes CSS'
 
 ```javascript
 // Récupère l'élément #menu
-let menu = document.getElementById('menu');
+const menu = document.getElementById('menu');
 
 // Supprime la class rouge de #menu si présente
 menu.classList.remove('rouge');
