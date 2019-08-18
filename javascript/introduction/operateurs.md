@@ -51,6 +51,21 @@ Si vous additionnez une chaîne à un nombre \(ou une autre valeur\), tout est d
 
 > L'ajout d'une chaîne vide à quelque chose est une manière utile de la convertir en une chaîne.
 
+###  Chaines de caractères sur plusieurs lignes
+
+Le plus simple est de créer plusieurs chaines de caractères et de le concaténer.
+
+```javascript
+let texteYoda = "La peur est le chemin vers le côté obscur : " +
+                "la peur mène à la colère, " +
+                "la colère mène à la haine, " +
+                "la haine mène à la souffrance.";
+
+// "La peur est le chemin vers le côté obscur : la peur mène à la colère, la colère mène à la haine, la haine mène à la souffrance."
+```
+
+Autre solution depuis ES6, utiliser les [Template Literals](../javascript-moderne/template-literals.md).
+
 ## Opérateurs de comparaison
 
 Les **comparaisons** en JavaScript se font à l'aide des opérateurs `<`, `>`, `<=` et `>=`. Ceux-ci fonctionnent tant pour les chaînes que pour les nombres.
