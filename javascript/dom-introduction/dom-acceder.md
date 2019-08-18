@@ -19,7 +19,7 @@ Renvoie **un objet** `Element` représentant l'élément dont l' `id` correspond
 
 ```javascript
 // Renvoie l'élément avec l'id "menu" <nav id="menu">...</nav>
-const MENU = document.getElementById('menu');
+const menu = document.getElementById('menu');
 ```
 
 ## Element.getElementsByClassName\(\)
@@ -62,17 +62,17 @@ Retourne **le premier** `Element` dans le document correspondant au **sélecteur
 
 ```javascript
 // Revoie le premier paragraphe du document
-const PREMIER_PARA = document.querySelector('p');
+const premierPara = document.querySelector('p');
 
 // Renvoie le premier élément du document correspondant à l'un des sélecteur CSS
 // 'img.rouge, img-jaune' (images appartenant à la classe rouge OU jaune)
-const IMG_ROUGE_OU_JAUNE = document.querySelector('img.rouge, img.jaune');
+const imgRougeOuJaune = document.querySelector('img.rouge, img.jaune');
 
 // Renvoie la valeur de l'élément coché (:checked) du groupe d'input "pays"
 let pays = document.querySelector('input[name="pays"]:checked').value;
 
 // Renvoi le champ texte "login" contenu dans une div avec la classe ".utilisateur"
-const INPUT_LOGIN = document.querySelector('div.utilisateur input[name="login"]');
+const inputLogin = document.querySelector('div.utilisateur input[name="login"]');
 ```
 
 ## Element.querySelectorAll\(\)
