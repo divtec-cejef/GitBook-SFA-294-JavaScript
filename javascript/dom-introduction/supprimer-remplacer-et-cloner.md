@@ -12,9 +12,9 @@
 
 <script>
 // Récupération du 1er paragraphe de la 1re div du document
-const P1 = document.querySelector("div p");
+const p1 = document.querySelector("div p");
 // Suppression du 1er paragraphe
-P1.remove();
+p1.remove();
 </script>
 ```
 
@@ -30,11 +30,11 @@ P1.remove();
 
 <script>
 // Récupération de la 1re div du document
-const DIV = document.querySelector("div");
+const div = document.querySelector("div");
 // Récupération du 1er <p> de la DIV
-const P1 = DIV.querySelector("p");
+const p1 = div.querySelector("p");
 // Suppression du 1er paragraphe
-DIV.removeChild(P1);
+div.removeChild(p1);
 </script>
 ```
 
@@ -50,15 +50,15 @@ DIV.removeChild(P1);
 
 <script>
 // Récupération de la 1re div du document
-const DIV = document.querySelector("div");
+const div = document.querySelector("div");
 // Récupération du 1er <p> de la DIV
-const ANCIEN_PARA = DIV.querySelector("p");
+const ancienPara = div.querySelector("p");
 // Création d'un nouveau <p>
-const NOUVEAU_PARA = document.createElement("p");
+const nouveauPara = document.createElement("p");
 // Modification du texte du nouveau <p>
-NOUVEAU_PARA.innerText = 'Nouveau paragraphe';
+nouveauPara.innerText = "Nouveau paragraphe";
 // Remplace l'ancien <p> par le nouveau
-DIV.replaceChild(NOUVEAU_PARA, ANCIEN_PARA);
+div.replaceChild(nouveauPara, ancienPara);
 </script>
 ```
 
@@ -79,11 +79,11 @@ DIV.replaceChild(NOUVEAU_PARA, ANCIEN_PARA);
 
 <script>
 // Récupération du dernier fils de #liste1 <li>Thé</li>
-const DERNIER_FILS_LISTE1 = document.querySelector("#liste1 :last-child");
+const dernierFilsListe1 = document.querySelector("#liste1 :last-child");
 // Clone, copie, le dernier fils et son contenu, sa descendance
-const CLONE = DERNIER_FILS_LISTE1.cloneNode(true);
-// Ajoute le clone à la fin de #liste1
-document.getElementById("liste2").appendChild(CLONE);
+const cloneDernierFils = dernierFilsListe1.cloneNode(true);
+// Ajoute le clone à la fin de #liste2
+document.getElementById("liste2").appendChild(cloneDernierFils);
 </script>
 ```
 
