@@ -39,8 +39,6 @@ Les variables JavaScript ne sont **pas typées** !
 On peut initialiser une variable avec un entier puis lui affecter une chaîne de caractères sans déclencher d’erreur.
 {% endhint %}
 
-\`\`
-
 {% page-ref page="types.md" %}
 
 ### Variables avec `var` ou `let` ?
