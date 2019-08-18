@@ -12,6 +12,28 @@ x = x + 5;
 
 Vous pouvez utiliser `++` et `--` respectivement pour incrémenter et pour décrémenter. Ils peuvent être utilisés comme opérateurs préfixes ou suffixes.
 
+{% hint style="danger" %}
+Attention, utiliser `++` et `--` en suffixe ou en préfixe ne fonctionne pas de la même manière.
+{% endhint %}
+
+En **suffixe**, l'opération s’effectuera **après l'affectation** :
+
+```javascript
+let x = 10;
+let y = 0;
+
+y = x++; // y = 10 et x = 11
+```
+
+En **préfixe**, l'opération s’effectuera **avant l'affectation** :
+
+```javascript
+let x = 10;
+let y = 0;
+
+y = ++x; // y = 11 et x = 11
+```
+
 ## Opérateur de concaténation de chaines
 
 L'opérateur `+` permet également de concaténer des chaînes :
