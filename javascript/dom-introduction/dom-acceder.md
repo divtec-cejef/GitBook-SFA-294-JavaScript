@@ -19,7 +19,7 @@ Renvoie **un objet** `Element` représentant l'élément dont l' `id` correspond
 
 ```javascript
 // Renvoie l'élément avec l'id "menu" <nav id="menu">...</nav>
-const menu = document.getElementById('menu');
+const menu = document.getElementById("menu");
 ```
 
 ## Element.getElementsByClassName\(\)
@@ -31,11 +31,11 @@ Retourne un **tableau** \(HTMLCollection\) contenant une référence sur tous le
 ```javascript
 // Renvoie un tableau de tous les éléments du document
 // appartenant à la classe rouge
-let elementsRouges = document.getElementsByClassName('rouge');
+const elementsRouges = document.getElementsByClassName("rouge");
 
 // Renvoie un tableau de tous les enfants de l'élément spécifié
 // appartenant aux classes rouge ET gras
-let elementsRougesGras = monElement.getElementsByClassName('rouge gras');
+const elementsRougesGras = monElement.getElementsByClassName("rouge gras");
 ```
 
 {% embed url="https://codepen.io/fallinov/pen/BqPNjK" caption="Exemple de récupération et parcours d\'éléments" %}
@@ -48,10 +48,10 @@ Retourne un **tableau** \(HTMLCollection\) contenant une référence sur tous le
 
 ```javascript
 // Renvoie un tableau de tous les éléments <li> du document
-let elementsDeListes = document.getElementsByTagName('li');
+const elementsDeListes = document.getElementsByTagName("li");
 
 // Renvoie un tableau des éléments <strong> enfants de monElement
-let taches = monElement.getElementsByTagName('strong');
+const taches = monElement.getElementsByTagName("strong");
 ```
 
 ## Element.querySelector\(\)
@@ -62,11 +62,11 @@ Retourne **le premier** `Element` dans le document correspondant au **sélecteur
 
 ```javascript
 // Revoie le premier paragraphe du document
-const premierPara = document.querySelector('p');
+const premierPara = document.querySelector("p");
 
 // Renvoie le premier élément du document correspondant à l'un des sélecteur CSS
 // 'img.rouge, img-jaune' (images appartenant à la classe rouge OU jaune)
-const imgRougeOuJaune = document.querySelector('img.rouge, img.jaune');
+const imgRougeOuJaune = document.querySelector("img.rouge, img.jaune");
 
 // Renvoie la valeur de l'élément coché (:checked) du groupe d'input "pays"
 let pays = document.querySelector('input[name="pays"]:checked').value;
@@ -83,13 +83,13 @@ Retourne un **tableau** \(NodeList\) contenant une référence sur tous les él�
 
 ```javascript
 // Retourne tous les paragraphes du document
-let paras = document.querySelectorAll("p");
+const paras = document.querySelectorAll("p");
 
 // Retourne tous les paragraphes présents dans une div avec la classe "article"
-let parasAticle = container.querySelectorAll("div.article > p");
+const parasAticle = container.querySelectorAll("div.article > p");
 
 // Retourne un tableau de tous les éléments correspondants à l'un des sélecteurs
 // Sélectionne les div appartenant à la classe "note" OU "alert"
-let notesEtAlertes = document.querySelectorAll('div.note, div.alert');
+const notesEtAlertes = document.querySelectorAll("div.note, div.alert");
 ```
 

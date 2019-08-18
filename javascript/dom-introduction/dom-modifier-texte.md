@@ -70,16 +70,20 @@ Il existe quatre `positions`:
 * `'beforeend'` : Juste à l'intérieur de l'`element` , **après son dernier enfant**.
 * `'afterend'` : **Après** `element` lui-même.
 
+Exemple de ces positions pour le paragraphe `#intro`
+
 ```markup
-<p>bla bla</p>
+<h2>Mon titre</h2>
+<p>Un peu de texte</p>
 <!-- beforebegin -->
 <p id='intro'>
   <!-- afterbegin -->
-  Un peu de texte
+  Et encore un peu de texte
   <!-- beforeend -->
 </p>
 <!-- afterend -->
-<p>bla bla</p>
+<p>Et encore et toujours du texte</p>
+<h3>Mon sous-titre</h3>
 ```
 
 ### Exemple
@@ -95,7 +99,7 @@ Il existe quatre `positions`:
 
 <script>
 // Ajouter un nouveau contenu entre #liste1 et #liste2
-let liste2 = document.getElementById('liste2');
+const liste2 = document.getElementById('liste2');
 
 // Ajout de <p> juste avant et juste après #liste2
 liste2.insertAdjacentHTML('beforebegin', '<p>Juste avant #liste2</p>');
