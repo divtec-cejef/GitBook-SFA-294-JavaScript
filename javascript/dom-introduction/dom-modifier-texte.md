@@ -18,12 +18,12 @@ Récupère ou définit le contenu HTML d'un élément et de ses descendants.
 
 <script>
 // Récupère le paragraphe #intro
-let introPara = document.getElementById('intro');
+const introPara = document.getElementById("intro");
 // Récupère le contenu HTML du paragraphe
 let contenu = introPara.innerHTML; //Je suis un <strong>joli</strong> paragraphe !
 
 // Remplacer le contenu HTML du paragraphe
-introPara.innerHTML = 'Je suis un <em>nouveau</em> paragraphe !';
+introPara.innerHTML = "Je suis un <em>nouveau</em> paragraphe !";
 // <p>Je suis un <em>nouveau</em> paragraphe !</p>
 
 // Ajouter du contenu HTML à la fin du contenu existant avec +=
@@ -47,7 +47,7 @@ Utilisé en lecture, il renvoie une approximation du texte que l’utilisateur o
 
 <script>
 // Récupère le paragraphe #intro
-let introPara = document.getElementById('intro');
+const introPara = document.getElementById("intro");
 
 // Récupération du contenu avec innerText
 console.log(introPara.innerText); // Je suis un joli paragraphe !
