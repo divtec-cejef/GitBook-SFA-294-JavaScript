@@ -4,10 +4,10 @@
 
 ```javascript
 // Crée un tableau vide
-let monPremierTab = [];
+const monPremierTab = [];
 
 // Crée un tableau avec valeurs. Peut contenir différents types
-let monTab = [monPremierTab, 33, true, 'une chaine'];
+const monTab = [monPremierTab, 33, true, 'une chaine'];
 
 // Retourne un élément spécifique du tableau
 monTab[1]; // Retourne 33
@@ -40,7 +40,7 @@ monTab.splice(3, 2); //Reourne et supprime le 4e et 5e élément
 ### **instruction** for
 
 ```javascript
-let animaux = [ '🐔', '🐷', '🐑', '🐇'];
+const animaux = [ '🐔', '🐷', '🐑', '🐇'];
 
 // Boucle for classique (éviter i++ et utiliser ++i ou i+=1)
 for (let i = 0; i < animaux.length; ++i) {
@@ -53,10 +53,25 @@ for (let i = 0; i < animaux.length; ++i) {
 // 🐇
 ```
 
+#### Avec index
+
+```javascript
+const animaux = [ '🐔', '🐷', '🐑', '🐇'];
+
+for (const [index, animal] of animaux.entries()) {  
+	console.log(index, animal);
+}
+
+// 0 🐔
+// 1 🐷
+// 2 🐑
+// 3 🐇
+```
+
 ### **instruction** for...of
 
 ```javascript
-let animaux = ["🐔", "🐷", "🐑", "🐇"];
+const animaux = ["🐔", "🐷", "🐑", "🐇"];
 
 // Itération avec for..of
 for (let animal of animaux) {
@@ -72,7 +87,7 @@ for (let animal of animaux) {
 ### Méthode forEach\(\)
 
 ```javascript
-let animaux = ["🐔", "🐷", "🐑", "🐇"];
+const animaux = ["🐔", "🐷", "🐑", "🐇"];
 
 // Méthode forEach avec fontion anonyme (depsui ES5 seulement)
 animaux.forEach(function(animal) {
