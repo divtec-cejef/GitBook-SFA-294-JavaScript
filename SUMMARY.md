@@ -30,7 +30,7 @@
   * [Naviguer dans le DOM](javascript/dom-introduction/dom-naviguer.md)
 * [Formulaires](javascript/formulaires/README.md)
   * [Envoyer des formulaires](javascript/formulaires/capter-lenvoi-du-formulaire.md)
-  * [Récupérer la valeur des champs](javascript/formulaires/recuperer-la-valeur-des-champs.md)
+  * [Récupérer et modifier la valeur des champs](javascript/formulaires/recuperer-la-valeur-des-champs.md)
   * [Valider les saisies utilisateurs](javascript/formulaires/valider-les-saisies-utilisateurs.md)
 * [JavaScript Moderne](javascript/javascript-moderne/README.md)
   * [Transpiller](javascript/javascript-moderne/transpiller.md)

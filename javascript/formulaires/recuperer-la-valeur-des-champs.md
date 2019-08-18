@@ -1,13 +1,14 @@
-# Récupérer la valeur des champs
+# Récupérer et modifier la valeur des champs
 
 ## Champs de saisie
 
 ### Propriété `value`
 
-Pour récupérer la valeur entrée par le visiteur dans un champs de saisie texte \(`input`, `textarea`\), on utilise la propriété `.value`.
+Pour récupérer ou modifier la valeur entrée par le visiteur dans un champs de saisie texte \(`input`,  `password`,`textarea`, `hidden` , `email`\) on utilise la propriété `.value`.
 
 ```javascript
-monElement.value;
+let texte = monElement.value;
+monElement.value = "toto";
 ```
 
 ## Liste déroulantes
@@ -36,7 +37,7 @@ Exemple récupérer le contenu texte de l'option `selected` :
 
 <script>
 const liste = document.getElementById("pays");
-let optionSelectionnee = liste.querySelector("option:checked");
+const optionSelectionnee = liste.querySelector("option:checked");
 
 console.log(optionSelectionnee.innerText); // Italie
 </script>
@@ -66,15 +67,15 @@ monElementListe.addEventListener("change", function() {...});
 
 <script>
 // Récupère la liste déroulante #pays et le span .code
-const LIS_PAYS = document.getElementById("pays");
-const SPAN_CODE = document.querySelector("span.code");
+const listePays = document.getElementById("pays");
+const codeSelectionne = document.querySelector("span.code");
 
 // Sur changement de la valeur de la liste déroulante
-LIS_PAYS.addEventListener("change", function() {
+listePays.addEventListener("change", function() {
    // Récupère la valeur de l'option sélectionnée
-   let codePays = LIS_PAYS.value;
-   // Modifie le contenu texte du span .code   
-   SPAN_CODE.innerText = codePays;
+   let codePays = listePays.value;
+   // Modifie le contenu texte du span .code
+   codeSelectionne.innerText = codePays;
 });
 </script>
 ```
@@ -85,7 +86,7 @@ LIS_PAYS.addEventListener("change", function() {
 
 ### Propriété checked
 
- La propritété `checked` vous permet de savoir si une case est cochée `true` ou non `false`
+ La propriété `checked` vous permet de savoir si une case est cochée `true` ou non `false`
 
 ```javascript
 monElement.checked; // Retourne true ou false
@@ -102,14 +103,14 @@ monElement.checked; // Retourne true ou false
 
 <script>
 // 1er formulaire du document
-const FORMULAIRE = document.querySelector('form');
+const formulaire = document.querySelector("form");
 // Case à cocher "copie"
-const CHK_COPIE = document.getElementById('copie');
+const chkCopie = document.getElementById("copie");
 
 // Evénement submit => Lors de l'envoi du formulaire
-FORMULAIRE.addEventListener('submit', function(event){ 
+formulaire.addEventListener("submit", function(event) {
    // Si utilisateur n'a pas saisi de nom
-   if(CHK_COPIE.checked === true) {
+   if (chkCopie.checked === true) {
       alert("Message envoyé AVEC copie !");
    } else {
       alert("Message envoyé SANS copie !");
@@ -154,14 +155,14 @@ Il ne faut donc rappeler `querySelectorAll()` pour mettre à jour le contenu de 
 
 <script>
 // 1er formulaire du document
-const FORMULAIRE = document.querySelector("form");
+const formulaire = document.querySelector("form");
 
 // Evénement submit => Lors de l'envoi du formulaire
-FORMULAIRE.addEventListener("submit", function(event) {
+formulaire.addEventListener("submit", function(event) {
    event.preventDefault();
-   
+
    // Cases cochée dans le groupe couleurs[]
-   let couleursCochées = document.querySelectorAll(
+   const couleursCochées = document.querySelectorAll(
       'input[name="couleurs[]"]:checked'
    );
 
@@ -199,25 +200,23 @@ document.querySelector('[name="couleur"]:checked').value;
 
 <script>
 // 1er formulaire du document
-const FORMULAIRE = document.querySelector("form");
+const formulaire = document.querySelector("form");
 
 // Evénement submit => Lors de l'envoi du formulaire
-FORMULAIRE.addEventListener("submit", function(event) {
-    // Désactive l'envoi du formulaire
+formulaire.addEventListener("submit", function(event) {
+   // Désactive l'envoi du formulaire
    event.preventDefault();
-   
+
    // Radio coché dans le groupe genre
-   let genre = document.querySelector(
-      '[name="genre"]:checked'
-   );
-   
+   const genre = document.querySelector('[name="genre"]:checked');
+
    // Test si un genre est coché
-   if(genre === null) {
+   if (genre === null) {
       alert("Sélectionner un genre !");
       return;
    }
-   
-   alert(genre.value);   
+
+   alert(genre.value);
 });
 </script>
 ```

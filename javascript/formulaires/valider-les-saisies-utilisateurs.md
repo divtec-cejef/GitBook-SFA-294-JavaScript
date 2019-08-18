@@ -32,7 +32,7 @@ Ci-après un exemple classique de validation de formulaire avec création d'un m
  */
 function validerPersonne(nom, age) {
    // Initialisation du tableau des erreurs
-   let erreurs = [];
+   const erreurs = [];
 
    //Supprime les espaces en début et fin de chaine
    nom = nom.trim();
