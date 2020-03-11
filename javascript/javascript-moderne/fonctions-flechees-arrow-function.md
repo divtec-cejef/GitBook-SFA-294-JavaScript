@@ -27,7 +27,7 @@ hello = (val) => "Hello " + val;
 hello = val => "Hello " + val;
 ```
 
-## Qu'en est-il de this !
+## Qu'en est-il de `this` !
 
 Le traitement de `this` n'est pas le même dans les fonctions de fléchées que dans les fonctions régulières.
 
