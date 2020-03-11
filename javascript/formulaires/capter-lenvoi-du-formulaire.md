@@ -45,6 +45,7 @@ formulaire.addEventListener('submit', function(event){
 
 ## Exemple
 
+{% code title="" %}
 ```markup
 <form action="https://kode.ch/getpost/" method="post">
    <label for="nom">Votre nom</label>
@@ -74,6 +75,7 @@ formulaire.addEventListener("submit", function(event) {
 
 </script>
 ```
+{% endcode %}
 
 {% embed url="https://codepen.io/fallinov/pen/yQPywX?editors=0010" %}
 

@@ -106,8 +106,8 @@ window.onload = function() {
 
 ## Ajouter un événement à une liste d'éléments
 
-{% code-tabs %}
-{% code-tabs-item title="main.js" %}
+{% tabs %}
+{% tab title="main.js" %}
 ```javascript
 const boutons = document.querySelectorAll("button");
 
@@ -117,18 +117,18 @@ for (let bouton of boutons) {
    });
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="index.html" %}
+{% tab title="index.html" %}
 ```markup
 <button>Bouton 1</button>
 <button>Bouton 3</button>
 <button>Bouton 3</button>
 
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="styles.css" %}
+{% tab title="styles.css" %}
 ```css
 button {
    cursor: pointer;
@@ -146,8 +146,8 @@ button.rouge {
 }
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 {% embed url="https://codepen.io/fallinov/pen/WaPXEQ/" %}
 

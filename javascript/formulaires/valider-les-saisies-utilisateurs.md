@@ -2,8 +2,8 @@
 
 Ci-après un exemple classique de validation de formulaire avec création d'un message d'erreur.
 
-{% code-tabs %}
-{% code-tabs-item title="HTML" %}
+{% tabs %}
+{% tab title="HTML" %}
 ```markup
 <ul class="message"></ul>
 <form action="https://kode.ch/getpost/" method="post">
@@ -22,9 +22,9 @@ Ci-après un exemple classique de validation de formulaire avec création d'un m
    </ul>
 </form>
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="" %}
+{% tab title="" %}
 ```javascript
 /**
  * Valide le nom et l'âge d'une personne et retourne un tableau d'erreurs
@@ -95,9 +95,9 @@ eleFormulaire.addEventListener("submit", function(event) {
    }
 });
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title=undefined %}
+{% tab title="CSS" %}
 ```css
 body {
    font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -127,8 +127,8 @@ form ul li label {
 }
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 {% embed url="https://codepen.io/fallinov/pen/mQBoBp?editors=0010" %}
 
