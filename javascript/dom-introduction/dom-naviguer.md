@@ -85,7 +85,9 @@
       </td>
     </tr>
   </tbody>
-</table>Comme on peut le voir, certaines actions sont réalisables avec deux propriétés différentes.
+</table>
+
+Comme on peut le voir, certaines actions sont réalisables avec deux propriétés différentes.
 
 Il existe deux "familles" de propriétés pour naviguer dans la DOM :
 

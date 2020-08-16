@@ -17,6 +17,7 @@
   * [Boucles](javascript/introduction/boucles.md)
   * [Objets](javascript/introduction/objets.md)
   * [Tableaux](javascript/introduction/tableaux.md)
+  * [Interactions avec l'utilisateur](javascript/introduction/interactions-avec-lutilisateur.md)
   * [Timers & Intervalles](javascript/introduction/timers.md)
 * [Manipuler une page Web via le DOM](javascript/dom-introduction/README.md)
   * [Introduction](javascript/dom-introduction/introduction.md)
