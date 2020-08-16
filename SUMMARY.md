@@ -10,6 +10,8 @@
   * [Commentaires & entêtes](javascript/introduction/commentaires.md)
   * [Variables et constantes](javascript/introduction/variables-et-constantes.md)
   * [Types de données](javascript/introduction/types.md)
+  * [String](javascript/introduction/string.md)
+  * [Number](javascript/introduction/number.md)
   * [Conversions](javascript/introduction/conversions.md)
   * [Opérateurs](javascript/introduction/operateurs.md)
   * [Conditions](javascript/introduction/conditions.md)
