@@ -21,7 +21,7 @@ Après saisie du prénom, une seconde boîte affiche un "bonjour" personnalisé.
 
 La valeur saisie dans la première boîte de dialogue a été stockée dans une variable de type chaîne nommée `prenom`. Ensuite, l'instruction JavaScript `alert()` a déclenché l'affichage de la seconde boîte, contenant le message d'accueil.
 
-### Afficher un message à l'utiliateur
+### Afficher un message à l’utilisateur
 
 Nous avons vu dans les précédents chapitres que l'instruction JavaScript `console.log()` permettait d'afficher une information.
 
