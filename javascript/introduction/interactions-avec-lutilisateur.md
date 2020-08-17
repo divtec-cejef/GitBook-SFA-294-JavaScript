@@ -38,7 +38,7 @@ console.log(temp1, temp2, temp3); // Affiche "36.9 37.6 37.1"
 
 ### Saisie de nombres
 
-Quel que soit le texte saisi, l'instruction `prompt()` **renvoie toujours une valeur de type chaîne**. Il faudra penser à convertir cette valeur avec l'instruction `Number()` si vous souhaitez ensuite la comparer à d'autres nombres ou l'utiliser dans des expressions mathématiques.
+Quel que soit le texte saisi, l'instruction `prompt()` **renvoie toujours une valeur de type chaîne**. Il faudra penser à convertir cette valeur avec l'instruction `Number()` , `parseInt()` ou `parseFloat()`, si vous souhaitez ensuite la comparer à d'autres nombres ou l'utiliser dans des expressions mathématiques.
 
 ```javascript
 // saisie est de type chaîne
