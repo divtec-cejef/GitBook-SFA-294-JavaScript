@@ -2,6 +2,8 @@
 
 Support de cours du module 133A de l'Ecole Professionnelle Technique de la DIVTEC de Porrentruy.
 
+{% file src=".gitbook/assets/133a-javascript-support-de-cours-2020.pdf" caption="Support de cours au format PDF" %}
+
 ### Compétence
 
 Développer, réaliser et tester une application, selon la donnée, avec un langage de scripts côté client.
