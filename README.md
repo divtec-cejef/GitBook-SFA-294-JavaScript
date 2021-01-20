@@ -1,6 +1,4 @@
-# Module 133A
-
-Support de cours du module 133A de l'Ecole Professionnelle Technique de la DIVTEC de Porrentruy.
+# Introduction à JavaScript
 
 {% file src=".gitbook/assets/133a-javascript-support-de-cours-2020.pdf" caption="Support de cours au format PDF" %}
 

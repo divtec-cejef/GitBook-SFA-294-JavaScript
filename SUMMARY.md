@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Module 133A](README.md)
+* [Introduction à JavaScript](README.md)
 * [Environnement de développement](environnement-de-developpement.md)
 
 ## JavaScript
