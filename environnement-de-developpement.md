@@ -1,8 +1,8 @@
 # Environnement de développement
 
-Pour coder en Javascript, un simple éditeur de texte et un navigateur suffisent.
+Pour coder en JavaScript, un simple éditeur de texte et un navigateur suffisent.
 
-Afin de faciliter le développement d'applicaitons JavaScript, il existe différents outils qui vous permettront de valider la qualité de votre code et d'automatiser certaines tâches. Ci-après une liste de quelques outils.
+Afin de faciliter le développement d’applications JavaScript, il existe différents outils qui vous permettront de valider la qualité de votre code et d'automatiser certaines tâches. Ci-après une liste de quelques outils.
 
 {% embed url="https://www.jetbrains.com/webstorm/" caption="Editeur de code professionnel \(gratuit pour étudiants\)" %}
 
