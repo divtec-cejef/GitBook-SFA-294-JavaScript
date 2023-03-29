@@ -93,6 +93,14 @@ Cette méthode correspond à la méthode [`parseFloat()`](https://developer.mozi
 
 Cette méthode correspond à la méthode [`parseInt()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global\_Objects/parseInt) de l'objet global.
 
+``[`Number.prototype.toFixed()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global\_Objects/Number/toFixed)``
+
+La méthode **`toFixed()`** permet de formater un nombre en notation à point-fixe.
+
+```javascript
+2.345789.toFixed(2); // Renvoie '2.35'
+```
+
 ### Les instances de `Number` <a href="#les_instances_de_number" id="les_instances_de_number"></a>
 
 Toutes les instances de `Number` héritent de [`Number.prototype` (en-US)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Number). Il est possible de modifier le prototype du constructeur `Number` pour affecter toutes les instances de `Number`.
