@@ -84,7 +84,7 @@ for (let animal of animaux) {
 // 🐇
 ```
 
-### Méthode forEach\(\)
+### Méthode forEach()
 
 ```javascript
 const animaux = ["🐔", "🐷", "🐑", "🐇"];
@@ -104,5 +104,21 @@ animaux.forEach(function(animal) {
 
 {% embed url="https://codepen.io/fallinov/pen/BqEJgp?editors=0011" %}
 
+## Retourner le contenu d'une tableau sous forme de chaîne
 
+### Array.prototype.join()
 
+La méthode **`join()`** crée et renvoie une nouvelle chaîne de caractères en concaténant tous les éléments d'un tableau (ou d'[un objet semblable à un tableau](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Indexed\_collections#manipuler\_des\_objets\_semblables\_%c3%a0\_des\_tableaux)). La concaténation utilise la virgule ou une autre chaîne, fournie en argument, comme séparateur.
+
+```javascript
+const elements = ['Fire', 'Air', 'Water'];
+
+console.log(elements.join());
+// "Fire,Air,Water"
+
+console.log(elements.join(''));
+// "FireAirWater"
+
+console.log(elements.join('-'));
+// "Fire-Air-Water"
+```
