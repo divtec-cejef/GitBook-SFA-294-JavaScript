@@ -95,7 +95,7 @@ Cette méthode correspond à la méthode [`parseInt()`](https://developer.mozill
 
 ``[`Number.prototype.toFixed()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global\_Objects/Number/toFixed)``
 
-La méthode **`toFixed()`** permet de formater un nombre en notation à point-fixe.
+La méthode **`toFixed()`** permet de formater (arrondir) un nombre en notation à point-fixe.
 
 ```javascript
 2.345789.toFixed(2); // Renvoie '2.35'
