@@ -24,6 +24,8 @@ const string4 = new String("Un objet String");
 
 Les valeurs littérales pour les chaînes de caractères peuvent être indiquées avec des **simples quotes (')**, **des doubles quotes (")** ou encore par **des accents graves (\`)**.&#x20;
 
+#### Template literals (Template strings) - Littéraux de gabarits
+
 Cette dernière forme permet de définir un [littéral de gabarit de chaîne de caractères](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Template\_literals) avec lequel on pourra interpoler des expressions dans une chaîne de caractères.
 
 ```javascript
