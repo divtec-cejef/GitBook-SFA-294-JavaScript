@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Introduction à JavaScript](README.md)
+* [Introduction](README.md)
 * [Environnement de développement](environnement-de-developpement.md)
 
 ## JavaScript
@@ -38,8 +38,7 @@
   * [Valider les saisies utilisateurs](javascript/formulaires/valider-les-saisies-utilisateurs.md)
 * [JavaScript Moderne](javascript/javascript-moderne/README.md)
   * [Transpiller](javascript/javascript-moderne/transpiller.md)
-  * [Fonctions fléchées \(Arrow Function\)](javascript/javascript-moderne/fonctions-flechees-arrow-function.md)
+  * [Fonctions fléchées (Arrow Function)](javascript/javascript-moderne/fonctions-flechees-arrow-function.md)
   * [Template Literals](javascript/javascript-moderne/template-literals.md)
   * [Ensembles](javascript/javascript-moderne/ensembles.md)
   * [Paramètres par défaut](javascript/javascript-moderne/parametres-par-default.md)
-
