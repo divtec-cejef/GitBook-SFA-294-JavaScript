@@ -16,20 +16,20 @@ Element.style.propriétéCSS = "valeur"
 
 En JavaScript deux règles importantes concernant le CSS :
 
-* les **valeurs sont toujours des chaines de caractères** `Element.style.padding = "4px"`. 
+* les **valeurs sont toujours des chaines de caractères** `Element.style.padding = "4px"`.&#x20;
 * les traits d'union `-` des **propriétés CSS composées de plusieurs mots-clés** comme `border-color`, sont remplacés par une **camélisation** `borderColor`.
 
-![Cam&#xE9;lisation des propri&#xE9;t&#xE9;s CSS](../../.gitbook/assets/image%20%281%29.png)
+![Camélisation des propriétés CSS](<../../.gitbook/assets/image (4).png>)
 
 Ci-après, quelques exemples de déclaration CSS et leur équivalence en JavaScript:
 
-| Déclaration CSS | JavaScript |
-| :--- | :--- |
-| `color: #2ecc71;` | `Element.style.color = "#2ecc71";` |
-| `font-size: 2em;` | `Element.style.fontSize = "2em";` |
-| `background-color: red;` | `Element.style.backgroundColor = "red";` |
-| `border-top-width : 2px;` | `Element.style.borderTopWidth = "2px";` |
-| `color: #333;` | `Element.style.color = "#333";` |
+| Déclaration CSS           | JavaScript                               |
+| ------------------------- | ---------------------------------------- |
+| `color: #2ecc71;`         | `Element.style.color = "#2ecc71";`       |
+| `font-size: 2em;`         | `Element.style.fontSize = "2em";`        |
+| `background-color: red;`  | `Element.style.backgroundColor = "red";` |
+| `border-top-width : 2px;` | `Element.style.borderTopWidth = "2px";`  |
+| `color: #333;`            | `Element.style.color = "#333";`          |
 
 ### Exemple
 
@@ -42,7 +42,7 @@ for (let i = 0; i < intros.length; i = i + 1) {
 }
 ```
 
-## window.getComputedStyle\(element\)
+## window.getComputedStyle(element)
 
 La méthode `window.getComputedStyle()` retourne un objet contenant la valeur calculée finale de toutes les propriétés CSS d'un élément.
 
@@ -62,6 +62,4 @@ console.log( styleIntro.getPropertyValue('top') ); // "40px"
 ```
 
 {% embed url="https://codepen.io/fallinov/pen/EdMxzL?editors=0011" %}
-
-
 

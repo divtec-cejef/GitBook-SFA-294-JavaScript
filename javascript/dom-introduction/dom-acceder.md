@@ -11,7 +11,7 @@ La deuxième méthode est plus efficace, puisqu'elle ne nécessite pas un parcou
 L' objet `document` représente l'élément `<html>` de la page.
 {% endhint %}
 
-## document.getElementById\(\)
+## document.getElementById()
 
 Ne peut être appelée qu'avec l'objet `document`.
 
@@ -22,11 +22,11 @@ Renvoie **un objet** `Element` représentant l'élément dont l' `id` correspond
 const menu = document.getElementById("menu");
 ```
 
-## Element.getElementsByClassName\(\)
+## Element.getElementsByClassName()
 
 Peut être appelée avec l'objet `document` ou un objet de type `Element`.
 
-Retourne un **tableau** \(HTMLCollection\) contenant une référence sur tous les éléments ayant les **noms de classes** passés en paramètre.
+Retourne un **tableau** (HTMLCollection) contenant une référence sur tous les éléments ayant les **noms de classes** passés en paramètre.
 
 ```javascript
 // Renvoie un tableau de tous les éléments du document
@@ -38,13 +38,15 @@ const elementsRouges = document.getElementsByClassName("rouge");
 const elementsRougesGras = monElement.getElementsByClassName("rouge gras");
 ```
 
-{% embed url="https://codepen.io/fallinov/pen/BqPNjK" caption="Exemple de récupération et parcours d\'éléments" %}
+{% embed url="https://codepen.io/fallinov/pen/BqPNjK" %}
+Exemple de récupération et parcours d'éléments
+{% endembed %}
 
-## Element.getElementsByTagName\(\)
+## Element.getElementsByTagName()
 
 Peut être appelée avec l'objet `document` ou un objet de type `Element`.
 
-Retourne un **tableau** \(HTMLCollection\) contenant une référence sur tous les éléments portant le **nom de balise** donné passé en paramètre.
+Retourne un **tableau** (HTMLCollection) contenant une référence sur tous les éléments portant le **nom de balise** donné passé en paramètre.
 
 ```javascript
 // Renvoie un tableau de tous les éléments <li> du document
@@ -54,11 +56,11 @@ const elementsDeListes = document.getElementsByTagName("li");
 const taches = monElement.getElementsByTagName("strong");
 ```
 
-## Element.querySelector\(\)
+## Element.querySelector()
 
 Peut être appelée avec l'objet `document` ou un objet de type `Element`.
 
-Retourne **le premier** `Element` dans le document correspondant au **sélecteur CSS** - ou groupe de sélecteurs - spécifié\(s\), ou null si aucune correspondance n'est trouvée.
+Retourne **le premier** `Element` dans le document correspondant au **sélecteur CSS** - ou groupe de sélecteurs - spécifié(s), ou null si aucune correspondance n'est trouvée.
 
 ```javascript
 // Revoie le premier paragraphe du document
@@ -75,11 +77,11 @@ let pays = document.querySelector('input[name="pays"]:checked').value;
 const inputLogin = document.querySelector('div.utilisateur input[name="login"]');
 ```
 
-## Element.querySelectorAll\(\)
+## Element.querySelectorAll()
 
 Peut être appelée avec l'objet `document` ou un objet de type `Element`.
 
-Retourne un **tableau** \(NodeList\) contenant une référence sur tous les éléments correspondent au **sélecteur CSS** - ou groupe de sélecteurs - spécifié\(s\).
+Retourne un **tableau** (NodeList) contenant une référence sur tous les éléments correspondent au **sélecteur CSS** - ou groupe de sélecteurs - spécifié(s).
 
 ```javascript
 // Retourne tous les paragraphes du document
@@ -92,4 +94,3 @@ const parasAticle = container.querySelectorAll("div.article > p");
 // Sélectionne les div appartenant à la classe "note" OU "alert"
 const notesEtAlertes = document.querySelectorAll("div.note, div.alert");
 ```
-

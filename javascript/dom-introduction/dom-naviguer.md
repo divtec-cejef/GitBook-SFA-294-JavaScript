@@ -2,90 +2,18 @@
 
 "Naviguer dans la DOM", représente l'action de se déplacer, ou récupérer un noeud parent, enfant ou adjacent.
 
-![Propri&#xE9;t&#xE9;s de navigations DOM](../../.gitbook/assets/image.png)
+![Propriétés de navigations DOM](<../../.gitbook/assets/image (3).png>)
 
 ## Tableau des propriétés
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Action</th>
-      <th style="text-align:left">Propri&#xE9;t&#xE9;s des noeud</th>
-      <th style="text-align:left">Retour</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">
-        <p>R&#xE9;cup&#xE9;rer les fils</p>
-        <p></p>
-      </td>
-      <td style="text-align:left">
-        <p><code>node.childNodes</code>
-        </p>
-        <p><code>element.children</code>
-        </p>
-      </td>
-      <td style="text-align:left">
-        <p><code>NodeList</code>  <em>tableau de noeuds</em>
-        </p>
-        <p><code>HTMLCollection</code>  <em>tableau d&apos;&#xE9;l&#xE9;ments</em>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Premier fils</td>
-      <td style="text-align:left">
-        <p><code>node.firstChild</code>
-        </p>
-        <p><code>element.firstElementChild</code>
-        </p>
-      </td>
-      <td style="text-align:left">
-        <p><code>Node</code>
-        </p>
-        <p><code>Element</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Dernier fils</td>
-      <td style="text-align:left">
-        <p><code>node.lastChild</code>
-        </p>
-        <p><code>element.lastElementChild</code>
-        </p>
-      </td>
-      <td style="text-align:left">
-        <p><code>Node</code>
-        </p>
-        <p><code>Element</code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Fr&#xE8;re suivant</td>
-      <td style="text-align:left"><code>node.nextSibling</code>
-      </td>
-      <td style="text-align:left"><code>Node</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Fr&#xE8;re pr&#xE9;c&#xE9;dent</td>
-      <td style="text-align:left"><code>node.previousSibling</code>
-      </td>
-      <td style="text-align:left"><code>Node</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">R&#xE9;cup&#xE8;rer le parent</td>
-      <td style="text-align:left"><code>node.parentNode</code>
-      </td>
-      <td style="text-align:left"><code>Node</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Action                           | Propriétés des noeud                                                             | Retour                                                                                                                |
+| -------------------------------- | -------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| <p>Récupérer les fils</p><p></p> | <p><code>node.childNodes</code></p><p><code>element.children</code></p>          | <p><code>NodeList</code> <em>tableau de noeuds</em></p><p><code>HTMLCollection</code> <em>tableau d'éléments</em></p> |
+| Premier fils                     | <p><code>node.firstChild</code></p><p><code>element.firstElementChild</code></p> | <p><code>Node</code></p><p><code>Element</code></p>                                                                   |
+| Dernier fils                     | <p><code>node.lastChild</code></p><p><code>element.lastElementChild</code></p>   | <p><code>Node</code></p><p><code>Element</code></p>                                                                   |
+| Frère suivant                    | `node.nextSibling`                                                               | `Node`                                                                                                                |
+| Frère précédent                  | `node.previousSibling`                                                           | `Node`                                                                                                                |
+| Récupèrer le parent              | `node.parentNode`                                                                | `Node`                                                                                                                |
 
 Comme on peut le voir, certaines actions sont réalisables avec deux propriétés différentes.
 
@@ -96,8 +24,10 @@ Il existe deux "familles" de propriétés pour naviguer dans la DOM :
 
 Dans l'exemple ci après, on récupère le premier fils de la `div`  avec la propriété `firstChild`, avec la propriété`firstElementChild` .
 
-* La propriété `firstChild` retourne le premier noeud peut importe son type. Dans l'exemple le premier noeud est un noeud texte contenant `"Bonjour le"`.
-* La propriété `firstElementChild` retourne le premier noeud de type élément. Dans l'exemple le premier élément de la div est `<strong>monde</strong>`.
+* La propriété `firstChild` retourne le premier noeud peut importe son type.\
+  Dans l'exemple le premier noeud est un noeud texte contenant `"Bonjour le"`.
+* La propriété `firstElementChild` retourne le premier noeud de type élément.\
+  Dans l'exemple le premier élément de la div est `<strong>monde</strong>`.
 
 ```markup
 <div>Bonjour le <strong>monde</strong>!</div>
@@ -171,6 +101,4 @@ listeAnimaux.firstElementChild; // <li>🐔</li>
 listeAnimaux.lastElementChild; // <li>🐷</li>
 </script>
 ```
-
-
 

@@ -4,7 +4,7 @@
 
 ### Propriété `value`
 
-Pour récupérer ou modifier la valeur entrée par le visiteur dans un champs de saisie texte \(`input`,  `password`,`textarea`, `hidden` , `email`\) on utilise la propriété `.value`.
+Pour récupérer ou modifier la valeur entrée par le visiteur dans un champs de saisie texte (`input`,  `password`,`textarea`, `hidden` , `email`) on utilise la propriété `.value`.
 
 ```javascript
 let texte = monElement.value;
@@ -23,9 +23,9 @@ monElementSelect.value;
 
 ### Selecteur CSS :checked
 
-Le sélecteur  `:checked` vous permet de récupérer l'**option actuellement sélectionnée** avec ****`querySelector` **.** 
+Le sélecteur  `:checked` vous permet de récupérer l'**option actuellement sélectionnée** avec `querySelector` **.**&#x20;
 
-Exemple récupérer le contenu texte de l'option `selected` : 
+Exemple récupérer le contenu texte de l'option `selected` :&#x20;
 
 ```markup
 <select name="pays" id="pays">
@@ -86,7 +86,7 @@ listePays.addEventListener("change", function() {
 
 ### Propriété checked
 
- La propriété `checked` vous permet de savoir si une case est cochée `true` ou non `false`
+&#x20;La propriété `checked` vous permet de savoir si une case est cochée `true` ou non `false`
 
 ```javascript
 monElement.checked; // Retourne true ou false
@@ -222,4 +222,3 @@ formulaire.addEventListener("submit", function(event) {
 ```
 
 {% embed url="https://codepen.io/fallinov/pen/aQzRPy?editors=0010" %}
-

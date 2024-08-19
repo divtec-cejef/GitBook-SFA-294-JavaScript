@@ -1,7 +1,7 @@
 # Fonctions
 
 * Bloc de code conçu pour effectuer une tâche particulière.
-* Est exécuté quand "quelque chose" l'invoque \(l'appelle\).
+* Est exécuté quand "quelque chose" l'invoque (l'appelle).
 * Seul moyen de créer un nouvelle portée en JavaScript avant ES6
 * En JS, les fonctions sont la base de toutes interactions
 
@@ -53,7 +53,9 @@ ditBonjour("James"); // undefined
 
 Si vous travailler avec ES6, le lien suivant peut vous intéresser :
 
-{% page-ref page="../javascript-moderne/parametres-par-default.md" %}
+{% content-ref url="../javascript-moderne/parametres-par-default.md" %}
+[parametres-par-default.md](../javascript-moderne/parametres-par-default.md)
+{% endcontent-ref %}
 
 ## Retourner une valeur
 
@@ -70,7 +72,7 @@ ditBonjour("James"); // "Bonjour Prince James!"
 
 ```
 
-## Sortir d'une fonction 
+## Sortir d'une fonction&#x20;
 
 En utilisant un `return`on peut forcer la sortie d'un fonction. Tout le code de la fonction situer après le `return` ne sera donc pas exécuté.
 
@@ -100,11 +102,11 @@ maFonction(); // "Bonjour de ma fonction"
 {% hint style="info" %}
 Utiliser un max les fonctions avec des noms, cela vous facilitera la vie lors du débogage.
 
-Si une fonction anonyme déclenche une erreur, dans la console vous aurez comme information :  
-  
- _Erreur déclenchée par "anonymous function"_  
-  
- … oui mais laquelle ???
+Si une fonction anonyme déclenche une erreur, dans la console vous aurez comme information :\
+\
+&#x20;_Erreur déclenchée par "anonymous function"_\
+\
+&#x20;… oui mais laquelle ???
 {% endhint %}
 
 ## Fonction “IIFE” Immediately Invoked Function Expression
@@ -117,4 +119,3 @@ En plaçant tout votre code dans une "IFFE", cela empêchera vos variables d'ent
     console.log("Auto-exécution");
 })();
 ```
-

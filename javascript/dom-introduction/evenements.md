@@ -4,33 +4,33 @@ Les événements permettent de déclencher une fonction pour une action spécifi
 
 ## Principaux événements du DOM
 
-| Evénement DOM | Description |
-| :--- | :--- |
-| `click` | Bouton de la souris enfoncé puis relâché sur un élément. |
-| `dblclick` | Deux foix l'événement `click` |
-| `mouseover` | Souris au-dessus d'un élément. |
-| `mouseout` | Souris sort d'un élément. |
-| `mousedown` | Bouton de la souris enfoncé, pas relâché, sur un élément. |
-| `mouseup` | Bouton de la souris relâché sur un élément. |
-| `mousemove` | Souris en mouvement au-dessus d'un élément. |
-| `keydown` | Touche clavier enfoncée, pas relâchée, sur un élément. |
-| `keyup` | Touche clavier relâchée sur un élément. |
-| `keypress` | Touche clavier enfoncée et relâchée sur un élément. |
-| `focus` | L'élément reçoit, gagne, le focus.   Quand un objet devient l'élément actif du document. |
-| `blur` | Elément perd le focus. |
-| `change` | Changement de a valeur d'un élément de formulaire. |
-| `select` | Sélection du texte d'un élémen, mis en srubrillance. |
-| `submit` | Envoi d'un formulaire |
-| `reset` | Réinitialisation d'un formulaire |
+| Evénement DOM | Description                                                                                        |
+| ------------- | -------------------------------------------------------------------------------------------------- |
+| `click`       | Bouton de la souris enfoncé puis relâché sur un élément.                                           |
+| `dblclick`    | Deux foix l'événement `click`                                                                      |
+| `mouseover`   | Souris au-dessus d'un élément.                                                                     |
+| `mouseout`    | Souris sort d'un élément.                                                                          |
+| `mousedown`   | Bouton de la souris enfoncé, pas relâché, sur un élément.                                          |
+| `mouseup`     | Bouton de la souris relâché sur un élément.                                                        |
+| `mousemove`   | Souris en mouvement au-dessus d'un élément.                                                        |
+| `keydown`     | Touche clavier enfoncée, pas relâchée, sur un élément.                                             |
+| `keyup`       | Touche clavier relâchée sur un élément.                                                            |
+| `keypress`    | Touche clavier enfoncée et relâchée sur un élément.                                                |
+| `focus`       | <p>L'élément reçoit, gagne, le focus.  <br>Quand un objet devient l'élément actif du document.</p> |
+| `blur`        | Elément perd le focus.                                                                             |
+| `change`      | Changement de a valeur d'un élément de formulaire.                                                 |
+| `select`      | Sélection du texte d'un élémen, mis en srubrillance.                                               |
+| `submit`      | Envoi d'un formulaire                                                                              |
+| `reset`       | Réinitialisation d'un formulaire                                                                   |
 
- 🔗 Liste complète des événements : [https://www.w3schools.com/jsref/dom\_obj\_event.asp](https://www.w3schools.com/jsref/dom_obj_event.asp)
+&#x20;:link: Liste complète des événements : [https://www.w3schools.com/jsref/dom\_obj\_event.asp](https://www.w3schools.com/jsref/dom\_obj\_event.asp)
 
 ## Affecter une fonction à un événement
 
 Il existe différentes manières d'affecter une fonction à l'événement d'un objet.
 
-* Utiliser les [**gestionnaires d'événements "on-event"**](evenements.md#on-event) ****👎 
-* Créer des écouteur d'événement \(listener\) avec [**la méthode `addEventListener()`**](evenements.md#addeventlistener) 👍 
+* Utiliser les [**gestionnaires d'événements "on-event"**](evenements.md#on-event) :thumbsdown:&#x20;
+* Créer des écouteur d'événement (listener) avec [**la méthode `addEventListener()`**](evenements.md#addeventlistener) :thumbsup:&#x20;
 
 {% hint style="success" %}
 **Le meilleure moyen est souvent `addEventListener()`**
@@ -40,9 +40,9 @@ Avec la méthode "on-event", chaque objet ne peut avoir qu'un seul gestionnaire 
 
 ### On-event
 
-Les gestionnaires d'événements "on-event" sont nommées selon l'événement lié : `onclick`, `onkeypress`, `onfocus`, `onsubmit`, etc. 
+Les gestionnaires d'événements "on-event" sont nommées selon l'événement lié : `onclick`, `onkeypress`, `onfocus`, `onsubmit`, etc.&#x20;
 
-🔗 Liste des gestionnaires d'événements : [https://www.w3schools.com/tags/ref\_eventattributes.asp](https://www.w3schools.com/tags/ref_eventattributes.asp)
+:link: Liste des gestionnaires d'événements : [https://www.w3schools.com/tags/ref\_eventattributes.asp](https://www.w3schools.com/tags/ref\_eventattributes.asp)
 
 On peut scpécifier un "on-event" pour un événement particulier de différentes manières :
 
@@ -73,9 +73,9 @@ document.querySelector('button').onclick = function() {
 document.querySelector('button').onclick = () => alert("Plutôt embrasser un Wookie");
 ```
 
-### addEventListener\(\)
+### addEventListener()
 
-🔗 Liste des événements JavaScript : [https://www.w3schools.com/jsref/dom\_obj\_event.asp](https://www.w3schools.com/jsref/dom_obj_event.asp)
+:link: Liste des événements JavaScript : [https://www.w3schools.com/jsref/dom\_obj\_event.asp](https://www.w3schools.com/jsref/dom\_obj\_event.asp)
 
 La méthode `addEventListener()` permet de définir une fonction à appeler chaque fois que l'événement spécifié est détecté sur l'élément ciblé.
 
@@ -199,10 +199,10 @@ bouton.addEventListener("click", function (event) {
 
 Capture ? Bouillonnement ? De quoi parle-t-on ?
 
-Ces deux phases sont deux étapes distinctes de l'exécution d'un événement. La première, la **capture** \(_capture_ en anglais\), s'exécute avant le déclenchement de l'événement, tandis que la deuxième, le **bouillonnement** \(_bubbling_ en anglais\), s'exécute après que l'événement a été déclenché. Toutes deux permettent de définir le sens de propagation des événements.  
+Ces deux phases sont deux étapes distinctes de l'exécution d'un événement. La première, la **capture** (_capture_ en anglais), s'exécute avant le déclenchement de l'événement, tandis que la deuxième, le **bouillonnement** (_bubbling_ en anglais), s'exécute après que l'événement a été déclenché. Toutes deux permettent de définir le sens de propagation des événements.\
 
 
-![](../../.gitbook/assets/image%20%285%29.png)
+![](<../../.gitbook/assets/image (2).png>)
 
 ```markup
 <div id="div1">
@@ -236,5 +236,4 @@ document.getElementById("div2").addEventListener("click", function() {
 
 ## A lire...
 
-{% embed url="https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating\_and\_triggering\_events" %}
-
+{% embed url="https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events" %}

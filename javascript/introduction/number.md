@@ -93,7 +93,7 @@ Cette méthode correspond à la méthode [`parseFloat()`](https://developer.mozi
 
 Cette méthode correspond à la méthode [`parseInt()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global\_Objects/parseInt) de l'objet global.
 
-``[`Number.prototype.toFixed()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global\_Objects/Number/toFixed)``
+[`Number.prototype.toFixed()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global\_Objects/Number/toFixed)
 
 La méthode **`toFixed()`** permet de formater (arrondir) un nombre en notation à point-fixe.
 
