@@ -17,4 +17,4 @@ Ce cours s'inscrit dans le cadre du module 294, axé sur la réalisation d'appli
 * **Utiliser les outils de développement modernes** : Maîtriser l'utilisation de WebStorm, GitHub, et des outils de débogage pour assurer une qualité de code élevée.
 * **Respecter les bonnes pratiques de sécurité** : Implémenter des validations et des filtrages de données pour éviter les vulnérabilités courantes telles que les injections SQL ou les attaques XSS.
 
-Ce cours prépare les étudiants à relever les défis actuels du développement web, en leur fournissant les compétences techniques nécessaires pour créer des applications web robustes, sécurisées et maintenables【8†source】【9†source】【10†source】.
+Ce cours prépare les étudiants à relever les défis actuels du développement web, en leur fournissant les compétences techniques nécessaires pour créer des applications web robustes, sécurisées et maintenables.
