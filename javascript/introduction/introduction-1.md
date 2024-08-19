@@ -10,6 +10,14 @@ C'est un **langage léger** qui **doit faire partie d'un environnement hôte** (
 
 </div>
 
+## JavaScript une technologie **CLIENT**
+
+<div data-full-width="true">
+
+<figure><img src="../../.gitbook/assets/js-techno-client.png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
 ## Quelques généralités sur JavaScript :
 
 * Langage **interprété**
