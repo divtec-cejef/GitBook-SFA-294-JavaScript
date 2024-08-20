@@ -1,4 +1,6 @@
-# Introduction
+# Introduction à JavaScript
+
+## Présentation
 
 JavaScript est un **langage de script**, **multiplateforme** et **orienté objet**.
 
@@ -10,14 +12,6 @@ C'est un **langage léger** qui **doit faire partie d'un environnement hôte** (
 
 </div>
 
-## JavaScript une technologie **CLIENT**
-
-<div data-full-width="true">
-
-<figure><img src="../../.gitbook/assets/js-techno-client.png" alt=""><figcaption></figcaption></figure>
-
-</div>
-
 ## Quelques généralités sur JavaScript :
 
 * Langage **interprété**
@@ -26,12 +20,89 @@ C'est un **langage léger** qui **doit faire partie d'un environnement hôte** (
   *   Langage à « prototype »
 
       Un prototype est un objet à partir duquel on crée de nouveaux objets
-* Sensible à la casse
+* **Sensible à la casse**
 * **Confusion** fréquente **avec Java**
-  * Aucun lien entre ces deux langages !
-* Anciennement appelé ECMAScript - ES
-  * Standardisé par ECMA - European Computer Manufacturers Association
+  * Anciennement appelé **LiveScript**, créé en 1995
+  * Renommé JavaScript par **son père** **Brendan Eich** pour bénéficier de la popularité de Java dans les années 90.
+* Anciennement appelé **ECMAScript** - ES
+  * Standardisé par **ECMA** - European Computer Manufacturers Association
   * ES5 (2009) version la plus répandue / **ES6** (2014), prend de l’ampleur
+
+## JavaScript une technologie "**CLIENT " (Navigateur)**
+
+<div data-full-width="true">
+
+<figure><img src="../../.gitbook/assets/js-techno-client.png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
+### Pourquoi les technologies "CLIENT" sont-elles à la mode ?
+
+Certains traitements, autrefois effectués uniquement sur le serveur, peuvent désormais être réalisés directement par le navigateur, grâce aux technologies client-side modernes.
+
+Par exemple, la validation des formulaires ou la mise à jour dynamique de l'interface utilisateur se font instantanément, sans nécessiter une requête vers le serveur.
+
+Cette tendance à se tourner vers les technologies client-side, telles que JavaScript et ses frameworks (React, Vue.js, Angular), s'explique par plusieurs facteurs :
+
+* **Réduction de la charge serveur :** En déplaçant certains traitements vers le client, les serveurs sont moins sollicités, ce qui réduit les coûts d'infrastructure pour les fournisseurs comme Google ou Facebook.
+* **Amélioration des performances et de l'expérience utilisateur :** Les traitements côté client permettent des interactions plus rapides et fluides, améliorant ainsi l'expérience utilisateur en réduisant le temps de latence.
+* **Scalabilité accrue :** Moins dépendants du serveur pour les tâches simples, les applications peuvent gérer un plus grand nombre d'utilisateurs simultanément, ce qui est crucial pour des plateformes à grande échelle comme celles de Google ou Facebook.
+* **Personnalisation et réactivité :** Les technologies client-side permettent une personnalisation plus poussée des interfaces et une réactivité immédiate aux actions des utilisateurs, créant ainsi des expériences plus engageantes et dynamiques.
+
+En somme, l'adoption des technologies client-side répond à la fois à des besoins de performance, de coût, et d'évolutivité, tout en offrant aux utilisateurs une expérience plus riche et immersive.
+
+### Que peut faire JavaScript dans le navigateur ?
+
+* Ajouter du HTML, modifier du contenu, agir sur le style
+* Réagir aux actions, clics, mouvements, pressions de touches
+* Envoyer des requêtes réseaux, download, upload des fichiers
+* Agir sur les cookies, afficher des messages
+* Stocker des données côté client (« local storage »)
+
+### Qu'est-ce que JavaScript ne peut pas faire dans le navigateur ?
+
+* Accéder au disque (lecture ou écriture)
+* Récupérer des fichiers sans l'accord de l'utilisateur
+* Interagir avec la caméra et le micro sans autorisation
+* Interagir avec les autres onglets et autres domaines
+
+<figure><img src="../../.gitbook/assets/limitations.svg" alt=""><figcaption></figcaption></figure>
+
+### **Chaque navigateur intègre un interpréteur de JS**
+
+* **SpiderMonkey** (Firefox)
+* **V8** (Google Chrome, Microsoft Edge)
+* **JavaScriptCore** (Safari)
+* **Chakra** (Internet Explorer)
+
+### Qu'est-ce qui rend JavaScript unique ?
+
+* Intégration complète avec HTML/CSS
+* Supporté et activé par défaut par les principaux navigateurs
+* Principal outil pour créer des interfaces utilisateurs
+* Peut faire :
+* Frontend (Vue.js, React, Angular)
+* Backend (Node.js, Deno)
+* Applications multiplateforme (Slack, Discord)
+* Applications mobiles
+
+### Les langages "par-dessus" JavaScript
+
+* JavaScript tel quel ne convient pas à tout le monde
+* Des surcouches à JavaScript ont été créées :
+  * CoffeeScript (sucre syntaxique)\
+    En d'autres termes, il s'agit de raccourcis syntaxiques qui simplifient l'écriture du code, le rendant plus "sucré" ou agréable, sans modifier le sens du programme.
+  * TypeScript (typage strict - Microsoft)
+  * Flow (typage strict - Facebook)
+  * Dart (langage orienté apps - Google pour le mobile)
+
+### Résumé
+
+* JavaScript a été créé pour le navigateur au départ
+* Aujourd'hui utilisé dans de nombreux environnements
+* Langage parmi les plus populaires au monde
+* Intégration complète avec HTML/CSS (la sainte trinité du web)
+* Il existe d'autres langages qui sont « **transpilés** » en JavaScript
 
 ## Où écrire du JavaScript
 
