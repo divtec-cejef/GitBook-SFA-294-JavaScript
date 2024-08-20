@@ -4,10 +4,6 @@ Dans ce cours, nous utiliserons plusieurs outils pour développer des applicatio
 
 Cette section vous guidera à travers les outils requis et vous fournira des instructions détaillées pour les installer et les configurer.
 
-Voici le chapitre 1 mis à jour pour **WebStorm**, incluant les instructions sur la création du compte JetBrains avant l'activation de la licence :
-
-***
-
 ## 1. **WebStorm**
 
 WebStorm est un éditeur de code puissant et intelligent, spécialement conçu pour le développement JavaScript. Il offre des fonctionnalités avancées comme l'autocomplétion, la refactorisation et le débogage intégré. WebStorm est particulièrement utile pour travailler sur des projets Vue.js et JavaScript.
@@ -58,35 +54,94 @@ GitHub est une plateforme de gestion de versions qui permet de suivre les modifi
 
 Vuetify est une bibliothèque de composants Material Design pour Vue.js. Il vous permet de créer des interfaces utilisateur élégantes et responsives rapidement.
 
-### Installation de Vuetify
+### Création et Configuration d'un Projet Vuetify
 
-Pour installer Vuetify dans un projet Vue.js, vous pouvez utiliser l'une des commandes suivantes :
+Pour créer un nouveau projet avec Vuetify en utilisant la configuration recommandée, suivez les étapes ci-dessous :
 
-*   Si vous créez un nouveau projet Vuetify :
+1. **Créer un projet Vuetify :**
+   *   Dans votre terminal, exécutez la commande suivante pour créer un nouveau projet Vuetify :
 
-    ```bash
-    npm create vuetify
-    ```
-*   Si vous ajoutez Vuetify à un projet Vue.js existant :
+       ```bash
+       npm create vuetify
+       ```
+   * Vous serez invité à répondre à quelques questions pour configurer le projet :
+     * **Project name:** Entrez le nom de votre projet, par exemple, `hello-world`.
+     * **Which preset would you like to install?** Choisissez `Recommended` pour installer toutes les options recommandées, y compris l'auto-importation, les layouts, et Pinia.
+     * **Use TypeScript?** Sélectionnez `Yes` ou `No` selon vos préférences.
+     * **Install Dependencies?** Sélectionnez `Yes` pour installer automatiquement les dépendances.
+2. **Accéder au répertoire de votre projet :**
+   *   Une fois la création du projet terminée, accédez au répertoire de votre nouveau projet :
 
-    ```bash
-    npm create vue@3
-    npm install vuetify
-    ```
+       ```bash
+       cd hello-world
+       ```
+3. **Démarrer le serveur de développement :**
+   *   Pour lancer votre projet en mode développement, exécutez la commande suivante :
 
-Suivez les instructions à l'écran pour configurer Vuetify dans votre projet.
+       ```bash
+       npm run dev
+       ```
+   *   Cette commande démarrera un serveur local. Vous verrez une sortie similaire à celle-ci dans votre terminal :
 
-## 4. **Docker**
+       ```
+       VITE v5.4.1  ready in 302 ms
 
-Docker est un outil de conteneurisation qui permet de déployer des applications dans des environnements isolés. Vous utiliserez Docker pour travailler avec les API fournies pendant le cours.
+       ➜  Local:   http://localhost:3000/
+       ➜  Network: use --host to expose
+       ➜  press h + enter to show help
+       ```
+4. **Voir votre projet dans le navigateur :**
+   * Ouvrez votre navigateur web préféré (Chrome, Firefox, etc.).
+   * Entrez l'URL `http://localhost:3000/` dans la barre d'adresse.
+   * Votre projet Vuetify sera visible et interactif dans le navigateur.
 
-### Installation de Docker
+### Commandes de base utiles avec Vuetify
 
-1. Téléchargez Docker Desktop depuis le site officiel : [docker.com](https://www.docker.com/products/docker-desktop).
-2. Installez Docker Desktop en suivant les instructions spécifiques à votre système d'exploitation.
-3. Lancez Docker et assurez-vous qu'il fonctionne correctement.
+Voici quelques commandes de base que vous trouverez utiles pour travailler avec un projet Vuetify :
 
-## 5. **Vue Devtools**
+1. **Installer un nouveau composant ou une nouvelle dépendance :**
+   *   Pour ajouter des packages ou des composants supplémentaires à votre projet, utilisez la commande `npm install`. Par exemple :
+
+       ```bash
+       npm install @vuetify/icons-material
+       ```
+   * Cela installe le package `@vuetify/icons-material` qui peut être utilisé dans votre projet.
+2. **Générer un fichier de production :**
+   *   Lorsque vous êtes prêt à déployer votre application, vous devez générer un fichier de production optimisé :
+
+       ```bash
+       npm run build
+       ```
+   * Cette commande compile votre projet et crée un dossier `dist/` contenant les fichiers optimisés pour la production.
+3. **Lancer un serveur de prévisualisation pour la production :**
+   *   Après avoir généré les fichiers de production, vous pouvez les prévisualiser avec cette commande :
+
+       ```bash
+       npm run preview
+       ```
+   * Cela lancera un serveur local pour voir à quoi ressemble votre application en production.
+4. **Mise à jour des dépendances :**
+   *   Gardez vos dépendances à jour avec la commande suivante :
+
+       ```bash
+       npm update
+       ```
+   * Cela met à jour tous les packages listés dans votre `package.json` vers leurs versions les plus récentes compatibles.
+5. **Lint et correction automatique du code :**
+   *   Vuetify utilise ESLint pour vérifier la qualité du code. Vous pouvez lancer ESLint pour vérifier votre code :
+
+       ```bash
+       npm run lint
+       ```
+   *   Vous pouvez également corriger automatiquement les erreurs de linting en ajoutant `--fix` :
+
+       ```bash
+       npm run lint --fix
+       ```
+
+Ces commandes vous aideront à gérer efficacement votre projet Vuetify et à maintenir un flux de travail fluide tout au long du développement.
+
+## 4. **Vue Devtools**
 
 Vue Devtools est une extension de navigateur dédiée à l'inspection et au débogage des applications Vue.js. Elle permet de visualiser l'état des composants, les événements et le store, ce qui facilite le développement et le débogage des applications Vue.js.
 
@@ -97,6 +152,16 @@ Vue Devtools est une extension de navigateur dédiée à l'inspection et au déb
 2. **Pour Mozilla Firefox :**\
    Ajoutez l'extension Vue Devtools depuis [Firefox Add-ons](https://addons.mozilla.org/fr/firefox/addon/vue-js-devtools/).
 3. Une fois installée, vous pouvez accéder à Vue Devtools directement depuis les outils de développement de votre navigateur (`F12` ou `Ctrl+Shift+I`). Recherchez l'onglet **Vue** dans le panneau des outils de développement
+
+## 5. **Docker**
+
+Docker est un outil de conteneurisation qui permet de déployer des applications dans des environnements isolés. Vous utiliserez Docker pour travailler avec les API fournies pendant le cours.
+
+### Installation de Docker
+
+1. Téléchargez Docker Desktop depuis le site officiel : [docker.com](https://www.docker.com/products/docker-desktop).
+2. Installez Docker Desktop en suivant les instructions spécifiques à votre système d'exploitation.
+3. Lancez Docker et assurez-vous qu'il fonctionne correctement.
 
 ## 6. **ESLint**
 
@@ -171,8 +236,6 @@ Dans certains cas, vous pourriez avoir besoin d'ignorer une ou plusieurs lignes 
     console.log("Log ignoré");
     /* eslint-enable no-alert, no-console */
     ```
-
-
 
 ## Conclusion
 
