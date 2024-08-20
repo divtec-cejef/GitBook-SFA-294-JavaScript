@@ -4,7 +4,7 @@ Dans ce cours, nous utiliserons plusieurs outils pour développer des applicatio
 
 Cette section vous guidera à travers les outils requis et vous fournira des instructions détaillées pour les installer et les configurer.
 
-Voici le chapitre 1 mis à jour pour **WebStorm**, incluant les instructions pour se connecter à JetBrains Toolbox après l'activation de la licence :
+Voici le chapitre 1 mis à jour pour **WebStorm**, incluant les instructions sur la création du compte JetBrains avant l'activation de la licence :
 
 ***
 
@@ -27,9 +27,9 @@ Pour faciliter la gestion des différents outils JetBrains, y compris WebStorm, 
    * Lancez l'application JetBrains Toolbox après l'installation.
    * Dans la liste des produits disponibles, trouvez **WebStorm** et cliquez sur le bouton "Install".
    * Une fois l'installation terminée, vous pouvez lancer WebStorm directement depuis JetBrains Toolbox.
-4. **Activation de la licence étudiante :**
-   * Lorsque vous lancez WebStorm pour la première fois, il vous sera demandé de vous connecter à votre compte JetBrains.
-   * **Utilisez votre email de l'école** pour activer votre licence étudiante. Vous pouvez obtenir cette licence via le programme [JetBrains Student License](https://www.jetbrains.com/fr-fr/community/education/#students).
+4. **Création d'un compte JetBrains et activation de la licence étudiante :**
+   * Créez un compte JetBrains si vous n'en avez pas déjà un. Rendez-vous sur [JetBrains Account](https://account.jetbrains.com/login) et suivez les instructions pour créer un compte en utilisant votre **email de l'école**.
+   * Une fois votre compte créé, accédez au programme [JetBrains Student License](https://www.jetbrains.com/fr-fr/community/education/#students) pour activer votre licence étudiante. **Utilisez l'email de l'école** pour valider votre statut étudiant et activer la licence.
 5. **Connexion à JetBrains Toolbox :**
    * Après avoir activé votre licence étudiante, retournez dans l'application **JetBrains Toolbox**.
    * Connectez-vous avec votre compte JetBrains (en utilisant l'email de l'école) pour synchroniser la licence avec JetBrains Toolbox.
@@ -43,10 +43,11 @@ GitHub est une plateforme de gestion de versions qui permet de suivre les modifi
 
 1. Téléchargez et installez Git depuis le site officiel : [git-scm.com](https://git-scm.com/).
 2. Créez un compte GitHub sur [github.com](https://github.com/).
-3. **Activation de la licence éducation :**  \
+3. Une fois votre compte créé, **complétez votre profil** [https://github.com/settings/profile](https://github.com/settings/profile) en ajoutant votre **nom complet, prénom,** et une **adresse email privée** [https://github.com/settings/emails](https://github.com/settings/emails) en plus de votre email de l'école. Cela permettra de maintenir une communication plus flexible et de respecter les bonnes pratiques professionnelles.
+4. **Activation de la licence éducation :**  \
    Pour bénéficier des fonctionnalités supplémentaires de GitHub, activez la licence éducation GitHub Student en vous inscrivant via [GitHub Student Developer Pack](https://education.github.com/pack). \
    **Utilisez votre email de l'école** pour cette étape afin de valider votre statut d'étudiant.
-4.  Configurez votre identité Git en utilisant les commandes suivantes dans votre terminal :
+5.  Configurez votre identité Git en utilisant le **même email que pour GitHub** avec les commandes suivantes dans votre terminal :
 
     ```bash
     git config --global user.name "Votre Nom"
