@@ -153,17 +153,7 @@ Vue Devtools est une extension de navigateur dédiée à l'inspection et au déb
    Ajoutez l'extension Vue Devtools depuis [Firefox Add-ons](https://addons.mozilla.org/fr/firefox/addon/vue-js-devtools/).
 3. Une fois installée, vous pouvez accéder à Vue Devtools directement depuis les outils de développement de votre navigateur (`F12` ou `Ctrl+Shift+I`). Recherchez l'onglet **Vue** dans le panneau des outils de développement
 
-## 5. **Docker**
-
-Docker est un outil de conteneurisation qui permet de déployer des applications dans des environnements isolés. Vous utiliserez Docker pour travailler avec les API fournies pendant le cours.
-
-### Installation de Docker
-
-1. Téléchargez Docker Desktop depuis le site officiel : [docker.com](https://www.docker.com/products/docker-desktop).
-2. Installez Docker Desktop en suivant les instructions spécifiques à votre système d'exploitation.
-3. Lancez Docker et assurez-vous qu'il fonctionne correctement.
-
-## 6. **ESLint**
+## 5. **ESLint**
 
 ESLint est un outil de linting pour JavaScript, essentiel pour maintenir un code propre et conforme aux normes de développement. Il aide à identifier et corriger les erreurs dans le code tout en respectant des conventions de style définies. Dans ce cours, ESLint est installé par défaut avec Vuetify.
 
@@ -236,6 +226,16 @@ Dans certains cas, vous pourriez avoir besoin d'ignorer une ou plusieurs lignes 
     console.log("Log ignoré");
     /* eslint-enable no-alert, no-console */
     ```
+
+## 5. **Docker**
+
+Docker est un outil de conteneurisation qui permet de déployer des applications dans des environnements isolés. Vous utiliserez Docker pour travailler avec les API fournies pendant le cours.
+
+### Installation de Docker
+
+1. Téléchargez Docker Desktop depuis le site officiel : [docker.com](https://www.docker.com/products/docker-desktop).
+2. Installez Docker Desktop en suivant les instructions spécifiques à votre système d'exploitation.
+3. Lancez Docker et assurez-vous qu'il fonctionne correctement.
 
 ## Conclusion
 
