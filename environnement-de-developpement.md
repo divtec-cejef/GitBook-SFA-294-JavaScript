@@ -4,7 +4,26 @@ Dans ce cours, nous utiliserons plusieurs outils pour développer des applicatio
 
 Cette section vous guidera à travers les outils requis et vous fournira des instructions détaillées pour les installer et les configurer.
 
-## 1. **WebStorm**
+## **GitHub et GitHub Classroom**
+
+GitHub est une plateforme de gestion de versions qui permet de suivre les modifications du code et de collaborer efficacement avec d'autres développeurs. Nous utiliserons également GitHub Classroom pour la gestion des exercices et des projets.
+
+### Installation de Git et Configuration de GitHub
+
+1. Téléchargez et installez Git depuis le site officiel : [git-scm.com](https://git-scm.com/).
+2. Créez un compte GitHub sur [github.com](https://github.com/).
+3. Une fois votre compte créé, **complétez votre profil** [https://github.com/settings/profile](https://github.com/settings/profile) en ajoutant votre **nom complet, prénom,** et une **adresse email privée** [https://github.com/settings/emails](https://github.com/settings/emails) en plus de votre email de l'école. Cela permettra de maintenir une communication plus flexible et de respecter les bonnes pratiques professionnelles.
+4. **Activation de la licence éducation :**  \
+   Pour bénéficier des fonctionnalités supplémentaires de GitHub, activez la licence éducation GitHub Student en vous inscrivant via [GitHub Student Developer Pack](https://education.github.com/pack). \
+   **Utilisez votre email de l'école** pour cette étape afin de valider votre statut d'étudiant.
+5.  Configurez votre identité Git en utilisant le **même email que pour GitHub** avec les commandes suivantes dans votre terminal :
+
+    ```bash
+    git config --global user.name "Votre Nom"
+    git config --global user.email "votre.email@exemple.com"
+    ```
+
+## **WebStorm**
 
 WebStorm est un éditeur de code puissant et intelligent, spécialement conçu pour le développement JavaScript. Il offre des fonctionnalités avancées comme l'autocomplétion, la refactorisation et le débogage intégré. WebStorm est particulièrement utile pour travailler sur des projets Vue.js et JavaScript.
 
@@ -31,26 +50,28 @@ Pour faciliter la gestion des différents outils JetBrains, y compris WebStorm, 
    * Connectez-vous avec votre compte JetBrains (en utilisant l'email de l'école) pour synchroniser la licence avec JetBrains Toolbox.
    * Une fois connecté, vous pourrez gérer vos installations JetBrains, y compris WebStorm, directement depuis Toolbox.
 
-## 2. **GitHub et GitHub Classroom**
+## Node.js et npm
 
-GitHub est une plateforme de gestion de versions qui permet de suivre les modifications du code et de collaborer efficacement avec d'autres développeurs. Nous utiliserons également GitHub Classroom pour la gestion des exercices et des projets.
+Node.js est un environnement d'exécution pour JavaScript, et npm (Node Package Manager) est un gestionnaire de paquets associé. Ils sont indispensables pour installer des dépendances et exécuter vos projets.
 
-### Installation de Git et Configuration de GitHub
+### **Étapes d'installation**
 
-1. Téléchargez et installez Git depuis le site officiel : [git-scm.com](https://git-scm.com/).
-2. Créez un compte GitHub sur [github.com](https://github.com/).
-3. Une fois votre compte créé, **complétez votre profil** [https://github.com/settings/profile](https://github.com/settings/profile) en ajoutant votre **nom complet, prénom,** et une **adresse email privée** [https://github.com/settings/emails](https://github.com/settings/emails) en plus de votre email de l'école. Cela permettra de maintenir une communication plus flexible et de respecter les bonnes pratiques professionnelles.
-4. **Activation de la licence éducation :**  \
-   Pour bénéficier des fonctionnalités supplémentaires de GitHub, activez la licence éducation GitHub Student en vous inscrivant via [GitHub Student Developer Pack](https://education.github.com/pack). \
-   **Utilisez votre email de l'école** pour cette étape afin de valider votre statut d'étudiant.
-5.  Configurez votre identité Git en utilisant le **même email que pour GitHub** avec les commandes suivantes dans votre terminal :
+1. **Télécharger Node.js :**
+   * Allez sur [nodejs.org](https://nodejs.org).
+   * Téléchargez la version LTS recommandée pour votre système d'exploitation.
+2. **Installer Node.js :**
+   * Suivez les instructions de l'installateur.
+   * npm sera installé automatiquement avec Node.js.
+3. **Vérifier l'installation :**
+   *   Ouvrez un terminal et tapez :
 
-    ```bash
-    git config --global user.name "Votre Nom"
-    git config --global user.email "votre.email@exemple.com"
-    ```
+       ```bash
+       node -v
+       npm -v
+       ```
+   * Ces commandes doivent afficher les versions installées de Node.js et npm.
 
-## 3. **Vuetify**
+## **Vuetify**
 
 Vuetify est une bibliothèque de composants Material Design pour Vue.js. Il vous permet de créer des interfaces utilisateur élégantes et responsives rapidement.
 
@@ -141,7 +162,7 @@ Voici quelques commandes de base que vous trouverez utiles pour travailler avec 
 
 Ces commandes vous aideront à gérer efficacement votre projet Vuetify et à maintenir un flux de travail fluide tout au long du développement.
 
-## 4. **Vue Devtools**
+## **Vue Devtools**
 
 Vue Devtools est une extension de navigateur dédiée à l'inspection et au débogage des applications Vue.js. Elle permet de visualiser l'état des composants, les événements et le store, ce qui facilite le développement et le débogage des applications Vue.js.
 
@@ -153,7 +174,7 @@ Vue Devtools est une extension de navigateur dédiée à l'inspection et au déb
    Ajoutez l'extension Vue Devtools depuis [Firefox Add-ons](https://addons.mozilla.org/fr/firefox/addon/vue-js-devtools/).
 3. Une fois installée, vous pouvez accéder à Vue Devtools directement depuis les outils de développement de votre navigateur (`F12` ou `Ctrl+Shift+I`). Recherchez l'onglet **Vue** dans le panneau des outils de développement
 
-## 5. **ESLint**
+## **ESLint**
 
 ESLint est un outil de linting pour JavaScript, essentiel pour maintenir un code propre et conforme aux normes de développement. Il aide à identifier et corriger les erreurs dans le code tout en respectant des conventions de style définies. Dans ce cours, ESLint est installé par défaut avec Vuetify.
 
@@ -227,7 +248,7 @@ Dans certains cas, vous pourriez avoir besoin d'ignorer une ou plusieurs lignes 
     /* eslint-enable no-alert, no-console */
     ```
 
-## 5. **Docker**
+## **Docker**
 
 Docker est un outil de conteneurisation qui permet de déployer des applications dans des environnements isolés. Vous utiliserez Docker pour travailler avec les API fournies pendant le cours.
 
