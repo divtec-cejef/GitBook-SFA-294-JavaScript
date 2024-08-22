@@ -4,30 +4,62 @@ Dans ce cours, nous utiliserons plusieurs outils pour développer des applicatio
 
 Cette section vous guidera à travers les outils requis et vous fournira des instructions détaillées pour les installer et les configurer.
 
-## **GitHub et GitHub Classroom**
+## Git et GitHub
 
-GitHub est une plateforme de gestion de versions qui permet de suivre les modifications du code et de collaborer efficacement avec d'autres développeurs. Nous utiliserons également GitHub Classroom pour la gestion des exercices et des projets.
+Git est un système de contrôle de version distribué, essentiel pour suivre l'évolution du code source au fil du temps. Il permet de gérer les versions de votre projet, de collaborer avec d'autres développeurs, et de maintenir un historique complet des modifications.
 
-### Installation de Git et Configuration de GitHub
+### **Installation de Git**
 
-1. Téléchargez et installez Git depuis le site officiel : [git-scm.com](https://git-scm.com/).
-2. Créez un compte GitHub sur [github.com](https://github.com/).
-3. Une fois votre compte créé, **complétez votre profil** [https://github.com/settings/profile](https://github.com/settings/profile) en ajoutant votre **nom complet, prénom,** et une **adresse email privée** [https://github.com/settings/emails](https://github.com/settings/emails) en plus de votre email de l'école. Cela permettra de maintenir une communication plus flexible et de respecter les bonnes pratiques professionnelles.
-4. **Activation de la licence éducation :**  \
-   Pour bénéficier des fonctionnalités supplémentaires de GitHub, activez la licence éducation GitHub Student en vous inscrivant via [GitHub Student Developer Pack](https://education.github.com/pack). \
-   **Utilisez votre email de l'école** pour cette étape afin de valider votre statut d'étudiant.
-5.  Configurez votre identité Git en utilisant le **même email que pour GitHub** avec les commandes suivantes dans votre terminal :
+#### **Téléchargez et installez Git**
 
-    ```bash
-    git config --global user.name "Votre Nom"
-    git config --global user.email "votre.email@exemple.com"
-    ```
+{% embed url="https://git-scm.com/" %}
+Site officiel de Git [https://git-scm.com/](https://git-scm.com/)
+{% endembed %}
+
+#### **Vérifiez l'installation**
+
+Ouvrez votre terminal (ou invite de commande) et tapez la commande suivante&#x20;
+
+```bash
+git --version
+```
+
+Si Git est installé correctement, cette commande affichera la version de Git.
+
+### **Configuration de Git**
+
+Dans le terminal, configurez Git avec ces commandes&#x20;
+
+```bash
+git config --global user.name "Votre Nom et prénom"
+git config --global user.email "votre.email@ecole.com"
+```
+
+### **Création d'un compte GitHub**
+
+GitHub est une plateforme en ligne qui s'appuie sur Git pour offrir des fonctionnalités de collaboration, de gestion de projets, et de partage de code.
+
+* Rendez-vous sur [github.com](https://github.com) pour créer un compte en utilisant **votre email de l'école**.
+* **Complétez votre profil** en ajoutant votre nom complet, prénom, et une adresse email privée (en plus de votre email de l'école) via ces liens :
+  * [Modifier votre profil GitHub](https://github.com/settings/profile)
+  * [Ajouter une adresse email privée](https://github.com/settings/emails)
+* Ces informations sont cruciales pour maintenir une communication flexible et respecter les bonnes pratiques professionnelles.
+
+### **Activation de la licence GitHub éducation**
+
+Avant de commencer, vous avez besoin d'une photo de votre carte d'étudiant, sans carte impossible d'activer la licence éducation.
+
+Ensuite, inscrivez-vous au [GitHub Student Developer Pack](https://education.github.com/pack) en utilisant votre email de l'école et la photo de votre carte étudiant pour valider votre statut étudiant.
 
 ## **WebStorm**
 
 WebStorm est un éditeur de code puissant et intelligent, spécialement conçu pour le développement JavaScript. Il offre des fonctionnalités avancées comme l'autocomplétion, la refactorisation et le débogage intégré. WebStorm est particulièrement utile pour travailler sur des projets Vue.js et JavaScript.
 
-### Installation de WebStorm via JetBrains Toolbox
+{% embed url="https://www.jetbrains.com/fr-fr/webstorm/" %}
+Site officiel de WebStorm
+{% endembed %}
+
+### Installer WebStorm via JetBrains Toolbox
 
 Pour faciliter la gestion des différents outils JetBrains, y compris WebStorm, nous recommandons d'utiliser **JetBrains Toolbox**.
 
@@ -42,9 +74,12 @@ Pour faciliter la gestion des différents outils JetBrains, y compris WebStorm, 
    * Lancez l'application JetBrains Toolbox après l'installation.
    * Dans la liste des produits disponibles, trouvez **WebStorm** et cliquez sur le bouton "Install".
    * Une fois l'installation terminée, vous pouvez lancer WebStorm directement depuis JetBrains Toolbox.
-4. **Création d'un compte JetBrains et activation de la licence étudiante :**
-   * Créez un compte JetBrains si vous n'en avez pas déjà un. Rendez-vous sur [JetBrains Account](https://account.jetbrains.com/login) et suivez les instructions pour créer un compte en utilisant votre **email de l'école**.
-   * Une fois votre compte créé, accédez au programme [JetBrains Student License](https://www.jetbrains.com/fr-fr/community/education/#students) pour activer votre licence étudiante. **Utilisez l'email de l'école** pour valider votre statut étudiant et activer la licence.
+4.  **Création d'un compte JetBrains et activation de la licence étudiante :**
+
+    * Créez un compte JetBrains si vous n'en avez pas déjà un. Rendez-vous sur [JetBrains Account](https://account.jetbrains.com/login) et suivez les instructions pour créer un compte en utilisant votre **email de l'école**.
+    * Une fois votre compte créé, accédez au programme [JetBrains Student License](https://www.jetbrains.com/fr-fr/community/education/#students) pour activer votre licence étudiante. **Utilisez l'email de l'école** pour valider votre statut étudiant et activer la licence.
+
+    > Ne pas oublier de valider les différentes étapes en cliquant sur les liens de confirmation reçu par email !
 5. **Connexion à JetBrains Toolbox :**
    * Après avoir activé votre licence étudiante, retournez dans l'application **JetBrains Toolbox**.
    * Connectez-vous avec votre compte JetBrains (en utilisant l'email de l'école) pour synchroniser la licence avec JetBrains Toolbox.
@@ -58,7 +93,7 @@ Node.js est un environnement d'exécution pour JavaScript, et npm (Node Package 
 
 1. **Télécharger Node.js :**
    * Allez sur [nodejs.org](https://nodejs.org).
-   * Téléchargez la version LTS recommandée pour votre système d'exploitation.
+   * Téléchargez la **version** **LTS** recommandée pour votre système d'exploitation.
 2. **Installer Node.js :**
    * Suivez les instructions de l'installateur.
    * npm sera installé automatiquement avec Node.js.
@@ -87,16 +122,17 @@ Pour créer un nouveau projet avec Vuetify en utilisant la configuration recomma
        ```
    * Vous serez invité à répondre à quelques questions pour configurer le projet :
      * **Project name:** Entrez le nom de votre projet, par exemple, `hello-world`.
-     * **Which preset would you like to install?** Choisissez `Recommended` pour installer toutes les options recommandées, y compris l'auto-importation, les layouts, et Pinia.
-     * **Use TypeScript?** Sélectionnez `Yes` ou `No` selon vos préférences.
-     * **Install Dependencies?** Sélectionnez `Yes` pour installer automatiquement les dépendances.
-2. **Accéder au répertoire de votre projet :**
+     * **Which preset would you like to install?** Sélectionnez `Recommended`&#x20;
+     * **Would you like to install dependencies with yarn, npm, pnpm, or bun?** Sélectionnez `npm`
+     * **Use TypeScript?** Sélectionnez `No`&#x20;
+     * **Install Dependencies?** Sélectionnez `Yes`&#x20;
+2. **Accéder au répertoire de votre projet**
    *   Une fois la création du projet terminée, accédez au répertoire de votre nouveau projet :
 
        ```bash
        cd hello-world
        ```
-3. **Démarrer le serveur de développement :**
+3. **Démarrer le serveur de développement**
    *   Pour lancer votre projet en mode développement, exécutez la commande suivante :
 
        ```bash
@@ -111,10 +147,13 @@ Pour créer un nouveau projet avec Vuetify en utilisant la configuration recomma
        ➜  Network: use --host to expose
        ➜  press h + enter to show help
        ```
-4. **Voir votre projet dans le navigateur :**
+4. **Voir votre projet dans le navigateur**
    * Ouvrez votre navigateur web préféré (Chrome, Firefox, etc.).
    * Entrez l'URL `http://localhost:3000/` dans la barre d'adresse.
    * Votre projet Vuetify sera visible et interactif dans le navigateur.
+5. **Arrêter le serveur de développement**&#x20;
+   * Utilisez le raccourci `CTRL+C` pour arrêter le serveur
+   * Ou fermer le terminal
 
 ### Commandes de base utiles avec Vuetify
 
