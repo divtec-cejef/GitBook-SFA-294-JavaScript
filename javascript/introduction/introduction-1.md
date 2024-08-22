@@ -223,6 +223,59 @@ Il existe également des outils permettant d'analyser votre code comme [ESLint](
 
 Ce support de cours est basé sur les conventions de **Google**.
 
+### Conventions de nommage pour ce cours
+
+Voici une liste des conventions de nommage basiques que vous devez respecter dans votre cours, en suivant les recommandations du guide de style JavaScript de Google :
+
+1. **Noms de variables et de fonctions** :
+   * Utiliser le **camelCase** pour nommer les **variables**, **fonctions** et **méthodes**. Par exemple : `userName`, `calculateTotal()`.
+   * Les constantes en dehors des classes doivent être nommées en **MAJUSCULES\_SEPARÉES\_PAR\_UN\_TIRET\_BAS**. Par exemple : `MAX_USERS`, `API_ENDPOINT`.
+2. **Noms de classes** :
+   * Utiliser le **PascalCase** pour les classes et les types. Par exemple : `UserController`, `ProductModel`.
+3. **Noms des propriétés et méthodes d’objets** :
+   * Suivre aussi le **camelCase** pour les propriétés et méthodes d’objets. Par exemple : `user.address`, `order.calculateTotal()`.
+4. **Noms de fichiers** :
+   * Les fichiers JavaScript doivent être nommés en **lowerCamelCase**. Par exemple : `userProfile.js`, `orderController.js`.
+
+### Bien nommer les variables représentant des éléments HTML
+
+Lorsque vous nommez des variables représentant des éléments HTML dans votre code JavaScript, il est recommandé de suivre certaines conventions pour améliorer la lisibilité et la compréhension du code. Voici les bonnes pratiques à suivre :
+
+1. **Utiliser un préfixe descriptif :**
+   * Utilisez un préfixe pour indiquer clairement qu'il s'agit d'un élément HTML. Par exemple, vous pouvez utiliser des préfixes comme `btn` pour un bouton (`button`), `input` pour un champ de saisie, `div` pour un `div`, ou `list` pour une liste (`ul` ou `ol`).
+   *   Exemple :
+
+       ```javascript
+       const btnSubmit = document.getElementById('submit');
+       const divContainer = document.querySelector('.container');
+       ```
+2. **CamelCase pour la lisibilité :**
+   * Suivez la convention **camelCase** pour nommer vos variables. Cette convention est cohérente avec les autres noms de variables dans JavaScript.
+   *   Exemple :
+
+       ```javascript
+       const inputUsername = document.querySelector('#username');
+       const listItems = document.querySelectorAll('.items');
+       ```
+3. **Inclure le type d'élément dans le nom :**
+   * Lorsque cela est pertinent, incluez le type d'élément HTML dans le nom de la variable. Cela aide à identifier rapidement le type d'élément manipulé sans avoir à consulter le code HTML.
+   *   Exemple :
+
+       ```javascript
+       const inputEmail = document.querySelector('#email');
+       const divMainContent = document.getElementById('main-content');
+       ```
+4. **Précision et clarté :**
+   * Assurez-vous que le nom de la variable décrit clairement son rôle ou sa fonction dans le code. Évitez les abréviations non évidentes ou les noms trop génériques.
+   *   Exemple :
+
+       ```javascript
+       const headerTitle = document.querySelector('h1');
+       const navMenu = document.querySelector('.navigation-menu');
+       ```
+
+En résumé, nommez vos variables représentant des éléments HTML de manière descriptive et cohérente avec les conventions camelCase, tout en indiquant clairement le type d'élément. Cela permet de maintenir un code propre, compréhensible et facile à maintenir.
+
 <div align="center">
 
 <figure><img src="../../.gitbook/assets/no-humans.png" alt=""><figcaption><p>Un peu d'humour pou terminer ce chapitre d'introduction</p></figcaption></figure>
