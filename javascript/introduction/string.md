@@ -186,7 +186,7 @@ Pour inclure des caractères spéciaux dans une chaîne de caractères, vous pou
 
 *   **Méthode `trim()`** : Pour enlever les espaces blancs **au début et à la fin** d'une chaîne.
 
-    ```
+    ```javascript
     let texte = "   Hello, World!   ";
     ```
 
