@@ -2,29 +2,39 @@
 
 ## Les différents types de données
 
-### Six types **primitifs**
+JavaScript reconnaît plusieurs types de données, dont certains sont dits "primitifs" car ils ne sont pas des objets et sont immuables. Le terme **immuable** signifie "qui ne peut pas être modifié après sa création".
+
+Il existe également un type complexe, `Object`, qui englobe plusieurs structures de données plus complexes.
+
+### Types **primitifs**
 
 * `boolean` pour les booléen : `true` et `false`.
-* `null` pour les valeurs nulles \(au sens informatique\).
-* `undefined` pour les valeurs indéfinies.
+* `null` Représente une valeur nulle intentionnelle. En d'autres termes, `null` est utilisé pour indiquer l'absence volontaire d'un objet ou d'une valeur.
+* `undefined` Représente une valeur non définie. Une variable déclarée, mais non initialisée, reçoit la valeur `undefined` par défaut.
 * `number` pour les nombres entiers ou décimaux. Par exemple : `42` ou `3.14159`.
 * `string` pour les chaînes de caractères. Par exemple : `"Coucou"`
-* `symbol` pour les symboles, apparus avec ECMAScript 2015 \(ES6\). Ce  type est utilisé pour représenter des données immuables et uniques.
+* `symbol` Introduit avec ECMAScript 2015 (ES6), ce type est utilisé pour créer des valeurs uniques et immuables, souvent utilisées comme clés pour les propriétés d'objets.
+* `bigint` : Ajouté avec ECMAScript 2020, ce type permet de représenter des nombres entiers plus grands que ceux que le type `number` peut représenter. `9007199254740991n`
 
-### Un type pour les **objets** `Object`
+### **Type Complexe : `Object`**
 
 Les éléments ci-après sont tous de type `Object`
 
-* `Function`
-* `Array`
-* `Date`
-* `RegExp`
+* **`Function`** : Représente des fonctions en JavaScript, qui sont elles-mêmes des objets.
+* **`Array`** : Représente des tableaux, qui sont des collections ordonnées de valeurs.
+* **`Date`** : Représente des dates et heures.
+* **`RegExp`** : Représente des expressions régulières utilisées pour correspondre à des motifs dans des chaînes de caractères.
+
+```javascript
+let tableau = [];
+let objet = {};
+let date = new Date();
+let regex = /ab+c/;
+```
 
 ## Tester le type d'une variable
 
-Les variables peuvent contenir tous types de données à tous moments. Il est donc important de pouvoir tester le type du contenu d'une variable.
-
-L'opérateur `typeof` renvoie une chaîne qui indique le type de son opérande.
+En JavaScript, il est possible de tester le type d'une variable en utilisant l'opérateur `typeof`, qui renvoie une chaîne indiquant le type de son opérande.
 
 ```javascript
 let nombre = 1;
@@ -32,17 +42,19 @@ let chaine = 'some Text';
 let bools = true;
 let tableau = [];
 let objet = {};
-let pasUnNombre = NaN; //NaN (Not A Number) est une valeur utilisée pour représenter une quantité qui n'est pas un nombre
+let pasUnNombre = NaN;
 let vide = null;
 let nonDefini;
 
-typeof nombre;  // 'number'
-typeof chaine;  // 'string'
-typeof bools;   // 'boolean'
-typeof tableau; // 'object' -- les tableaux sont de type objet.
-typeof objet; // 'object'
-typeof pasUnNombre; // 'number' -- Et oui NaN fait partie de l'objet Number.
-typeof nonDefini; // 'undefined'
+console.log(typeof nombre);  // 'number'
+console.log(typeof chaine);  // 'string'
+console.log(typeof bools);   // 'boolean'
+console.log(typeof tableau); // 'object' -- les tableaux sont de type objet
+console.log(typeof objet);   // 'object'
+console.log(typeof pasUnNombre); // 'number' -- bien que NaN signifie "Not-a-Number", son type est 'number'
+console.log(typeof vide); // 'object' -- malgré que null soit un type primitif, typeof renvoie 'object'
+console.log(typeof nonDefini); // 'undefined'
+
 ```
 
 ### Exemple de test de type
@@ -50,42 +62,39 @@ typeof nonDefini; // 'undefined'
 ```javascript
 let message = "Bonjour le monde";
 
-if(typeof message === "string"){
-    alert("c’est une chaine");
+if (typeof message === "string") {
+    alert("C’est une chaîne");
 } else {
-    alert("ce n’est pas une chaine !");
+    alert("Ce n’est pas une chaîne !");
 }
 ```
 
 ### Astuces
 
-#### Comment savoir si une variable contient un tableau ?
+#### **Comment savoir si une variable contient un tableau ?**
 
-Réponse, on teste si l'objet possède une propriété `length`.
+Utilisez la méthode `Array.isArray()` pour tester si une variable est un tableau :
 
 ```javascript
-let tableau = ['je','suis','un','tableau'];
+javascriptCopy codelet tableau = ['je', 'suis', 'un', 'tableau'];
 
-// Si est un objet et possède un propriété length
-if(typeof tableau === 'object' && tableau.hasOwnProperty('length')) {
+if (Array.isArray(tableau)) {
     alert("C'est un tableau !");
 } else {
     alert("Ce n'est PAS un tableau !");
 }
 ```
 
-#### Comment s'assurer qu'une variable est du type number et que c'est un nombre ?
+#### **Comment s'assurer qu'une variable est du type `number` et que c'est un nombre valide ?**
 
-Réponse, utiliser la fonction `isNaN()` qui retourne `true` si la valeur passée en paramètre n'est pas un nombre.
+Utilisez la fonction `isNaN()` pour vérifier qu'une valeur n'est pas `NaN` (Not-a-Number) :
 
 ```javascript
-let age = NaN;
+javascriptCopy codelet age = NaN;
 
-// Si est de type number et est un nombre valide
-if(typeof age === 'number' && !isNaN(age)) {
+if (typeof age === 'number' && !isNaN(age)) {
     alert("C'est un nombre !");
 } else {
     alert("Ce n'est PAS un nombre !");
 }
 ```
-
