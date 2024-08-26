@@ -18,7 +18,7 @@ const string4 = new String("Un objet String");
 
 ### Template Literals (Littéraux de Gabarits)
 
-Introduits avec ECMAScript 2015 (ES6), les **template literals** permettent d'interpoler des expressions dans une chaîne de caractères, de manière plus lisible et puissante que la concaténation traditionnelle :
+Introduits avec ECMAScript 2015 (ES6), les **template literals** permettent d'interpoler des expressions dans une chaîne de caractères, de manière plus lisible et plus puissante que la concaténation traditionnelle :
 
 ```javascript
 let age = 35;
@@ -116,14 +116,14 @@ Pour inclure des caractères spéciaux dans une chaîne de caractères, vous pou
 
 *   **Méthode `slice()`** : Pour extraire une section d'une chaîne de caractères.
 
-    ```
+    ```javascript
     let texte = "Hello, World!";
     let partie = texte.slice(0, 5); // "Hello"
     ```
 * **Méthode `substring()`** : Similaire à `slice()`, mais sans accepter d'index négatifs.
 *   **Méthode `split()`** : Pour diviser une chaîne de caractères en un tableau de sous-chaînes, en fonction d'un séparateur.
 
-    ```
+    ```javascript
     let texte = "apple,banana,pear";
     let fruits = texte.split(","); // ["apple", "banana", "pear"]
     ```
@@ -132,13 +132,13 @@ Pour inclure des caractères spéciaux dans une chaîne de caractères, vous pou
 
 *   **Méthode `toUpperCase()`** : Convertit une chaîne en majuscules.
 
-    ```
+    ```javascript
     let texte = "hello";
     console.log(texte.toUpperCase()); // "HELLO"
     ```
 *   **Méthode `toLowerCase()`** : Convertit une chaîne en minuscules.
 
-    ```
+    ```javascript
     let texte = "HELLO";
     console.log(texte.toLowerCase()); // "hello"
     ```
@@ -147,19 +147,19 @@ Pour inclure des caractères spéciaux dans une chaîne de caractères, vous pou
 
 *   **Méthode `includes()`** : Pour vérifier si une chaîne contient une sous-chaîne donnée.
 
-    ```
+    ```javascript
     let phrase = "Bonjour le monde";
     console.log(phrase.includes("le")); // true
     ```
 *   **Méthode `indexOf()`** : Pour trouver l'index de la première occurrence d'une sous-chaîne.
 
-    ```
+    ```javascript
     let texte = "Hello, World!";
     console.log(texte.indexOf("World")); // 7
     ```
 *   **Méthode `startsWith()` et `endsWith()`** : Pour vérifier si une chaîne commence ou se termine par une sous-chaîne spécifique.
 
-    ```
+    ```javascript
     let texte = "Hello, World!";
     console.log(texte.startsWith("Hello")); // true
     console.log(texte.endsWith("!")); // true
@@ -169,14 +169,14 @@ Pour inclure des caractères spéciaux dans une chaîne de caractères, vous pou
 
 *   **Méthode `replace()`** : Pour remplacer une sous-chaîne par une autre.
 
-    ```
+    ```javascript
     let texte = "Hello, World!";
     let nouveauTexte = texte.replace("World", "Everyone");
     console.log(nouveauTexte); // "Hello, Everyone!"
     ```
 *   **Méthode `replaceAll()`** : Introduit avec ECMAScript 2021, cette méthode remplace toutes les occurrences d'une sous-chaîne par une autre.
 
-    ```
+    ```javascript
     let texte = "banane, banane, banane";
     let nouveauTexte = texte.replaceAll("banane", "pomme");
     console.log(nouveauTexte); // "pomme, pomme, pomme"
@@ -184,7 +184,7 @@ Pour inclure des caractères spéciaux dans une chaîne de caractères, vous pou
 
 ### Trimming — supprimer les espaces
 
-*   **Méthode `trim()`** : Pour enlever les espaces blancs au début et à la fin d'une chaîne.
+*   **Méthode `trim()`** : Pour enlever les espaces blancs **au début et à la fin** d'une chaîne.
 
     ```
     let texte = "   Hello, World!   ";
