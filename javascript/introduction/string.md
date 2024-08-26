@@ -1,101 +1,193 @@
----
-description: >-
-  Un objet String est utilisé afin de représenter et de manipuler une chaîne de
-  caractères.
----
-
 # String
 
-Les chaînes de caractères sont utiles pour stocker des données qui peuvent être représentées sous forme de texte. Parmi les opérations les plus utilisées pour manipuler les chaînes de caractères, on a : la vérification de leur longueur avec [`length`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global\_Objects/String/length), la construction et la concaténation avec [les opérateurs `+` et `+=`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Expressions\_and\_Operators#string\_operators), la recherche de sous-chaîne avec les méthodes [`includes()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global\_Objects/String/includes) ou [`indexOf()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global\_Objects/String/indexOf) ou encore l'extraction de sous-chaînes avec la méthode [`substring()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global\_Objects/String/substring).
+En JavaScript, un objet `String` est utilisé pour représenter et manipuler une chaîne de caractères. Les chaînes de caractères sont fondamentales pour stocker et gérer des données textuelles. Elles permettent une variété d'opérations, comme la vérification de la longueur, la concaténation, la recherche de sous-chaînes, et l'extraction de portions spécifiques.
 
-### Créer des chaînes de caractères <a href="#creer_des_chaines_de_caracteres" id="creer_des_chaines_de_caracteres"></a>
+### Créer des Chaînes de Caractères
 
-Il est possible de créer des chaînes de caractères comme des valeurs primitives ou comme des objets avec le constructeur [`String()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/String/String) :
+Il est possible de créer des chaînes de caractères soit comme des valeurs primitives, soit comme des objets à l'aide du constructeur `String()` :
 
-```
+```javascript
 const string1 = "Une chaîne de caractères primitive";
 const string2 = 'Là encore une valeur de chaîne de caractères primitive';
 const string3 = `Et ici aussi`;
-```
-
-```
 const string4 = new String("Un objet String");
 ```
 
-Les valeurs littérales pour les chaînes de caractères peuvent être indiquées avec des **simples quotes (')**, **des doubles quotes (")** ou encore par **des accents graves (\`)**.&#x20;
+* **Littéraux de chaînes** : Les valeurs littérales de chaînes peuvent être délimitées par des simples quotes (`'`), des doubles quotes (`"`), ou des accents graves (\`\`).
+* **Objet String** : La création d'une chaîne en tant qu'objet (`new String("texte")`) est rarement nécessaire et peut être évitée dans la plupart des cas.
 
-#### Template literals (Template strings) - Littéraux de gabarits
+### Template Literals (Littéraux de Gabarits)
 
-Cette dernière forme permet de définir un [littéral de gabarit de chaîne de caractères](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Template\_literals) avec lequel on pourra interpoler des expressions dans une chaîne de caractères.
+Introduits avec ECMAScript 2015 (ES6), les **template literals** permettent d'interpoler des expressions dans une chaîne de caractères, de manière plus lisible et puissante que la concaténation traditionnelle :
 
 ```javascript
 let age = 35;
-let maChaine = `texte`;
-
+let maChaine = `Le capitaine a ${age} ans`;
+​
 maChaine = `ligne de texte 1
- ligne de texte 2
- ligne de texte 3`;
-
-maChaine = `Le capitaine a ${age} ans`;
+ligne de texte 2
+ligne de texte 3`;
 ```
 
-### Accéder à un caractère <a href="#acceder_a_un_caractere" id="acceder_a_un_caractere"></a>
+* **Interpolation** : L'expression `${expression}` permet d'insérer dynamiquement des valeurs dans la chaîne de caractères.
+* **Multilignes** : Les template literals permettent également de créer des chaînes de caractères sur plusieurs lignes sans utiliser de caractère d'échappement.
 
-Il existe deux façons d'accéder à un caractère dans une chaîne. La première façon consiste à utiliser la méthode [`charAt()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global\_Objects/String/charAt) :
+### Accéder à un Caractère
 
-```
-return 'chat'.charAt(2); // renvoie "a"
-```
+Il existe deux façons d'accéder à un caractère spécifique dans une chaîne de caractères :
 
-La seconde méthode, introduite avec ECMAScript 5, est de manipuler la chaîne comme un tableau, où les caractères sont les éléments du tableau et ont un indice correspondant à leur position :
+1.  **Méthode `charAt()`** :
 
-```
-return 'chat'[2]; // renvoie "a"
-```
+    ```
+    return 'chat'.charAt(2); // renvoie "a"
+    ```
 
-En utilisant la seconde notation, il est impossible de supprimer ou d'affecter une valeur à ces propriétés. En effet, les propriétés concernées ne sont ni accessibles en écriture ni configurables. Pour plus d'informations, voir la page de [`Object.defineProperty()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global\_Objects/Object/defineProperty).
+    Cette méthode retourne le caractère à la position spécifiée (ici, à l'index 2).
+2.  **Accès via la notation par indices** :
 
-### Comparer des chaînes de caractères <a href="#comparer_des_chaines_de_caracteres" id="comparer_des_chaines_de_caracteres"></a>
+    ```
+    return 'chat'[2]; // renvoie "a"
+    ```
 
-Les développeurs C utilisent la fonction `strcmp()` pour comparer des chaînes de caractères. En JavaScript, il est possible d'utiliser [les opérateurs inférieur et supérieur ](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators):
+    Cette notation traite la chaîne comme un tableau, où chaque caractère est un élément du tableau.
+
+**Note :** En utilisant la notation par indices, les caractères de la chaîne sont en lecture seule. Il est impossible de les modifier ou de les supprimer directement par cette méthode.
+
+### Comparer des Chaînes de Caractères
+
+En JavaScript, il est possible de comparer des chaînes de caractères en utilisant les opérateurs de comparaison `<`, `>`, `<=`, `>=` :
 
 ```
 let a = "a";
 let b = "b";
 if (a < b) { // true
-  console.log(a + " est inférieure à " + b);
+  console.log(a + " est inférieure à " + b);
 } else if (a > b) {
-  console.log(a + " est supérieure à " + b);
+  console.log(a + " est supérieure à " + b);
 } else {
-  console.log(a + " et " + b + " sont égales.");
+  console.log(a + " et " + b + " sont égales.");
 }
 ```
 
-On peut obtenir un résultat semblable avec la méthode [`localeCompare()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global\_Objects/String/localeCompare) qui permet de prendre en compte la locale utilisée et qui est héritée par toutes les instances de `String`.
+Pour une comparaison plus fine, prenant en compte la locale, vous pouvez utiliser la méthode `localeCompare()` :
 
-On notera que `a == b` compare les chaînes de caractères `a` et `b` de façon sensible à la casse. Si on souhaite comparer des chaînes sans être sensible à la casse, on pourra utiliser une fonction semblable à :
+```
+if (a.localeCompare(b) < 0) {
+  console.log(a + " est inférieure à " + b);
+} else if (a.localeCompare(b) > 0) {
+  console.log(a + " est supérieure à " + b);
+} else {
+  console.log(a + " et " + b + " sont égales.");
+}
+```
+
+**Comparaison Insensible à la Casse :** Pour comparer des chaînes de caractères sans tenir compte de la casse, vous pouvez convertir les chaînes en majuscules ou minuscules :
 
 ```
 function isEqual(str1, str2) {
-  return str1.toUpperCase() === str2.toUpperCase()
+  return str1.toUpperCase() === str2.toUpperCase();
 }
 ```
 
-On utilise ici une conversion en majuscules plutôt qu'en minuscules, car cela cause certains problèmes de conversion pour certains caractères UTF-8.
+Il est généralement préférable de convertir en majuscules pour éviter certains problèmes de conversion liés aux caractères UTF-8.
 
-### Échappement des caractères <a href="#echappement_des_caracteres" id="echappement_des_caracteres"></a>
+### Échappement des Caractères
 
-En dehors des caractères classiques, des caractères spéciaux peuvent être encodés grâce à l'échappement :
+Pour inclure des caractères spéciaux dans une chaîne de caractères, vous pouvez utiliser des séquences d'échappement :
 
 | Code | Résultat               |
 | ---- | ---------------------- |
-| `\0` | Caractère nul          |
-| `\'` | simple quote           |
-| `\"` | double quote           |
-| `\\` | barre oblique inversée |
-| `\n` | nouvelle ligne         |
-| `\r` | retour chariot         |
-| `\v` | tabulation verticale   |
-| `\t` | tabulation             |
-| `\b` | retour arrière         |
-| `\f` | saut de page           |
+|      | Caractère nul          |
+| `'`  | Simple quote           |
+| `"`  | Double quote           |
+| `\`  | Barre oblique inversée |
+| \`   |                        |
+| \`   | Nouvelle ligne         |
+| \`   |                        |
+| \`   | Retour chariot         |
+|      | Tabulation verticale   |
+|      | Tabulation             |
+| ``  | Retour arrière         |
+|      | Saut de page           |
+
+### Manipulation de Chaînes
+
+#### `slice()`, `substring()` et `split()`
+
+*   **Méthode `slice()`** : Pour extraire une section d'une chaîne de caractères.
+
+    ```
+    let texte = "Hello, World!";
+    let partie = texte.slice(0, 5); // "Hello"
+    ```
+* **Méthode `substring()`** : Similaire à `slice()`, mais sans accepter d'index négatifs.
+*   **Méthode `split()`** : Pour diviser une chaîne de caractères en un tableau de sous-chaînes, en fonction d'un séparateur.
+
+    ```
+    let texte = "apple,banana,pear";
+    let fruits = texte.split(","); // ["apple", "banana", "pear"]
+    ```
+
+#### Manipulation de la Casse
+
+*   **Méthode `toUpperCase()`** : Convertit une chaîne en majuscules.
+
+    ```
+    let texte = "hello";
+    console.log(texte.toUpperCase()); // "HELLO"
+    ```
+*   **Méthode `toLowerCase()`** : Convertit une chaîne en minuscules.
+
+    ```
+    let texte = "HELLO";
+    console.log(texte.toLowerCase()); // "hello"
+    ```
+
+### Recherche de Sous-chaînes
+
+*   **Méthode `includes()`** : Pour vérifier si une chaîne contient une sous-chaîne donnée.
+
+    ```
+    let phrase = "Bonjour le monde";
+    console.log(phrase.includes("le")); // true
+    ```
+*   **Méthode `indexOf()`** : Pour trouver l'index de la première occurrence d'une sous-chaîne.
+
+    ```
+    let texte = "Hello, World!";
+    console.log(texte.indexOf("World")); // 7
+    ```
+*   **Méthode `startsWith()` et `endsWith()`** : Pour vérifier si une chaîne commence ou se termine par une sous-chaîne spécifique.
+
+    ```
+    let texte = "Hello, World!";
+    console.log(texte.startsWith("Hello")); // true
+    console.log(texte.endsWith("!")); // true
+    ```
+
+### Substitution de Sous-chaînes
+
+*   **Méthode `replace()`** : Pour remplacer une sous-chaîne par une autre.
+
+    ```
+    let texte = "Hello, World!";
+    let nouveauTexte = texte.replace("World", "Everyone");
+    console.log(nouveauTexte); // "Hello, Everyone!"
+    ```
+*   **Méthode `replaceAll()`** : Introduit avec ECMAScript 2021, cette méthode remplace toutes les occurrences d'une sous-chaîne par une autre.
+
+    ```
+    let texte = "banane, banane, banane";
+    let nouveauTexte = texte.replaceAll("banane", "pomme");
+    console.log(nouveauTexte); // "pomme, pomme, pomme"
+    ```
+
+### Trimming
+
+*   **Méthode `trim()`** : Pour enlever les espaces blancs au début et à la fin d'une chaîne.
+
+    ```
+    let texte = "   Hello, World!   ";
+    ```
+
+\
