@@ -7,7 +7,7 @@
 * Une variable doit porter un **nom représentatif de ce qu'elle contient**
 
 {% hint style="danger" %}
-JavaScript est **sensible à la casse** : `NomDeFamille` ≠ `nomdefamille` 
+JavaScript est **sensible à la casse** : `NomDeFamille` ≠ `nomdefamille`&#x20;
 {% endhint %}
 
 ## Déclarer des variables et constantes
@@ -27,10 +27,10 @@ const personne = { age: 20 };
 {% hint style="success" %}
 #### Bonne pratique
 
-Ecrire en :
+Écrire en :
 
-* **majuscule** les constantes contenant des **valeurs** : `const MAX = 33;` 
-* **minuscule** les constantes contenant des **références**  : `const ids = [12, 44];` 
+* **majuscule** les constantes contenant des **valeurs** : `const MAX = 33;`&#x20;
+* **minuscule** les constantes contenant des **références**  : `const ids = [12, 44];`&#x20;
 {% endhint %}
 
 {% hint style="info" %}
@@ -39,14 +39,16 @@ Les variables JavaScript ne sont **pas typées** !
 On peut initialiser une variable avec un entier puis lui affecter une chaîne de caractères sans déclencher d’erreur.
 {% endhint %}
 
-{% page-ref page="types.md" %}
+{% content-ref url="types.md" %}
+[types.md](types.md)
+{% endcontent-ref %}
 
-### Variables avec `var` ou `let` ?
+## Variables avec `var` ou `let` ⁣ ?
 
-Il existe deux instructions pour déclarer des variables depuis la sixième édition du standard ECMAScript \(ES6 en abrégé\).
+Il existe deux instructions pour déclarer des variables depuis la sixième édition du standard ECMAScript (ES6 en abrégé).
 
 * `let` permet de déclarer une **variable dont la portée est celle du bloc courant**.
-* `var` quant à lui, permet de définir une **variable globale ou locale à une** **fonction** \(sans distinction des blocs utilisés dans la fonction\).
+* `var` quant à lui, permet de définir une **variable globale ou locale à une** **fonction** (sans distinction des blocs utilisés dans la fonction).
 
 ```javascript
 // Avec var
@@ -70,3 +72,6 @@ function letTest() {
 }
 ```
 
+#### **Conclusion**
+
+Utilisez `let` de préférence à `var` pour éviter les pièges liés à la portée des variables. Réservez `const` pour les valeurs qui ne doivent pas être réassignées, en respectant les conventions de nommage pour maintenir un code clair et lisible.
