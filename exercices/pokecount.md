@@ -158,9 +158,11 @@ Nous allons créer des variables pour stocker le compteur de Pokémon et l'élé
     const compteurEl = document.getElementById("compteur-el");
     ```
 
-#### Pourquoi stocker les références des éléments HTML dans des variables ?
+#### **Pourquoi utilise-t-on `const` pour `compteurEl` ?**
 
-Cela améliore les **performances** en évitant de chercher l'élément dans le DOM à chaque fois. C'est aussi plus **lisible** et **facile à maintenir** comme vous réutilisez la même variable.
+Nous utilisons `const` pour déclarer la variable `compteurEl` car elle **représente une référence** à un élément HTML qui ne changera pas. En d'autres termes, la valeur de `compteurEl` (la référence à l'élément `<h2>`) restera la même tout au long du script, même si le contenu ou les attributs de cet élément peuvent être modifiés.
+
+En revanche, `let` est utilisé pour `compteur` car cette variable est destinée à être modifiée régulièrement, chaque fois qu'un Pokémon est capturé. L'utilisation de `const` pour `compteurEl` garantit que cette référence ne sera pas accidentellement réassignée à un autre élément plus tard dans le code, ce qui contribue à la stabilité et à la clarté du code.
 
 ***
 
@@ -259,6 +261,24 @@ Nous souhaitons modifier la couleur du texte du compteur toutes les cinq capture
 
 Les écouteurs d'événements (`event listeners`) permettent de réagir à des interactions de l'utilisateur, comme un clic, sans mélanger HTML et JavaScript.
 
+**Introduction aux Callbacks**
+
+Avant de commencer cette étape, il est important de comprendre le concept de **callback** en JavaScript.
+
+Un **callback** est une fonction que vous passez en argument à une autre fonction, et qui sera exécutée plus tard, généralement en réponse à un événement. Les callbacks sont couramment utilisés pour diriger les interactions utilisateur de manière asynchrone, comme répondre à un clic sur un bouton.
+
+**Exemple d'utilisation d'un Callback**
+
+Lorsque vous utilisez un écouteur d'événement avec `addEventListener`, vous passez un callback qui sera exécuté lorsque l'événement spécifié se produit. Par exemple :
+
+```javascript
+const capturerBtn = document.getElementById("capturer-btn");
+
+capturerBtn.addEventListener("click", capturer);
+```
+
+Dans cet exemple, la fonction `capturer` est passée comme callback à `addEventListener`. Elle sera appelée automatiquement chaque fois que l'utilisateur cliquera sur le bouton "CAPTURER". Les callbacks permettent ainsi de rendre votre application interactive en réagissant aux actions de l'utilisateur de manière dynamique.
+
 #### **Retirer les attributs `onclick` du HTML :**
 
 *   **Action :** Ouvrez `index.html` et retirez les attributs `onclick` des boutons "CAPTURER" et "SAUVEGARDER". Les boutons devraient ressembler à ceci :
@@ -310,7 +330,11 @@ Le `localStorage` est une fonctionnalité du navigateur qui permet de stocker de
     ```
 * **Test :** Visualisez les données sauvegardées dans le `localStorage` en ouvrant les outils de développement du navigateur (F12 ou clic droit > Inspecter > Application > Local Storage).
 
-**Charger les captures sauvegardées au chargement de la page :§**
+**Charger les captures sauvegardées au chargement de la page**
+
+Dans cette étape, nous allons charger les captures sauvegardées dès que la page est chargée. Pour cela, nous allons utiliser un écouteur d'événement associé à l'événement `load`. Cet événement se déclenche lorsque la page a complètement fini de se charger.
+
+Au lieu de définir une fonction nommée séparée, nous allons utiliser une **fonction anonyme** directement dans notre écouteur d'événement. Une fonction anonyme est une fonction sans nom, utilisée ici parce qu'elle est **spécifique à cette action** unique et **ne nécessite pas d'être réutilisée ailleurs**.
 
 *   **Action :** Ajoutez le code suivant pour charger les captures sauvegardées au chargement de la page :
 
@@ -319,6 +343,13 @@ Le `localStorage` est une fonctionnalité du navigateur qui permet de stocker de
         sauvegardeEl.textContent = localStorage.getItem("captures") || ""; // Charger les captures sauvegardées ou une chaîne vide
     });
     ```
+
+Dans cet exemple, la fonction que nous passons à `addEventListener` est une fonction anonyme.
+
+Elle est définie avec la syntaxe `() => { ... }` et sera exécutée une seule fois lorsque l'événement `load` se déclenchera.
+
+L'utilisation d'une fonction anonyme ici permet de garder le code simple et directement lié à l'événement spécifique, sans ajouter de complexité inutile.
+
 * **Test :** Actualisez la page dans le navigateur. Capturez quelques Pokémon, sauvegardez-les, puis rechargez la page.
 
 ***
