@@ -1,3 +1,9 @@
+---
+description: >-
+  PokeCount: Créer une application web pour capturer et sauvegarder des Pokémon
+  !
+---
+
 # PokeCount
 
 ## **Objectif général**
@@ -251,6 +257,8 @@ Nous souhaitons modifier la couleur du texte du compteur toutes les cinq capture
 
 ### **Étape 7 : Amélioration du code avec des écouteurs d'événements**
 
+Les écouteurs d'événements (`event listeners`) permettent de réagir à des interactions de l'utilisateur, comme un clic, sans mélanger HTML et JavaScript.
+
 #### **Retirer les attributs `onclick` du HTML :**
 
 *   **Action :** Ouvrez `index.html` et retirez les attributs `onclick` des boutons "CAPTURER" et "SAUVEGARDER". Les boutons devraient ressembler à ceci :
@@ -285,7 +293,7 @@ L'utilisation d'écouteurs d'événements améliore la **séparation** entre le 
 
 Actuellement, les captures sont stockées temporairement dans la page web, mais elles sont perdues si l'utilisateur recharge la page ou ferme le navigateur. Pour résoudre ce problème, nous allons utiliser le `localStorage`.
 
-Le `localStorage` est une fonctionnalité du navigateur qui permet de stocker des données localement sur l'ordinateur de l'utilisateur. Cela peut être utile pour sauvegarder des informations entre les rechargements de page ou les sessions.
+Le `localStorage` est une fonctionnalité du navigateur qui permet de stocker des données localement sur l'ordinateur de l'utilisateur. Cela signifie que les données peuvent être conservées même après le rechargement de la page ou la fermeture du navigateur.
 
 **Sauvegarder les captures dans le `localStorage` :**
 
