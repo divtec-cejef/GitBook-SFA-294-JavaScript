@@ -1,79 +1,88 @@
 # Conversions
 
-## Convertir des nombres en chaines de caractères
+En JavaScript, il est souvent nécessaire de convertir des nombres en chaînes de caractères et inversement. Voici les différentes méthodes disponibles pour ces conversions.
 
-### String\(\)
+## Convertir des Nombres en Chaînes de Caractères
 
-La méthode globale `String()` permet de convertir des nombres en chaines.
+### Utiliser la Méthode Globale `String()`
 
-```javascript
-let total = 123.56;
-String(total); // "123.56"
-String(123); // "123"
-String(100 + 23); // "123"
-```
-
-### .toString\(\)
-
-Autre solution utiliser la méthode `.toString()`.
+La méthode globale `String()` permet de convertir un nombre en chaîne de caractères.
 
 ```javascript
 let total = 123.56;
-total.toString(); // "123.56"
-123.toString(); // "123"
-(100 + 23).toString(); // "123"
+console.log(String(total)); // "123.56"
+console.log(String(123)); // "123"
+console.log(String(100 + 23)); // "123"
 ```
 
-### Opérateur + concaténation
+### Utiliser la Méthode `.toString()`
 
-En utilisant l'opérateur `+` de concaténation, il suffit d'ajouter une chaine au nombre.
+Une autre solution consiste à utiliser la méthode `.toString()` directement sur le nombre.
 
 ```javascript
 let total = 123.56;
-total + ""; // "123.56"
-100 + "123"; // "100123"
-100 + 23 + ""; //"123"
-50 + " CHF"; // "50 CHF"
+console.log(total.toString()); // "123.56"
+console.log((123).toString()); // "123"
+console.log((100 + 23).toString()); // "123"
 ```
 
-## Convertir une chaîne de caractères en nombre
+### Utiliser l'Opérateur `+` pour la Concaténation
 
-Il existe deux méthodes :
+Avec l'opérateur `+` de concaténation, vous pouvez convertir un nombre en chaîne simplement en lui ajoutant une chaîne vide.
 
-* `parseInt(string, base)`
-* `parseFloat(string)`
+```javascript
+let total = 123.56;
+console.log(total + ""); // "123.56"
+console.log(100 + "123"); // "100123"
+console.log(100 + 23 + ""); // "123"
+console.log(50 + " CHF"); // "50 CHF"
+```
+
+## Convertir une Chaîne de Caractères en Nombre
+
+### Utiliser `parseInt(string, base)`
+
+La méthode `parseInt()` convertit une chaîne en nombre entier. Le deuxième paramètre optionnel (`base`) permet de préciser la base numérique (base 10, base 2, etc.).
 
 ```javascript
 // Conversion nombre entier en base 10
-parseInt("35", 10); // 35
-
+console.log(parseInt("35", 10)); // 35
+​
 // Conversion en base 2
-parseInt("01010",2); // 10
-
+console.log(parseInt("01010", 2)); // 10
+​
 // Conversion nombre entier (en base 10 si pas de deuxième paramètre)
-parseInt("22 ans"); // 22
-
+console.log(parseInt("22 ans", 10)); // 22
+​
 // Conversion nombre entier
-parseInt("33.1045"); //33
-
-// Conversion en nombre flottant
-parseFloat("33.1045"); //33.1045
-
-// Conversion en nombre flottant
-parseFloat("33,1045"); //33 - la virgule n'est pas prise en compte
+console.log(parseInt("33.1045", 10)); // 33
 ```
 
-> Une bonne pratique pour `parseInt()` est de toujours inclure l'argument qui indique dans quelle base numérique le résultat doit être renvoyé \(base 2, base 10...\).
+**Bonne Pratique :** Toujours inclure l'argument de base numérique pour éviter les ambiguïtés.
 
-### Opérateur + unaire
+### Utiliser `parseFloat(string)`
 
-Une autre méthode pour récupérer un nombre à partir d'une chaîne de caractères consiste à utiliser l'opérateur `+`.
+La méthode `parseFloat()` convertit une chaîne en nombre flottant (décimal).
 
 ```javascript
-+"1.1" = 1.1 // fonctionne seulement avec le + unaire
+// Conversion en nombre flottant
+console.log(parseFloat("33.1045")); // 33.1045
+​
+// Conversion en nombre flottant, mais la virgule n'est pas prise en compte
+console.log(parseFloat("33,1045")); // 33
 ```
 
-### Not A Number
+### Utiliser l'Opérateur `+` Unaire
 
-TODO - ...
+Une autre méthode pour convertir une chaîne en nombre consiste à utiliser l'opérateur `+` unaire. Il convertit une chaîne en nombre si possible.
+
+```javascript
+console.log(+"1.1"); // 1.1
+console.log(+"123"); // 123
+console.log(+"12.34abc"); // NaN, car "abc" n'est pas un nombre
+```
+
+### Not A Number (NaN)
+
+`NaN` signifie "Not a Number" et est une valeur spéciale utilisée pour représenter un résultat qui n'est pas un nombre. Cette section est à compléter pour expliquer en détail le concept et son utilisation.
 
