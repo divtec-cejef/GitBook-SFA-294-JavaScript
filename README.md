@@ -2,7 +2,9 @@
 
 ## Module 294: Développement d'Applications Web Interactives
 
-Ce cours fait partie du module 294, axé sur la création d'applications web interactives, en mettant l'accent sur le développement front-end. L'objectif principal est d'enseigner aux étudiants à concevoir et développer des interfaces utilisateur dynamiques et réactives, tout en respectant les bonnes pratiques de sécurité, de gestion des versions et de collaboration.
+Ce cours fait partie du module 294, axé sur la création d'applications web interactives, en mettant l'accent sur le développement front-end.
+
+L'objectif principal est d'enseigner aux étudiants à concevoir et développer des interfaces utilisateur dynamiques et réactives, tout en respectant les bonnes pratiques de sécurité, de gestion des versions et de collaboration.
 
 ## Objectifs du Cours
 
