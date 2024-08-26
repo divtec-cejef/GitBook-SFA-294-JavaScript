@@ -3,6 +3,10 @@
 * [Introduction](README.md)
 * [Environnement de développement](environnement-de-developpement.md)
 
+## Exercices
+
+* [PokeCount](exercices/pokecount.md)
+
 ## JavaScript
 
 * [Les bases](javascript/introduction/README.md)
