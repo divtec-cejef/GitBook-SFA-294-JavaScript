@@ -12,6 +12,7 @@
   * [Types de données](javascript/introduction/types.md)
   * [String](javascript/introduction/string.md)
   * [Number](javascript/introduction/number.md)
+  * [L'objet Math](javascript/introduction/lobjet-math.md)
   * [Conversions](javascript/introduction/conversions.md)
   * [Opérateurs](javascript/introduction/operateurs.md)
   * [Conditions](javascript/introduction/conditions.md)
