@@ -21,7 +21,7 @@
   * [Tableaux](javascript/introduction/tableaux.md)
   * [Interactions avec l'utilisateur](javascript/introduction/interactions-avec-lutilisateur.md)
   * [Timers & Intervalles](javascript/introduction/timers.md)
-* [Manipuler une page Web via le DOM](javascript/dom-introduction/README.md)
+* [Manipuler une page Web (DOM)](javascript/dom-introduction/README.md)
   * [Introduction](javascript/dom-introduction/introduction.md)
   * [Accéder aux éléments](javascript/dom-introduction/dom-acceder.md)
   * [Modifier les contenus textes](javascript/dom-introduction/dom-modifier-texte.md)
