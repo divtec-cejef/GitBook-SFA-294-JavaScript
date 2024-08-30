@@ -4,7 +4,7 @@
 
 * [Présentation du cours](README.md)
 * [Environnement de développement](environnement-de-developpement.md)
-* [Les bases](javascript/introduction/README.md)
+* [Les bases du JavaScript](javascript/introduction/README.md)
   * [Introduction à JavaScript](javascript/introduction/introduction-1.md)
   * [Commentaires & entêtes](javascript/introduction/commentaires.md)
   * [Variables et constantes](javascript/introduction/variables-et-constantes.md)
