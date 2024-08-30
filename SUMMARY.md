@@ -1,14 +1,9 @@
 # Table of contents
 
-* [Introduction](README.md)
-* [Environnement de développement](environnement-de-developpement.md)
-
-## Exercices
-
-* [🔢 Exercice PokeCount](exercices/pokecount.md)
-
 ## JavaScript
 
+* [Environnement de développement](README.md)
+* [Introduction](javascript/master.md)
 * [Les bases](javascript/introduction/README.md)
   * [Introduction à JavaScript](javascript/introduction/introduction-1.md)
   * [Commentaires & entêtes](javascript/introduction/commentaires.md)
@@ -47,6 +42,10 @@
   * [Template Literals](javascript/javascript-moderne/template-literals.md)
   * [Ensembles](javascript/javascript-moderne/ensembles.md)
   * [Paramètres par défaut](javascript/javascript-moderne/parametres-par-default.md)
+
+## Exercices
+
+* [🔢 Exercice PokeCount](exercices/pokecount.md)
 
 ## Plan des cours 2024
 
