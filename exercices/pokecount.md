@@ -17,7 +17,7 @@ layout:
   outline:
     visible: true
   pagination:
-    visible: true
+    visible: false
 ---
 
 # 🔢 Exercice PokeCount
@@ -376,3 +376,13 @@ L'utilisation d'une fonction anonyme ici permet de garder le code simple et dire
 * Afficher l'historique des captures dans une liste à puce.
 * Conduire l'historique des captures dans un tableau JavaScript.
 * Permettre à l'utilisateur de supprimer des captures de l'historique.
+
+## :dodo: La solution du prof
+
+{% embed url="https://fallinov.github.io/2024-SFA-JS-EXE-PokeCount/" fullWidth="false" %}
+Le site du prof
+{% endembed %}
+
+{% embed url="https://github.com/fallinov/2024-SFA-JS-EXE-PokeCount" %}
+Le code du prof
+{% endembed %}

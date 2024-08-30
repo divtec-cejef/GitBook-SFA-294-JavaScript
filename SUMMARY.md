@@ -5,7 +5,7 @@
 
 ## Exercices
 
-* [🔢 Exercice PokeCount](exercices/exercice-pokecount.md)
+* [🔢 Exercice PokeCount](exercices/pokecount.md)
 
 ## JavaScript
 
