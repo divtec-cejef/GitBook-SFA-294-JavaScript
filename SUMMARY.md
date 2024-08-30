@@ -51,3 +51,7 @@
 
 * [📅 20 août – Leçons 1 à 3](plan-des-cours-2024/20-aout-lecons-1-a-3.md)
 * [📅 27 août — Leçons 4 à 6](plan-des-cours-2024/27-aout-lecons-4-a-6.md)
+
+***
+
+* [📅 3 septembre — Leçons 7 à 9](3-septembre-lecons-7-a-9.md)
