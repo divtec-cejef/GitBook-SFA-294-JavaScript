@@ -2,8 +2,8 @@
 
 ## JavaScript
 
-* [Environnement de développement](README.md)
-* [Introduction](javascript/master.md)
+* [Présentation du cours](README.md)
+* [Environnement de développement](environnement-de-developpement.md)
 * [Les bases](javascript/introduction/README.md)
   * [Introduction à JavaScript](javascript/introduction/introduction-1.md)
   * [Commentaires & entêtes](javascript/introduction/commentaires.md)
