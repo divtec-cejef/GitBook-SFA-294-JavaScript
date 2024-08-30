@@ -47,3 +47,8 @@
   * [Template Literals](javascript/javascript-moderne/template-literals.md)
   * [Ensembles](javascript/javascript-moderne/ensembles.md)
   * [Paramètres par défaut](javascript/javascript-moderne/parametres-par-default.md)
+
+## Plan des cours 2024
+
+* [📅 20 août – Leçons 1 à 3](plan-des-cours-2024/20-aout-lecons-1-a-3.md)
+* [📅 27 août — Leçons 4 à 6](plan-des-cours-2024/27-aout-lecons-4-a-6.md)
