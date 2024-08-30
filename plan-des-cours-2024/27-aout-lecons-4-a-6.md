@@ -1,7 +1,5 @@
 # 📅 27 août — Leçons 4 à 6
 
-## 📅 27 août – Leçons 4 à 6
-
 ## 🚀 Objectifs du jour <a href="#objectifs-du-jour" id="objectifs-du-jour"></a>
 
 * Comprendre les concepts de base du JavaScript en réalisant un exercice pratique.
@@ -32,6 +30,7 @@
   * Faire un **push** de votre travail pour l'envoyer sur GitHub
 * **Partagez votre réalisation**
   * Publiez votre application sur **GitHub Pages**
+    * [Création d’un site GitHub Pages](https://docs.github.com/fr/pages/getting-started-with-github-pages/creating-a-github-pages-site)
   * **Partager le lien** avec le formateur et vos collègues dans le canal de l'exercice sur **Discord**
 
 ## [📝](https://discord.com/assets/eb6f1572602c535a987c.svg) Devoirs
