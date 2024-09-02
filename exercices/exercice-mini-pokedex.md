@@ -2,12 +2,7 @@
 description: >-
   Crée un mini Pokédex, pour connaitre le nom, le type et le niveau de tes
   Pokémons !
-cover: ../.gitbook/assets/exe-mini-pokedex.png
-coverY: 73.36533333333333
 layout:
-  cover:
-    visible: true
-    size: hero
   title:
     visible: true
   description:
@@ -22,6 +17,12 @@ layout:
 
 # 📒 Exercice Mini Pokédex
 
+<div data-full-width="true">
+
+<figure><img src="../.gitbook/assets/exe-mini-pokedex.png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
 
 
 ## **Objectifs**
@@ -34,12 +35,6 @@ layout:
 * **Construire une Interface Interactive :** Créer une interface qui s'adapte aux entrées de l'utilisateur, comme le tri et la recherche.
 * **Valider les Données :** Vérifier que les données sont correctes avant de les afficher.
 * **Utiliser la Documentation :** Encourager l'utilisation de la documentation pour résoudre des problèmes et apprendre de nouvelles fonctionnalités.
-
-<div data-full-width="true">
-
-<figure><img src="../.gitbook/assets/exe-mini-pokedex.png" alt=""><figcaption></figcaption></figure>
-
-</div>
 
 ***
 
