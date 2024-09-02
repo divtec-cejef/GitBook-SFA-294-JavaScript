@@ -146,14 +146,14 @@ Chaque Pokémon est affiché dans une carte avec ses détails :
     <div class="pokemon-card">
         <img src="images/pikachu.png" alt="Pikachu">
         <h2>Pikachu</h2>
-        <p>Type: Électrique</p>
-        <p>Niveau: 35</p>
+        <div>Type: Électrique</div>
+        <div>Niveau: 35</div>
     </div>
     <div class="pokemon-card">
         <img src="images/bulbizarre.png" alt="Bulbizarre">
         <h2>Bulbizarre</h2>
-        <p>Type: Plante, Poison</p>
-        <p>Niveau: 15</p>
+        <div>Type: Plante, Poison</div>
+        <div>Niveau: 15</div>
     </div>
     <!-- Les autres Pokémon -->
 </div>
@@ -200,16 +200,16 @@ Chaque carte Pokémon a un fond coloré correspondant à ses types :
     <div class="pokemon-card" style="background: #FFD700;">
         <img src="images/pikachu.png" alt="Pikachu">
         <h2>Pikachu</h2>
-        <p>Type: Électrique</p>
-        <p>Niveau: 35</p>
+        <div>Type: Électrique</div>
+        <div>Niveau: 35</div>
     </div>
     
     <!-- Exemple de Pokemon avec deux types -->
     <div class="pokemon-card" style="background: linear-gradient(to right, #78C850 50%, #A040A0 50%);">
         <img src="images/bulbizarre.png" alt="Bulbizarre">
         <h2>Bulbizarre</h2>
-        <p>Type: Plante, Poison</p>
-        <p>Niveau: 15</p>
+        <div>Type: Plante, Poison</div>
+        <div>Niveau: 15</div>
     </div>
     <!-- Les autres Pokémon -->
 </div>
