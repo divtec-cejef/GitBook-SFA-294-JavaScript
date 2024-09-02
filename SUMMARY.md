@@ -46,6 +46,7 @@
 ## Exercices
 
 * [🔢 Exercice PokeCount](exercices/pokecount.md)
+* [📒 Exercice Mini Pokédex](exercices/exercice-mini-pokedex.md)
 
 ## Plan des cours 2024
 
