@@ -53,7 +53,12 @@ Pour réaliser cet exercice, copier les fichiers de ce dépôt
 3. Ajoute chaque nom de Pokémon avec [`innerHTML`](../javascript/dom-introduction/dom-modifier-texte.md#innerhtml).
 4. Pensez à vider, réinitialiser, le contenu du conteneur `.pokemon-container` avant de créer la liste.
 5. Utiliser les [_template literals_](../javascript/introduction/string.md#template-literals-litteraux-de-gabarits) pour créer des chaines de caractères dynamiques.
-6. Pensez à appeler votre fonction pour la tester :smile:
+6.  Si le tableau des Pokémons est vide, ajouter le paragraphe suivant dans le conteneur `.pokemon-container`
+
+    ```
+    <p>Dracaufeu a tout brûlé, aucun Pokémon ne correspond à ta recherche !</p>
+    ```
+7. Pensez à appeler votre fonction pour la tester :smile:
 
 #### **Exemple de résultat attendu**
 
@@ -215,39 +220,81 @@ Chaque carte Pokémon a un fond coloré correspondant à ses types :
 * [#extraire-des-chaines-slice-substring-et-split](../javascript/introduction/string.md#extraire-des-chaines-slice-substring-et-split "mention")
 * [#loperateur-conditionnel-ternaire](../javascript/introduction/conditions.md#loperateur-conditionnel-ternaire "mention")
 * [#loperateur-de-coalescence-or-or](../javascript/introduction/operateurs.md#loperateur-de-coalescence-or-or "mention")
-* [Documentation MDN sur les Objets en JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Working\_with\_Objects)
+* [#resume-de-la-creation-et-manipulation-dobjets](../javascript/introduction/objets.md#resume-de-la-creation-et-manipulation-dobjets "mention")
 * [Documentation MDN sur les Dégradés CSS](https://developer.mozilla.org/fr/docs/Web/CSS/gradient)
 
 ***
 
-### Étape 5 : Ajout des fonctionnalités de recherche et de tri
+### **Étape 5 : Recherche dans le nom des Pokémons**
 
-**Objectif :** Ajouter la fonctionnalité de recherche et de tri pour filtrer les Pokémon affichés.
+**Objectif :** Crée une fonction qui filtre les Pokémon affichés en fonction des caractères saisi dans la barre de recherche.
 
 #### **Instructions**
 
-1. Crée une fonction `filterAndSortPokemons` qui filtre et trie les Pokémon, puis affiche le résultat en appelant `displayPokemons(filteredPokemons)` en lui passant le tableau filtré et trié.
-2. Ajoute des gestionnaires d'événements pour capturer les changements dans le champ de recherche et les listes déroulantes de filtrage par type et de tri.
-3. Appeler `filterAndSortPokemons` dès qu'un changement est détecté dans le champ de recherche ou les listes.
-4. Pense à appeler `filterAndSortPokemons` une première fois à la fin de ton script pour afficher les cartes Pokémons au chargement.&#x20;
+1. Dans le fichier `script.js`, crée une nouvelle fonction `filterAndSortPokemons` qui va gérer le filtrage des Pokémon par nom :
+   * Récupère la valeur du champ de recherche avec `searchBar.value.toLowerCase()`.
+   * Utilise la méthode [`filter()`](../javascript/introduction/tableaux.md#filtrer-un-tableau) sur le tableau `pokemons` pour ne garder que les Pokémon dont le nom contient la chaîne de caractères entrée par l'utilisateur.
+   * Appelle `displayPokemons(filteredPokemons)` pour afficher les Pokémon filtrés.
+2. Ajoute un [gestionnaire qui écoute l'événement](../javascript/dom-introduction/evenements.md#addeventlistener) `input` sur la barre de recherche (`searchBar`) pour déclencher `filterAndSortPokemons` à chaque modification du texte.
 
-#### **Exemple de résultat attendu**
+#### **Tests manuels à effectuer :**
 
-* **Recherche "Pikachu" :** Seule la carte de Pikachu doit s'afficher.
-* **Recherche "RA" :** Seuls les carte de Dracaufeu, Raichu et Carapuce s'affichent
-* **Filtrage par Type "Feu"** : Les Pokémon de type Feu comme Salamèche et Dracaufeu doivent s'afficher.
-* **Tri par niveau décroissant :** Bulbizarre s'affiche en premier suivi de Carapuce et Dracaufeu
-* **Tri par niveau décroissant :** Mewtwo s'affiche en premier suivi de Florizarre et Tortank
+* Tape `Pika` dans la barre de recherche, et vérifie que seul Pikachu est affiché.
+* Tape `a` dans la barre de recherche, et vérifie que tous les Pokémon contenant "a" dans leur nom sont affichés (par exemple, "Salamèche", "Bulbizarre").
+* Tape `FFF` dans la barre de recherche, et vérifie que le message `Dracaufeu a tout brûlé, aucun Pokémon ne correspond à ta recherche !` s'affiche.
+* Efface le texte dans la barre de recherche, et vérifie que tous les Pokémon sont de nouveau affichés.
 
 #### **Ressources Utiles**
 
 * [#addeventlistener](../javascript/dom-introduction/evenements.md#addeventlistener "mention")
 * [#filtrer-un-tableau](../javascript/introduction/tableaux.md#filtrer-un-tableau "mention")
-* [#trier-un-tableau](../javascript/introduction/tableaux.md#trier-un-tableau "mention")
-
-
 
 ***
+
+### **Étape 6 : Ajoute le Filtrage par Type dans `filterAndSortPokemons`**
+
+**Objectif :** Mettre à jour la fonction `filterAndSortPokemons` pour inclure un filtre par type de Pokémon.
+
+#### **Instructions**
+
+1. Modifie la fonction `filterAndSortPokemons` pour ajouter un filtrage par type après le filtrage par nom :
+   * Récupère la valeur du filtre de type avec `typeFilter.value`.
+   * Si un type est sélectionné, utilise la méthode `filter()` pour ne garder que les Pokémon dont le type correspond à la sélection.
+   * Appelle `displayPokemons(filteredPokemons)` pour afficher les Pokémon filtrés.
+2. Ajoute un gestionnaire d'événement `change` à l'à la liste déroulante (`typeFilter`) pour déclencher `filterAndSortPokemons` à chaque changement de sélection.
+
+#### **Tests manuels à effectuer :**
+
+* Sélectionne `Feu` dans le filtre de type et vérifie que seuls les Pokémon de type Feu (comme Salamèche et Dracaufeu) sont affichés.
+* Combine la recherche par nom et le filtre de type en tapant `a` dans la barre de recherche et en sélectionnant `Eau` comme type. Vérifie que seuls les Pokémon correspondant aux deux critères sont affichés (par exemple, Carapuce).
+* Sélectionne `Tous les types` et vérifie que la recherche par nom fonctionne toujours correctement.
+
+***
+
+### **Étape 7 : Ajoute le Tri dans `filterAndSortPokemons`**
+
+**Objectif :** Achever la fonction `filterAndSortPokemons` pour trier les Pokémon en fonction du critère sélectionné dans le menu déroulant de tri.
+
+#### **Instructions**
+
+1. Modifie la fonction `filterAndSortPokemons` pour ajouter le tri après le filtrage par nom et par type :
+   * Récupère la valeur du critère de tri avec `sortOrder.value`.
+   * Utilise la méthode [`sort()`](../javascript/introduction/tableaux.md#trier-un-tableau) pour trier les Pokémon selon le critère sélectionné : par nom (A-Z, Z-A) ou par niveau (croissant, décroissant).
+   * Appelle `displayPokemons(filteredPokemons)` pour afficher les Pokémon triés.
+2. Ajoute un gestionnaire d'événement `change` au critère de tri (`sortOrder`) pour déclencher `filterAndSortPokemons` à chaque changement de sélection.
+
+#### **Tests manuels à effectuer**
+
+* Sélectionne : `Nom (A-Z)` et vérifie que les Pokémon sont affichés par ordre alphabétique croissant.
+* Sélectionne : `Nom (Z-A)` et vérifie que les Pokémon sont affichés par ordre alphabétique décroissant.
+* Sélectionne : `Niveau (croissant)` et vérifie que les Pokémon sont affichés par ordre de niveau croissant.
+* Sélectionne : `Niveau (décroissant)` et vérifie que les Pokémon sont affichés par ordre de niveau décroissant.
+* Combine les filtres de type, la recherche par nom et le tri pour vérifier que tout fonctionne ensemble correctement (par exemple, tape `a`, sélectionne `Eau` comme type, et trie par `niveau décroissant`).
+
+#### **Ressources Utiles**
+
+* [#trier-un-tableau](../javascript/introduction/tableaux.md#trier-un-tableau "mention")
+* [#extraire-des-chaines-slice-substring-et-split](../javascript/introduction/string.md#extraire-des-chaines-slice-substring-et-split "mention")
 
 ## **Challenges supplémentaires**
 
