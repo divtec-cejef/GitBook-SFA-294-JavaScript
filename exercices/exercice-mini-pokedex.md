@@ -89,7 +89,7 @@ Un Pokémon possède au **minimum un type** et au **maximum deux**.
 
 #### **Instructions**
 
-1. Modifie la fonction précédemment créée pour afficher le nom de chaque Pokémon, et son type.
+1. Modifie la fonction `displayPokemons` pour afficher le nom de chaque Pokémon, et son type.
 2.  Pour chaque Pokémon, affiche son nom suivi de ses types dans un élément `<small>,` en n'oubliant pas les espaces s'il y a plusieurs types.
 
     ```html
@@ -124,9 +124,13 @@ La page doit afficher la liste des Pokémon avec leurs types :
 
 #### **Instructions**
 
-1. Modifie la fonction pour remplacer chaque élément `<p>` par un élément `<div>` avec la classe `pokemon-card`.
-2. Chaque carte doit inclure l'image du Pokémon, son nom, ses types et son niveau.
-3. Utilise `innerHTML` pour construire chaque carte et l'ajouter au conteneur.
+1. Créer une fonction `generatePokemonCardHTML(pokemon)` qui retourne le code HTML de la carte Pokémon pour l'objet Pokémon passé en paramètre.&#x20;
+2. Le code HTML retourné par `generatePokemonCardHTML` remplacera chaque élément `<p>` dans la fonction `displayPokemons`
+3.  Chaque carte doit inclure l'image du Pokémon, son nom, ses types et son niveau.
+
+    Les images se trouvent dans le dossier `images/` du projet.
+4. Utilise les [_template literals_](../javascript/introduction/string.md#template-literals-litteraux-de-gabarits) pour construire le HTML de chaque carte et le retourner.
+5. Pense à appeler `generatePokemonCardHTML` dans `displayPokemons` à la place de la création du paragraphe `<p>`.
 
 #### **Exemple de résultat attendu**
 
@@ -152,8 +156,9 @@ Chaque Pokémon est affiché dans une carte avec ses détails :
 
 #### **Ressources utiles**
 
-* [Documentation MDN sur la Manipulation du DOM](https://developer.mozilla.org/fr/docs/Web/API/Document\_Object\_Model/Introduction)
-* [Documentation MDN sur les Éléments HTML](https://developer.mozilla.org/fr/docs/Web/HTML/Element/div)
+* [#creer-et-appeler-un-fonction](../javascript/introduction/fonctions.md#creer-et-appeler-un-fonction "mention")
+* [#template-literals-litteraux-de-gabarits](../javascript/introduction/string.md#template-literals-litteraux-de-gabarits "mention")
+* [#innerhtml](../javascript/dom-introduction/dom-modifier-texte.md#innerhtml "mention")
 
 ***
 
@@ -164,8 +169,23 @@ Chaque Pokémon est affiché dans une carte avec ses détails :
 #### **Instructions**
 
 1. Modifie la fonction pour que la couleur de fond de chaque carte soit déterminée par les types du Pokémon.
-2. Si un Pokémon a deux types, utilise un dégradé de couleurs pour la carte.
-3. Utilise l'objet `typeColors` pour récupérer les couleurs associées à chaque type.
+2.  Pour ajouter le _CSS_, on l'ajoutera en ligne **via la propriété** `style=""` de la `<div>` représentant la carte.
+
+    <pre class="language-html"><code class="lang-html"><strong>&#x3C;div style="background: #FFD700;">
+    </strong></code></pre>
+3.  Si un Pokémon a deux types, utilise un dégradé de couleurs pour la carte.\
+    Utiliser&#x20;
+
+    ```html
+    <div style="background: linear-gradient(to right, #78C850 50%, #A040A0 50%);">
+    ```
+4. Utilise l'objet `typeColors` pour récupérer les couleurs associées à chaque type.
+
+```javascript
+typeColors['Feu'] // Retoune le code couleur pour Feu soit '#F08030'
+```
+
+
 
 #### **Exemple de résultat attendu**&#x20;
 
