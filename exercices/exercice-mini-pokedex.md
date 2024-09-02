@@ -135,7 +135,8 @@ La page doit afficher la liste des Pokémon avec leurs types :
 
     Les images se trouvent dans le dossier `images/` du projet.
 4. Utilise les [_template literals_](../javascript/introduction/string.md#template-literals-litteraux-de-gabarits) pour construire le HTML de chaque carte et le retourner.
-5. Pense à appeler `generatePokemonCardHTML` dans `displayPokemons` à la place de la création du paragraphe `<p>`.
+5. Utiliser [`join()`](../javascript/introduction/tableaux.md#methode-join) pour fusionner les types et les séparer par une virgule et un espace  `,`&#x20;
+6. Pense à appeler `generatePokemonCardHTML` dans `displayPokemons` à la place de la création du paragraphe `<p>`.
 
 #### **Exemple de résultat attendu**
 
@@ -143,13 +144,13 @@ Chaque Pokémon est affiché dans une carte avec ses détails :
 
 ```html
 <div class="pokemon-container">
-    <div class="pokemon-card">
+    <div class="pokemon-card" style="background: #705898;">
         <img src="images/pikachu.png" alt="Pikachu">
         <h2>Pikachu</h2>
         <div>Type: Électrique</div>
         <div>Niveau: 35</div>
     </div>
-    <div class="pokemon-card">
+    <div class="pokemon-card" style="background: #705898;">
         <img src="images/bulbizarre.png" alt="Bulbizarre">
         <h2>Bulbizarre</h2>
         <div>Type: Plante, Poison</div>
@@ -163,6 +164,7 @@ Chaque Pokémon est affiché dans une carte avec ses détails :
 
 * [#creer-et-appeler-un-fonction](../javascript/introduction/fonctions.md#creer-et-appeler-un-fonction "mention")
 * [#template-literals-litteraux-de-gabarits](../javascript/introduction/string.md#template-literals-litteraux-de-gabarits "mention")
+* [#methode-join](../javascript/introduction/tableaux.md#methode-join "mention")
 * [#innerhtml](../javascript/dom-introduction/dom-modifier-texte.md#innerhtml "mention")
 
 ***
