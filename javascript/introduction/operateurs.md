@@ -108,6 +108,23 @@ Les opérateurs `!=` et `!==` existent également pour vérifier l'inégalité. 
 
 ***
 
+## L'Opérateur de Coalescence `||`
+
+**Définition :** L'opérateur `||` (OU logique) en JavaScript permet de retourner la première valeur "truthy" rencontrée entre deux expressions. Si la première valeur est "falsy" (comme `undefined`, `null`, `0`, `false`, ou `""`), il retourne la seconde.
+
+**Exemple :**
+
+```javascript
+const nomUtilisateur = utilisateur.nom || "Invité";
+```
+
+* Si `utilisateur.nom` est défini (et "truthy"), `nomUtilisateur` prendra cette valeur.
+* Si `utilisateur.nom` est `undefined` ou vide, `nomUtilisateur` prendra la valeur `"Invité"`.
+
+**Utilisation Courante :** Cet opérateur est souvent utilisé pour fournir des valeurs par défaut lorsque la valeur initiale est absente ou invalide.
+
+**Conclusion :** L'opérateur `||` est essentiel pour simplifier la gestion des valeurs par défaut en JavaScript.
+
 ## Conclusion
 
 Les opérateurs en JavaScript offrent une grande flexibilité pour effectuer des calculs, manipuler des chaînes de caractères et comparer des valeurs. Il est important de comprendre comment ils fonctionnent, en particulier les différences entre les opérateurs d'égalité `==` et `===`, pour éviter des erreurs subtiles dans votre code.

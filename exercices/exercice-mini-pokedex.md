@@ -173,19 +173,17 @@ Chaque Pokémon est affiché dans une carte avec ses détails :
 
     <pre class="language-html"><code class="lang-html"><strong>&#x3C;div style="background: #FFD700;">
     </strong></code></pre>
-3.  Si un Pokémon a deux types, utilise un dégradé de couleurs pour la carte.\
-    Utiliser&#x20;
+3.  Si un Pokémon a deux types, utilise un dégradé de couleurs pour la carte.&#x20;
 
     ```html
     <div style="background: linear-gradient(to right, #78C850 50%, #A040A0 50%);">
     ```
-4. Utilise l'objet `typeColors` pour récupérer les couleurs associées à chaque type.
+4.  Utilise l'objet `typeColors` pour récupérer les couleurs associées à chaque type.
 
-```javascript
-typeColors['Feu'] // Retoune le code couleur pour Feu soit '#F08030'
-```
-
-
+    ```javascript
+    typeColors['Feu'] // Retoune le code couleur pour Feu soit '#F08030'
+    ```
+5. Utiliser l'**opérateur ternaire** ou **opérateur de coalescence** pour affecter la couleur par défaut de la constante `DEFAULT_COLOR` au cas où le type n'existerait pas.
 
 #### **Exemple de résultat attendu**&#x20;
 
@@ -215,6 +213,7 @@ Chaque carte Pokémon a un fond coloré correspondant à ses types :
 #### **Ressources utiles**
 
 * [#extraire-des-chaines-slice-substring-et-split](../javascript/introduction/string.md#extraire-des-chaines-slice-substring-et-split "mention")
+* [#loperateur-conditionnel-ternaire](../javascript/introduction/conditions.md#loperateur-conditionnel-ternaire "mention")
 * [Documentation MDN sur les Objets en JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Working\_with\_Objects)
 * [Documentation MDN sur les Dégradés CSS](https://developer.mozilla.org/fr/docs/Web/CSS/gradient)
 
