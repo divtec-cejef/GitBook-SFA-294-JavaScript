@@ -14,13 +14,12 @@
 
 ### 📒 Démarrer l'exercice Mini Pokédex
 
+* Cloner le dépôt de l'exercice :&#x20;
+* Consignes [exercice-mini-pokedex.md](../exercices/exercice-mini-pokedex.md "mention")
 * Introduction à l'exercice Mini Pokédex : explication des objectifs de l'exercice.
 * Lecture du code de départ, explication des parties principales.
-* Début des premières étapes : affichage des Pokémon, gestion des événements basiques.
+* Début des premières étapes : affichage des Pokémons.
 
 ## ✅ Devoirs
 
-* Finaliser l'exercice PokeCount si ce n'est pas encore fait.
-* Commencer à travailler sur l'exercice Mini Pokédex :
-  * Afficher la liste des Pokémon.
-  * Filtrer et trier les Pokémon.
+* Réaliser les étapes 1 à 4 de l'exercice Mini Pokédex.
