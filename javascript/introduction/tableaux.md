@@ -9,7 +9,7 @@ const animaux = [];
 // Créer un tableau avec des valeurs de différents types
 const tableauHétérogène = [zoo, 33, true, 'une chaine', '🐷'];
 
-// Créer un tableau avec des valeurs (émojis animaux)
+// Créer un tableau de chaînes de caractères
 const zoo = ['🐔', '🐷', '🐑', '🐇'];
 
 // Retourner un élément spécifique du tableau
@@ -117,11 +117,11 @@ animaux.forEach(function(animal) {
 
 ***
 
-
-
 ## Retourner le contenu d'un tableau sous forme de chaîne
 
 ### **Méthode `join()`**
+
+{% embed url="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/join" %}
 
 La méthode `join()` permet de concaténer tous les éléments d'un tableau en une seule chaîne de caractères. On peut spécifier un séparateur entre chaque élément (par défaut, une virgule).
 
@@ -137,7 +137,9 @@ console.log(elements.join('-'));  // "Fire-Air-Water"
 
 ## Filtrer un tableau
 
-### **Méthode `filter()`**&#x20;
+### **Méthode `filter()`**
+
+{% embed url="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" %}
 
 {% hint style="danger" %}
 #### Retourne un nouveau tableau
@@ -172,6 +174,8 @@ console.log(utilisateursJeunes); // [{ nom: 'Alice', age: 25 }]
 
 ### **Méthode `sort()`**&#x20;
 
+{% embed url="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/sort" %}
+
 {% hint style="danger" %}
 Modifie le tableau traité
 {% endhint %}
@@ -205,6 +209,8 @@ console.log(utilisateurs);
 ```
 
 ### Utilisation de `localeCompare()`&#x20;
+
+{% embed url="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare" %}
 
 Lorsque vous travaillez avec des chaînes de caractères, en particulier dans des langues différentes ou avec des accents, la méthode `localeCompare()` est très utile pour un tri plus précis et conforme aux conventions locales.
 
@@ -264,13 +270,17 @@ fruits.forEach(fruit => console.log(`${fruit.nom} - ${fruit.prix}€`));
 
 ***
 
-## Recherche de sous-chaîne dans un tableau de chaînes de caractères
+## Recherche dans un tableau de chaînes de caractères
 
-#### Utilisation de `includes()`
+### Utilisation de `includes()`
+
+{% embed url="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/includes" %}
 
 {% hint style="danger" %}
 **Retourne un nouveau tableau**
 {% endhint %}
+
+#### Dans un tableau de chaînes
 
 ```javascript
 // Créer un tableau simple de chaînes de caractères
@@ -284,11 +294,38 @@ console.log(nomsAvecA);
 // ["Alice", "Charlie", "David"]
 ```
 
-#### Alternative avec `indexOf()`
+#### Dans un tableau d'objets
+
+```javascript
+const personnes = [
+    { nom: 'Alice', age: 25 },
+    { nom: 'Bob', age: 30 },
+    { nom: 'Charlie', age: 35 },
+    { nom: 'David', age: 40 },
+    { nom: 'Eve', age: 28 }
+];
+
+// Rechercher les personnes dont le nom contient la lettre 'a'
+const personnesAvecA = personnes.filter(personne => personne.nom.toLowerCase().includes('a'));
+
+console.log(personnesAvecA);
+// Résultat :
+// [
+//   { nom: 'Alice', age: 25 },
+//   { nom: 'Charlie', age: 35 },
+//   { nom: 'David', age: 40 }
+// ]
+```
+
+### Alternative avec `indexOf()`
+
+{% embed url="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf" %}
 
 {% hint style="danger" %}
 **Retourne un nouveau tableau**
 {% endhint %}
+
+#### Dans un tableau de chaînes
 
 ```javascript
 // Créer un tableau simple de chaînes de caractères
@@ -302,9 +339,32 @@ console.log(nomsAvecA);
 // ["Alice", "Charlie", "David"]
 ```
 
+#### Dans un tableau d'objets
+
+```javascript
+const personnes = [
+    { nom: 'Alice', age: 25 },
+    { nom: 'Bob', age: 30 },
+    { nom: 'Charlie', age: 35 },
+    { nom: 'David', age: 40 },
+    { nom: 'Eve', age: 28 }
+];
+
+// Rechercher les personnes dont le nom contient la lettre 'a'
+const personnesAvecA = personnes.filter(personne => personne.nom.toLowerCase().indexOf('a') !== -1);
+
+console.log(personnesAvecA);
+// Résultat :
+// [
+//   { nom: 'Alice', age: 25 },
+//   { nom: 'Charlie', age: 35 },
+//   { nom: 'David', age: 40 }
+// ]
+```
+
 ***
 
-### Résumé des fonctions
+## Résumé des fonctions
 
 * **Modifie le tableau en place :** `push`, `pop`, `shift`, `unshift`, `splice`, `sort`.
 * **Retourne un nouveau tableau :** `filter`, `slice`, `map`, `concat`, `join`, `includes`, `indexOf`.
