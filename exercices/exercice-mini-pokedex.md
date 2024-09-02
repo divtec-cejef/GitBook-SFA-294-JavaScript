@@ -183,7 +183,7 @@ Chaque Pokémon est affiché dans une carte avec ses détails :
     ```javascript
     typeColors['Feu'] // Retoune le code couleur pour Feu soit '#F08030'
     ```
-5. Utiliser l'**opérateur ternaire** ou **opérateur de coalescence** pour affecter la couleur par défaut de la constante `DEFAULT_COLOR` au cas où le type n'existerait pas.
+5. Utiliser [l'opérateur **ternaire**](../javascript/introduction/conditions.md#loperateur-conditionnel-ternaire) ou [opérateur de **coalescence**](../javascript/introduction/operateurs.md#loperateur-de-coalescence-or-or) pour affecter la couleur par défaut de la constante `DEFAULT_COLOR` au cas où le type n'existerait pas.
 
 #### **Exemple de résultat attendu**&#x20;
 
@@ -214,65 +214,36 @@ Chaque carte Pokémon a un fond coloré correspondant à ses types :
 
 * [#extraire-des-chaines-slice-substring-et-split](../javascript/introduction/string.md#extraire-des-chaines-slice-substring-et-split "mention")
 * [#loperateur-conditionnel-ternaire](../javascript/introduction/conditions.md#loperateur-conditionnel-ternaire "mention")
+* [#loperateur-de-coalescence-or-or](../javascript/introduction/operateurs.md#loperateur-de-coalescence-or-or "mention")
 * [Documentation MDN sur les Objets en JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Working\_with\_Objects)
 * [Documentation MDN sur les Dégradés CSS](https://developer.mozilla.org/fr/docs/Web/CSS/gradient)
 
 ***
 
-#### Étape 5 : Ajout des Fonctionnalités de Recherche et de Tri
+### Étape 5 : Ajout des fonctionnalités de recherche et de tri
 
 **Objectif :** Ajouter la fonctionnalité de recherche et de tri pour filtrer les Pokémon affichés.
 
-**Instructions :**
+#### **Instructions**
 
-1. Ajoute des gestionnaires d'événements pour capturer les changements dans le champ de recherche et les listes déroulantes de filtrage et de tri.
-2. Implémente une fonction pour filtrer les Pokémon en fonction du nom recherché et du type sélectionné.
-3. Trie les résultats en fonction du critère sélectionné (nom ou niveau, dans l'ordre croissant ou décroissant).
+1. Crée une fonction `filterAndSortPokemons` qui filtre et trie les Pokémon, puis affiche le résultat en appelant `displayPokemons(filteredPokemons)` en lui passant le tableau filtré et trié.
+2. Ajoute des gestionnaires d'événements pour capturer les changements dans le champ de recherche et les listes déroulantes de filtrage par type et de tri.
+3. Appeler `filterAndSortPokemons` dès qu'un changement est détecté dans le champ de recherche ou les listes.
+4. Pense à appeler `filterAndSortPokemons` une première fois à la fin de ton script pour afficher les cartes Pokémons au chargement.&#x20;
 
-**Exemple de Résultat Attendu :**
+#### **Exemple de résultat attendu**
 
-*   **Recherche "Pikachu"** : Seule la carte de Pikachu doit s'afficher.
+* **Recherche "Pikachu" :** Seule la carte de Pikachu doit s'afficher.
+* **Recherche "RA" :** Seuls les carte de Dracaufeu, Raichu et Carapuce s'affichent
+* **Filtrage par Type "Feu"** : Les Pokémon de type Feu comme Salamèche et Dracaufeu doivent s'afficher.
+* **Tri par niveau décroissant :** Bulbizarre s'affiche en premier suivi de Carapuce et Dracaufeu
+* **Tri par niveau décroissant :** Mewtwo s'affiche en premier suivi de Florizarre et Tortank
 
-    ```html
-    <div class="pokemon-container">
-        <div class="pokemon-card" style="background: #FFD700;">
-            <img src="images/pikachu.png" alt="Pikachu">
-            <h2>Pikachu</h2>
-            <p>Type: Électrique</p>
-            <p>Niveau: 35</p>
-        </div>
-    </div>
-    ```
-*   **Filtrage par Type "Feu"** : Les Pokémon de type Feu comme Salamèche et Dracaufeu doivent s'afficher.
+#### **Ressources Utiles**
 
-    ```html
-    <div class="pokemon-container">
-        <div class="pokemon-card" style="background: #F08030;">
-            <img src="images/salameche.png" alt="Salamèche">
-            <h2>Salamèche</h2>
-            <p>Type: Feu</p>
-            <p>Niveau: 20</p>
-        </div>
-        <div class="pokemon-card" style="background: linear-gradient(to right, #F08030 50%, #A890F0 50%);">
-            <img src="images/dracaufeu.png" alt="Dracaufeu">
-            <h2>Dracaufeu</h2>
-            <p>Type: Feu, Vol</p>
-            <p>Niveau: 50</p>
-        </div>
-    </div>
-    ```
-
-**Ressources Utiles :**
-
-* [Documentation MDN sur `addEventListener`](https://developer.mozilla.org/fr/docs/Web/API/EventTarget/addEventListener)
-* [Documentation MDN sur `Array.prototype.filter()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets\_globaux/Array/filter)
-* [Documentation MDN sur `Array.prototype.sort()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets\_globaux/Array/sort)
-
-***
-
-#### Conclusion
-
-Ces étapes vous guident à travers la création d'un Pokedex interactif en JavaScript. Chaque étape introduit des concepts clés du développement web, avec des exemples de résultats attendus sous forme de code HTML pour vous aider à vérifier votre travail. Utilisez la documentation officielle pour approfondir votre compréhension des concepts abordés.
+* [#addeventlistener](../javascript/dom-introduction/evenements.md#addeventlistener "mention")
+* [#filtrer-un-tableau](../javascript/introduction/tableaux.md#filtrer-un-tableau "mention")
+* [#trier-un-tableau](../javascript/introduction/tableaux.md#trier-un-tableau "mention")
 
 
 
