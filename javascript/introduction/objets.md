@@ -1,6 +1,6 @@
 # Objets
 
-**Pourquoi utiliser des Objets en programmation ?**
+## **Pourquoi utiliser des Objets en programmation ?**
 
 Les objets sont essentiels en programmation pour organiser et structurer des données de manière claire et cohérente. Ils permettent de représenter des entités complexes en regroupant plusieurs propriétés sous une même entité. Voici quelques raisons pour lesquelles les objets sont utilisés :
 
@@ -11,6 +11,41 @@ Les objets sont essentiels en programmation pour organiser et structurer des don
 En JavaScript, les objets sont des structures de données essentielles qui permettent de regrouper des informations sous la forme de paires clés-valeur.
 
 Ils sont particulièrement utiles pour modéliser des entités complexes, comme un utilisateur, un produit ou une configuration.
+
+## Résumé de la création et manipulation d'objets
+
+```javascript
+// 1. Création d'un objet simple en utilisant la notation littérale
+const voiture = {
+    marque: "Toyota",           // Propriété 'marque' de l'objet
+    modele: "Corolla",          // Propriété 'modele' de l'objet
+    annee: 2020,                // Propriété 'annee' de l'objet
+    estElectrique: false,       // Propriété 'estElectrique' de l'objet
+
+    // 2. Ajout d'une méthode à l'objet
+    afficherDetails: function() {
+        console.log(`${this.marque} ${this.modele}, ${this.annee} - Électrique: ${this.estElectrique}`);
+        // 'this' fait référence à l'objet 'voiture'
+    }
+};
+
+// 3. Accès aux propriétés de l'objet
+console.log(voiture.marque);        // Affiche "Toyota"
+console.log(voiture["modele"]);     // Affiche "Corolla"
+
+// 4. Modification des propriétés de l'objet
+voiture.annee = 2021;               // Change l'année de 2020 à 2021
+
+// 5. Ajout d'une nouvelle propriété à l'objet
+voiture.couleur = "Rouge";          // Ajoute une nouvelle propriété 'couleur'
+
+// 6. Utilisation de la méthode de l'objet
+voiture.afficherDetails();          // Affiche "Toyota Corolla, 2021 - Électrique: false"
+
+// 7. Suppression d'une propriété de l'objet
+delete voiture.estElectrique;       // Supprime la propriété 'estElectrique'
+
+```
 
 ***
 
