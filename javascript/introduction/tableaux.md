@@ -173,7 +173,7 @@ console.log(utilisateursJeunes); // [{ nom: 'Alice', age: 25 }]
 ### **Méthode `sort()`**&#x20;
 
 {% hint style="danger" %}
-#### Modifie le tableau traité
+Modifie le tableau traité
 {% endhint %}
 
 La méthode `sort()` trie les éléments d'un tableau en place et retourne le tableau. La fonction de comparaison peut être utilisée pour définir l'ordre de tri.
