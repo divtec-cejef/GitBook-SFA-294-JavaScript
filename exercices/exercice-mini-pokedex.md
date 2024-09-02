@@ -2,8 +2,8 @@
 description: >-
   PokeCount: Créer une application web pour capturer et sauvegarder des Pokémon
   !
-cover: ../.gitbook/assets/exe-pokeCount.png
-coverY: 121
+cover: ../.gitbook/assets/exe-mini-pokedex.png
+coverY: 0
 layout:
   cover:
     visible: true
