@@ -42,16 +42,18 @@ Pour réaliser cet exercice, copier les fichiers de ce dépôt
 
 
 
-### Étape 1 : Afficher une Liste Simple de Pokémon
+### Étape 1 : Afficher une liste simple de Pokémon
 
 **Objectif :** Afficher une liste simple contenant les noms de tous les Pokémon.
 
 #### **Instructions**
 
-1. Dans le fichier `script.js`, ajoute une fonction qui remplace le contenu du conteneur `.pokemon-container` par une liste des noms de Pokémon.
+1. Dans le fichier `script.js`, ajoute créer une [fonction](../javascript/introduction/fonctions.md#creer-et-appeler-un-fonction) `displayPokemons` qui remplace le contenu du conteneur `.pokemon-container` par une liste des noms de Pokémon.
 2. Utilise une [boucle](../javascript/introduction/boucles.md) pour parcourir le [tableau](../javascript/introduction/tableaux.md) `pokemons` et pour chaque Pokémon, crée un élément `<p>` contenant son nom.
 3. Ajoute chaque nom de Pokémon avec [`innerHTML`](../javascript/dom-introduction/dom-modifier-texte.md#innerhtml).
 4. Pensez à vider, réinitialiser, le contenu du conteneur `.pokemon-container` avant de créer la liste.
+5. Utiliser les [_template literals_](../javascript/introduction/string.md#template-literals-litteraux-de-gabarits) pour créer des chaines de caractères dynamiques.
+6. Pensez à appeler votre fonction pour la tester :smile:
 
 #### **Exemple de résultat attendu**
 
@@ -70,7 +72,9 @@ La page doit simplement afficher les noms de Pokémon comme suit :
 
 #### **Ressources utiles**
 
+* [#creer-et-appeler-un-fonction](../javascript/introduction/fonctions.md#creer-et-appeler-un-fonction "mention")
 * [#instruction-for...of](../javascript/introduction/tableaux.md#instruction-for...of "mention")
+* [#template-literals-litteraux-de-gabarits](../javascript/introduction/string.md#template-literals-litteraux-de-gabarits "mention")
 * [#innerhtml](../javascript/dom-introduction/dom-modifier-texte.md#innerhtml "mention")
 
 ***
@@ -83,24 +87,27 @@ La page doit simplement afficher les noms de Pokémon comme suit :
 Un Pokémon possède au **minimum un type** et au **maximum deux**.
 {% endhint %}
 
-**Instructions :**
+#### **Instructions**
 
 1. Modifie la fonction précédemment créée pour afficher le nom de chaque Pokémon, et son type.
-2. Pour chaque Pokémon, affiche son nom suivi de ses types, séparés par un espace, un _pipe_ et encore un espace  `|`  si le Pokémon a plusieurs types.\
-   **Exemple :** `<p>Bulbizarre - Type: Plante | Poison</p>`
-3. Utilise la méthode `split()` pour convertir la chaine de caractères des types en tableau.
+2.  Pour chaque Pokémon, affiche son nom suivi de ses types dans un élément `<small>,` en n'oubliant pas les espaces s'il y a plusieurs types.
 
-**Exemple de résultat attendu :**
+    ```html
+    <p>Bulbizarre <small>Plante</small> <small>Poison</small></p>
+    ```
+3. Utilise la méthode `split()` pour convertir la chaine de caractères des types d'un Pokémon en tableau.
+
+#### **Exemple de résultat attendu**
 
 La page doit afficher la liste des Pokémon avec leurs types :
 
 ```html
 <div class="pokemon-container">
-    <p>Pikachu - Type: Électrique</p>
-    <p>Bulbizarre - Type: Plante | Poison</p>
-    <p>Salamèche - Type: Feu</p>
-    <p>Carapuce - Type: Eau</p>
-    <p>Rondoudou - Type: Normal, Fée</p>
+    <p>Pikachu <small>Électrique</small></p>
+    <p>Bulbizarre <small>Plante</small> <small>Poison</small></p>
+    <p>Salamèche <small>Feu</small></p>
+    <p>Carapuce <small>Eau</small></p>
+    <p>Rondoudou <small>Normal</small> <small>Fée</small></p>
     <!-- Les autres Pokémon -->
 </div>
 ```
@@ -111,17 +118,17 @@ La page doit afficher la liste des Pokémon avec leurs types :
 
 ***
 
-#### Étape 3 : Créer des Cartes de Pokémon
+### Étape 3 : Créer des cartes de Pokémon
 
 **Objectif :** Afficher chaque Pokémon sous forme de carte avec son nom, type, niveau, et image.
 
-**Instructions :**
+#### **Instructions**
 
 1. Modifie la fonction pour remplacer chaque élément `<p>` par un élément `<div>` avec la classe `pokemon-card`.
-2. Chaque carte doit inclure l'image du Pokémon, son nom, ses types, et son niveau.
+2. Chaque carte doit inclure l'image du Pokémon, son nom, ses types et son niveau.
 3. Utilise `innerHTML` pour construire chaque carte et l'ajouter au conteneur.
 
-**Exemple de Résultat Attendu :**
+#### **Exemple de résultat attendu**
 
 Chaque Pokémon est affiché dans une carte avec ses détails :
 
@@ -143,35 +150,38 @@ Chaque Pokémon est affiché dans une carte avec ses détails :
 </div>
 ```
 
-**Ressources Utiles :**
+#### **Ressources utiles**
 
 * [Documentation MDN sur la Manipulation du DOM](https://developer.mozilla.org/fr/docs/Web/API/Document\_Object\_Model/Introduction)
 * [Documentation MDN sur les Éléments HTML](https://developer.mozilla.org/fr/docs/Web/HTML/Element/div)
 
 ***
 
-#### Étape 4 : Ajouter des Couleurs de Fond pour les Types de Pokémon
+### Étape 4 : Couleurs de fond en fonction du type
 
-**Objectif :** Appliquer une couleur de fond à chaque carte Pokémon en fonction de ses types.
+**Objectif :** Appliquer une couleur de fond à chaque carte Pokémon par rapport à ses types.
 
-**Instructions :**
+#### **Instructions**
 
 1. Modifie la fonction pour que la couleur de fond de chaque carte soit déterminée par les types du Pokémon.
 2. Si un Pokémon a deux types, utilise un dégradé de couleurs pour la carte.
 3. Utilise l'objet `typeColors` pour récupérer les couleurs associées à chaque type.
 
-**Exemple de Résultat Attendu :**
+#### **Exemple de résultat attendu**&#x20;
 
 Chaque carte Pokémon a un fond coloré correspondant à ses types :
 
 ```html
 <div class="pokemon-container">
+    <!-- Exemple de Pokemon avec un seul type -->
     <div class="pokemon-card" style="background: #FFD700;">
         <img src="images/pikachu.png" alt="Pikachu">
         <h2>Pikachu</h2>
         <p>Type: Électrique</p>
         <p>Niveau: 35</p>
     </div>
+    
+    <!-- Exemple de Pokemon avec deux types -->
     <div class="pokemon-card" style="background: linear-gradient(to right, #78C850 50%, #A040A0 50%);">
         <img src="images/bulbizarre.png" alt="Bulbizarre">
         <h2>Bulbizarre</h2>
@@ -182,8 +192,9 @@ Chaque carte Pokémon a un fond coloré correspondant à ses types :
 </div>
 ```
 
-**Ressources Utiles :**
+#### **Ressources utiles**
 
+* [#extraire-des-chaines-slice-substring-et-split](../javascript/introduction/string.md#extraire-des-chaines-slice-substring-et-split "mention")
 * [Documentation MDN sur les Objets en JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Working\_with\_Objects)
 * [Documentation MDN sur les Dégradés CSS](https://developer.mozilla.org/fr/docs/Web/CSS/gradient)
 
