@@ -364,7 +364,45 @@ console.log(personnesAvecA);
 
 ***
 
-## Résumé des fonctions
+## Appliquer une fonction à tous les éléments d'un tableau
 
-* **Modifie le tableau en place :** `push`, `pop`, `shift`, `unshift`, `splice`, `sort`.
-* **Retourne un nouveau tableau :** `filter`, `slice`, `map`, `concat`, `join`, `includes`, `indexOf`.
+### Méthode `map()`
+
+{% embed url="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map" %}
+
+La méthode `map()` permet de transformer chaque élément d'un tableau en appliquant une fonction et retourne un nouveau tableau contenant les résultats. Le tableau original n'est pas modifié.**:**
+
+```javascript
+const nombres = [1, 2, 3];
+const nombresMultipliés = nombres.map(nombre => nombre * 2);
+console.log(nombresMultipliés); // [2, 4, 6]
+```
+
+***
+
+## Accumuler (additionner) les valeurs d'un tableau
+
+#### Méthode `reduce()`
+
+{% embed url="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce" %}
+
+La méthode `reduce()` applique une fonction qui est appelée sur chaque élément du tableau (de la gauche vers la droite) pour le réduire à une seule valeur.
+
+
+
+```javascript
+const nombres = [1, 2, 3, 4, 5];
+
+// Calcule la somme de tous les nombres
+const somme = nombres.reduce(function(accumulateur, nombreActuel) {
+    return accumulateur + nombreActuel;
+}, 0);
+
+console.log(somme); // 15
+```
+
+**Explication :**
+
+* La méthode `reduce()` prend deux paramètres : une fonction de rappel (callback) et une valeur initiale.
+* La fonction de rappel prend deux arguments : `accumulateur` (la valeur accumulée jusqu'à présent) et `nombreActuel` (l'élément actuel du tableau).
+* Dans cet exemple, `reduce()` additionne tous les nombres du tableau pour obtenir une somme totale, en commençant avec une valeur initiale de `0`.
