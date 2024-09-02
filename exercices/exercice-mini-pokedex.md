@@ -298,6 +298,16 @@ Chaque carte Pokémon a un fond coloré correspondant à ses types :
 
 ## **Challenges supplémentaires**
 
+### **Ajouter une Pagination**
+
+* **Objectif :** Implémenter un système de pagination pour diviser l'affichage des Pokémon en plusieurs pages.
+* **Instructions :** Limiter le nombre de Pokémon affichés par page (par exemple 6), et ajouter des boutons "Suivant" et "Précédent" pour naviguer entre les pages.
+
+### **Favoris et Filtrage Avancé**
+
+* **Objectif :** Permettre à l'utilisateur de marquer certains Pokémon comme favoris et d'ajouter un filtre pour n'afficher que les favoris.
+* **Instructions :** Ajouter un bouton "Favori" sur chaque carte Pokémon, stocker l'état des favoris dans `localStorage`, et ajouter un filtre pour n'afficher que les Pokémon marqués comme favoris.
+
 
 
 ## :dodo: La solution du prof
