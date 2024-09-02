@@ -1,6 +1,6 @@
 # 📅 20 août – Leçons 1 à 3
 
-## :rocket: Objectifs du jour
+## 🚀 Objectifs du jour
 
 * Présentations du cours
 * Mettre en place l'environnement de développement
@@ -26,7 +26,7 @@
 [introduction](../javascript/introduction/)
 {% endcontent-ref %}
 
-## :woman\_technologist: Premier pas en JavaScript avec l'exercice PokeCount
+## :1234: Premier pas en JavaScript avec l'exercice PokeCount
 
 * **Créer le dépôt GitHub via GitHub Classroom** : [Clique sur ce lien pour créer ton dépôt](https://classroom.github.com/a/z9Q4FRir)&#x20;
 * **Cloner le dépôt avec WebStorm** :
@@ -37,7 +37,7 @@
 [pokecount.md](../exercices/pokecount.md)
 {% endcontent-ref %}
 
-## :white\_check\_mark: Devoirs
+## ✅ Devoirs
 
 * Finaliser la mise en place de l'environnement de développement :
   * Installer **Git**

@@ -5,7 +5,7 @@
 * Comprendre les concepts de base du JavaScript en réalisant un exercice pratique.
 * **Réaliser au moins un des challenges** proposés dans l'exercice **PokeCount**.
 
-## :1234: Exercice PokeCount
+## 🔢 Exercice PokeCount
 
 * **Présentation de l'exercice :** L'exercice **PokeCount** consiste à créer une application JavaScript qui permet de compter et d'afficher les résultats des comptages de Pokémons.
 * **Consignes détaillées :** Suivez les [instructions de l'exercice PokeCount](https://divtec.gitbook.io/dev-web/v/javascript/exercices/pokecount).
@@ -33,7 +33,7 @@
     * [Création d’un site GitHub Pages](https://docs.github.com/fr/pages/getting-started-with-github-pages/creating-a-github-pages-site)
   * **Partager le lien** avec le formateur et vos collègues dans le canal de l'exercice sur **Discord**
 
-## [📝](https://discord.com/assets/eb6f1572602c535a987c.svg) Devoirs
+## ✅ Devoirs
 
 * **Finaliser l'exercice PokeCount** et le challenge si ce n'est pas terminer durant le cours.
 * **Faire un commit final** et pousser votre code sur GitHub.
