@@ -308,6 +308,11 @@ Chaque carte Pokémon a un fond coloré correspondant à ses types :
 * **Objectif :** Permettre à l'utilisateur de marquer certains Pokémon comme favoris et d'ajouter un filtre pour n'afficher que les favoris.
 * **Instructions :** Ajouter un bouton "Favori" sur chaque carte Pokémon, stocker l'état des favoris dans `localStorage`, et ajouter un filtre pour n'afficher que les Pokémon marqués comme favoris.
 
+### **Animer l'Affichage des Cartes**
+
+* **Objectif :** Ajouter des animations pour améliorer l'affichage des cartes Pokémon, à l'affichage ou au passage par-dessus ou au clic.
+* **Instructions :** Ajouter un effet de fondu ou de glissement lors de l'apparition des cartes, et utiliser des transitions CSS pour des changements de couleur ou d'apparence.
+
 
 
 ## :dodo: La solution du prof
