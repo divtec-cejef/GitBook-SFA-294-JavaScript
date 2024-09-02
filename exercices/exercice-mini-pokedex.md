@@ -23,8 +23,6 @@ layout:
 
 </div>
 
-
-
 ## **Objectifs**
 
 * **Manipuler le DOM :** Apprendre à utiliser JavaScript pour ajouter et modifier des éléments HTML sur une page.
@@ -48,13 +46,14 @@ Pour réaliser cet exercice, copier les fichiers de ce dépôt
 
 **Objectif :** Afficher une liste simple contenant les noms de tous les Pokémon.
 
-**Instructions :**
+#### **Instructions**
 
 1. Dans le fichier `script.js`, ajoute une fonction qui remplace le contenu du conteneur `.pokemon-container` par une liste des noms de Pokémon.
-2. Utilise une boucle pour parcourir le tableau `pokemons` et pour chaque Pokémon, crée un élément `<p>` contenant son nom.
-3. Affiche chaque nom de Pokémon en utilisant `innerHTML`.
+2. Utilise une [boucle](../javascript/introduction/boucles.md) pour parcourir le [tableau](../javascript/introduction/tableaux.md) `pokemons` et pour chaque Pokémon, crée un élément `<p>` contenant son nom.
+3. Ajoute chaque nom de Pokémon avec [`innerHTML`](../javascript/dom-introduction/dom-modifier-texte.md#innerhtml).
+4. Pensez à vider, réinitialiser, le contenu du conteneur `.pokemon-container` avant de créer la liste.
 
-**Exemple de Résultat Attendu :**
+#### **Exemple de résultat attendu**
 
 La page doit simplement afficher les noms de Pokémon comme suit :
 
@@ -69,33 +68,36 @@ La page doit simplement afficher les noms de Pokémon comme suit :
 </div>
 ```
 
-**Ressources Utiles :**
+#### **Ressources utiles**
 
 * [#instruction-for...of](../javascript/introduction/tableaux.md#instruction-for...of "mention")
 * [#innerhtml](../javascript/dom-introduction/dom-modifier-texte.md#innerhtml "mention")
-* [Documentation MDN sur les Boucles `for`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Boucles\_et\_it%C3%A9rations#for\_statement)
-* [Documentation MDN sur `innerHTML`](https://developer.mozilla.org/fr/docs/Web/API/Element/innerHTML)
 
 ***
 
-#### Étape 2 : Afficher une Liste de Pokémon avec leur Type
+### Étape 2 : Afficher une liste de Pokémon avec leur type
 
 **Objectif :** Afficher les noms des Pokémon avec leurs types respectifs.
 
+{% hint style="info" %}
+Un Pokémon possède au **minimum un type** et au **maximum deux**.
+{% endhint %}
+
 **Instructions :**
 
-1. Modifie la fonction précédemment créée pour afficher non seulement le nom de chaque Pokémon, mais aussi son type.
-2. Pour chaque Pokémon, affiche son nom suivi de ses types, séparés par une virgule si le Pokémon a plusieurs types.
-3. Utilise la méthode `join()` pour convertir les types en une chaîne de caractères.
+1. Modifie la fonction précédemment créée pour afficher le nom de chaque Pokémon, et son type.
+2. Pour chaque Pokémon, affiche son nom suivi de ses types, séparés par un espace, un _pipe_ et encore un espace  `|`  si le Pokémon a plusieurs types.\
+   **Exemple :** `<p>Bulbizarre - Type: Plante | Poison</p>`
+3. Utilise la méthode `split()` pour convertir la chaine de caractères des types en tableau.
 
-**Exemple de Résultat Attendu :**
+**Exemple de résultat attendu :**
 
 La page doit afficher la liste des Pokémon avec leurs types :
 
 ```html
 <div class="pokemon-container">
     <p>Pikachu - Type: Électrique</p>
-    <p>Bulbizarre - Type: Plante, Poison</p>
+    <p>Bulbizarre - Type: Plante | Poison</p>
     <p>Salamèche - Type: Feu</p>
     <p>Carapuce - Type: Eau</p>
     <p>Rondoudou - Type: Normal, Fée</p>
@@ -103,10 +105,9 @@ La page doit afficher la liste des Pokémon avec leurs types :
 </div>
 ```
 
-**Ressources Utiles :**
+**Ressources utiles :**
 
-* [Documentation MDN sur `Array.prototype.join()`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets\_globaux/Array/join)
-* [Documentation MDN sur la Manipulation de Chaînes](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Manipuler\_les\_cha%C3%AEnes\_de\_caract%C3%A8res)
+* [#extraire-des-chaines-slice-substring-et-split](../javascript/introduction/string.md#extraire-des-chaines-slice-substring-et-split "mention")
 
 ***
 
