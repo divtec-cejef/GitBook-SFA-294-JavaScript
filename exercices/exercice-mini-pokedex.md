@@ -144,6 +144,8 @@ La page doit afficher la liste des Pokémon avec leurs types :
 **Ressources utiles :**
 
 * [#extraire-des-chaines-slice-substring-et-split](../javascript/introduction/string.md#extraire-des-chaines-slice-substring-et-split "mention")
+* [#methode-join](../javascript/introduction/tableaux.md#methode-join "mention")
+* [#methode-map](../javascript/introduction/tableaux.md#methode-map "mention")
 
 ***
 
