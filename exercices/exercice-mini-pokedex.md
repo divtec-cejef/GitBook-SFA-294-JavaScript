@@ -93,6 +93,7 @@ La page doit simplement afficher les noms de Pokémon comme suit :
 #### **Ressources utiles**
 
 * [#creer-et-appeler-un-fonction](../javascript/introduction/fonctions.md#creer-et-appeler-un-fonction "mention")
+* [#pourquoi-utiliser-des-objets-en-programmation](../javascript/introduction/objets.md#pourquoi-utiliser-des-objets-en-programmation "mention")
 * [#instruction-for...of](../javascript/introduction/tableaux.md#instruction-for...of "mention")
 * [#template-literals-litteraux-de-gabarits](../javascript/introduction/string.md#template-literals-litteraux-de-gabarits "mention")
 * [#innerhtml](../javascript/dom-introduction/dom-modifier-texte.md#innerhtml "mention")
