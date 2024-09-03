@@ -193,7 +193,7 @@ Chaque Pokémon est affiché dans une carte avec ses détails :
 
 <div data-full-width="true">
 
-<figure><img src="../.gitbook/assets/exe-mini-pokedex-e4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/exe-mini-pokedex-e4.png" alt=""><figcaption><p>Exemple de solution pour l'étape 4</p></figcaption></figure>
 
 </div>
 
