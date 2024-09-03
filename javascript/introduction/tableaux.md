@@ -370,12 +370,23 @@ console.log(personnesAvecA);
 
 {% embed url="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map" %}
 
-La méthode `map()` permet de transformer chaque élément d'un tableau en appliquant une fonction et retourne un nouveau tableau contenant les résultats. Le tableau original n'est pas modifié.**:**
+La méthode **`map()`** crée un nouveau tableau avec les résultats de l'appel d'une fonction fournie sur chaque élément du tableau appelant.
+
+Le tableau original n'est pas modifié.
 
 ```javascript
 const nombres = [1, 2, 3];
 const nombresMultipliés = nombres.map(nombre => nombre * 2);
 console.log(nombresMultipliés); // [2, 4, 6]
+```
+
+#### Coupler avec la méthode  `join()` on peut transformer le résultat en chaine
+
+```javascript
+const courses = ['Pommes', 'Bananes', 'Lait'];
+const listeCourses = courses.map(item => `<li>${item}</li>`).join('');
+console.log(`<ul>${listeCourses}</ul>`);
+// <ul><li>Pommes</li><li>Bananes</li><li>Lait</li></ul>
 ```
 
 ***
