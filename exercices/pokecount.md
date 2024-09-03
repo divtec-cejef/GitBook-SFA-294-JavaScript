@@ -32,9 +32,10 @@ layout:
 
 ## Instructions
 
-Pour réaliser cet exercice, copier les fichiers de ce dépôt
-
-{% embed url="https://github.com/fallinov/2024-SFA-JS-EXE-PokeCount/tree/main" %}
+1. Clique sur le lien suivant pour **créer ton dépôt GitHub** pour l'exercice : [https://classroom.github.com/a/z9Q4FRir](https://classroom.github.com/a/z9Q4FRir)
+2. **Clone ton dépôt GitHub en local** avec WebStorm ou un autre éditeur
+3. Créer une **nouvelle branche** qui porte ton nom
+4. Commence l'exercice et pense à **faire régulièrement des **<mark style="color:red;">**commits**</mark>** et des **_<mark style="color:red;">**push**</mark>_.
 
 ### **Étape 1 : Liaison du JavaScript au HTML**
 
