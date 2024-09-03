@@ -30,7 +30,7 @@ layout:
 
 ***
 
-## Instructions
+## Mise en place
 
 1. Clique sur le lien suivant pour **créer ton dépôt GitHub** pour l'exercice : [https://classroom.github.com/a/z9Q4FRir](https://classroom.github.com/a/z9Q4FRir)
 2. **Clone ton dépôt GitHub en local** avec WebStorm ou un autre éditeur
