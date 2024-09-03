@@ -120,7 +120,7 @@ La page doit simplement afficher les noms de Pokémon comme suit :
     ```html
     <p>Bulbizarre <small>Plante</small> <small>Poison</small></p>
     ```
-4. Utilise la méthode `split()` pour convertir la chaine de caractères des types d'un Pokémon en tableau.
+4. Utilise la [méthode split()](../javascript/introduction/string.md#extraire-des-chaines-slice-substring-et-split) pour convertir la chaine de caractères des types d'un Pokémon en tableau.
 
 {% hint style="info" %}
 Un Pokémon possède au **minimum un type** et au **maximum deux**.
