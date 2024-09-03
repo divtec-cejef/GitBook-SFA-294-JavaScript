@@ -64,9 +64,10 @@ layout:
 
 1. Créer une **nouvelle branche** et la nommer `etape-1`, si ce n'est pas encore fait.
 2. Dans le fichier `script.js`, ajoute créer une [fonction](../javascript/introduction/fonctions.md#creer-et-appeler-un-fonction) `displayPokemons` qui remplace le contenu du conteneur `.pokemon-container` par une liste des noms de Pokémon.
+   1. Utilise [#element.queryselector](../javascript/dom-introduction/dom-acceder.md#element.queryselector "mention") pour récupérer l'élément HMTL `<div class="pokemon-container">`
 3. Utilise une [boucle](../javascript/introduction/boucles.md) pour parcourir le [tableau](../javascript/introduction/tableaux.md) `pokemons` et pour chaque Pokémon, crée un élément `<p>` contenant son nom.
-4. Ajoute chaque nom de Pokémon avec [`innerHTML`](../javascript/dom-introduction/dom-modifier-texte.md#innerhtml).
-5. Pensez à vider, réinitialiser, le contenu du conteneur `.pokemon-container` avant de créer la liste.
+4. Ajoute chaque nom de Pokémon avec [innerHTML](../javascript/dom-introduction/dom-modifier-texte.md#innerhtml).
+5. Pense à vider, réinitialiser, le contenu du conteneur `.pokemon-container` avant de créer la liste.
 6. Utiliser les [_template literals_](../javascript/introduction/string.md#template-literals-litteraux-de-gabarits) pour créer des chaines de caractères dynamiques.
 7.  Si le tableau des Pokémons est vide, ajouter le paragraphe suivant dans le conteneur `.pokemon-container`
 
