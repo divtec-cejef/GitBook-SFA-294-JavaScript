@@ -7,15 +7,12 @@
 
 ## 🔢 Exercice PokeCount
 
+{% content-ref url="../exercices/pokecount.md" %}
+[pokecount.md](../exercices/pokecount.md)
+{% endcontent-ref %}
+
 * **Présentation de l'exercice :** L'exercice **PokeCount** consiste à créer une application JavaScript qui permet de compter et d'afficher les résultats des comptages de Pokémons.
 * **Consignes détaillées :** Suivez les [instructions de l'exercice PokeCount](https://divtec.gitbook.io/dev-web/v/javascript/exercices/pokecount).
-
-### Mise en place de l'exercice
-
-1. **Créer un dépôt GitHub pour votre projet** : [Lien pour créer le dépôt via GitHub Classroom](https://classroom.github.com/a/z9Q4FRir).
-2. Clonage du dépôt et configuration dans WebStorm
-3. Utilisez l'URL de votre dépôt pour le cloner dans WebStorm.
-4. Suivre les consignes de l'exercice:  [pokecount.md](../exercices/pokecount.md "mention")
 
 ### Objectifs
 

@@ -8,17 +8,30 @@
 
 ## 🔢 Revoir et Présenter l'exercice PokeCount
 
+{% content-ref url="../exercices/pokecount.md" %}
+[pokecount.md](../exercices/pokecount.md)
+{% endcontent-ref %}
+
 * Présentation des projets PokeCount par les apprentis.
 * Discussion sur les challenges supplémentaires réalisés (pagination, favoris, animations, etc.).
 * Revue collective de certains extraits de code pour mettre en lumière les bonnes pratiques et les points d'amélioration.
 
 ### 📒 Démarrer l'exercice Mini Pokédex
 
-[exercice-mini-pokedex.md](../exercices/exercice-mini-pokedex.md "mention")
+{% content-ref url="../exercices/exercice-mini-pokedex.md" %}
+[exercice-mini-pokedex.md](../exercices/exercice-mini-pokedex.md)
+{% endcontent-ref %}
 
 * Introduction à l'exercice Mini Pokédex : explication des objectifs de l'exercice.
 * Lecture du code de départ, explication des parties principales.
 * Début des premières étapes : affichage des Pokémons.
+* **Partagez votre réalisation dès que l'étape 1 est terminée**
+  *   Publiez votre application sur **GitHub Pages**
+
+      * [Création d’un site GitHub Pages](https://docs.github.com/fr/pages/getting-started-with-github-pages/creating-a-github-pages-site) &#x20;
+
+      <figure><img src="../.gitbook/assets/GitHubPages.png" alt=""><figcaption></figcaption></figure>
+  * **Partager le lien** avec le formateur par email.
 
 ## ✅ Devoirs
 
