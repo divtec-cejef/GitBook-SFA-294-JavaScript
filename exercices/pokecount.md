@@ -21,6 +21,10 @@ layout:
 
 </div>
 
+## **Démo**
+
+{% embed url="https://fallinov.github.io/2024-SFA-JS-EXE-PokeCount/" %}
+
 ## **Objectifs**
 
 * Créer une application web simple pour capturer et sauvegarder des Pokémon.

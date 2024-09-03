@@ -23,6 +23,10 @@ layout:
 
 </div>
 
+## **Démo**
+
+{% embed url="https://fallinov.github.io/2024-SFA-JS-Mini-Pokedex/" %}
+
 ## **Objectifs**
 
 * **Manipuler le DOM :** Apprendre à utiliser JavaScript pour ajouter et modifier des éléments HTML sur une page.
