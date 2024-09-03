@@ -364,10 +364,10 @@ Chaque carte Pokémon a un fond coloré correspondant à ses types :
 
 ## :dodo: La solution du prof
 
-{% embed url="https://fallinov.github.io/2024-SFA-JS-EXE-PokeCount/" fullWidth="false" %}
-Le site du prof
+{% embed url="https://fallinov.github.io/2024-SFA-JS-Mini-Pokedex/" %}
+L'étape 7
 {% endembed %}
 
-{% embed url="https://github.com/fallinov/2024-SFA-JS-EXE-PokeCount" %}
-Le code du prof
+{% embed url="https://github.com/fallinov/2024-SFA-JS-Mini-Pokedex/tree/etape-7" %}
+Le code de l'étape 7
 {% endembed %}
