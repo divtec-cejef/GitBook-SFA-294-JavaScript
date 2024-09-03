@@ -46,6 +46,12 @@ Pour réaliser cet exercice, copier les fichiers de ce dépôt
 
 **Objectif :** Afficher une liste simple contenant les noms de tous les Pokémon.
 
+<div data-full-width="true">
+
+<figure><img src="../.gitbook/assets/exe-mini-pokedex-e1.png" alt=""><figcaption><p>Exemple de solution pour l'étape 1</p></figcaption></figure>
+
+</div>
+
 #### **Instructions**
 
 1. Dans le fichier `script.js`, ajoute créer une [fonction](../javascript/introduction/fonctions.md#creer-et-appeler-un-fonction) `displayPokemons` qui remplace le contenu du conteneur `.pokemon-container` par une liste des noms de Pokémon.
@@ -88,6 +94,12 @@ La page doit simplement afficher les noms de Pokémon comme suit :
 
 **Objectif :** Afficher les noms des Pokémon avec leurs types respectifs.
 
+<div data-full-width="true">
+
+<figure><img src="../.gitbook/assets/exe-mini-pokedex-e2.png" alt=""><figcaption><p>Exemple de solution pour l'étape 2</p></figcaption></figure>
+
+</div>
+
 {% hint style="info" %}
 Un Pokémon possède au **minimum un type** et au **maximum deux**.
 {% endhint %}
@@ -126,6 +138,12 @@ La page doit afficher la liste des Pokémon avec leurs types :
 ### Étape 3 : Créer des cartes de Pokémon
 
 **Objectif :** Afficher chaque Pokémon sous forme de carte avec son nom, type, niveau, et image.
+
+<div data-full-width="true">
+
+<figure><img src="../.gitbook/assets/exe-mini-pokedex-e3.png" alt=""><figcaption><p>Exemple de solution pour l'étape 3</p></figcaption></figure>
+
+</div>
 
 #### **Instructions**
 
@@ -172,6 +190,12 @@ Chaque Pokémon est affiché dans une carte avec ses détails :
 ### Étape 4 : Couleurs de fond en fonction du type
 
 **Objectif :** Appliquer une couleur de fond à chaque carte Pokémon par rapport à ses types.
+
+<div data-full-width="true">
+
+<figure><img src="../.gitbook/assets/exe-mini-pokedex-e4.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 #### **Instructions**
 
