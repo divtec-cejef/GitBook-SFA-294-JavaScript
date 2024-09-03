@@ -44,8 +44,9 @@ layout:
 
 1. Clique sur le lien suivant pour **créer ton dépôt GitHub** pour l'exercice : [https://classroom.github.com/a/bI6JBefI](https://classroom.github.com/a/bI6JBefI)
 2. **Clone ton dépôt GitHub en local** avec WebStorm ou un autre éditeur
-3. Créer une **nouvelle branche** qui porte ton nom
+3. Créer une **nouvelle branche** et la nommer `etape-1`
 4. Commence l'exercice et pense à **faire régulièrement des **<mark style="color:red;">**commits**</mark>** et des **_<mark style="color:red;">**push**</mark>_.
+5. Partage ta branche `main` avec **GitHub Pages**, et fait des _<mark style="color:green;">**Pull requests**</mark>_ pour partager l'avancement de ton travail.
 
 
 
@@ -61,17 +62,18 @@ layout:
 
 #### **Instructions**
 
-1. Dans le fichier `script.js`, ajoute créer une [fonction](../javascript/introduction/fonctions.md#creer-et-appeler-un-fonction) `displayPokemons` qui remplace le contenu du conteneur `.pokemon-container` par une liste des noms de Pokémon.
-2. Utilise une [boucle](../javascript/introduction/boucles.md) pour parcourir le [tableau](../javascript/introduction/tableaux.md) `pokemons` et pour chaque Pokémon, crée un élément `<p>` contenant son nom.
-3. Ajoute chaque nom de Pokémon avec [`innerHTML`](../javascript/dom-introduction/dom-modifier-texte.md#innerhtml).
-4. Pensez à vider, réinitialiser, le contenu du conteneur `.pokemon-container` avant de créer la liste.
-5. Utiliser les [_template literals_](../javascript/introduction/string.md#template-literals-litteraux-de-gabarits) pour créer des chaines de caractères dynamiques.
-6.  Si le tableau des Pokémons est vide, ajouter le paragraphe suivant dans le conteneur `.pokemon-container`
+1. Créer une **nouvelle branche** et la nommer `etape-1`, si ce n'est pas encore fait.
+2. Dans le fichier `script.js`, ajoute créer une [fonction](../javascript/introduction/fonctions.md#creer-et-appeler-un-fonction) `displayPokemons` qui remplace le contenu du conteneur `.pokemon-container` par une liste des noms de Pokémon.
+3. Utilise une [boucle](../javascript/introduction/boucles.md) pour parcourir le [tableau](../javascript/introduction/tableaux.md) `pokemons` et pour chaque Pokémon, crée un élément `<p>` contenant son nom.
+4. Ajoute chaque nom de Pokémon avec [`innerHTML`](../javascript/dom-introduction/dom-modifier-texte.md#innerhtml).
+5. Pensez à vider, réinitialiser, le contenu du conteneur `.pokemon-container` avant de créer la liste.
+6. Utiliser les [_template literals_](../javascript/introduction/string.md#template-literals-litteraux-de-gabarits) pour créer des chaines de caractères dynamiques.
+7.  Si le tableau des Pokémons est vide, ajouter le paragraphe suivant dans le conteneur `.pokemon-container`
 
     ```
     <p>Dracaufeu a tout brûlé, aucun Pokémon ne correspond à ta recherche !</p>
     ```
-7. Pensez à appeler votre fonction pour la tester :smile:
+8. Pensez à appeler votre fonction pour la tester :smile:
 
 #### **Exemple de résultat attendu**
 
@@ -109,13 +111,14 @@ La page doit simplement afficher les noms de Pokémon comme suit :
 
 #### **Instructions**
 
-1. Modifie la fonction `displayPokemons` pour afficher le nom de chaque Pokémon, et son type.
-2.  Pour chaque Pokémon, affiche son nom suivi de ses types dans un élément `<small>,` en n'oubliant pas les espaces s'il y a plusieurs types.
+1. Créer une **nouvelle branche** et la nommer `etape-2`.
+2. Modifie la fonction `displayPokemons` pour afficher le nom de chaque Pokémon, et son type.
+3.  Pour chaque Pokémon, affiche son nom suivi de ses types dans un élément `<small>,` en n'oubliant pas les espaces s'il y a plusieurs types.
 
     ```html
     <p>Bulbizarre <small>Plante</small> <small>Poison</small></p>
     ```
-3. Utilise la méthode `split()` pour convertir la chaine de caractères des types d'un Pokémon en tableau.
+4. Utilise la méthode `split()` pour convertir la chaine de caractères des types d'un Pokémon en tableau.
 
 {% hint style="info" %}
 Un Pokémon possède au **minimum un type** et au **maximum deux**.
@@ -154,14 +157,15 @@ La page doit afficher la liste des Pokémon avec leurs types :
 
 #### **Instructions**
 
-1. Créer une fonction `generatePokemonCardHTML(pokemon)` qui retourne le code HTML de la carte Pokémon pour l'objet Pokémon passé en paramètre.&#x20;
-2. Le code HTML retourné par `generatePokemonCardHTML` remplacera chaque élément `<p>` dans la fonction `displayPokemons`
-3.  Chaque carte doit inclure l'image du Pokémon, son nom, ses types et son niveau.
+1. Créer une **nouvelle branche** et la nommer `etape-3`.
+2. Créer une fonction `generatePokemonCardHTML(pokemon)` qui retourne le code HTML de la carte Pokémon pour l'objet Pokémon passé en paramètre.&#x20;
+3. Le code HTML retourné par `generatePokemonCardHTML` remplacera chaque élément `<p>` dans la fonction `displayPokemons`
+4.  Chaque carte doit inclure l'image du Pokémon, son nom, ses types et son niveau.
 
     Les images se trouvent dans le dossier `images/` du projet.
-4. Utilise les [_template literals_](../javascript/introduction/string.md#template-literals-litteraux-de-gabarits) pour construire le HTML de chaque carte et le retourner.
-5. Utiliser [`join()`](../javascript/introduction/tableaux.md#methode-join) pour fusionner les types et les séparer par une virgule et un espace  `,`&#x20;
-6. Pense à appeler `generatePokemonCardHTML` dans `displayPokemons` à la place de la création du paragraphe `<p>`.
+5. Utilise les [_template literals_](../javascript/introduction/string.md#template-literals-litteraux-de-gabarits) pour construire le HTML de chaque carte et le retourner.
+6. Utiliser [`join()`](../javascript/introduction/tableaux.md#methode-join) pour fusionner les types et les séparer par une virgule et un espace  `,`&#x20;
+7. Pense à appeler `generatePokemonCardHTML` dans `displayPokemons` à la place de la création du paragraphe `<p>`.
 
 #### **Exemple de résultat attendu**
 
@@ -206,22 +210,23 @@ Chaque Pokémon est affiché dans une carte avec ses détails :
 
 #### **Instructions**
 
-1. Modifie la fonction pour que la couleur de fond de chaque carte soit déterminée par les types du Pokémon.
-2.  Pour ajouter le _CSS_, on l'ajoutera en ligne **via la propriété** `style=""` de la `<div>` représentant la carte.
+1. Créer une **nouvelle branche** et la nommer `etape-4`.
+2. Modifie la fonction pour que la couleur de fond de chaque carte soit déterminée par les types du Pokémon.
+3.  Pour ajouter le _CSS_, on l'ajoutera en ligne **via la propriété** `style=""` de la `<div>` représentant la carte.
 
     <pre class="language-html"><code class="lang-html"><strong>&#x3C;div style="background: #FFD700;">
     </strong></code></pre>
-3.  Si un Pokémon a deux types, utilise un dégradé de couleurs pour la carte.&#x20;
+4.  Si un Pokémon a deux types, utilise un dégradé de couleurs pour la carte.&#x20;
 
     ```html
     <div style="background: linear-gradient(to right, #78C850 50%, #A040A0 50%);">
     ```
-4.  Utilise l'objet `typeColors` pour récupérer les couleurs associées à chaque type.
+5.  Utilise l'objet `typeColors` pour récupérer les couleurs associées à chaque type.
 
     ```javascript
     typeColors['Feu'] // Retoune le code couleur pour Feu soit '#F08030'
     ```
-5. Utiliser [l'opérateur **ternaire**](../javascript/introduction/conditions.md#loperateur-conditionnel-ternaire) ou [opérateur de **coalescence**](../javascript/introduction/operateurs.md#loperateur-de-coalescence-or-or) pour affecter la couleur par défaut de la constante `DEFAULT_COLOR` au cas où le type n'existerait pas.
+6. Utiliser [l'opérateur **ternaire**](../javascript/introduction/conditions.md#loperateur-conditionnel-ternaire) ou [opérateur de **coalescence**](../javascript/introduction/operateurs.md#loperateur-de-coalescence-or-or) pour affecter la couleur par défaut de la constante `DEFAULT_COLOR` au cas où le type n'existerait pas.
 
 #### **Exemple de résultat attendu**&#x20;
 
@@ -270,11 +275,12 @@ Chaque carte Pokémon a un fond coloré correspondant à ses types :
 
 #### **Instructions**
 
-1. Dans le fichier `script.js`, crée une nouvelle fonction `filterAndSortPokemons` qui va gérer le filtrage des Pokémon par nom :
+1. Créer une **nouvelle branche** et la nommer `etape-5`.
+2. Dans le fichier `script.js`, crée une nouvelle fonction `filterAndSortPokemons` qui va gérer le filtrage des Pokémon par nom :
    * Récupère la valeur du champ de recherche avec `searchBar.value.toLowerCase()`.
    * Utilise la méthode [`filter()`](../javascript/introduction/tableaux.md#filtrer-un-tableau) sur le tableau `pokemons` pour ne garder que les Pokémon dont le nom contient la chaîne de caractères entrée par l'utilisateur.
    * Appelle `displayPokemons(filteredPokemons)` pour afficher les Pokémon filtrés.
-2. Ajoute un [gestionnaire qui écoute l'événement](../javascript/dom-introduction/evenements.md#addeventlistener) `input` sur la barre de recherche (`searchBar`) pour déclencher `filterAndSortPokemons` à chaque modification du texte.
+3. Ajoute un [gestionnaire qui écoute l'événement](../javascript/dom-introduction/evenements.md#addeventlistener) `input` sur la barre de recherche (`searchBar`) pour déclencher `filterAndSortPokemons` à chaque modification du texte.
 
 #### **Tests manuels à effectuer :**
 
@@ -302,11 +308,12 @@ Chaque carte Pokémon a un fond coloré correspondant à ses types :
 
 #### **Instructions**
 
-1. Modifie la fonction `filterAndSortPokemons` pour ajouter un filtrage par type après le filtrage par nom :
+1. Créer une **nouvelle branche** et la nommer `etape-6`.
+2. Modifie la fonction `filterAndSortPokemons` pour ajouter un filtrage par type après le filtrage par nom :
    * Récupère la valeur du filtre de type avec `typeFilter.value`.
    * Si un type est sélectionné, utilise la méthode `filter()` pour ne garder que les Pokémon dont le type correspond à la sélection.
    * Appelle `displayPokemons(filteredPokemons)` pour afficher les Pokémon filtrés.
-2. Ajoute un gestionnaire d'événement `change` à l'à la liste déroulante (`typeFilter`) pour déclencher `filterAndSortPokemons` à chaque changement de sélection.
+3. Ajoute un gestionnaire d'événement `change` à l'à la liste déroulante (`typeFilter`) pour déclencher `filterAndSortPokemons` à chaque changement de sélection.
 
 #### **Tests manuels à effectuer :**
 
@@ -328,11 +335,12 @@ Chaque carte Pokémon a un fond coloré correspondant à ses types :
 
 #### **Instructions**
 
-1. Modifie la fonction `filterAndSortPokemons` pour ajouter le tri après le filtrage par nom et par type :
+1. Créer une **nouvelle branche** et la nommer `etape-7`.
+2. Modifie la fonction `filterAndSortPokemons` pour ajouter le tri après le filtrage par nom et par type :
    * Récupère la valeur du critère de tri avec `sortOrder.value`.
    * Utilise la méthode [`sort()`](../javascript/introduction/tableaux.md#trier-un-tableau) pour trier les Pokémon selon le critère sélectionné : par nom (A-Z, Z-A) ou par niveau (croissant, décroissant).
    * Appelle `displayPokemons(filteredPokemons)` pour afficher les Pokémon triés.
-2. Ajoute un gestionnaire d'événement `change` au critère de tri (`sortOrder`) pour déclencher `filterAndSortPokemons` à chaque changement de sélection.
+3. Ajoute un gestionnaire d'événement `change` au critère de tri (`sortOrder`) pour déclencher `filterAndSortPokemons` à chaque changement de sélection.
 
 #### **Tests manuels à effectuer**
 
