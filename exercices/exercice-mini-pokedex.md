@@ -48,7 +48,7 @@ Pour réaliser cet exercice, copier les fichiers de ce dépôt
 
 <div data-full-width="true">
 
-<figure><img src="../.gitbook/assets/exe-mini-pokedex-e1.png" alt=""><figcaption><p>Exemple de solution pour l'étape 1</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/exe-mini-pokedex-e1.png" alt=""><figcaption><p>Exemple de résultat pour la liste des noms des Pokémons</p></figcaption></figure>
 
 </div>
 
@@ -96,13 +96,9 @@ La page doit simplement afficher les noms de Pokémon comme suit :
 
 <div data-full-width="true">
 
-<figure><img src="../.gitbook/assets/exe-mini-pokedex-e2.png" alt=""><figcaption><p>Exemple de solution pour l'étape 2</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/exe-mini-pokedex-e2.png" alt=""><figcaption><p>La liste des Pokémons avec leur <strong>nom</strong> et leur <strong>type.</strong></p></figcaption></figure>
 
 </div>
-
-{% hint style="info" %}
-Un Pokémon possède au **minimum un type** et au **maximum deux**.
-{% endhint %}
 
 #### **Instructions**
 
@@ -113,6 +109,10 @@ Un Pokémon possède au **minimum un type** et au **maximum deux**.
     <p>Bulbizarre <small>Plante</small> <small>Poison</small></p>
     ```
 3. Utilise la méthode `split()` pour convertir la chaine de caractères des types d'un Pokémon en tableau.
+
+{% hint style="info" %}
+Un Pokémon possède au **minimum un type** et au **maximum deux**.
+{% endhint %}
 
 #### **Exemple de résultat attendu**
 
@@ -255,6 +255,12 @@ Chaque carte Pokémon a un fond coloré correspondant à ses types :
 
 **Objectif :** Crée une fonction qui filtre les Pokémon affichés en fonction des caractères saisi dans la barre de recherche.
 
+<div data-full-width="true">
+
+<figure><img src="../.gitbook/assets/exe-mini-pokedex-e5.png" alt=""><figcaption><p>Les Pokémon dont le nom contient <code>"ra"</code></p></figcaption></figure>
+
+</div>
+
 #### **Instructions**
 
 1. Dans le fichier `script.js`, crée une nouvelle fonction `filterAndSortPokemons` qui va gérer le filtrage des Pokémon par nom :
@@ -281,6 +287,12 @@ Chaque carte Pokémon a un fond coloré correspondant à ses types :
 
 **Objectif :** Mettre à jour la fonction `filterAndSortPokemons` pour inclure un filtre par type de Pokémon.
 
+<div data-full-width="true">
+
+<figure><img src="../.gitbook/assets/exe-mini-pokedex-e6.png" alt=""><figcaption><p>Les Pokémon de <strong>type Eau</strong> dont le nom contient  <code>"ar"</code> </p></figcaption></figure>
+
+</div>
+
 #### **Instructions**
 
 1. Modifie la fonction `filterAndSortPokemons` pour ajouter un filtrage par type après le filtrage par nom :
@@ -300,6 +312,12 @@ Chaque carte Pokémon a un fond coloré correspondant à ses types :
 ### **Étape 7 : Ajoute le Tri dans `filterAndSortPokemons`**
 
 **Objectif :** Achever la fonction `filterAndSortPokemons` pour trier les Pokémon en fonction du critère sélectionné dans le menu déroulant de tri.
+
+<div data-full-width="true">
+
+<figure><img src="../.gitbook/assets/exe-mini-pokedex-e7.png" alt=""><figcaption><p>Pokémons triés <strong>par Niveau décroissant</strong>, de <strong>type Eau</strong> et contenant la lettre <code>"K"</code> dans leur nom</p></figcaption></figure>
+
+</div>
 
 #### **Instructions**
 
