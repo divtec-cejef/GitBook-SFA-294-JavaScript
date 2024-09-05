@@ -12,6 +12,57 @@ C'est un **langage léger** qui **doit faire partie d'un environnement hôte** (
 
 </div>
 
+## Grandes étapes dans l'histoire de JavaScript
+
+**1995 : La naissance de JavaScript**
+
+* **Objectif** : Permettre des pages web interactives, manipulation basique du DOM (Document HTML) et validation des formulaires.
+* **Caractéristiques clés** : Gestion d'événements simples, fonctions `alert()`, `confirm()`, et `prompt()`.
+
+**2006 : L'émergence de jQuery**
+
+* **Impact** : Simplification de la manipulation du DOM et fourniture d'une API cohérente pour les événements et animations sur différents navigateurs.
+* **Caractéristiques clés** : Appels AJAX plus simples, gestion des animations et gestion des événements.
+
+**2009 : ECMAScript 5 (ES5)**
+
+* **Introductions** : Mode strict, support du format JSON, nouvelles méthodes pour les tableaux.
+* **Impact** : Amélioration de la fiabilité du code et de la gestion des données.
+
+**2010-2014 : L'essor des frameworks MVC**
+
+* **Exemples notables** : Backbone.js (2010), AngularJS (2010), Ember.js (2011).
+* **Impact** : Introduction d'approches structurées pour développer des applications web complexes, en favorisant la séparation des préoccupations.
+
+<mark style="background-color:yellow;">**2015 : ECMAScript 2015 (ES6)**</mark>
+
+* **Avancées majeures** : Variables `let` et `const`, fonctions fléchées (arrow functions), Promesses, modules.
+* **Effet** : Amélioration significative de l'organisation du code et de la gestion des opérations asynchrones.
+
+**2013-2016 : L'arrivée des frameworks modernes fondés sur des composants**
+
+* **Acteurs clés** : React (2013), <mark style="color:green;">**Vue.js (2014)**</mark>, Angular 2+ (2016).
+* **Impact** : Passage à une architecture basée sur les composants et l'utilisation du DOM virtuel.
+
+**2017 : L'arrivée d'Async/Await**
+
+* **Changements** : Simplification de la programmation asynchrone.
+* **Résultat** : Un code asynchrone plus intuitif et lisible.
+
+**2020 : ECMAScript 2020**
+
+* **Ajouts notables** : Chaînage optionnel (`?.`), coalescence nullish (`??`), BigInt.
+* **Avantage** : Amélioration de l'expérience développeur et de la robustesse du code.
+
+**2023 : Dernières nouveautés**
+
+* **Nouvelles fonctionnalités** : `Array.prototype.toReversed()`, `Array.prototype.toSorted()`, `Object.groupBy()`, aides pour les itérateurs comme `.map()` et `.filter()` pour n'importe quel itérable.
+* **Perspectives** : Accent continu sur la productivité des développeurs et la performance.
+
+***
+
+Ce texte peut être intégré directement dans ton cours Gitbook pour que tes élèves puissent suivre l'évolution de JavaScript tout en travaillant sur leurs projets.
+
 ## Quelques généralités sur JavaScript :
 
 * Langage **interprété**
