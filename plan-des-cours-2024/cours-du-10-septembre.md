@@ -1,4 +1,4 @@
-# 📅 Cours du 10 septembre
+# 📅 10 septembre — Leçons 10 à 12
 
 ## 🚀 Objectifs du jour
 
