@@ -7,8 +7,8 @@
 
 ## 🔢 Exercice PokeCount
 
-{% content-ref url="../exercices/pokecount.md" %}
-[pokecount.md](../exercices/pokecount.md)
+{% content-ref url="../exercices/exercice-pokecount.md" %}
+[exercice-pokecount.md](../exercices/exercice-pokecount.md)
 {% endcontent-ref %}
 
 * **Présentation de l'exercice :** L'exercice **PokeCount** consiste à créer une application JavaScript qui permet de compter et d'afficher les résultats des comptages de Pokémons.

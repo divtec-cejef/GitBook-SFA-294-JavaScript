@@ -1,4 +1,4 @@
-# 📅 20 août – Leçons 1 à 3
+# 📅 20 août — Leçons 1 à 3
 
 ## 🚀 Objectifs du jour
 
@@ -16,8 +16,8 @@
 
 ## :toolbox: Mise en place de l'environnement de développement
 
-{% content-ref url="../environnement-de-developpement.md" %}
-[environnement-de-developpement.md](../environnement-de-developpement.md)
+{% content-ref url="../javascript/environnement-de-developpement.md" %}
+[environnement-de-developpement.md](../javascript/environnement-de-developpement.md)
 {% endcontent-ref %}
 
 ## :teacher: Introduction à JavaScript (JS)
@@ -31,10 +31,10 @@
 * **Créer le dépôt GitHub via GitHub Classroom** : [Clique sur ce lien pour créer ton dépôt](https://classroom.github.com/a/z9Q4FRir)&#x20;
 * **Cloner le dépôt avec WebStorm** :
   * Utilisez l'**URL de ton dépôt** pour **cloner** le projet dans WebStorm.
-* Lire les consignes de l'exercice [pokecount.md](../exercices/pokecount.md "mention")
+* Lire les consignes de l'exercice [exercice-pokecount.md](../exercices/exercice-pokecount.md "mention")
 
-{% content-ref url="../exercices/pokecount.md" %}
-[pokecount.md](../exercices/pokecount.md)
+{% content-ref url="../exercices/exercice-pokecount.md" %}
+[exercice-pokecount.md](../exercices/exercice-pokecount.md)
 {% endcontent-ref %}
 
 ## ✅ Devoirs

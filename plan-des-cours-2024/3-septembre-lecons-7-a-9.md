@@ -8,8 +8,8 @@
 
 ## 🔢 Revoir et Présenter l'exercice PokeCount
 
-{% content-ref url="../exercices/pokecount.md" %}
-[pokecount.md](../exercices/pokecount.md)
+{% content-ref url="../exercices/exercice-pokecount.md" %}
+[exercice-pokecount.md](../exercices/exercice-pokecount.md)
 {% endcontent-ref %}
 
 * Présentation des projets PokeCount par les apprentis.
