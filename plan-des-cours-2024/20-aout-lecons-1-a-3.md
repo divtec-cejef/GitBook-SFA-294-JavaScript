@@ -10,8 +10,8 @@
 
 ## :school: Présentation du cours
 
-{% content-ref url="master.md" %}
-[master.md](master.md)
+{% content-ref url="../README (1).md" %}
+[README (1).md](<../README (1).md>)
 {% endcontent-ref %}
 
 ## :toolbox: Mise en place de l'environnement de développement
