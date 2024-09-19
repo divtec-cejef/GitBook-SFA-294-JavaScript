@@ -1,4 +1,4 @@
-# 📅 20 août — Leçons 1 à 3
+# 📅 20 août
 
 ## 🚀 Objectifs du jour
 

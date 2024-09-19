@@ -1,4 +1,4 @@
-# 📅 24 septembre — Leçons 16 à 18
+# 📅 24 septembre
 
 ## 🚀 Objectifs du jour
 
