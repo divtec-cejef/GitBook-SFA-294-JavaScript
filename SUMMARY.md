@@ -1,10 +1,8 @@
 # Table of contents
 
-* [Présentation du cours](README.md)
-
 ## JavaScript
 
-* [Environnement de développement](javascript/environnement-de-developpement.md)
+* [Environnement de développement](README.md)
 * [Les bases du JavaScript](javascript/introduction/README.md)
   * [Introduction à JavaScript](javascript/introduction/introduction-1.md)
   * [Commentaires & entêtes](javascript/introduction/commentaires.md)
@@ -55,6 +53,7 @@
 
 ## Plan des cours 2024
 
+* [Présentation du cours](plan-des-cours-2024/master.md)
 * [📅 20 août](plan-des-cours-2024/20-aout-lecons-1-a-3.md)
 * [📅 27 août](plan-des-cours-2024/27-aout.md)
 * [📅 3 septembre](plan-des-cours-2024/3-septembre.md)
