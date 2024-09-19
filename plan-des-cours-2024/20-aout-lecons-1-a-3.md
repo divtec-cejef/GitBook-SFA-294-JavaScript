@@ -10,14 +10,14 @@
 
 ## :school: Présentation du cours
 
-{% content-ref url="../README (1).md" %}
-[README (1).md](<../README (1).md>)
+{% content-ref url="../" %}
+[..](../)
 {% endcontent-ref %}
 
 ## :toolbox: Mise en place de l'environnement de développement
 
-{% content-ref url="../" %}
-[..](../)
+{% content-ref url="../presentation-du-cours/environnement-de-developpement.md" %}
+[environnement-de-developpement.md](../presentation-du-cours/environnement-de-developpement.md)
 {% endcontent-ref %}
 
 ## :teacher: Introduction à JavaScript (JS)

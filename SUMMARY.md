@@ -1,8 +1,12 @@
 # Table of contents
 
+## Présentation du cours
+
+* [Objectifs du module 294](README.md)
+* [Environnement de développement](presentation-du-cours/environnement-de-developpement.md)
+
 ## JavaScript
 
-* [Environnement de développement](README.md)
 * [Les bases du JavaScript](javascript/introduction/README.md)
   * [Introduction à JavaScript](javascript/introduction/introduction-1.md)
   * [Commentaires & entêtes](javascript/introduction/commentaires.md)
@@ -53,14 +57,9 @@
 
 ## Plan des cours 2024
 
-* [Présentation du cours](<README (1).md>)
 * [📅 20 août](plan-des-cours-2024/20-aout-lecons-1-a-3.md)
 * [📅 27 août](plan-des-cours-2024/27-aout.md)
 * [📅 3 septembre](plan-des-cours-2024/3-septembre.md)
 * [📅 10 septembre](plan-des-cours-2024/10-septembre.md)
 * [📅 17 septembre](plan-des-cours-2024/17-septembre.md)
 * [📅 24 septembre](plan-des-cours-2024/24-septembre.md)
-
-## Group 1
-
-* [Présentation du cours](group-1/presentation-du-cours.md)
