@@ -55,6 +55,7 @@
 * [📅 3 septembre — Leçons 7 à 9](plan-des-cours-2024/3-septembre-lecons-7-a-9.md)
 * [📅 10 septembre — Leçons 10 à 12](plan-des-cours-2024/10-septembre-lecons-10-a-12.md)
 * [📅 17 septembre — Leçons 13 à 15](plan-des-cours-2024/17-septembre-lecons-13-a-15.md)
+* [📅 24 septembre — Leçons 16 à 18](plan-des-cours-2024/24-septembre-lecons-16-a-18.md)
 
 ## Vue.js
 
