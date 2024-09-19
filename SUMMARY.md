@@ -1,8 +1,9 @@
 # Table of contents
 
+* [Présentation du cours](README.md)
+
 ## JavaScript
 
-* [Présentation du cours](README.md)
 * [Environnement de développement](javascript/environnement-de-developpement.md)
 * [Les bases du JavaScript](javascript/introduction/README.md)
   * [Introduction à JavaScript](javascript/introduction/introduction-1.md)
@@ -43,6 +44,10 @@
   * [Ensembles](javascript/javascript-moderne/ensembles.md)
   * [Paramètres par défaut](javascript/javascript-moderne/parametres-par-default.md)
 
+## Vue.js
+
+* [Introduction à Vue](vue.js/introduction-a-vue.md)
+
 ## Exercices
 
 * [🔢 Exercice PokeCount](exercices/exercice-pokecount.md)
@@ -50,13 +55,9 @@
 
 ## Plan des cours 2024
 
-* [📅 20 août — Leçons 1 à 3](plan-des-cours-2024/20-aout-lecons-1-a-3.md)
+* [📅 20 août](plan-des-cours-2024/20-aout.md)
 * [📅 27 août — Leçons 4 à 6](plan-des-cours-2024/27-aout-lecons-4-a-6.md)
 * [📅 3 septembre — Leçons 7 à 9](plan-des-cours-2024/3-septembre-lecons-7-a-9.md)
 * [📅 10 septembre — Leçons 10 à 12](plan-des-cours-2024/10-septembre-lecons-10-a-12.md)
 * [📅 17 septembre — Leçons 13 à 15](plan-des-cours-2024/17-septembre-lecons-13-a-15.md)
 * [📅 24 septembre — Leçons 16 à 18](plan-des-cours-2024/24-septembre-lecons-16-a-18.md)
-
-## Vue.js
-
-* [Introduction à Vue](vue.js/introduction-a-vue.md)

@@ -1,3 +1,7 @@
+---
+icon: volume
+---
+
 # Présentation du cours
 
 ## Module 294: Développement d'Applications Web Interactives
