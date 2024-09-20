@@ -1,4 +1,4 @@
-# 📅 17 septembre — Leçons 13 à 15
+# 📅 17 septembre
 
 ## 🚀 Objectifs du jour
 
@@ -29,8 +29,8 @@
 
 La suite sur cette page :
 
-{% content-ref url="../vue.js/introduction-a-vue.md" %}
-[introduction-a-vue.md](../vue.js/introduction-a-vue.md)
+{% content-ref url="../vue.js/demo-dintroduction-a-vue.md" %}
+[demo-dintroduction-a-vue.md](../vue.js/demo-dintroduction-a-vue.md)
 {% endcontent-ref %}
 
 ### ✅ Devoirs
