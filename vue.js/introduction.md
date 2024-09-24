@@ -1,4 +1,40 @@
+---
+cover: ../.gitbook/assets/vuetify.png
+coverY: 0
+---
+
 # Introduction
+
+## **Utilisation de Vuetify dans ce cours**
+
+Dans ce cours, nous allons utiliser [**Vuetify**](https://vuetifyjs.com/), une bibliothèque de composants établie sur [**Material Design**](https://material.io/design) pour Vue.js.&#x20;
+
+Vuetify nous permettra de créer rapidement des interfaces utilisateur élégantes, réactives, et cohérentes, en nous appuyant sur une large collection de composants préconçus (boutons, cartes, formulaires, etc.) que nous pourrons personnaliser et intégrer facilement dans nos applications.
+
+#### Exemple de composant `BUTTON`
+
+{% embed url="https://vuetifyjs.com/en/components/buttons/#usage" %}
+
+<div data-full-width="false">
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.36.48.png" alt=""><figcaption><p>Exemple du composant <code>BUTTON</code> et de son utilisation</p></figcaption></figure>
+
+</div>
+
+### **D'autres outils disponibles**
+
+Il existe d'autres bibliothèques et frameworks d'interface utilisateur compatibles avec Vue.js :
+
+* [**BootstrapVue**](https://bootstrap-vue.org/) : Basé sur Bootstrap, il fournit des composants classiques et une mise en page fluide.
+* [**Quasar**](https://quasar.dev/) : Un framework complet pour créer des applications web, mobiles, et de bureau.
+* [**Element Plus**](https://element-plus.org/) : Offre une grande collection de composants professionnels adaptés aux projets d'envergure.
+* [**Ant Design Vue**](https://www.antdv.com/) : Basé sur le design system d'Ant Design, idéal pour les applications d'entreprise.
+
+### **Pourquoi utiliser Vuetify ?**
+
+Vuetify est un excellent choix pour débuter, car il est bien documenté, facile à utiliser, et garantit une cohérence visuelle grâce à Material Design.
+
+Cependant, connaître d'autres outils vous permettra d'adapter vos choix selon les besoins et la nature de vos futurs projets.
 
 ## **Utilisation des SFC (Single File Components) et de l'API Composition dans ce cours**
 
