@@ -49,7 +49,7 @@
 ## Vue.js
 
 * [Introduction](vue.js/introduction.md)
-* [Création d'une application Vuetify](vue.js/creation-dune-application-vuetify.md)
+* [Créer une application Vuetify](vue.js/creer-une-application-vuetify.md)
 * [Bases](vue.js/page.md)
 * [Démo d'introduction à Vue](vue.js/demo-dintroduction-a-vue.md)
 
