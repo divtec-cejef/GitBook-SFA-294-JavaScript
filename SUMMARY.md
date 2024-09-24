@@ -50,7 +50,8 @@
 
 * [Introduction](vue.js/introduction.md)
 * [Créer une application Vuetify](vue.js/creer-une-application-vuetify.md)
-* [Bases](vue.js/page.md)
+* [Anatomie d'un projet Vuetify](vue.js/anatomie-dun-projet-vuetify.md)
+* [Bases (en construction)](vue.js/bases-en-construction.md)
 * [Démo d'introduction à Vue](vue.js/demo-dintroduction-a-vue.md)
 
 ## Exercices
