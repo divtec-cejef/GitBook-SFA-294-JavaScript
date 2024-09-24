@@ -1,26 +1,53 @@
-# Page
+# Bases
+
+## Données réactives / Data binding
+
+### **Réactivité dans Vue.js**
+
+La **réactivité** dans Vue.js permet à l'interface utilisateur de se mettre à jour automatiquement lorsque les données changent. C’est un concept clé qui garantit que toute modification de données est immédiatement reflétée dans le DOM, sans nécessiter d'interventions manuelles.
+
+#### **Utilisation de `ref`**
+
+`ref` est utilisé pour créer des données réactives simples, comme des variables primitives (chaînes de caractères, nombres, booléens) ou des objets. Lorsqu’on utilise `ref`, on doit accéder à la valeur réelle à l'aide de `.value`.
+
+**Exemple :**
+
+```javascript
+import { ref } from 'vue';
+
+const compteur = ref(0);
+compteur.value += 1; // Accéder et modifier la valeur
+```
+
+#### **Utilisation de `reactive`**
+
+`reactive` est utilisé pour créer des objets réactifs, des tableaux ou des structures de données plus complexes. Contrairement à `ref`, vous accédez directement aux propriétés sans avoir besoin de `.value`.
+
+**Exemple :**
+
+```javascript
+import { reactive } from 'vue';
+
+const utilisateur = reactive({
+  nom: 'Alice',
+  age: 25
+});
+
+utilisateur.age += 1; // Modification directe
+```
+
+#### **Différences Clés :**
+
+* **`ref`** est idéal pour les valeurs primitives ou lorsque vous souhaitez créer un conteneur réactif.
+* **`reactive`** convient mieux aux objets et aux tableaux, permettant des modifications directes.
+
+La réactivité de Vue.js rend ainsi le développement web dynamique et fluide, en assurant des interfaces utilisateur toujours à jour.
+
+### Démo
 
 {% hint style="success" %}
 Tout ce que vous avez déclaré dans `<script setup>`\
 sera automatiquement disponible dans `<template>`
-{% endhint %}
-
-### [Déclaration de données réactives](https://fr.vuejs.org/api/reactivity-core.html)
-
-{% hint style="success" %}
-Utilisez `ref` pour les types **primitifs** (number, string, bollean, null, undefined) et `reactive` pour les types **complexes** (objets, tableaux, … )
-{% endhint %}
-
-{% hint style="warning" %}
-Pour accéder ou modifier la valeur d'un `ref()` dans `<script>` on doit utiliser`.value`&#x20;
-
-Ce qui n'est pas le cas pour les `reactive()`
-
-```javascript
-const nom = ref('Julie')
-nom.value = 'Juliette'.  // .value pour modifie la valeur de nom
-console.log(’nom.value’) // .value pour accéder à la valeur de nom
-```
 {% endhint %}
 
 ```html
@@ -37,7 +64,7 @@ const personne = reactive({ nom: "Jean", anneeNaissance: 1992 });
 
 // Fonction qui retourne l'age actuel
 function getAge() {
-	// Ne pas oublier le .value pour accéder la donnée de type ref()
+  // Ne pas oublier le .value pour accéder la donnée de type ref()
   return anneeEnCours.value - personne.anneeNaissance;
 }
 </script>

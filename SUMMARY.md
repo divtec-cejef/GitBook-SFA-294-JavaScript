@@ -48,7 +48,8 @@
 
 ## Vue.js
 
-* [Page](vue.js/page.md)
+* [Introduction](vue.js/introduction.md)
+* [Bases](vue.js/bases.md)
 * [Démo d'introduction à Vue](vue.js/demo-dintroduction-a-vue.md)
 
 ## Exercices
