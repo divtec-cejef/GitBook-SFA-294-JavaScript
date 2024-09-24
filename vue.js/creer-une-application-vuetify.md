@@ -61,7 +61,7 @@ VITE v5.4.1  ready in 302 ms
 
 Voici quelques commandes de base que vous trouverez utiles pour travailler avec un projet Vuetify :
 
-### **Installer un nouveau composant ou une nouvelle librairie**
+### **Installer une librairie**
 
 Pour ajouter des packages ou des composants supplémentaires à votre projet, utilisez la commande `npm install`.&#x20;
 
@@ -72,6 +72,16 @@ npm install @vuetify/icons-material
 ```
 
 Cela installe le package `@vuetify/icons-material` qui peut être utilisé dans votre projet.
+
+### **Mise à jour des librairies**
+
+Gardez vos dépendances à jour avec la commande suivante :
+
+```bash
+npm update
+```
+
+Cela actualise tous les packages listés dans votre `package.json` vers leurs versions les plus récentes compatibles.
 
 ### **Générer un fichier de production**
 
@@ -93,16 +103,6 @@ npm run preview
 
 Cela lancera un serveur local pour voir à quoi ressemble votre application en production.
 
-### **Mise à jour des librairies**
-
-Gardez vos dépendances à jour avec la commande suivante :
-
-```bash
-npm update
-```
-
-Cela actualise tous les packages listés dans votre `package.json` vers leurs versions les plus récentes compatibles.
-
 ### **Lint et correction automatique du code**
 
 #### **Qu'est-ce que le Lint ?**
@@ -114,6 +114,8 @@ Vuetify utilise **ESLint** pour vérifier la qualité du code. Vous pouvez lance
 ```bash
 npm run lint
 ```
+
+#### Correction automatique
 
 Vous pouvez également corriger automatiquement les erreurs de linting en ajoutant `--fix` :
 
