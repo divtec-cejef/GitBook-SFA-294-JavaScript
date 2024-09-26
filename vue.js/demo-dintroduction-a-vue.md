@@ -17,32 +17,50 @@ Ajouter le code suivant dans le fichier `index.html`  juste avant l'inclusion du
 ```html
 <!-- Inclusion de Vue 3 dernière version -->
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-<!-- Inclusion du fichier JavaScript contenant la logique de l'application Vue.js -->
-<script src="script.js"></script>
-</body>
 ```
 
 ### **Créer une instance Vue**
 
-Initialisez Vue.js dans le fichier `script.js` et liez-le à un élément avec l'ID `poke-app`.
+Nous allons créer une nouvelle application Vue dans le fichier `script.js`.
+
+Le code suivant va créer cette nouvelle application et la _crocher_ sur la div `#poke-app`.
+
+Cela veut-dire que tout ce qui est contenu dans `<div id="poke-app">...</div>`  sera contrôlé par Vue.
 
 ```javascript
-const { createApp } = Vue;
+const { createApp } = Vue; // Récupère la méthode pour créer un nouvelle app Vue
 
-createApp({
+const app = createApp({
   setup() {
+    // Déclaration des données (data) Vue
     const message = "Bienvenue dans PokeCount!";
-    return { message };
+    
+    // Toutes les données retournées seront accessible dans le HTML
+    return { 
+      message
+    };
   }
-}).mount("#poke-app");
+}).mount("#poke-app"); // Monte l'application sur la div #poke-app
 ```
 
 ### **Utiliser l'interpolation dans le HTML**
 
-Dans le fichier HTML, utilisez la syntaxe `{{ message }}` pour afficher le message.
+Maintenant que l'application Vue existe, on peut accéder aux données retournées directement dans le HTML.
+
+Dans le HTML, utilisez la syntaxe `{{ message }}` n'importe où à l'intérieur de  `<div id="poke-app">` pour afficher le contenu de la donnée `message`.
+
+On peut, par exemple, remplacer le contenu du titre principal `<h1>` avec la donnée `message`.
 
 ```html
 <h1>{{ message }}</h1>
+```
+
+#### Afficher le contenu d'une donnée dans la console du navigateur
+
+Pour afficher le contenu de la donnée message dans la console, taper cette commande.
+
+```javascript
+app.message; // "Bienvenue dans PokeCount!"
 ```
 
 ***
@@ -51,27 +69,76 @@ Dans le fichier HTML, utilisez la syntaxe `{{ message }}` pour afficher le messa
 
 **🚀 Objectif :** Ajouter un compteur réactif pour capturer des Pokémon.
 
-1.  **Créer une donnée réactive**\
-    Utilisez `ref()` dans le fichier `script.js` pour créer une variable réactive `compteur`.
+La donnée message que nous venons de créer n'est pas réactive. Si on modifie sa valeur, elle ne se met pas à jour automatiquement dans le HTML.
 
-    ```javascript
-    const compteur = ref(0);
-    ```
-2.  **Incrémenter le compteur**\
-    Créez une fonction pour capturer des Pokémon et incrémenter le compteur.
+Pour essayer, taper cette commande dans la console du navigateur.
 
-    ```javascript
-    function capturer() {
-      compteur.value += 1;
-    }
-    ```
-3.  **Afficher le compteur et ajouter un bouton**\
-    Dans le fichier `index.html`, utilisez `v-on` ou `@click` pour capturer un Pokémon.
+```javascript
+app.message = "Bulbizarre"; 
+```
 
-    ```html
-    <p>Pokémons capturés : {{ compteur }}</p>
-    <button @click="capturer">Capturer 🐢</button>
-    ```
+Rien ne se passe, le contenu de notre `<h1>` n'a pas changé 😢.
+
+### Déclarer une valeur réactive avec `ref()`
+
+C'est bien la valeur qui sera réactive et non la donnée elle-même.
+
+Pour déclarer une valeur réactive, nous avons besoin de la méthode `ref()`. Cela va référencer une valeur qui sera analysée en permanence par Vue. Vue répercutera immédiatement les modifications de cette valeur partout dans l'application, que ce soit dans le JavaScript ou le HTML.
+
+#### Importer `ref()` depuis Vue
+
+Comme pour `createApp`, nous allons importer `ref` depuis Vue. Il faut donc ajouter `ref` à la ligne des importation Vue, sans oublier de séparer les méthodes avec une virgule.
+
+```javascript
+const { createApp, ref } = Vue; // importe createApp et ref de Vue
+```
+
+**Créer une donnée réactive**
+
+Nous allons créer une nouvelle donnée `compteur` et lui affecter une **valeur réactive** initialisée à `0`.
+
+Ajouter ce code juste après la création de la donnée `message`.
+
+```javascript
+const compteur = ref(0); // Donnée avec valeur réactive initialisée avec 0
+```
+
+**Afficher le compteur et ajouter un bouton**
+
+Dans le fichier `index.html`, modifier le code de `<div class="captures">` en y ajoutant la donnée `compteur`.
+
+```html
+<div class="captures">Pokémons capturés: {{ compteur }}</div>
+```
+
+#### Modifier la valeur de la donnée `compteur`
+
+Taper la commande suivante dans la console de votre navigateur et vous devriez voir la compteur changer dans le HTML.
+
+```javascript
+app.compteur = 5; 
+```
+
+YES 🎉 Le compteur, c'est actualisé 😀
+
+
+
+Dans le fichier `index.html`, utilisez `v-on` ou `@click` pour capturer un Pokémon.
+
+```html
+<p>Pokémons capturés : {{ compteur }}</p>
+<button @click="capturer">Capturer 🐢</button>
+```
+
+#### **Incrémenter le compteur**
+
+Créez une fonction pour capturer des Pokémon et incrémenter le compteur.
+
+```javascript
+function capturer() {
+  compteur.value += 1;
+}
+```
 
 ***
 
