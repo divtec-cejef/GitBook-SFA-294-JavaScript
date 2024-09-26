@@ -113,7 +113,7 @@ Dans le fichier `index.html`, modifier le code de `<div class="captures">` en y 
 
 #### Modifier la valeur de la donnée `compteur`
 
-Taper la commande suivante dans la console de votre navigateur et vous devriez voir la compteur changer dans le HTML.
+Taper la commande suivante dans la console de votre navigateur et vous devriez voir le compteur changer dans le HTML.
 
 ```javascript
 app.compteur = 5; 
