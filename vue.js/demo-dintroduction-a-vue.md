@@ -1,4 +1,4 @@
-# Introduction à Vue
+# Démo d'introduction à Vue
 
 Création d'un dépôt pour la démo : [https://classroom.github.com/a/wbeFruIa](https://classroom.github.com/a/wbeFruIa)
 
@@ -304,13 +304,86 @@ clic sur un lien et demander confirmation.
 
 **Objectif :** Redonner le focus à l'input après chaque sauvegarde.
 
-1.  **Ajouter `ref` à l'input**\
-    Utilisez `ref` pour cibler l'input.
+### Comment récupérer un élément HTML pour le manipuler en JavaScript ?&#x20;
+
+#### En JavaScript
+
+On met un `id` à l'élément HTML qu'on veut récupérer.
+
+```html
+<h1 id="pokedex">Mon Pokédex</h1>
+```
+
+Puis on utilise la méthode `document.getElmentById()` ou`document.querySelector()`.&#x20;
+
+```javascript
+const h1Pokedex = document.getElementById("pokedex");
+```
+
+#### Avec Vue
+
+On n'ajoute pas un `id`, mais un `ref` pour identifier l'élément qu'on veut manipuler.
+
+```html
+<h1 ref="pokedex">Mon Pokédex</h1>
+```
+
+Ensuite, on récupère l'élément HTML avec la méthode `useTemplateRef()`.
+
+```javascript
+<script setup>
+import { useTemplateRef } from 'vue';
+
+// Récupère l'élément HMTML grâce à useTemplateRef()
+const h1Pokedex = useTemplateRef("pokedex");
+</script>
+```
+
+#### Attendre que le composant soit monté
+
+{% hint style="danger" %}
+Il faut **attendre que le composant soit monté** `onMounted` pour pouvoir manipuler l'élément HTML, car avant il n'existera simplement pas.
+{% endhint %}
+
+```html
+<script setup>
+import { useTemplateRef, onMounted } from 'vue';
+
+// Récupère l'élément HMTML grâce à useTemplateRef()
+const h1Pokedex = useTemplateRef("pokedex");
+
+// On doit attendre que le composant soit monté
+// avant de pouvoir utiliser l'élément HTML
+onMounted(() => {
+  // Modifie le contenu texte 
+  h1Pokedex.value.textContent = "Mon Pokédex";
+  // Modifie le style CSS
+  h1Pokedex.value.style.color = "#fac100";
+});
+</script>
+```
+
+### Démo
+
+{% embed url="https://codepen.io/fallinov/pen/eYqNOQY" fullWidth="true" %}
+
+### Modification de notre application
+
+1.  **Ajouter `ref` à l'input**
 
     ```html
     <input v-model.number="compteur" ref="inputCapture" type="number" />
     ```
-2.  **Redonner le focus après la sauvegarde**\
+2.  **Importer** `useTemplateRef` **depuis Vue**
+
+    ```javascript
+    const { createApp, ref, computed, onMounted, watch, useTemplateRef } = Vue;
+    ```
+3.  **Récupérer l'input**
+
+    <pre class="language-javascript"><code class="lang-javascript"><strong>const inputCapture = useTemplateRef("inputCapture");
+    </strong></code></pre>
+4.  **Redonner le focus après la sauvegarde**\
     Utilisez `refs.inputCapture.focus()` après chaque sauvegarde pour redonner le focus à l'input.
 
     ```javascript
@@ -318,7 +391,7 @@ clic sur un lien et demander confirmation.
       if (!isNaN(compteur.value) && compteur.value > 0) {
         capturesTab.value.push(compteur.value);
         compteur.value = 0;
-        refs.inputCapture.focus();
+        inputCapture.value.focus();
       }
     }
     ```
