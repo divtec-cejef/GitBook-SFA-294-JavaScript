@@ -68,6 +68,8 @@ VITE v5.4.1  ready in 302 ms
 * Entrez l'URL `http://localhost:3000/` dans la barre d'adresse.
 * Votre projet Vuetify sera visible et interactif dans le navigateur.
 
+<figure><img src="../.gitbook/assets/Screenshot 2024-09-26 at 14.48.12.png" alt=""><figcaption></figcaption></figure>
+
 ### **Arrêter le serveur de développement**&#x20;
 
 * Utilisez le raccourci `CTRL+C` pour arrêter le serveur
@@ -75,13 +77,7 @@ VITE v5.4.1  ready in 302 ms
 
 ## Commandes de base utiles avec Vuetify
 
-Voici quelques commandes de base que vous trouverez utiles pour travailler avec un projet Vuetify :
-
-### **Installer une librairie**
-
-Pour ajouter des packages ou des composants supplémentaires à votre projet, utilisez la commande `npm install`.&#x20;
-
-#### Exemple
+### **Installer une librairie** — `npm install`
 
 ```bash
 npm install @vuetify/icons-material
@@ -89,9 +85,7 @@ npm install @vuetify/icons-material
 
 Cela installe le package `@vuetify/icons-material` qui peut être utilisé dans votre projet.
 
-### **Mise à jour des librairies**
-
-Gardez vos dépendances à jour avec la commande suivante :
+### **Mise à jour des librairies — `npm update`**
 
 ```bash
 npm update
@@ -99,7 +93,7 @@ npm update
 
 Cela actualise tous les packages listés dans votre `package.json` vers leurs versions les plus récentes compatibles.
 
-### **Générer un fichier de production**
+### **Générer un fichier de production — `npm run build`**
 
 Lorsque vous êtes prêt à déployer votre application, vous devez générer un fichier de production optimisé :
 
@@ -109,7 +103,7 @@ npm run build
 
 Cette commande compile votre projet et crée un dossier `dist/` contenant les fichiers optimisés pour la production.
 
-### **Lancer un serveur de prévisualisation pour la production**
+### **Lancer un serveur de prévisualisation pour la production — `npm run preview`**
 
 Après avoir généré les fichiers de production, vous pouvez les prévisualiser avec cette commande :
 
@@ -119,7 +113,7 @@ npm run preview
 
 Cela lancera un serveur local pour voir à quoi ressemble votre application en production.
 
-### **Lint et correction automatique du code**
+### **Lint et correction automatique du code — `npm run lint`**
 
 #### **Qu'est-ce que le Lint ?**
 
@@ -150,8 +144,13 @@ Cette commande peut automatiquement corriger diverses erreurs de linting, notamm
 
 Ces corrections automatiques permettent de maintenir la cohérence et la propreté du code, contribuant ainsi à un flux de travail plus efficace.
 
+#### Configuration WebStorm
+
 {% hint style="info" %}
 Vous pouvez configurer **WebStorm** pour qu'il lance la commande `--fix` à chaque fois que vous sauvegarder `CTRL+S` vos fichiers.
 {% endhint %}
 
+<figure><img src="../.gitbook/assets/eslint-fix-webstorm.png" alt=""><figcaption></figcaption></figure>
+
 Ces commandes vous aideront à gérer efficacement votre projet Vuetify et à maintenir un flux de travail fluide tout au long du développement.
+
