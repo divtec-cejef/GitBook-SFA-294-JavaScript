@@ -4,6 +4,12 @@
 
 Pour créer un nouveau projet avec Vuetify suivez les étapes ci-dessous.
 
+<div data-full-width="true">
+
+<figure><img src="../.gitbook/assets/vuetify-create.gif" alt=""><figcaption><p>Création d'un nouveau projet Vuetify <code>hello-world</code></p></figcaption></figure>
+
+</div>
+
 ### **Créer un projet Vuetify**
 
 Dans votre terminal, exécutez la commande suivante pour créer un nouveau projet Vuetify.
@@ -14,11 +20,21 @@ npm create vuetify
 
 Vous serez invité à répondre à quelques questions pour configurer le projet :
 
-* **Project name:** Entrez le nom de votre projet, par exemple, `hello-world`.
-* **Which preset would you like to install?** Sélectionnez `Recommended`&#x20;
-* **Would you like to install dependencies with yarn, npm, pnpm, or bun?** Sélectionnez `npm`
-* **Use TypeScript?** Sélectionnez `No`&#x20;
-* **Install Dependencies?** Sélectionnez `Yes`&#x20;
+* **Project name**
+  * Entrez le nom de votre projet, par exemple, `hello-world`.
+  * Ce sera également le nom du dossier du projet
+* **Which preset would you like to install?**&#x20;
+  * Sélectionnez `Recommended`&#x20;
+  * Utiliser les flèches clavier ↑ ↓ pour naviguer et Enter ↵ pour valider
+* **Would you like to install dependencies with yarn, npm, pnpm, or bun?**&#x20;
+  * Sélectionnez `npm`
+  * Utiliser les flèches clavier ↑ ↓ pour naviguer et Enter ↵ pour valider
+* **Use TypeScript?**&#x20;
+  * Sélectionnez `No`&#x20;
+  * Utiliser les flèches clavier ← → pour naviguer et Enter ↵ pour valider
+* **Install Dependencies?**&#x20;
+  * Sélectionnez `Yes`&#x20;
+  * Utiliser les flèches clavier ← → pour naviguer et Enter ↵ pour valider
 
 ### **Accéder au répertoire de votre projet**
 
