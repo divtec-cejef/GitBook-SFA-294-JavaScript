@@ -28,7 +28,8 @@ hello-world/                   # Dossier racine du projet Vuetify
 │   │   └── default.vue        # Mise en page par défaut de l'application (avec en-tête, pied de page, etc.)
 │   │
 │   ├── pages/                 # Composants Vue représentant les différentes pages de l'application
-│   │   └── index.vue          # Page principale de l'application
+│   │   ├── index.vue          # Page principale de l'application
+│   │   └── contact.vue        # Page de contact
 │   │
 │   ├── plugins/               # Dossier pour les plugins utilisés dans l'application
 │   │   ├── index.js           # Fichier principal d'initialisation des plugins
@@ -186,7 +187,11 @@ Bien que je n'aie pas pu accéder directement à votre `App.vue`, il est probabl
 * `<v-app>` : Composant de base de Vuetify qui enveloppe toute l'application, assurant l'intégration des thèmes et styles.
 * `<router-view />` : Place un espace réservé qui affichera le composant correspondant à la route actuelle (par exemple, la page d'accueil).
 
-#### **4. `router/index.js` : Gestion de la navigation avec le routage automatique**
+#### **4. `router/index.js` : Gestion de la navigation avec le** routage basé sur les fichiers
+
+{% embed url="https://uvr.esm.is/guide/file-based-routing.html" %}
+Plugin Vue Router pour le routage basé sur les fichiers
+{% endembed %}
 
 Votre fichier `index.js` du routeur utilise le système de **routage automatique** de Vue Router. Voici le contenu de ce fichier :
 
