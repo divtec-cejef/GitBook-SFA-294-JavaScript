@@ -10,19 +10,21 @@ Voici un aperçu de l'anatomie d'un projet Vuetify typique.
 ```
 hello-world/                   # Dossier racine du projet Vuetify
 │
-├── public/                    # Contient les fichiers accessibles publiquement
-│   ├── favicon.ico            # L'icône de la page web affichée dans l'onglet du navigateur
+├── node_modules/              # Contient les bibliothèques installés avec NPM, dont Vue.js  
+│
+├── public/                    # Contient les fichiers accessibles publiquement (images, icônes, pdf)
+│   └── favicon.ico            
 │
 ├── src/                       # Contient le code source principal de l'application
-│   ├── assets/                # Dossier pour les ressources statiques (images, polices, styles, etc.)
-│   │   ├── logo.png           # Image utilisée dans le projet
-│   │   └── logo.svg           # Image SVG utilisée dans le projet
+│   │ 
+│   ├── assets/                # Dossier pour les ressources statiques (images, polices, styles CSS, etc.)         
+│   │   └── logo.svg             nécessitant un traitement, une optimisation, une compression.
 │   │
 │   ├── components/            # Composants réutilisables de l'application
 │   │   ├── AppFooter.vue      # Composant Vue pour le pied de page de l'application
 │   │   └── HelloWorld.vue     # Exemple de composant Vue réutilisable
 │   │
-│   ├── layouts/               # Contient les dispositions globales de l'application
+│   ├── layouts/               # Contient les différents mise en pages de l'application
 │   │   └── default.vue        # Mise en page par défaut de l'application (avec en-tête, pied de page, etc.)
 │   │
 │   ├── pages/                 # Composants Vue représentant les différentes pages de l'application
