@@ -64,7 +64,7 @@ VITE v5.4.1  ready in 302 ms
 
 ### **Voir votre projet dans le navigateur**
 
-* Ouvrez votre navigateur web préféré (Chrome, Firefox, etc.).
+* Ouvrez votre navigateur web préféré (Firefox 🦊, Chrome 💩,  Arc 🌈, etc.).
 * Entrez l'URL `http://localhost:3000/` dans la barre d'adresse.
 * Votre projet Vuetify sera visible et interactif dans le navigateur.
 
@@ -76,22 +76,6 @@ VITE v5.4.1  ready in 302 ms
 * Où fermer le terminal
 
 ## Commandes de base utiles avec Vuetify
-
-### **Installer une librairie** — `npm install`
-
-```bash
-npm install @vuetify/icons-material
-```
-
-Cela installe le package `@vuetify/icons-material` qui peut être utilisé dans votre projet.
-
-### **Mise à jour des librairies — `npm update`**
-
-```bash
-npm update
-```
-
-Cela actualise tous les packages listés dans votre `package.json` vers leurs versions les plus récentes compatibles.
 
 ### **Générer un fichier de production — `npm run build`**
 
@@ -112,6 +96,22 @@ npm run preview
 ```
 
 Cela lancera un serveur local pour voir à quoi ressemble votre application en production.
+
+### **Installer une librairie** — `npm install`
+
+```bash
+npm install @vuetify/icons-material
+```
+
+Cela installe le package `@vuetify/icons-material` qui peut être utilisé dans votre projet.
+
+### **Mise à jour des librairies — `npm update`**
+
+```bash
+npm update
+```
+
+Cela actualise tous les packages listés dans votre `package.json` vers leurs versions les plus récentes compatibles.
 
 ### **Lint et correction automatique du code — `npm run lint`**
 
@@ -147,7 +147,7 @@ Ces corrections automatiques permettent de maintenir la cohérence et la propret
 #### Configuration WebStorm
 
 {% hint style="info" %}
-Vous pouvez configurer **WebStorm** pour qu'il lance la commande `--fix` à chaque fois que vous sauvegarder `CTRL+S` vos fichiers.
+Vous pouvez configurer **WebStorm** pour qu'il lance la commande `--fix` dès que vous sauvegarder `CTRL+S` vos fichiers.
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/eslint-fix-webstorm.png" alt=""><figcaption></figcaption></figure>
