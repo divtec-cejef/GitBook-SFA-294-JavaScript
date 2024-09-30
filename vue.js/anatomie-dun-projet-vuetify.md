@@ -95,7 +95,9 @@ Comprendre cette anatomie vous permettra d'organiser efficacement votre code et 
 
 <summary>Étape 1 : Chargement de <code>index.html</code></summary>
 
-Le processus de démarrage de l'application commence avec le chargement du fichier `index.html` par le navigateur. Ce fichier contient la structure de base de la page, y compris le conteneur `<div id="app">` où l'application Vue.js sera montée.
+Le processus de démarrage de l'application commence par le chargement du fichier `index.html` par le navigateur.
+
+Ce fichier contient la structure de base de la page, dont l'élément  `<div id="app">` où l'application Vue sera montée.
 
 </details>
 
@@ -103,9 +105,9 @@ Le processus de démarrage de l'application commence avec le chargement du fichi
 
 <summary>Étape 2 : Chargement de <code>main.js</code></summary>
 
-Ensuite, le navigateur charge le fichier `main.js`, qui est le point d'entrée principal de l'application Vue. Ce fichier gère l'initialisation de l'application en important Vue, les plugins, et le composant racine `App.vue`.
+Ensuite, le navigateur charge le fichier `main.js`, qui est le point d'entrée principal de l'application Vue.
 
-
+Ce fichier conduit l'initialisation de l'application en important Vue, les plugins (Composants Vuetify, Thème Vuetify, Pinia et Vue Router) et le composant racine `App.vue`.
 
 </details>
 
@@ -113,9 +115,9 @@ Ensuite, le navigateur charge le fichier `main.js`, qui est le point d'entrée p
 
 <summary>Étape 3 : Chargement de Vue</summary>
 
-À ce stade, la bibliothèque Vue.js elle-même est chargée. C'est le cœur de votre application qui permet de créer des composants réactifs et de gérer les fonctionnalités de Vue. L'instance Vue est initialisée à partir de la fonction `createApp()`.
+À ce stade, la bibliothèque Vue elle-même est chargée. C'est le cœur de votre application qui permet de créer des composants réactifs et de gérer les fonctionnalités de Vue.
 
-
+L'instance Vue est initialisée à partir de la fonction `createApp()`.
 
 </details>
 
@@ -127,7 +129,7 @@ Lors de cette étape, les principaux plugins et configurations de l'application 
 
 * **Thèmes** : Vuetify applique les thèmes et les styles globaux à l'application.
 * **Composants Vuetify** : Vuetify charge l'ensemble de ses composants prêts à être utilisés dans l'application.
-* **Pinia** : Le store de gestion d'état de l'application est initialisé pour gérer les données globales.
+* **Pinia** : Le magasin, store en anglais,  de gestion d'état de l'application est initialisé pour gérer les données globales. C'est ce magasin qui s'occupera de faire les appels aux API si nécessaire.
 * **Vue Router** : La configuration de Vue Router est chargée pour permettre la navigation entre les différentes pages de l'application.
 
 </details>
@@ -136,7 +138,9 @@ Lors de cette étape, les principaux plugins et configurations de l'application 
 
 <summary>Étape 5 : Montage du composant <code>App.vue</code></summary>
 
-Une fois tous les plugins et éléments de configuration chargés, le composant racine `App.vue` est monté sur l'élément `<div id="app">` dans `index.html`. Cela signifie que `App.vue` prend le contrôle de l'application et agit comme conteneur principal pour le reste des composants.
+Une fois tous les plugins et éléments de configuration chargés, le composant racine, root en anglais,  `App.vue` est monté sur l'élément `<div id="app">` dans `index.html`.&#x20;
+
+Cela signifie que `App.vue` prend le contrôle de l'application et agit comme conteneur principal pour le reste des composants.
 
 </details>
 
@@ -144,7 +148,9 @@ Une fois tous les plugins et éléments de configuration chargés, le composant 
 
 <summary>Étape 6 : Vue Router détermine le composant à charger en fonction de l'URI</summary>
 
-À ce stade, Vue Router vérifie l'URI de l'application (par exemple, `/bulbi`) et détermine quel composant Vue doit être chargé pour cette route. C'est grâce à la configuration des routes définie précédemment que Vue Router sait quel composant est associé à chaque chemin.
+À ce stade, Vue Router vérifie l'URI de l'application (par exemple, `/bulbi`) et détermine quel composant Vue doit être chargé pour cette route.&#x20;
+
+C'est grâce à la configuration des routes que Vue Router sait quel composant est associé à chaque chemin.
 
 </details>
 
@@ -152,7 +158,9 @@ Une fois tous les plugins et éléments de configuration chargés, le composant 
 
 <summary>Étape 7 : Retour du composant correspondant à la route par Vue Router</summary>
 
-Vue Router renvoie le composant correspondant à la route actuelle (par exemple, `bulbi.vue` pour la route `/bulbi`). Ce composant est ensuite prêt à être affiché à l'intérieur de l'application.
+Vue Router renvoie le composant correspondant à la route actuelle (par exemple, `bulbi.vue` pour la route `/bulbi`).
+
+Ce composant est ensuite prêt à être affiché à l'intérieur de l'application.
 
 </details>
 
@@ -160,7 +168,7 @@ Vue Router renvoie le composant correspondant à la route actuelle (par exemple,
 
 <summary>Étape 8 : Chargement du composant retourné par Vue Router</summary>
 
-Le composant correspondant à la route active (`bulbi.vue` dans cet exemple) est alors chargé et rendu dans la balise `<router-view>` du composant `App.vue`. C'est à ce moment que l'utilisateur voit le contenu de la page correspondant à la route actuelle.
+Le composant correspondant à la route active (`bulbi.vue` dans cet exemple) est alors chargé et rendu dans la balise `<router-view>` du composant `App.vue`.&#x20;
 
 </details>
 
@@ -168,7 +176,7 @@ Le composant correspondant à la route active (`bulbi.vue` dans cet exemple) est
 
 <summary>Étape 9 : Récupération des données dans Pinia</summary>
 
-Une fois que le composant `bulbi.vue` est monté, il récupère les données dont il a besoin à partir du store Pinia. Ces données peuvent inclure des informations partagées entre différents composants de l'application, ce qui permet à `bulbi.vue` de disposer de l'état global ou spécifique nécessaire à son affichage.
+Une fois que le composant `bulbi.vue` est monté, il récupère les données dont il a besoin à partir du store Pinia. Par exemple toutes les données du Pokémon Bulbizarre.
 
 
 
@@ -178,7 +186,9 @@ Une fois que le composant `bulbi.vue` est monté, il récupère les données don
 
 <summary>Étape 10 : Récupération des composants Vuetify</summary>
 
-Le composant `bulbi.vue` utilise les composants Vuetify (`v-btn`, `v-card`, `v-img`, etc.) pour construire l'interface utilisateur. Ces composants sont stylisés et configurés selon le thème Vuetify qui a été chargé précédemment.
+Le composant `bulbi.vue` utilise les composants Vuetify (`v-btn`, `v-card`, `v-img`, etc.) pour construire l'interface utilisateur, user interface (UI) en anglais.&#x20;
+
+Ces composants sont stylisés et configurés selon le thème Vuetify chargé précédemment.
 
 </details>
 
@@ -186,7 +196,9 @@ Le composant `bulbi.vue` utilise les composants Vuetify (`v-btn`, `v-card`, `v-i
 
 <summary>Étape 11 : Application complète rendue et interactivité assurée</summary>
 
-Enfin, l'application Vue.js est entièrement montée, configurée, et rendue dans le navigateur. L'utilisateur peut interagir avec l'application, naviguer entre les différentes pages grâce à Vue Router, utiliser les composants Vuetify, et voir les données gérées par Pinia en temps réel
+Enfin, l'application Vue.js est entièrement montée, configurée et rendue dans le navigateur.
+
+L'utilisateur peut interagir avec l'application, naviguer entre les différentes pages grâce à Vue Router, utiliser les composants Vuetify, et voir les données gérées par Pinia en temps réel.
 
 </details>
 
