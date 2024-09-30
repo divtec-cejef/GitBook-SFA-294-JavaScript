@@ -12,33 +12,39 @@ hello-world/                   # Dossier racine du projet Vuetify
 │
 ├── node_modules/              # Contient les bibliothèques installés avec NPM, dont Vue.js  
 │
-├── public/                    # Contient les fichiers accessibles publiquement (images, icônes, pdf)
-│   └── favicon.ico            
-│
+├── public/                    # Contient les fichiers accessibles publiquement (images, icônes, pdf)         
+│                              #  ne nécesssitant PAS de traitements
 ├── src/                       # Contient le code source principal de l'application
 │   │ 
 │   ├── assets/                # Dossier pour les ressources statiques (images, polices, styles CSS, etc.)         
-│   │   └── logo.svg             nécessitant un traitement, une optimisation, une compression.
+│   │                          #  nécessitant un traitement (regroupement, optimisation, compression, etc.)
 │   │
 │   ├── components/            # Composants réutilisables de l'application
-│   │   ├── AppFooter.vue      # Composant Vue pour le pied de page de l'application
-│   │   └── HelloWorld.vue     # Exemple de composant Vue réutilisable
+│   │   ├── AppFooter.vue
+│   │   ├── AppHeader.vue
+│   │   ├── PokemonListe.vue              
+│   │   └── PokemonFiche.vue
 │   │
 │   ├── layouts/               # Contient les différents mise en pages de l'application
-│   │   └── default.vue        # Mise en page par défaut de l'application (avec en-tête, pied de page, etc.)
+│   │   ├── default.vue
+│   │   ├── fullWidth.vue
+│   │   └── sideBarLeft.vue        
 │   │
 │   ├── pages/                 # Composants Vue représentant les différentes pages de l'application
-│   │   ├── index.vue          # Page principale de l'application
-│   │   └── contact.vue        # Page de contact
+│   │   ├── index.vue          # Page principale de l'application '/'
+│   │   ├── contact.vue        # Page de contact '/contact'
+│   │   ├── [...path].vue      # Page d'erreur pour les pages introuvable
+│   │   └── pokemons/          
+│   │       ├── index.vue      # Page d'acceuil des Pokemons '/pokemons'
+│   │       └── [id].vue       # Page de détail d'un Pokemon avec paramètre '/pokemons/pikachu' 
+│   │                          #  'pikachu' sera la valeur du paramètre
 │   │
 │   ├── plugins/               # Dossier pour les plugins utilisés dans l'application
-│   │   ├── index.js           # Fichier principal d'initialisation des plugins
-│   │   └── vuetify.js         # Configuration de Vuetify pour le projet
 │   │
 │   ├── router/                # Configuration du routeur Vue (vue-router) pour la navigation entre les pages
 │   │   └── index.js           # Fichier de configuration des routes de l'application
 │   │
-│   ├── stores/                # Contient la gestion d'état globale (Vuex ou Pinia) de l'application
+│   ├── stores/                # Contient la gestion d'état globale, le magasins (Vuex ou Pinia)
 │   │   ├── app.js             # Store principal pour gérer l'état de l'application
 │   │   └── index.js           # Fichier d'index pour initialiser les stores
 │   │
@@ -46,8 +52,7 @@ hello-world/                   # Dossier racine du projet Vuetify
 │   │   └── settings.scss      # Fichier de styles SCSS pour la configuration de l'application
 │   │
 │   ├── App.vue                # Composant racine de l'application
-│   ├── main.js                # Point d'entrée JavaScript qui initialise Vue et Vuetify
-│   └── vite-env.d.ts          # Fichier d'extension de TypeScript pour Vite
+│   └── main.js                # Point d'entrée JavaScript qui initialise Vue et Vuetify
 │
 ├── index.html                 # Fichier HTML principal servant de point d'entrée pour l'application
 ├── jsconfig.json              # Configuration du projet JavaScript
@@ -57,42 +62,20 @@ hello-world/                   # Dossier racine du projet Vuetify
 ```
 {% endcode %}
 
-## **Description des Dossiers et Fichiers**
-
-### **Dossier Racine**
-
-* **`package.json`** : Contient les informations sur votre projet et les dépendances nécessaires, comme Vue, Vuetify, et d'autres bibliothèques installées.
-* **`.env`** : Permet de configurer les variables d'environnement, comme les API Keys.
-* **`vue.config.js`** : Fichier de configuration optionnel pour personnaliser la configuration de Vue CLI.
-* **`.gitignore`** : Définit les fichiers et dossiers à ignorer par Git.
-
-### **Dossier `public/`**
-
-* **`index.html`** : Le fichier HTML principal qui sert de point d'entrée de l'application. Le contenu de votre application Vuetify est injecté ici.
-* **`favicon.ico`** : Icône du site web affichée dans les onglets du navigateur.
-
-### **Dossier `src/`**
-
-Ce dossier contient la logique et les composants principaux de votre projet.
-
-* **`main.js`** : Fichier d'entrée JavaScript de votre application. Il initialise Vue, Vuetify, et monte l'application sur la page HTML.
-* **`App.vue`** : Le composant racine de votre application. C'est ici que votre application commence.
-
-#### **Sous-dossiers de `src/` :**
-
-* **`assets/`** : Contient les ressources statiques comme les images, les fichiers CSS, ou les polices de caractères.
-* **`components/`** : Ce dossier contient les composants réutilisables de l'application. Chaque composant Vue (.vue) correspond à une partie de l'interface utilisateur.
-* **`layouts/`** : Contient les dispositions globales de votre application. Par exemple, `DefaultLayout.vue` pourrait définir la barre de navigation et le pied de page.
-* **`plugins/`** : Utilisé pour configurer et initialiser les plugins que vous utilisez dans votre projet. Par exemple, `vuetify.js` configure Vuetify et ses options.
-* **`router/`** : Contient les fichiers de configuration du routeur Vue (vue-router), ce qui permet de gérer la navigation entre les différentes pages de votre application.
-* **`store/`** : Contient les fichiers de gestion d'état de votre application en utilisant Vuex. Cela permet de gérer l'état global de l'application.
-* **`views/`** : Contient les composants de vue qui représentent les pages de l'application. Par exemple, `Home.vue` serait la page d'accueil.
-
 ## **Conseils pour Organiser Votre Projet Vuetify**
 
-1. **Utilisez des composants réutilisables** : Placez les composants réutilisables (boutons, cartes, formulaires) dans le dossier `components/`.
-2. **Divisez votre logique** : Séparez les pages de l'application dans `views/` et les composants spécifiques à ces pages dans `components/`.
-3. **Configurez correctement le thème** : Utilisez `plugins/vuetify.js` pour personnaliser les couleurs, polices, et styles de votre projet.
+1. **Utilisez des composants réutilisables** : placez les composants réutilisables (entête et pieds de pages, boutons, cartes, listes, formulaires, etc.) dans le dossier `components/`.&#x20;
+2. **Divisez votre logique** : séparez les pages de l'application dans `views/` et les composants spécifiques à ces pages dans `components/`.
+3. **Explorer** [**les composants Vuetify** ](https://vuetifyjs.com/en/components/all/#components)**avant de créer un composant :** ne pas réinventer la roue et parcourir les composants Vuetify avant de créer vos propres composants.
+4. **Configurez correctement le** [**thème Vuetify**](https://vuetifyjs.com/en/features/theme/) : utilisez `plugins/vuetify.js` pour personnaliser les couleurs, polices, et styles de votre projet.
+
+{% embed url="https://vuetifyjs.com/en/components/all/#components" %}
+Les composants Vuetify
+{% endembed %}
+
+{% embed url="https://vuetifyjs.com/en/features/theme/#theme-configuration" %}
+Configurer le thème Vuetify
+{% endembed %}
 
 ### **Conclusion**
 
@@ -100,41 +83,150 @@ La structure d'un projet Vuetify est conçue pour être modulaire et organisée,
 
 Comprendre cette anatomie vous permettra d'organiser efficacement votre code et de profiter pleinement des fonctionnalités offertes par Vue.js et Vuetify.
 
-## **Déroulement de l'affichage de la page d'accueil**
+## **Déroulement du chargement d'une application Vue avec Vuetify**
 
-**1. `index.html` : Le point de départ**
+<div data-full-width="true">
 
-Votre fichier `index.html` est le premier fichier chargé par le navigateur. Voici son contenu :
+<figure><img src="../.gitbook/assets/Chargement projet Vuetify.png" alt=""><figcaption><p>Schéma du chargement d'une application Vue classique avec Vuetify</p></figcaption></figure>
 
-```html
-<!DOCTYPE html>
-<html lang="en">
+</div>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" href="/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to Vuetify 3</title>
-</head>
+<details>
 
-<body>
-  <div id="app"></div> <!-- Conteneur principal de l'application Vue -->
-  <script type="module" src="/src/main.js"></script> <!-- Lancement de l'application via main.js -->
-</body>
+<summary>Étape 1 : Chargement de <code>index.html</code></summary>
 
-</html>
-```
+Le processus de démarrage de l'application commence avec le chargement du fichier `index.html` par le navigateur. Ce fichier contient la structure de base de la page, y compris le conteneur `<div id="app">` où l'application Vue.js sera montée.
 
-**Ce qui se passe ici :**
+</details>
+
+<details>
+
+<summary>Étape 2 : Chargement de <code>main.js</code></summary>
+
+Ensuite, le navigateur charge le fichier `main.js`, qui est le point d'entrée principal de l'application Vue. Ce fichier gère l'initialisation de l'application en important Vue, les plugins, et le composant racine `App.vue`.
+
+
+
+</details>
+
+<details>
+
+<summary>Étape 3 : Chargement de Vue</summary>
+
+À ce stade, la bibliothèque Vue.js elle-même est chargée. C'est le cœur de votre application qui permet de créer des composants réactifs et de gérer les fonctionnalités de Vue. L'instance Vue est initialisée à partir de la fonction `createApp()`.
+
+
+
+</details>
+
+<details>
+
+<summary>Étape 4 : Chargement des éléments de configuration (Thèmes, Vuetify et ses composants, Pinia, Vue Router)</summary>
+
+Lors de cette étape, les principaux plugins et configurations de l'application sont chargés :
+
+* **Thèmes** : Vuetify applique les thèmes et les styles globaux à l'application.
+* **Composants Vuetify** : Vuetify charge l'ensemble de ses composants prêts à être utilisés dans l'application.
+* **Pinia** : Le store de gestion d'état de l'application est initialisé pour gérer les données globales.
+* **Vue Router** : La configuration de Vue Router est chargée pour permettre la navigation entre les différentes pages de l'application.
+
+</details>
+
+<details>
+
+<summary>Étape 5 : Montage du composant <code>App.vue</code></summary>
+
+Une fois tous les plugins et éléments de configuration chargés, le composant racine `App.vue` est monté sur l'élément `<div id="app">` dans `index.html`. Cela signifie que `App.vue` prend le contrôle de l'application et agit comme conteneur principal pour le reste des composants.
+
+</details>
+
+<details>
+
+<summary>Étape 6 : Vue Router détermine le composant à charger en fonction de l'URI</summary>
+
+À ce stade, Vue Router vérifie l'URI de l'application (par exemple, `/bulbi`) et détermine quel composant Vue doit être chargé pour cette route. C'est grâce à la configuration des routes définie précédemment que Vue Router sait quel composant est associé à chaque chemin.
+
+</details>
+
+<details>
+
+<summary>Étape 7 : Retour du composant correspondant à la route par Vue Router</summary>
+
+Vue Router renvoie le composant correspondant à la route actuelle (par exemple, `bulbi.vue` pour la route `/bulbi`). Ce composant est ensuite prêt à être affiché à l'intérieur de l'application.
+
+</details>
+
+<details>
+
+<summary>Étape 8 : Chargement du composant retourné par Vue Router</summary>
+
+Le composant correspondant à la route active (`bulbi.vue` dans cet exemple) est alors chargé et rendu dans la balise `<router-view>` du composant `App.vue`. C'est à ce moment que l'utilisateur voit le contenu de la page correspondant à la route actuelle.
+
+</details>
+
+<details>
+
+<summary>Étape 9 : Récupération des données dans Pinia</summary>
+
+Une fois que le composant `bulbi.vue` est monté, il récupère les données dont il a besoin à partir du store Pinia. Ces données peuvent inclure des informations partagées entre différents composants de l'application, ce qui permet à `bulbi.vue` de disposer de l'état global ou spécifique nécessaire à son affichage.
+
+
+
+</details>
+
+<details>
+
+<summary>Étape 10 : Récupération des composants Vuetify</summary>
+
+Le composant `bulbi.vue` utilise les composants Vuetify (`v-btn`, `v-card`, `v-img`, etc.) pour construire l'interface utilisateur. Ces composants sont stylisés et configurés selon le thème Vuetify qui a été chargé précédemment.
+
+</details>
+
+<details>
+
+<summary>Étape 11 : Application complète rendue et interactivité assurée</summary>
+
+Enfin, l'application Vue.js est entièrement montée, configurée, et rendue dans le navigateur. L'utilisateur peut interagir avec l'application, naviguer entre les différentes pages grâce à Vue Router, utiliser les composants Vuetify, et voir les données gérées par Pinia en temps réel
+
+</details>
+
+
+
+### Étape 1 : Chargemt
+
+**1. `index.html` Le point de départ**
+
+Votre fichier `index.html` est le premier fichier chargé par le navigateur.
+
+<pre class="language-html" data-title="index.html" data-line-numbers data-full-width="true"><code class="lang-html">&#x3C;!DOCTYPE html>
+&#x3C;html lang="en">
+
+&#x3C;head>
+  &#x3C;meta charset="UTF-8" />
+  &#x3C;link rel="icon" href="/favicon.ico" />
+  &#x3C;meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  &#x3C;title>Welcome to Vuetify 3&#x3C;/title>
+&#x3C;/head>
+
+&#x3C;body>
+<strong>  &#x3C;div id="app">&#x3C;/div> &#x3C;!-- Conteneur principal de l'application Vue -->
+</strong>  &#x3C;script type="module" src="/src/main.js">&#x3C;/script> &#x3C;!-- Lancement de l'application via src/main.js -->
+&#x3C;/body>
+
+&#x3C;/html>
+</code></pre>
+
+#### **Ce qui se passe ici**
 
 * Le navigateur charge `index.html` et crée une structure HTML de base.
 * L'élément `<div id="app"></div>` est un conteneur vide qui sera rempli par notre application Vue.
 * Le script `<script type="module" src="/src/main.js"></script>` indique au navigateur de démarrer l'application en chargeant `main.js`.
 
-**2. `main.js` : Initialisation de Vue et Vuetify**
+### &#x20;**2. `src/main.js` Initialisation de Vue et Vuetify**
 
-Voici le contenu de votre fichier `main.js` :
+Voici le contenu de votre fichier `main.js` qui est chargé à la `ligne 13` de `index.html`
 
+{% code title="src/main.js" lineNumbers="true" fullWidth="true" %}
 ```javascript
 /**
  * main.js
@@ -142,52 +234,60 @@ Voici le contenu de votre fichier `main.js` :
  * Bootstraps Vuetify and other plugins then mounts the App`
  */
 
-// Plugins
+// Importation des plugins enregistrés pour l'application
 import { registerPlugins } from '@/plugins'
 
-// Components
+// Importation du composant racine de l'application Vue (App.vue)
 import App from './App.vue'
 
-// Composables
+// Importation de la fonction createApp de Vue.js pour créer une nouvelle instance de l'application
 import { createApp } from 'vue'
 
+// Création de l'instance principale de l'application Vue avec le composant App comme composant racine
 const app = createApp(App)
 
+// Enregistrement des plugins nécessaires pour l'application, comme Vuetify ou d'autres bibliothèques tierces
 registerPlugins(app)
 
+// Montage de l'application Vue sur l'élément DOM avec l'ID "app" pour rendre l'application dans la page HTML
 app.mount('#app')
 ```
+{% endcode %}
 
-**Ce qui se passe ici :**
+#### **Ce qui se passe ici**
 
-* `createApp(App)`: Crée une instance de l'application Vue en utilisant `App.vue` comme composant racine.
-* `registerPlugins(app)`: Enregistre et configure les plugins nécessaires pour l'application, notamment Vuetify.
-* `app.mount('#app')`: Monte l'application Vue dans le conteneur `<div id="app"></div>` défini dans `index.html`.
+* `createApp(App)`: Crée une instance de l'application Vue en utilisant `App.vue` comme composant racine (le premier composant de l'application).
+* `registerPlugins(app)`: Enregistre et configure les plugins nécessaires pour l'application, notamment Vuetify. Les plugins sont définis dans `src/plugins/index.js`
+* `app.mount('#app')`: Monte l'application Vue dans le conteneur `<div id="app"></div>` défini à la `ligne 12` de `index.html`.
 
 À ce stade, l'application Vue est initialisée, et le composant `App.vue` est prêt à être affiché.
 
-**3. `App.vue` : Le composant racine**
+### **3. `src/App.vue` : Le composant racine**
 
-Bien que je n'aie pas pu accéder directement à votre `App.vue`, il est probable que ce fichier ressemble à ceci :
+C'est le premier composant de notre application, on l'appelle le **composant "root"**, composant racine en français.
 
-```vue
+{% code title="src/App.vue" lineNumbers="true" fullWidth="true" %}
+```markup
 <template>
-  <v-app> <!-- Composant Vuetify principal qui enveloppe l'application -->
-    <router-view /> <!-- Composant de routeur qui affiche la page correspondante à la route actuelle -->
+  <v-app> <!-- Composant racine de l'application Vuetify. Applique les styles et fonctionnalités globales de Vuetify -->
+    <v-main> <!-- Le contenu principal de la page -->
+      <router-view /> <!-- Composant de Vue Router qui affiche le contenu de la route actuelle, permettant le rendu dynamique des pages -->
+    </v-main>
   </v-app>
 </template>
 
 <script setup>
-// Configuration ou logique spécifique du composant App
+ 
 </script>
 ```
+{% endcode %}
 
-**Ce qui se passe ici :**
+#### **Ce qui se passe ici**
 
 * `<v-app>` : Composant de base de Vuetify qui enveloppe toute l'application, assurant l'intégration des thèmes et styles.
 * `<router-view />` : Place un espace réservé qui affichera le composant correspondant à la route actuelle (par exemple, la page d'accueil).
 
-#### **4. `router/index.js` : Gestion de la navigation avec le** routage basé sur les fichiers
+### **4. `router/index.js` : Gestion de la navigation avec le** routage basé sur les fichiers
 
 {% embed url="https://uvr.esm.is/guide/file-based-routing.html" %}
 Plugin Vue Router pour le routage basé sur les fichiers
@@ -251,7 +351,7 @@ export default router
 
 **En résumé :** Le routage de votre application est configuré automatiquement en se basant sur la structure des fichiers `.vue` dans votre projet. Le fichier `index.vue` situé dans `src/pages/` est automatiquement associé à la route `/`, ce qui en fait la page d'accueil de votre application. Ce système de routage automatique permet de simplifier la gestion des routes, sans avoir besoin de les définir manuellement.
 
-**5. `pages/index.vue` : Affichage de la page d'accueil**
+### **5. `pages/index.vue` : Affichage de la page d'accueil**
 
 Enfin, votre `index.vue` dans le dossier `pages/` définit le contenu de la page d'accueil. Voici son contenu :
 

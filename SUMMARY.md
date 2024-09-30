@@ -61,7 +61,7 @@
 
 ## Plan des cours 2024
 
-* [📅 20 août](plan-des-cours-2024/20-aout-lecons-1-a-3.md)
+* [📅 20 août](plan-des-cours-2024/20-aout.md)
 * [📅 27 août](plan-des-cours-2024/27-aout.md)
 * [📅 3 septembre](plan-des-cours-2024/3-septembre.md)
 * [📅 10 septembre](plan-des-cours-2024/10-septembre.md)

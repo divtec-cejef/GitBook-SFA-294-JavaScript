@@ -125,3 +125,17 @@ button:hover {
 * **Flexibilité** : L'API Composition permet de mieux structurer le code pour les composants complexes, notamment dans les projets plus grands.
 
 Ainsi, les exemples de code présentés dans ce cours sont établis sur ces concepts de **SFC** et de l’**API Composition** pour offrir une approche moderne et efficace du développement avec Vue.js.
+
+## Méthodes de rendu web
+
+L'objectif de ce chapitre est de vous familiariser avec les différentes techniques de rendu disponibles pour vos projets web utilisant Vue.js. Chaque technique de rendu a été conçue pour répondre à des **besoins spécifiques en matière de performances, de référencement (SEO), et d'expérience utilisateur**. Comme développeurs, il est important de comprendre ces différences afin de **choisir la méthode la plus adaptée à chaque projet**.
+
+Ces différentes techniques existent parce que les applications web ont des exigences variées. Certaines applications nécessitent une indexation optimale par les moteurs de recherche (SEO), tandis que d'autres privilégient la rapidité ou l'interactivité. De plus, selon la nature du contenu (statique ou dynamique), la manière dont les pages sont générées et servies aux utilisateurs peut grandement influencer les performances et l'expérience utilisateur.
+
+Le tableau ci-dessous vous offre une vue d'ensemble des principales méthodes de rendu, leurs avantages, leurs inconvénients, et les contextes dans lesquels elles sont le plus appropriées.
+
+<table data-full-width="true"><thead><tr><th width="158">Méthode</th><th width="219">Utilisation</th><th width="308">Résumé</th><th width="71" align="center">SEO</th><th width="140" align="center">Perfs</th><th align="center">Serveur JS</th></tr></thead><tbody><tr><td>CSR</td><td>Applications SPA<br>(Single Page Application)</td><td>Rendu côté client, interactivité après chargement complet du JavaScript.</td><td align="center">❌</td><td align="center">🔴</td><td align="center">❌</td></tr><tr><td>PWA (CSR)</td><td>Expériences mobiles</td><td>Application web hors ligne.</td><td align="center">❌</td><td align="center">🟡</td><td align="center">❌</td></tr><tr><td>SSR</td><td>Applications dynamiques</td><td>Rendu côté serveur.</td><td align="center">✅</td><td align="center">🟠</td><td align="center">✅</td></tr><tr><td>SSG</td><td>Sites à contenu statique</td><td>Pages statiques.</td><td align="center">✅</td><td align="center">🟢</td><td align="center">❌</td></tr><tr><td>ISR</td><td>Contenus semi-dynamiques</td><td>Combinaison SSR/SSG, contenu dynamique, régénération périodique possible.</td><td align="center">✅</td><td align="center">🟢</td><td align="center">✅</td></tr><tr><td>Pre-rendering</td><td>Amélioration de SEO</td><td>Pré-rendu HTML, partiellement dynamique, améliorant chargement initial.</td><td align="center">✅</td><td align="center">🟢</td><td align="center">❌</td></tr></tbody></table>
+
+* **SEO** : Indique si la méthode est favorable au référencement naturel.
+* **Perfs (Performances) :** 🟢 : Excellent 🟡 : Moyen 🟠 : Moyenne à mauvaise 🔴 : Mauvais
+* **Serveur JS** : Si un serveur JavaScript est requis (✅) ou non (❌).
