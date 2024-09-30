@@ -87,7 +87,7 @@ Comprendre cette anatomie vous permettra d'organiser efficacement votre code et 
 
 <div data-full-width="true">
 
-<figure><img src="../.gitbook/assets/Chargement projet Vuetify.png" alt=""><figcaption><p>Schéma du chargement d'une application Vue classique avec Vuetify</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Chargement projet Vuetify v3.png" alt=""><figcaption><p>Schéma du chargement d'une application Vue classique avec Vuetify</p></figcaption></figure>
 
 </div>
 
