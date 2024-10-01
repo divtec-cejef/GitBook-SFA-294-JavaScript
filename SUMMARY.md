@@ -48,7 +48,7 @@
 
 ## Vue.js
 
-* [Introduction à Vue et Vuetify](vue.js/introduction-a-vue-et-vuetify.md)
+* [Introduction à Vue et Vuetify](vue.js/introduction.md)
 * [Créer une application Vuetify](vue.js/creer-une-application-vuetify.md)
 * [Anatomie d'un projet Vuetify](vue.js/anatomie-dun-projet-vuetify.md)
 * [Bases (en construction)](vue.js/bases-en-construction.md)

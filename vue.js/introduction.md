@@ -3,7 +3,7 @@ cover: ../.gitbook/assets/vuetify.png
 coverY: 0
 ---
 
-# Introduction
+# Introduction à Vue et Vuetify
 
 ## **Utilisation de Vuetify dans ce cours**
 
@@ -151,6 +151,10 @@ button:hover {
 <figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption><p>Découpage et réutilisation des composants Vue</p></figcaption></figure>
 
 Ainsi, les exemples de code présentés dans ce cours sont établis sur ces concepts de **SFC** et de l’**API Composition** pour offrir une approche moderne et efficace du développement avec Vue.js.
+
+{% file src="../.gitbook/assets/Vue-3-Cheat-Sheet.pdf" %}
+Cheat Sheet pour Vue 3 SFC et composition API
+{% endfile %}
 
 ## Méthodes de rendu web
 
