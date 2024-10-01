@@ -1,3 +1,7 @@
+---
+layout: editorial
+---
+
 # Anatomie d'un projet Vuetify
 
 Lors de la création d'un projet Vuetify, il est important de comprendre la structure des fichiers et des dossiers pour bien organiser votre code et faciliter la maintenance.
