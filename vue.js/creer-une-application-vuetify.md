@@ -26,12 +26,12 @@ Vous serez invité à répondre à quelques questions pour configurer le projet 
 * **Which preset would you like to install?**&#x20;
   * Sélectionnez `Recommended`&#x20;
   * Utiliser les flèches clavier ↑ ↓ pour naviguer et Enter ↵ pour valider
-* **Would you like to install dependencies with yarn, npm, pnpm, or bun?**&#x20;
-  * Sélectionnez `npm`
-  * Utiliser les flèches clavier ↑ ↓ pour naviguer et Enter ↵ pour valider
 * **Use TypeScript?**&#x20;
   * Sélectionnez `No`&#x20;
   * Utiliser les flèches clavier ← → pour naviguer et Enter ↵ pour valider
+* **Would you like to install dependencies with yarn, npm, pnpm, or bun?**&#x20;
+  * Sélectionnez `npm`
+  * Utiliser les flèches clavier ↑ ↓ pour naviguer et Enter ↵ pour valider
 * **Install Dependencies?**&#x20;
   * Sélectionnez `Yes`&#x20;
   * Utiliser les flèches clavier ← → pour naviguer et Enter ↵ pour valider
