@@ -48,7 +48,7 @@
 
 ## Vue.js
 
-* [Introduction](vue.js/introduction.md)
+* [Introduction à Vue et Vuetify](vue.js/introduction-a-vue-et-vuetify.md)
 * [Créer une application Vuetify](vue.js/creer-une-application-vuetify.md)
 * [Anatomie d'un projet Vuetify](vue.js/anatomie-dun-projet-vuetify.md)
 * [Bases (en construction)](vue.js/bases-en-construction.md)
@@ -67,3 +67,4 @@
 * [📅 10 septembre](plan-des-cours-2024/10-septembre.md)
 * [📅 17 septembre](plan-des-cours-2024/17-septembre.md)
 * [📅 24 septembre](plan-des-cours-2024/24-septembre.md)
+* [📅 1ᵉʳ octobre](plan-des-cours-2024/1-octobre.md)
