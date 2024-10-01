@@ -36,8 +36,8 @@ hello-world/                   # Dossier racine du projet Vuetify
 │   │   ├── [...path].vue      # Page d'erreur pour les pages introuvable
 │   │   └── pokemons/          
 │   │       ├── index.vue      # Page d'acceuil des Pokemons '/pokemons'
-│   │       └── [id].vue       # Page de détail d'un Pokemon avec paramètre '/pokemons/pikachu' 
-│   │                          #  'pikachu' sera la valeur du paramètre
+│   │       └── [nom].vue      # Page de détail d'un Pokemon avec paramètre '/pokemons/pikachu' 
+│   │                          #  'pikachu' sera la valeur du paramètre 'nom'
 │   │
 │   ├── plugins/               # Dossier pour les plugins utilisés dans l'application
 │   │
@@ -79,7 +79,7 @@ Configurer le thème Vuetify
 
 ### **Conclusion**
 
-La structure d'un projet Vuetify est conçue pour être modulaire et organisée, **facilitant** ainsi le **développement**, la **maintenance**, et **l'évolutivité** de votre application.
+La structure d'un projet Vuetify est conçue pour être modulaire et organisée, **facilitant** ainsi le **développement**, la **maintenance** et **l'évolutivité** de votre application.
 
 Comprendre cette anatomie vous permettra d'organiser efficacement votre code et de profiter pleinement des fonctionnalités offertes par Vue.js et Vuetify.
 
@@ -87,7 +87,7 @@ Comprendre cette anatomie vous permettra d'organiser efficacement votre code et 
 
 <div data-full-width="true">
 
-<figure><img src="../.gitbook/assets/Chargement projet Vuetify v3.png" alt=""><figcaption><p>Schéma du chargement d'une application Vue classique avec Vuetify</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Chargement projet Vuetify v4.png" alt="Schéma du chargement d&#x27;une application Vue classique avec Vuetify"><figcaption><p>Schéma du chargement d'une application Vue classique avec Vuetify</p></figcaption></figure>
 
 </div>
 
