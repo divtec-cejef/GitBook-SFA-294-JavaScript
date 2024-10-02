@@ -38,7 +38,7 @@ Cependant, connaître d'autres outils vous permettra d'adapter vos choix selon l
 
 ## **Utilisation des SFC (Single File Components) et de l'API Composition dans ce cours**
 
-```markup
+```javascript
 <script setup>
 import { ref } from 'vue'
 const greeting = ref('Hello World!')
@@ -86,10 +86,8 @@ Pour pouvoir utiliser `ref` et `reactive`, il faudra **les importer au tout déb
 {% code lineNumbers="true" %}
 ```html
 <script setup>
-// Importation de ref et réactive 
 import { ref, reactive } from "vue";
-
-// Création d'une variable réactive avec `ref`
+// Création d'une valeur réactive avec `ref`
 const compteur = ref(0);
 
 // Création d'un objet réactif avec `reactive`
@@ -98,16 +96,21 @@ const utilisateur = reactive({
   age: 25
 });
 
+// Fonction pour incrémenter le compteur
+function incrementer() {
+  compteur.value++; // .value obligatoire pour accéder à la valeur réactive
+}
+  
 // Fonction pour incrémenter l'âge de l'utilisateur
 function incrementerAge() {
-  utilisateur.age++;
+  utilisateur.age++; // pas de .value pour les objets réactifs
 }
 </script>
 
 <template>
   <div class="main">
     <p>Compteur: {{ compteur }}</p>
-    <button @click="compteur++">Incrémenter le compteur</button>
+    <button @click="incrementer">Incrémenter le compteur</button>
 
     <p>Personne: {{ utilisateur.nom }} {{ utilisateur.age }} ans</p>
     <button @click="incrementerAge">Incrémenter l'âge</button>
@@ -137,6 +140,7 @@ button:hover {
   background: #4fc08d;
 }
 </style>
+
 ```
 {% endcode %}
 
