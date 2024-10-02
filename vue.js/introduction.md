@@ -38,7 +38,7 @@ Cependant, connaître d'autres outils vous permettra d'adapter vos choix selon l
 
 ## **Utilisation des SFC (Single File Components) et de l'API Composition dans ce cours**
 
-```javascript
+```markup
 <script setup>
 import { ref } from 'vue'
 const greeting = ref('Hello World!')
