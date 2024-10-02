@@ -85,9 +85,9 @@ Comprendre cette anatomie vous permettra d'organiser efficacement votre code et 
 
 ## **Déroulement du chargement d'une application Vue avec Vuetify**
 
-<div data-full-width="false">
+<div data-full-width="true">
 
-<figure><img src="../.gitbook/assets/Chargement projet Vuetify v4.png" alt="Schéma du chargement d&#x27;une application Vue classique avec Vuetify" width="563"><figcaption><p>Schéma du chargement d'une application Vue classique avec Vuetify</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Chargement projet Vuetify v4.png" alt="Schéma du chargement d&#x27;une application Vue classique avec Vuetify"><figcaption><p>Schéma du chargement d'une application Vue classique avec Vuetify</p></figcaption></figure>
 
 </div>
 
