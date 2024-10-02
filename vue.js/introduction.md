@@ -40,21 +40,23 @@ Cependant, connaître d'autres outils vous permettra d'adapter vos choix selon l
 
 ```markup
 <script setup>
-import { ref } from 'vue'
-const greeting = ref('Hello World!')
+import { ref } from "vue";
+const message = ref("Coucou !");
 </script>
 
 <template>
-  <p class="greeting">{{ greeting }}</p>
+  <h1>{{ message }}</h1>
 </template>
 
 <style>
-.greeting {
-  color: red;
+h1 {
+  color: deeppink;
   font-weight: bold;
 }
 </style>
 ```
+
+{% embed url="https://codepen.io/fallinov/pen/NWQxJGy" %}
 
 Dans ce cours, nous utilisons des **Single File Components (SFC)**, un format de fichier spécial avec l'extension `.vue` qui permet de structurer chaque composant de manière claire et organisée. Les SFC contiennent trois sections principales :
 
