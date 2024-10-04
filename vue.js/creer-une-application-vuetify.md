@@ -115,6 +115,25 @@ Cela actualise tous les packages listés dans votre `package.json` vers leurs ve
 
 ### **Lint et correction automatique du code — `npm run lint`**
 
+{% hint style="warning" %}
+#### Si vous rencontrez des problèmes avec ESLint dans votre projet exécutez les commandes suivantes.
+
+```sh
+# Ajout de TypeScript
+npm install --save-dev typescript
+# Ajout de TypeScript pou ESLint
+npm install --save-dev @vue/eslint-config-typescript
+# Vide le cache de NPM, force le re-téléchargement des librairies
+npm cache clean --force
+# Supprime le dossier node_modules/
+rm -rf node_modules
+# Supprime le fichier package-lock.json
+rm package-lock.json
+# Réinstalle prorpement les librairies
+npm install
+```
+{% endhint %}
+
 #### **Qu'est-ce que le Lint ?**
 
 Le Lint est un outil d'analyse statique de code qui identifie des erreurs de syntaxe, des bugs potentiels, des incohérences de style et d'autres problèmes dans votre code. Utiliser un linter permet d'améliorer la qualité et la lisibilité de votre code, tout en réduisant le nombre de bugs.
