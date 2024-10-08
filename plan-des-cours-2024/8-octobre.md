@@ -3,11 +3,17 @@
 ## 🚀 Objectifs du jour
 
 * **Problèmes avec** [**ESLint**](../vue.js/creer-une-application-vuetify.md#si-vous-rencontrez-des-problemes-avec-eslint-dans-votre-projet-executez-les-commandes-suivantes)
-* **Introduction à la création d'application Vue**
-* **Mise en place d'une application simple avec Vue.js et Vuetify**
-* **Explication du fonctionnement d'une application Vue.js avec Vuetify**
+* **Création d'un Pokédex avec Vuetify**
 
-## 🛠 Intro à Vue.js&#x20;
+## 📒 Exercice Pokédex avec Vuetify
+
+Création du dépot : [https://classroom.github.com/a/yToQBlsU](https://classroom.github.com/a/yToQBlsU)
+
+#### Exemple de solutions
+
+{% embed url="https://kode.ch/pokedex/" %}
+
+## 🛠 Outils
 
 {% file src="../.gitbook/assets/Vue-3-Cheat-Sheet.pdf" %}
 
