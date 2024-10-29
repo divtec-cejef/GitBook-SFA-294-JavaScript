@@ -158,7 +158,39 @@ Vous trouverez la liste des icônes sur ce site :&#x20;
 
 ### **Étape 3 - Créer le contenu de la page "Mon Pokémon"**
 
-Inclure un titre, une image cliquable qui s'ouvre dans une pop-up, et un texte comprenant un sous-titre et un paragraphe descriptif.
+Ajouter l'image du monde Pokémon qui se trouve dans `public/images/pokemon-map.png` en utilisant un composant `v-img.`
+
+{% embed url="https://vuetifyjs.com/en/components/images/" %}
+Documentation du composant Image de Vuetify
+{% endembed %}
+
+Ajouter le texte ci-après dans un composant `v-card.`
+
+{% embed url="https://vuetifyjs.com/en/components/cards/#cards" %}
+Documentation du composant Card de Vuetify
+{% endembed %}
+
+```markup
+<h2>Un univers fascinant à découvrir</h2>
+<p>Le monde Pokémon est un vaste et merveilleux univers peuplé de créatures extraordinaires appelées Pokémon. Cette carte représente les différentes régions que les dresseurs peuvent explorer, chacune offrant ses propres défis, Pokémon uniques et aventures palpitantes.</p>
+
+<h2>Des régions diversifiées</h2>
+<p>De Kanto à Galar, en passant par Johto, Hoenn, Sinnoh, Unova, Kalos et Alola, chaque région du monde Pokémon possède sa propre identité, sa culture et son écosystème unique. Les paysages varient des montagnes enneigées aux îles tropicales, offrant une diversité incroyable d'habitats pour les différentes espèces de Pokémon.</p>
+
+<h2>Un monde en constante évolution</h2>
+<p>Le monde Pokémon est en perpétuelle expansion, avec de nouvelles régions, de nouvelles espèces de Pokémon et de nouvelles aventures qui sont régulièrement découvertes. Cette carte n'est qu'un aperçu d'un univers riche et en constante évolution, prêt à être exploré par les dresseurs audacieux.</p>
+
+<h2>Un appel à l'aventure</h2>
+<p>Que vous soyez un dresseur débutant ou expérimenté, le monde Pokémon vous invite à partir à l'aventure. Capturez de nouveaux Pokémon, affrontez des champions d'arènes, déjouez les plans des équipes malveillantes et devenez peut-être le prochain Maître Pokémon. L'aventure commence ici, sur cette carte, mais où vous mènera-t-elle ?</p>
+```
+
+Faire en sorte que l'image s'affiche dans une boite de dialogue lorsqu'on clique dessus en utilisant le composant `v-dialog`.&#x20;
+
+{% hint style="success" %}
+Explorer les codes des différentes démos de la documentation Vuetify pour trouver l'exemple qui ressemble le plus à votre objectif.
+{% endhint %}
+
+{% embed url="https://vuetifyjs.com/en/components/dialogs/#dialogs" %}
 
 ### **Étape 4 - Créer le contenu de la page "Vos questions"**
 
