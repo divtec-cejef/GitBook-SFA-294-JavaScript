@@ -222,32 +222,32 @@ Dans cet exemple, nous avons un magasin Pinia appelé **`pokemon`** qui contient
 
 Le magasin se compose de trois sections principales :&#x20;
 
-* l'état (state)
-* les getters
-* les actions
+* L'état (state) → Les données
+* Les getters → Les données calculées → computed
+* Les actions → Les méthodes utilisées pour modifier l'état, les données
 
 **État (state)**
 
 L'état est la partie du magasin qui contient **les données** que nous voulons partager dans notre application. Dans cet exemple, l'état comprend :
 
 * **`typeColors`** : un objet associant à chaque type de Pokémon une couleur
-* **`pokemons`** : une tableau d'objets représentant chaque Pokémon, chacun avec des caractéristiques comme le nom, le type, le niveau, les capacités, et des statistiques (PV, attaque, défense, etc.).
+* **`pokemons`** : un tableau d'objets représentant chaque Pokémon, chacun avec des caractéristiques comme le nom, le type, le niveau, les capacités et des statistiques (PV, attaque, défense, etc.).
 * **`selectedPokemon`** : permet de garder une référence au Pokémon sélectionné par l'utilisateur.
-* **`favorites`** : une tableau des Pokémon favoris sélectionnés par l'utilisateur.
+* **`favorites`** : un tableau des Pokémon favoris sélectionnés par l'utilisateur.
 
 **Getters**
 
-Les getters sont comme des propriétés calculées pour votre état. Ils permettent de dériver des informations basées sur l'état existant. Par exemple :
+Les getters ressemblent aux propriétés calculées pour votre état. Ils permettent de dériver des données  établies sur l'état existant. Par exemple :
 
-* **`favoritesCount`** : ce getter renvoie le nombre de Pokémon qui ont été ajoutés aux favoris.
+* **`favoritesCount`** : ce getter renvoie le nombre de Pokémon ajoutés aux favoris.
 
 **Actions**
 
-Les actions sont utilisées pour modifier l'état. Elles sont similaires aux méthodes dans une classe ou un composant. Voici les actions définies dans notre magasin :
+Les actions sont utilisées pour modifier l'état. Elles sont comparables aux méthodes dans une classe ou un composant. Voici les actions définies dans notre magasin :
 
 * **`selectPokemon(id)`** : permet de sélectionner un Pokémon à partir de son identifiant. Cela met à jour la propriété `selectedPokemon`.
-* **`toggleFavorite(pokemon)`** : permet d'ajouter ou de retirer un Pokémon de la liste des favoris.
-* **`isFavorite(pokemon)`** : renvoie `true` si le Pokémon est dan les favoris, sinon `false`.
+* **`toggleFavorite(pokemon)`** : ajoute ou de retire un Pokémon de la liste des favoris.
+* **`isFavorite(pokemon)`** : renvoie `true` si le Pokémon est dans les favoris, sinon `false`.
 * **`getTypeColor(type)`** : renvoie la couleur associée à un type de Pokémon. Si le type n'existe pas, une couleur par défaut est renvoyée.
 
 #### Utilisation du magasin dans un composant
@@ -258,27 +258,46 @@ Voyons maintenant comment utiliser ce magasin Pinia dans un composant.
 
 Pour utiliser le magasin, nous devons d'abord l'importer dans notre composant :
 
-```javascript
+```markup
 <script setup>
 import { usePokemonStore } from '@/stores/pokemon'
 import { storeToRefs } from 'pinia'
 
+// Récupère le magasin des Pokémons
 const pokemonStore = usePokemonStore()
+
+/* Récupère les données pokemons, selectedPokemon, favorites
+ * et les transforme directement en refs (données réactives) dans le composant
+ *
+ * Elles sont donc directement accessibles dans le template HTML
+ *
+ * Attention à ne pas oublier le .value dans le <script> pour accéder à la valeur 
+ * comme pour les autre refs.
+ */
 const { pokemons, selectedPokemon, favorites } = storeToRefs(pokemonStore)
 
-const selectPokemon = (id) => {
+// Fonction pour sélectionner un Pokémon
+function selectPokemon(id) {
   pokemonStore.selectPokemon(id)
 }
 
-const toggleFavorite = (pokemon) => {
+// Fonction pour basculer un Pokémon en favori
+function toggleFavorite(pokemon) {
   pokemonStore.toggleFavorite(pokemon)
+}
+
+// Fonction pour obtenir le nombre total de Pokémon
+function getTotalPokemons() {
+  // On utilise .value pour récupérer la valeur
+  return pokemons.value.length;
 }
 </script>
 ```
 
 * **`usePokemonStore()`** : Cette fonction nous permet d'accéder au magasin.
 * **`storeToRefs(pokemonStore)`** : Cette méthode est utilisée pour convertir les propriétés réactives du magasin en références réactives, ce qui facilite leur utilisation dans le template.
-* **`selectPokemon()`**\*\* et \*\***`toggleFavorite()`** : Ces méthodes sont définies localement en appelant les actions du magasin.
+* **`selectPokemon()`** et **`toggleFavorite()`** : ces méthodes sont définies localement en appelant les actions du magasin.
+* **`getTotalPokemons()`** : méthode locale qui retourne la taille du tableau des Pokémons.
 
 **Utilisation dans le Template**
 
@@ -307,16 +326,6 @@ Voici un exemple de la façon dont vous pouvez utiliser l'état, les getters et 
 * **`getTypeColor(pokemon.type)`** : Utilise la couleur du type pour styliser le texte.
 * **`selectPokemon(pokemon.id)`** : Action pour sélectionner un Pokémon spécifique.
 * **`toggleFavorite(pokemon)`** : Action pour ajouter ou retirer un Pokémon des favoris.
-
-#### Conclusion
-
-Ce magasin Pinia est un excellent exemple pour comprendre comment centraliser la gestion de l'état dans une application Vue.js. Il montre comment gérer des données complexes, comme une liste de Pokémon, et permet de manipuler l'état de manière précise et efficace.
-
-Pinia est particulièrement utile lorsqu'une application grandit et que plusieurs composants doivent accéder aux mêmes données. L'approche centralisée évite la redondance et facilite le débogage.
-
-N'hésitez pas à jouer avec les actions et les getters pour bien comprendre leur fonctionnement et comment ils interagissent avec l'état ! Si vous avez des questions ou besoin de clarifications, je suis là pour vous aider.
-
-Lister les Pokémon avec les informations suivantes : une image, le nom, le type, le niveau, et une icône pour les ajouter en favori. Ajouter également un champ de recherche pour trouver un Pokémon en tapant son nom. Pour les avancés, appliquer une couleur de fond correspondant au type de chaque Pokémon.
 
 ### **Étape 6 - Créer le contenu de la page "Favoris"**
 
