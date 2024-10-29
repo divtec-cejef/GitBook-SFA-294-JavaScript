@@ -218,15 +218,15 @@ La liste de tous les composants Vuetify
 
 #### Objectifs :&#x20;
 
-* [ ] Récupérer le magasin Pina des Pokémons et ses données
-* [ ] Parcourir le tableau des Pokémons et afficher au minimum les données suivantes&#x20;
-  * Nom
-  * Image. Elles sont dans `public/images/`  comme pour la carte du monde.
-  * Type
-  * Niveau
-* [ ] Mettre la bonne couleur aux types en changeant la couleur du texte ou de l'arrière-plan.
-* [ ] Créer un bouton permettant d'ajouter un Pokémon aux favoris
-* [ ] Créer un champ de recherche permettant la recherche d'un Pokémon par son nom
+1. Récupérer le magasin Pina des Pokémons et ses données
+2. Parcourir le tableau des Pokémons et afficher au minimum les données suivantes&#x20;
+   * Nom
+   * Image. Elles sont dans `public/images/`  comme pour la carte du monde.
+   * Type
+   * Niveau
+3. Mettre la bonne couleur aux types en changeant la couleur du texte ou de l'arrière-plan.
+4. Créer un bouton permettant d'ajouter un Pokémon aux favoris
+5. Créer un champ de recherche permettant la recherche d'un Pokémon par son nom
 
 Vous êtes libre de présenter cette liste comme vous le désirez avec les composants Vuetify de votre choix.
 
