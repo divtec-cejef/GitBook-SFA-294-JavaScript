@@ -1,4 +1,4 @@
-# Magasin Pinia
+# Introduction à Pinia 🍍
 
 #### Introduction au magasin Pinia
 
