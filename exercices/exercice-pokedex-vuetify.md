@@ -232,11 +232,72 @@ Pour **apprendre à utiliser Pinia**, lire le chapitre suivant :
 [magasin-pinia.md](../vue.js/magasin-pinia.md)
 {% endcontent-ref %}
 
-
-
 ### **Étape 6 - Créer le contenu de la page "Favoris"**
 
-Afficher tous les Pokémon ajoutés en favori, en utilisant le stockage local (localStorage) pour conserver ces favoris en complément du store Vuex.
+La page des favoris ressemble beaucoup à la page d'accueil. Afin de ne pas répéter le code, créer un composant `src/components/PokemonCard.vue`  qui contiendra le code d'une carte Pokémon.
+
+Utiliser ensuite ce composant pour afficher les cartes sur la page d'accueil et sur la carte des favoris.
+
+Modifier l'action `toggleFavorite` du magasin en utilisant le stockage local (localStorage) pour conserver ces favoris en complément du store Pinia.
 
 ### **Étape 7 - Créer la fiche de détail d'un Pokémon**
 
+Lorsque l'on clique sur la carte d'un Pokémon, cela va ouvrir sa fiche de détail.
+
+Par exemple pour Carapuce, la route (URL) qui correspond à la fiche de détail sera la suivante [http://localhost:3000/pokemon/4](http://localhost:3000/pokemon/4).&#x20;
+
+En lisant cette route, on comprend que cela va afficher le Pokémon avec l'identifiant `4`.
+
+Cette valeur est appelée un **paramètre d'URL** ou **paramètre de route dynamique** et sera différente pour chaque Pokémon.
+
+Voici comment créer une route dynamique et récupérer la valeur du paramètre.
+
+**Créer la page de détail avec un paramètre id**
+
+1. Dans `src/pages/`, créer un dossier `pokemon/`&#x20;
+2. Dans le dossier `pokemon/`, créez un nouveau fichier nommé `[id].vue` \
+   `[id]` indique la création d'un paramètre de route `id`
+
+#### **Récupérer le paramètre de la route**
+
+Grâce à la syntaxe `[id].vue`, Vue Router transmet automatiquement la valeur dans la route (URL) au composant. \
+\
+Pour récupérer ce paramètre, dans le fichier `[id].vue` utilisez `useRoute()`  et `route.params` pour récupérer la valeur du paramètre `id` et l'afficher à l'écran.
+
+Ajouter le code suivant à votre fichier `[id].vue`
+
+{% code title="src/pages/pokemon/[id].vue" lineNumbers="true" %}
+```markup
+<template>
+  <div>
+    <h1>Détails du Pokémon</h1>
+    <p>Identifiant du Pokémon : {{ pokemonId }}</p>
+  </div>
+</template>
+
+<script setup>
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+const pokemonId = route.params.id;
+</script>
+```
+{% endcode %}
+
+Tester le bon fonctionnement du paramètre avec ces différentes URL
+
+* [http://localhost:3000/pokemon/4](http://localhost:3000/pokemon/4)
+* [http://localhost:3000/pokemon/102](http://localhost:3000/pokemon/102)
+* [http://localhost:3000/pokemon/carapuce](http://localhost:3000/pokemon/carapuce)
+
+#### Créer un lien dynamique avec paramètres&#x20;
+
+Ajouter maintenant un lien dynamique à votre carte Pokémon pour qu'il ouvre la bonne fiche de détail.
+
+```javascript
+<router-link :to="`/pokemon/${pokemon.id}`"> ... </router-link>
+// si vous utiliser une v-card
+<v-card :to="`/pokemon/${pokemon.id}`"> ... </v-card>
+```
+
+Il ne vous reste plus qu'à vous connecter au magasin Pina et récupérer **toutes** les données du Pokémon et à les afficher avec un peu de style et de fantaisie.
