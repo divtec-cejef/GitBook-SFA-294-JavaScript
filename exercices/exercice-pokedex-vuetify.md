@@ -55,17 +55,17 @@ Vous devriez apercevoir le résultat suivant :
 Voici une vue d'ensemble des différents dossiers et fichiers du projet :
 
 * **public/** : Contient le fichier `index.html`, qui est le point d'entrée statique de l'application.
-  * **images/** : Contient les images des différents Pokémon
+  * **images/** : Contient les **images des Pokémons**
 * **src/** : Le dossier principal qui contient tout le code source de l'application
-  * **assets/** : Contient les ressources statiques comme les images, les icônes, le logo du site, etc.
+  * **assets/** : Contient les ressources statiques comme les images, les icônes, le **logo du site**, etc.
   * **components/** : Contient les composants Vue réutilisables de l'application. C'est ici que vous pourrez créer vos composants.
-  * **store/** : Contient la configuration initiale du magasin Pinia pour la gestion de l'état global de l'application.
-    * **pokemons.js** : Fichier qui gère l'état des données des Pokémon, incluant leur liste, leurs détails, et les actions associées.
-  * **views/** : Contient les différentes vues (ou pages) de l'application. Voici les fichiers présents dans le code de départ :
+  * **pages/** : Contient les différentes vues (ou pages) de l'application. Voici les fichiers présents dans le code de départ :
     * **index.vue** : Page principale du projet.
-    * **\[...path].vue** : S'affiche&#x20;
+    * **\[...path].vue** : Page chargé lorsque la route est incorrecte, souvent utilisé pour afficher une page "404 - Non trouvée".
+  * **stores/** : Contient la configuration initiale du magasin Pinia pour la gestion de l'état global de l'application.
+    * **pokemons.js** : Fichier qui gère l'état des données des Pokémon, incluant leur liste, leurs détails, et les actions associées.
   * **App.vue** : Composant racine de l'application
-  * **main.js** : Point d'entrée JavaScript de l'application. Il initialise Vue, intègre Vuetify, Pinia, et le routeur.
+  * **main.js** : Point d'entrée JavaScript de l'application appelé par index.html. Il initialise Vue, intègre Vuetify, Pinia, et Vue Router.
 
 ### Layout de base
 
