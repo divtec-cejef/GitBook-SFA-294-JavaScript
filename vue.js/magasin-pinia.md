@@ -44,7 +44,7 @@ Voyons maintenant comment utiliser ce magasin Pinia dans un composant.
 
 **Importer le magasin**
 
-Pour utiliser le magasin, nous devons d'abord l'importer dans notre composant :
+Pour utiliser le magasin, nous devons d'abord l'importer dans notre composant. Les magasins se trouvent dans le dossier `src/stores/`.
 
 ```markup
 <script setup>
