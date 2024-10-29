@@ -46,7 +46,7 @@ Voici un exemple de solution : [https://kode.ch/pokedex/](https://kode.ch/pokede
 
 Vous devriez apercevoir le résultat suivant :
 
-
+<figure><img src="../.gitbook/assets/pokedex-vuetify-start.png" alt=""><figcaption></figcaption></figure>
 
 ## Présentation du projet de départ
 
@@ -75,10 +75,6 @@ Le composant principal **App.vue** est composé de trois sections principales :
 * **\<v-main>** : Contenu principal de la page qui contient le composant `<router-view>`, qui affiche dynamiquement les pages en fonction de la route active.
 * **\<v-footer>** : Pied de page du site contenant un simple copyright
 
-### Magasin Pinia
-
-
-
 ## Travail à réaliser
 
 ### **Étape 1 - Créer les pages**
@@ -106,6 +102,41 @@ Assurez-vous que vos pages sont bien accessibles :&#x20;
 ### **Étape 2 - Créer** les liens du menu de navigation
 
 Le menu de navigation est implémenté dans le composant `AppHeader.vue`, qui est inclus dans le composant principal `App.vue`.&#x20;
+
+{% code title="AppHeader.vue" lineNumbers="true" %}
+```markup
+<template>
+  <v-app-bar flat>
+    <v-container class="d-flex align-start align-center">
+      <v-avatar
+        class="mr-4 pa-0 cursor-pointer"
+        image="@/assets/pokeball.svg"
+        size="64"
+        @click="$router.push('/')"
+      />
+      <v-toolbar-title>Pokedex</v-toolbar-title>
+      <v-btn
+        v-for="link in menuItems"
+        :key="link.title"
+        :icon="link.icon"
+        :to="link.path"
+      />
+    </v-container>
+  </v-app-bar>
+</template>
+
+<script setup>
+  const menuItems = [
+    { title: 'Accueil', path: '/', icon: 'mdi-pokeball' },
+    // Ajouter ici les autres liens du menu.
+    // Vous trouverez des icônes sur https://pictogrammers.com/library/mdi/
+    // N'oubliez pas d'ajouter le préfixe 'mdi-' devant le nom de l'icône.
+  ]
+</script>
+```
+{% endcode %}
+
+
 
 Ce menu utilise le composant `v-app-bar` de Vuetify pour créer une barre de navigation en haut de la page. Voici les éléments principaux du code :
 
