@@ -59,7 +59,7 @@
 
 * [🔢 Exercice PokeCount](exercices/exercice-pokecount.md)
 * [📒 Exercice Mini Pokédex](exercices/exercice-mini-pokedex.md)
-* [📒 Exercice Pokédex Vuetify](exercices/exercice-pokedex-vuetify.md)
+* [📕 Exercice Pokédex Vuetify](exercices/exercice-pokedex-vuetify.md)
 
 ## Plan des cours 2024
 

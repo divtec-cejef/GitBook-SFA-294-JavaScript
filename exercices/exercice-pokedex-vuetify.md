@@ -13,7 +13,13 @@ layout:
     visible: false
 ---
 
-# 📒 Exercice Pokédex Vuetify
+# 📕 Exercice Pokédex Vuetify
+
+<div data-full-width="true">
+
+<figure><img src="../.gitbook/assets/Capture d’écran 2024-10-29 à 15.26.44.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 ## Introduction
 
