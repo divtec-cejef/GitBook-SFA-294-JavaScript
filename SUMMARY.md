@@ -52,7 +52,7 @@
 * [Créer une application Vuetify](vue.js/creer-une-application-vuetify.md)
 * [Anatomie d'un projet Vuetify](vue.js/anatomie-dun-projet-vuetify.md)
 * [Bases (en construction)](vue.js/bases-en-construction.md)
-* [Magasin Pinia](vue.js/magasin-pinia.md)
+* [Introduction à Pinia 🍍](vue.js/introduction-a-pinia.md)
 * [Démo d'introduction à Vue](vue.js/demo-dintroduction-a-vue.md)
 
 ## Exercices
