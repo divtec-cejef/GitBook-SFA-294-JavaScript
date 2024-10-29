@@ -156,13 +156,17 @@ Vous trouverez la liste des icônes sur ce site :&#x20;
 
 {% embed url="https://pictogrammers.com/library/mdi/" %}
 
-### **Étape 3 - Créer le contenu de la page "Mon Pokémon"**
+### **Étape 3 - Créer le contenu de la page "**Le Monde Pokémon**"**
 
-Ajouter l'image du monde Pokémon qui se trouve dans `public/images/pokemon-map.png` en utilisant un composant `v-img.`
+#### Image
+
+Ajouter l'image du monde Pokémon qui se trouve dans `public/images/pokemon-map.png` en utilisant un composant `v-img.`  Utiliser la valeur suivante pour la source de l'image dans le code du template HTML  `src="/images/pokemon-map.png"`.
 
 {% embed url="https://vuetifyjs.com/en/components/images/" %}
 Documentation du composant Image de Vuetify
 {% endembed %}
+
+#### Texte
 
 Ajouter le texte ci-après dans un composant `v-card.`
 
@@ -184,6 +188,8 @@ Documentation du composant Card de Vuetify
 <p>Que vous soyez un dresseur débutant ou expérimenté, le monde Pokémon vous invite à partir à l'aventure. Capturez de nouveaux Pokémon, affrontez des champions d'arènes, déjouez les plans des équipes malveillantes et devenez peut-être le prochain Maître Pokémon. L'aventure commence ici, sur cette carte, mais où vous mènera-t-elle ?</p>
 ```
 
+#### Popup pour l'image
+
 Faire en sorte que l'image s'affiche dans une boite de dialogue lorsqu'on clique dessus en utilisant le composant `v-dialog`.&#x20;
 
 {% hint style="success" %}
@@ -191,101 +197,116 @@ Explorer les codes des différentes démos de la documentation Vuetify pour trou
 {% endhint %}
 
 {% embed url="https://vuetifyjs.com/en/components/dialogs/#dialogs" %}
+Documentation du composant Dialog de Vuetify
+{% endembed %}
 
 ### **Étape 4 - Créer le contenu de la page "Vos questions"**
 
-Utiliser un composant Vuetify approprié pour réaliser une page de FAQ. Les questions doivent être listées et afficher leur réponse au clic.
+Utiliser un composant Vuetify approprié, hé oui c'est à vous de trouver 😜, pour réaliser une page de FAQ. Les questions doivent être listées et afficher leur réponse au clic.
+
+{% embed url="https://vuetifyjs.com/en/components/all/#containment" %}
+La liste de tous les composants Vuetify
+{% endembed %}
 
 ### **Étape 5 - Créer le contenu de la page "Pokédex"**
 
-#### Introduction au Magasin Pinia
+Pour créer cette page, vous aurez besoin d'accéder au magasin Pinia des Pokémons qui se trouve dans `src/stores/pokemonStore.js`. C'est dans ce magasin que sont stockés tous les Pokémons.
 
-Bonjour à tous ! Aujourd'hui, nous allons découvrir un exemple de magasin Pinia qui gère une collection de Pokémon. Pinia est un gestionnaire d'état pour Vue.js qui vous permet de centraliser l'état de votre application de manière propre et efficace.
+#### Introduction au magasin Pinia
+
+Pinia est un **gestionnaire d'état** pour Vue.js qui vous permet de centraliser l'**état des données** de votre application de manière propre et efficace.
 
 Dans cet exemple, nous avons un magasin Pinia appelé **`pokemon`** qui contient une liste de différents Pokémon, chacun avec des informations comme le type, le niveau, les capacités, etc. Nous allons voir comment ce magasin est structuré, ainsi que les différentes fonctionnalités qu'il offre.
 
 #### Contenu du Magasin
 
-Le magasin se compose de trois sections principales : l'état (state), les getters, et les actions.
+Le magasin se compose de trois sections principales :&#x20;
 
-1.  **État (state)**
+* l'état (state)
+* les getters
+* les actions
 
-    L'état est la partie du magasin qui contient les données que nous voulons partager dans notre application. Dans cet exemple, l'état comprend :
+**État (state)**
 
-    * **`typeColors`** : un objet associant à chaque type de Pokémon une couleur, ce qui peut être utile pour les affichages visuels.
-    * **`pokemons`** : une liste d'objets représentant chaque Pokémon, chacun avec des caractéristiques comme le nom, le type, le niveau, les capacités, et des statistiques (PV, attaque, défense, etc.).
-    * **`selectedPokemon`** : permet de garder une référence au Pokémon sélectionné par l'utilisateur.
-    * **`favorites`** : une liste des Pokémon favoris sélectionnés par l'utilisateur.
-2.  **Getters**
+L'état est la partie du magasin qui contient **les données** que nous voulons partager dans notre application. Dans cet exemple, l'état comprend :
 
-    Les getters sont comme des propriétés calculées pour votre état. Ils permettent de dériver des informations basées sur l'état existant. Par exemple :
+* **`typeColors`** : un objet associant à chaque type de Pokémon une couleur
+* **`pokemons`** : une tableau d'objets représentant chaque Pokémon, chacun avec des caractéristiques comme le nom, le type, le niveau, les capacités, et des statistiques (PV, attaque, défense, etc.).
+* **`selectedPokemon`** : permet de garder une référence au Pokémon sélectionné par l'utilisateur.
+* **`favorites`** : une tableau des Pokémon favoris sélectionnés par l'utilisateur.
 
-    * **`favoritesCount`** : ce getter renvoie le nombre de Pokémon qui ont été ajoutés aux favoris.
-3.  **Actions**
+**Getters**
 
-    Les actions sont utilisées pour modifier l'état. Elles sont similaires aux méthodes dans une classe ou un composant. Voici les actions définies dans notre magasin :
+Les getters sont comme des propriétés calculées pour votre état. Ils permettent de dériver des informations basées sur l'état existant. Par exemple :
 
-    * **`selectPokemon(id)`** : permet de sélectionner un Pokémon à partir de son identifiant. Cela met à jour la propriété `selectedPokemon`.
-    * **`toggleFavorite(pokemon)`** : permet d'ajouter ou de retirer un Pokémon de la liste des favoris.
-    * **`isFavorite(pokemon)`** : renvoie `true` si le Pokémon est présent dans la liste des favoris, sinon `false`.
-    * **`getTypeColor(type)`** : renvoie la couleur associée à un type de Pokémon. Si le type n'existe pas, une couleur par défaut est renvoyée.
+* **`favoritesCount`** : ce getter renvoie le nombre de Pokémon qui ont été ajoutés aux favoris.
+
+**Actions**
+
+Les actions sont utilisées pour modifier l'état. Elles sont similaires aux méthodes dans une classe ou un composant. Voici les actions définies dans notre magasin :
+
+* **`selectPokemon(id)`** : permet de sélectionner un Pokémon à partir de son identifiant. Cela met à jour la propriété `selectedPokemon`.
+* **`toggleFavorite(pokemon)`** : permet d'ajouter ou de retirer un Pokémon de la liste des favoris.
+* **`isFavorite(pokemon)`** : renvoie `true` si le Pokémon est dan les favoris, sinon `false`.
+* **`getTypeColor(type)`** : renvoie la couleur associée à un type de Pokémon. Si le type n'existe pas, une couleur par défaut est renvoyée.
 
 #### Utilisation du magasin dans un composant
 
 Voyons maintenant comment utiliser ce magasin Pinia dans un composant.
 
-1.  **Importer le magasin**
+**Importer le magasin**
 
-    Pour utiliser le magasin, nous devons d'abord l'importer dans notre composant :
+Pour utiliser le magasin, nous devons d'abord l'importer dans notre composant :
 
-    ```javascript
-    <script setup>
-    import { usePokemonStore } from '@/stores/pokemon'
-    import { storeToRefs } from 'pinia'
+```javascript
+<script setup>
+import { usePokemonStore } from '@/stores/pokemon'
+import { storeToRefs } from 'pinia'
 
-    const pokemonStore = usePokemonStore()
-    const { pokemons, selectedPokemon, favorites } = storeToRefs(pokemonStore)
+const pokemonStore = usePokemonStore()
+const { pokemons, selectedPokemon, favorites } = storeToRefs(pokemonStore)
 
-    const selectPokemon = (id) => {
-      pokemonStore.selectPokemon(id)
-    }
+const selectPokemon = (id) => {
+  pokemonStore.selectPokemon(id)
+}
 
-    const toggleFavorite = (pokemon) => {
-      pokemonStore.toggleFavorite(pokemon)
-    }
-    </script>
-    ```
+const toggleFavorite = (pokemon) => {
+  pokemonStore.toggleFavorite(pokemon)
+}
+</script>
+```
 
-    * **`usePokemonStore()`** : Cette fonction nous permet d'accéder au magasin.
-    * **`storeToRefs(pokemonStore)`** : Cette méthode est utilisée pour convertir les propriétés réactives du magasin en références réactives, ce qui facilite leur utilisation dans le template.
-    * **`selectPokemon()`**\*\* et \*\***`toggleFavorite()`** : Ces méthodes sont définies localement en appelant les actions du magasin.
-2.  **Utilisation dans le Template**
+* **`usePokemonStore()`** : Cette fonction nous permet d'accéder au magasin.
+* **`storeToRefs(pokemonStore)`** : Cette méthode est utilisée pour convertir les propriétés réactives du magasin en références réactives, ce qui facilite leur utilisation dans le template.
+* **`selectPokemon()`**\*\* et \*\***`toggleFavorite()`** : Ces méthodes sont définies localement en appelant les actions du magasin.
 
-    Voici un exemple de la façon dont vous pouvez utiliser l'état, les getters et les actions dans le template :
+**Utilisation dans le Template**
 
-    ```html
-    <template>
-      <div>
-        <h1>Liste des Pokémon</h1>
-        <ul>
-          <li v-for="pokemon in pokemons" :key="pokemon.id">
-            <img :src="pokemon.img" :alt="pokemon.name" />
-            <h2>{{ pokemon.name }}</h2>
-            <p>Type : <span :style="{ color: getTypeColor(pokemon.type) }">{{ pokemon.type }}</span></p>
-            <button @click="selectPokemon(pokemon.id)">Voir les détails</button>
-            <button @click="toggleFavorite(pokemon)">
-              {{ isFavorite(pokemon) ? 'Retirer des favoris' : 'Ajouter aux favoris' }}
-            </button>
-          </li>
-        </ul>
-      </div>
-    </template>
-    ```
+Voici un exemple de la façon dont vous pouvez utiliser l'état, les getters et les actions dans le template :
 
-    * **`v-for="pokemon in pokemons"`** : Boucle sur la liste des Pokémon pour les afficher.
-    * **`getTypeColor(pokemon.type)`** : Utilise la couleur du type pour styliser le texte.
-    * **`selectPokemon(pokemon.id)`** : Action pour sélectionner un Pokémon spécifique.
-    * **`toggleFavorite(pokemon)`** : Action pour ajouter ou retirer un Pokémon des favoris.
+```html
+<template>
+  <div>
+    <h1>Liste des Pokémon</h1>
+    <ul>
+      <li v-for="pokemon in pokemons" :key="pokemon.id">
+        <img :src="pokemon.img" :alt="pokemon.name" />
+        <h2>{{ pokemon.name }}</h2>
+        <p>Type : <span :style="{ color: getTypeColor(pokemon.type) }">{{ pokemon.type }}</span></p>
+        <button @click="selectPokemon(pokemon.id)">Voir les détails</button>
+        <button @click="toggleFavorite(pokemon)">
+          {{ isFavorite(pokemon) ? 'Retirer des favoris' : 'Ajouter aux favoris' }}
+        </button>
+      </li>
+    </ul>
+  </div>
+</template>
+```
+
+* **`v-for="pokemon in pokemons"`** : Boucle sur la liste des Pokémon pour les afficher.
+* **`getTypeColor(pokemon.type)`** : Utilise la couleur du type pour styliser le texte.
+* **`selectPokemon(pokemon.id)`** : Action pour sélectionner un Pokémon spécifique.
+* **`toggleFavorite(pokemon)`** : Action pour ajouter ou retirer un Pokémon des favoris.
 
 #### Conclusion
 
