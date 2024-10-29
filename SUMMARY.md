@@ -70,3 +70,4 @@
 * [📅 24 septembre](plan-des-cours-2024/24-septembre.md)
 * [📅 1ᵉʳ octobre](plan-des-cours-2024/1-octobre.md)
 * [📅 8 octobre](plan-des-cours-2024/8-octobre.md)
+* [📅 29 octobre](plan-des-cours-2024/29-octobre.md)
