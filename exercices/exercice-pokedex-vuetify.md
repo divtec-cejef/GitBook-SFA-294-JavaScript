@@ -210,6 +210,16 @@ La liste de tous les composants Vuetify
 
 ### **Étape 5 - Créer le contenu de la page "Pokédex"**
 
+#### Objectifs :&#x20;
+
+* [ ] Récupérer le magasin Pina des Pokémons et ses données
+* [ ] Parcourir le tableau des Pokémons et afficher au minimum les données suivantes&#x20;
+  * Nom
+  * Image. Elles sont dans `public/images/`  comme pour la carte du monde.
+  * Type
+  * Niveau
+* [ ] Mettre en couleur les types
+
 Pour créer cette page, vous aurez besoin d'accéder au magasin Pinia des Pokémons qui se trouve dans `src/stores/pokemonStore.js`. C'est dans ce magasin que sont stockés tous les Pokémons.
 
 #### Introduction au magasin Pinia
