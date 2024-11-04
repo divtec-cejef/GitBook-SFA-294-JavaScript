@@ -246,6 +246,8 @@ Utiliser ensuite ce composant pour afficher les cartes sur la page d'accueil et 
 
 Modifier l'action `toggleFavorite` du magasin en utilisant le stockage local (localStorage) pour conserver ces favoris en complément du store Pinia.
 
+Dans le composant `src/App.vue` attendre que le composant soit chargé `onMounted` pour récupérer les favoris dans le magasin s'il y en a dans le `localStorage`.
+
 ### **Étape 7 - Créer la fiche de détail d'un Pokémon**
 
 Lorsque l'on clique sur la carte d'un Pokémon, cela va ouvrir sa fiche de détail.
