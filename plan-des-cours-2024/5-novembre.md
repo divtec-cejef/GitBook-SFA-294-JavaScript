@@ -15,6 +15,10 @@
 [exercice-pokedex-vuetify.md](../exercices/exercice-pokedex-vuetify.md)
 {% endcontent-ref %}
 
+{% embed url="https://github.com/fallinov/2024-SFA-JS-Vue-Vuetify-Pokedex/tree/magasin-local" %}
+La solution du prof&#x20;
+{% endembed %}
+
 1. **Revue des cinq premières étapes** :
    * Vérification des composants créés (pages et liens de navigation).
    * Validation de la navigation entre les pages et des éléments de style.
