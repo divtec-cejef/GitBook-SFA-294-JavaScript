@@ -31,7 +31,7 @@
 
 ***
 
-### 🌐 Introduction aux APIs
+## 🌐 Introduction aux APIs
 
 1. **Mise en place d'une API locale avec Docker et Directus :**&#x20;
    * Cloner et suivre les consignes de ce dépôt :[https://github.com/fallinov/2024-SFA-Pokemon-Directus](https://github.com/fallinov/2024-SFA-Pokemon-Directus)&#x20;
@@ -60,7 +60,7 @@
 
 * Finaliser l'adaptation des composants à l'API.
 
-### 📒 Supports de cours supplémentaires
+## 📒 Supports de cours supplémentaires
 
 1. [Vuetify Documentation (EN)](https://vuetifyjs.com/en/getting-started/installation/)
 2. [Vue Mastey - Intro to Vue 3 (EN)](https://www.vuemastery.com/courses/intro-to-vue-3/intro-to-vue3)
