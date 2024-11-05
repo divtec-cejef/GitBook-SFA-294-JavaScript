@@ -309,3 +309,110 @@ Ajouter maintenant un lien dynamique à votre carte Pokémon pour qu'il ouvre la
 ```
 
 Il ne vous reste plus qu'à vous connecter au magasin Pina et récupérer **toutes** les données du Pokémon et à les afficher avec un peu de style et de fantaisie.
+
+### Étape 8 - Connexion à l'API
+
+
+
+Dans cette étape, nous allons connecter notre application "Pokédex Vuetify" à une API pour récupérer les données des Pokémon et des types. Cela nous permettra d'avoir des informations dynamiques et de centraliser les données.
+
+#### **1. Présentation de Axios**
+
+**Axios** est une bibliothèque JavaScript utilisée pour effectuer des requêtes HTTP depuis le navigateur. Elle simplifie les appels vers des APIs en utilisant des méthodes comme `axios.get()` pour obtenir des données et `axios.post()` pour envoyer des données. L’utilisation d’Axios nous permet de gérer facilement les requêtes, les réponses et les erreurs de façon asynchrone.
+
+#### **2. Les routes API pour le Pokédex**
+
+Nous utiliserons les routes suivantes pour obtenir les informations des types et des Pokémon :
+
+* **Récupérer les types** : `https://localhost/items/type`
+* **Récupérer les Pokémon** : `https://localhost/items/pokemon`
+* **Récupérer les informations détaillées des Pokémon** : `https://localhost/items/pokemon?fields=*,images.*,types.type_id.*`
+
+La dernière route inclut tous les champs nécessaires, notamment les images et les types des Pokémon, pour simplifier le rendu dans l’application.
+
+#### **3. Modification du Magasin Pinia**
+
+Voici le magasin Pinia mis à jour pour intégrer les appels vers l’API et gérer les états :
+
+```javascript
+import { defineStore } from 'pinia'
+import axios from 'axios'
+
+export const usePokemonStore = defineStore('pokemon', {
+  state: () => ({
+    isLoading: false, // Indique si une requête est en cours
+    apiUrl: 'https://localhost', // URL de base pour l'API
+    imageUrl: 'https://localhost/assets', // URL de base pour les images
+    types: [], // Contient les informations de tous les types
+    pokemons: [], // Contiendra les Pokémon avec les identifiants de types non transformés
+    selectedPokemon: null,
+    favorites: [],
+  }),
+  getters: {
+    favoritesCount: state => state.favorites.length,
+  },
+  actions: {
+    // Récupération des types
+    async fetchTypes () {
+      this.isLoading = true
+      try {
+        const typesResponse = await axios.get(`${this.apiUrl}/items/type`)
+        this.types = typesResponse.data.data
+      } catch (error) {
+        console.error('Erreur lors du chargement des types:', error)
+      } finally {
+        this.isLoading = false
+      }
+    },
+
+    // Récupération des Pokémon
+    async fetchPokemons () {
+      this.isLoading = true
+      try {
+        const response = await axios.get(`${this.apiUrl}/items/pokemon?fields=*,images.*,types.type_id.*`)
+        this.pokemons = response.data.data
+      } catch (error) {
+        console.error('Erreur lors du chargement des pokémons:', error)
+      } finally {
+        this.isLoading = false
+      }
+    },
+
+    // Sélection d'un Pokémon pour voir ses détails
+    selectPokemon (id) {
+      this.selectedPokemon = this.pokemons.find(p => p.id === id) || null
+    },
+
+    // Chargement des favoris depuis le localStorage
+    loadFavorites () {
+      this.favorites = JSON.parse(localStorage.getItem('favorites')) || []
+    },
+
+    // Gestion des favoris
+    toggleFavorite (pokemon) {
+      const index = this.favorites.findIndex(fav => fav.id === pokemon.id)
+      if (index === -1) {
+        this.favorites.push(pokemon)
+      } else {
+        this.favorites.splice(index, 1)
+      }
+      localStorage.setItem('favorites', JSON.stringify(this.favorites))
+    },
+
+    // Vérification si un Pokémon est en favoris
+    isFavorite (pokemon) {
+      return this.favorites.some(fav => fav.id === pokemon.id)
+    },
+  },
+})
+```
+
+**Explications des fonctionnalités**
+
+* **fetchTypes** : Cette méthode fait appel à l'API pour obtenir la liste des types de Pokémon et les stocke dans l'état `types`.
+* **fetchPokemons** : Récupère les informations détaillées des Pokémon (avec leurs images et types).
+* **selectPokemon** : Sélectionne un Pokémon en fonction de son identifiant pour afficher ses informations détaillées.
+* **loadFavorites** et **toggleFavorite** : Gèrent les favoris, en sauvegardant et chargeant les données dans le `localStorage` pour persister les informations entre les sessions.
+
+En suivant ces étapes, vous pourrez utiliser les données de l’API pour rendre l’application plus dynamique et fonctionnelle.
+
