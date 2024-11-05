@@ -11,6 +11,10 @@
 
 ## 🔄 Correction de l'exercice "Pokédex Vuetify"
 
+{% content-ref url="../exercices/exercice-pokedex-vuetify.md" %}
+[exercice-pokedex-vuetify.md](../exercices/exercice-pokedex-vuetify.md)
+{% endcontent-ref %}
+
 1. **Revue des cinq premières étapes** :
    * Vérification des composants créés (pages et liens de navigation).
    * Validation de la navigation entre les pages et des éléments de style.
