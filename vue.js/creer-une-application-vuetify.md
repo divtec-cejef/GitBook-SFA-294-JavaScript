@@ -121,15 +121,20 @@ Cela actualise tous les packages listés dans votre `package.json` vers leurs ve
 ```sh
 # Ajout de TypeScript
 npm install --save-dev typescript
-# Ajout de TypeScript pou ESLint
+
+# Ajout de TypeScript pour ESLint
 npm install --save-dev @vue/eslint-config-typescript
-# Vide le cache de NPM, force le re-téléchargement des librairies
+
+# Vide le cache de NPM et force le re-téléchargement des librairies
 npm cache clean --force
-# Supprime le dossier node_modules/
-rm -rf node_modules
+
+# Supprime le dossier node_modules
+rmdir /s /q node_modules
+
 # Supprime le fichier package-lock.json
-rm package-lock.json
-# Réinstalle prorpement les librairies
+del package-lock.json
+
+# Réinstalle proprement les librairies
 npm install
 ```
 {% endhint %}
