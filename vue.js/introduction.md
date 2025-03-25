@@ -15,11 +15,7 @@ Vuetify nous permettra de créer rapidement des interfaces utilisateur élégant
 
 {% embed url="https://vuetifyjs.com/en/components/buttons/#usage" %}
 
-<div data-full-width="false">
-
-<figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.36.48.png" alt=""><figcaption><p>Exemple du composant <code>BUTTON</code> et de son utilisation</p></figcaption></figure>
-
-</div>
+<div data-full-width="false"><figure><img src="../.gitbook/assets/Screenshot 2024-09-24 at 11.36.48.png" alt=""><figcaption><p>Exemple du composant <code>BUTTON</code> et de son utilisation</p></figcaption></figure></div>
 
 ### **D'autres outils disponibles**
 
@@ -66,11 +62,7 @@ Dans ce cours, nous utilisons des **Single File Components (SFC)**, un format de
 
 ### **API Composition**
 
-<div data-full-width="true">
-
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption><p>Différence entre l'API option (gauche) et composition (droite)</p></figcaption></figure>
-
-</div>
+<div data-full-width="true"><figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption><p>Différence entre l'API option (gauche) et composition (droite)</p></figcaption></figure></div>
 
 Nous utilisons également l'**API Composition**, une approche plus moderne et flexible pour structurer la logique d’un composant dans Vue.js 3.&#x20;
 
@@ -80,7 +72,7 @@ Nous utilisons également l'**API Composition**, une approche plus moderne et fl
 * `setup` ajouter en attribut de la balise `<script>` est la fonction clé où toute la logique du composant est définie.
 
 {% hint style="danger" %}
-Pour pouvoir utiliser `ref` et `reactive`, il faudra **les importer au tout début du code** comme présenter à la ligne 3 de l'exemple ci-après.
+Pour pouvoir utiliser `ref` et `reactive`, il faudra **les importer au tout début du code** comme présenter à la ligne 2 de l'exemple ci-après.
 {% endhint %}
 
 ### **Exemple**
